@@ -1,0 +1,23 @@
+{
+  "country": "Uzbekistan",
+  "regions": [
+    "Karakalpakstan",
+    "Tashkent",
+    "Samarkand",
+    "Bukhara",
+    "Namangan"
+  ],
+  "time_window": [
+    2017,
+    2025
+  ],
+  "crs": "EPSG:4326",
+  "random_seed": 42,
+  "paths": {
+    "raw": "alphaearth-uz/data_raw",
+    "work": "alphaearth-uz/data_work",
+    "final": "alphaearth-uz/data_final",
+    "figs": "alphaearth-uz/figs",
+    "tables": "alphaearth-uz/tables"
+  }
+}

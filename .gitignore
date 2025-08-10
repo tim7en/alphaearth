@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+alphaearth-uz/data_raw/
+alphaearth-uz/data_work/
+alphaearth-uz/models/
+*.ipynb_checkpoints
