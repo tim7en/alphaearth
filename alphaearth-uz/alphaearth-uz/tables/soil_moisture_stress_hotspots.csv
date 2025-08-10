@@ -1,0 +1,6 @@
+region,sample_id_count,soil_moisture_predicted_mean,soil_moisture_predicted_std,water_stress_indicator_mean
+Bukhara,345,0.277,0.052,0.602
+Karakalpakstan,376,0.287,0.047,0.589
+Namangan,406,0.279,0.044,0.594
+Samarkand,341,0.28,0.049,0.597
+Tashkent,373,0.278,0.05,0.596

@@ -1,0 +1,16 @@
+variable,min_value,max_value,optimal_min,optimal_max
+soil_ph,4.0,9.0,6.45,7.73
+soil_depth_cm,10.0,200.0,25.03,102.72
+soil_organic_matter,0.5,8.0,2.36,4.21
+annual_precip_mm,100.0,800.0,286.13,455.52
+avg_temperature_c,-1.31,27.27,10.24,15.0
+frost_days,24.0,70.0,40.0,49.0
+slope_degrees,0.0,45.0,2.2,10.35
+elevation_m,100.0,2828.37,389.51,1107.88
+dist_to_roads_km,0.1,100.0,3.77,17.5
+dist_to_water_km,0.1,50.0,2.16,9.46
+latitude,37.2,45.6,39.29,43.54
+longitude,55.9,73.19,60.37,68.65
+vegetation_index,0.0,1.0,0.27,0.54
+soil_moisture_est,0.0,1.0,0.12,0.48
+temperature_anomaly,-2.05,6.43,1.3,2.91

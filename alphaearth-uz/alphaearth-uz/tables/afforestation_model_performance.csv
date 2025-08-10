@@ -1,0 +1,3 @@
+model,metric,value,additional_metric,additional_value
+Binary Classification,AUC,0.9709628066473227,Accuracy,0.9608333333333333
+Suitability Score Regression,R²,0.9640300868114551,RMSE,0.028162812663005868

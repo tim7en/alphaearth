@@ -6,5 +6,7 @@ rasterio
 scikit-learn
 xgboost
 matplotlib
+seaborn
+scipy
 jinja2
 reportlab

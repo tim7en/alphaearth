@@ -1,0 +1,11 @@
+feature,importance
+soil_organic_matter,0.3003993
+soil_ph,0.18188585
+annual_precip_mm,0.11605184
+soil_depth_cm,0.08170624
+avg_temperature_c,0.061719272
+elevation_m,0.057852633
+slope_degrees,0.03482253
+dist_to_water_km,0.034548353
+dist_to_roads_km,0.03126289
+embed_082,0.005209932
