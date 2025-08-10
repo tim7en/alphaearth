@@ -127,7 +127,7 @@ Regular satellite monitoring recommended every 6 months with annual comprehensiv
 **Next Update:** {(datetime.now().month % 12) + 1}/2025"""
 
     # Write to file
-    Path("alphaearth-uz/reports/AlphaEarth_Uzbekistan_Report.md").write_text(full_report)
+    Path("reports/AlphaEarth_Uzbekistan_Report.md").write_text(full_report)
     
     print("Comprehensive final report generated successfully")
     return {"status": "ok", "artifacts": ["reports/AlphaEarth_Uzbekistan_Report.md"]}
