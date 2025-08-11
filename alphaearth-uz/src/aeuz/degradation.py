@@ -7,7 +7,7 @@ from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from datetime import datetime
-from .utils import (load_config, ensure_dir, setup_plotting, generate_synthetic_embeddings,
+from .utils import (load_config, ensure_dir, setup_plotting, load_actual_data,
                    calculate_confidence_interval, perform_trend_analysis, create_summary_statistics,
                    save_plot, validate_data_quality)
 
@@ -21,33 +21,20 @@ def run():
     ensure_dir(tables); ensure_dir(figs)
     setup_plotting()
     
-    # Generate synthetic AlphaEarth embeddings for degradation analysis
-    print("Processing AlphaEarth embeddings for land degradation assessment...")
-    embeddings_df = generate_synthetic_embeddings(n_samples=3500, n_features=128)
+    # Load actual degradation analysis data
+    print("Loading actual degradation analysis data...")
+    data_df = load_actual_data('degradation')
     
-    # Add degradation-specific indicators
-    np.random.seed(42)
-    
-    # Vegetation and soil indicators
-    embeddings_df['ndvi_current'] = np.clip(np.random.beta(2, 3, len(embeddings_df)), 0.1, 0.9)
-    embeddings_df['ndvi_baseline'] = embeddings_df['ndvi_current'] + np.random.normal(0.1, 0.15, len(embeddings_df))
-    embeddings_df['ndvi_baseline'] = np.clip(embeddings_df['ndvi_baseline'], 0.1, 0.9)
-    
-    # Soil indicators
-    embeddings_df['soil_erosion_rate'] = np.clip(np.random.exponential(2.0, len(embeddings_df)), 0, 15)  # mm/year
-    embeddings_df['soil_salinity'] = np.clip(np.random.gamma(2, 1.5, len(embeddings_df)), 0, 20)  # dS/m
-    embeddings_df['organic_carbon_loss'] = np.clip(np.random.beta(3, 2, len(embeddings_df)) * 5, 0, 5)  # %
-    
-    # Land use pressure indicators
-    embeddings_df['grazing_pressure'] = np.random.choice([0, 1, 2, 3], len(embeddings_df), p=[0.3, 0.4, 0.2, 0.1])  # 0=none, 3=severe
-    embeddings_df['irrigation_intensity'] = np.clip(np.random.gamma(1.5, 2, len(embeddings_df)), 0, 10)
-    embeddings_df['crop_yield_decline'] = np.clip(np.random.beta(2, 5, len(embeddings_df)) * 50, 0, 50)  # % decline
-    
-    # Climate stress indicators
-    embeddings_df['drought_frequency'] = np.random.poisson(1.2, len(embeddings_df))  # events per 5 years
-    embeddings_df['heat_stress_days'] = np.random.poisson(25, len(embeddings_df))  # days >35°C annually
+    print(f"Loaded {len(data_df)} records from degradation analysis")
+    print(f"Data sources: {data_df['data_source'].unique()}")
+    print(f"Regions covered: {data_df['region'].unique()}")
     
     # Data quality validation
+    required_cols = ['region']
+    available_cols = [col for col in required_cols if col in data_df.columns]
+    if available_cols:
+        quality_report = validate_data_quality(data_df, available_cols)
+        print(f"Data quality score: {quality_report['quality_score']:.1f}%")
     required_cols = ['region', 'ndvi_current', 'soil_erosion_rate', 'soil_salinity']
     quality_report = validate_data_quality(embeddings_df, required_cols)
     print(f"Data quality score: {quality_report['quality_score']:.1f}%")
