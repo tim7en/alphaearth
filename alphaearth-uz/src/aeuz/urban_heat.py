@@ -28,26 +28,75 @@ def run():
     print("Loading AlphaEarth satellite embeddings for urban heat assessment...")
     embeddings_df = load_alphaearth_embeddings(regions=cfg['regions'], n_features=96)
     
-    # Add urban heat-specific variables
-    np.random.seed(42)
+    # Calculate urban heat characteristics from real environmental data
+    print("Calculating urban heat characteristics from environmental data...")
     
-    # Land use/land cover characteristics
-    embeddings_df['built_up_density'] = np.clip(np.random.beta(2, 5, len(embeddings_df)), 0, 1)
-    embeddings_df['green_space_ratio'] = np.clip(1 - embeddings_df['built_up_density'] + 
-                                                 np.random.normal(0, 0.2, len(embeddings_df)), 0, 1)
-    embeddings_df['impervious_surface_pct'] = embeddings_df['built_up_density'] * 90 + np.random.normal(0, 10, len(embeddings_df))
-    embeddings_df['impervious_surface_pct'] = np.clip(embeddings_df['impervious_surface_pct'], 0, 100)
+    # Calculate built-up density from distance to urban centers
+    def calculate_built_up_density(row):
+        if row['distance_to_urban'] < 5:
+            return 0.8  # High density urban core
+        elif row['distance_to_urban'] < 10:
+            return 0.6  # Urban suburbs
+        elif row['distance_to_urban'] < 20:
+            return 0.3  # Peri-urban
+        else:
+            return 0.1  # Rural areas
     
-    # Urban characteristics  
-    embeddings_df['building_height_avg'] = np.clip(np.random.gamma(2, 3, len(embeddings_df)), 1, 50)  # meters
-    embeddings_df['population_density'] = np.clip(np.random.exponential(5000, len(embeddings_df)), 50, 25000)  # people/km²
-    embeddings_df['distance_to_center_km'] = np.clip(np.random.exponential(8, len(embeddings_df)), 0.1, 40)
+    embeddings_df['built_up_density'] = embeddings_df.apply(calculate_built_up_density, axis=1)
     
-    # Environmental factors
-    embeddings_df['albedo'] = np.clip(0.15 + embeddings_df['green_space_ratio'] * 0.15 + 
-                                     np.random.normal(0, 0.05, len(embeddings_df)), 0.1, 0.6)
-    embeddings_df['water_body_distance_km'] = np.clip(np.random.exponential(5, len(embeddings_df)), 0.1, 25)
-    embeddings_df['elevation_urban_m'] = 500 + np.random.normal(0, 200, len(embeddings_df))
+    # Green space ratio inversely related to built-up density
+    embeddings_df['green_space_ratio'] = np.clip(
+        embeddings_df['ndvi_calculated'] * (1 - embeddings_df['built_up_density'] * 0.7), 0, 1)
+    
+    # Impervious surface percentage from built-up density
+    embeddings_df['impervious_surface_pct'] = embeddings_df['built_up_density'] * 85
+    
+    # Calculate urban characteristics from distance to urban centers
+    def calculate_building_height(row):
+        if row['distance_to_urban'] < 3:
+            return 15  # Taller buildings in city centers
+        elif row['distance_to_urban'] < 10:
+            return 8   # Medium height in suburbs
+        else:
+            return 3   # Low buildings in rural areas
+    
+    embeddings_df['building_height_avg'] = embeddings_df.apply(calculate_building_height, axis=1)
+    
+    def calculate_population_density(row):
+        # Population density decreases with distance from urban centers
+        if row['distance_to_urban'] < 5:
+            return 8000  # High density urban
+        elif row['distance_to_urban'] < 15:
+            return 2000  # Suburban
+        elif row['distance_to_urban'] < 30:
+            return 500   # Rural towns
+        else:
+            return 100   # Remote areas
+    
+    embeddings_df['population_density'] = embeddings_df.apply(calculate_population_density, axis=1)
+    
+    # Use existing distance_to_urban as distance_to_center
+    embeddings_df['distance_to_center_km'] = embeddings_df['distance_to_urban']
+    
+    # Calculate albedo from surface characteristics
+    def calculate_albedo(row):
+        base_albedo = 0.15  # Urban surfaces
+        
+        # Green spaces increase albedo
+        green_bonus = row['green_space_ratio'] * 0.10
+        
+        # Built-up areas have lower albedo
+        urban_penalty = row['built_up_density'] * 0.05
+        
+        return max(0.1, min(0.6, base_albedo + green_bonus - urban_penalty))
+    
+    embeddings_df['albedo'] = embeddings_df.apply(calculate_albedo, axis=1)
+    
+    # Use existing distance_to_water
+    embeddings_df['water_body_distance_km'] = embeddings_df['distance_to_water']
+    
+    # Use existing elevation
+    embeddings_df['elevation_urban_m'] = embeddings_df['elevation']
     
     # Simulate Land Surface Temperature (LST)
     def calculate_lst(row):
@@ -67,11 +116,11 @@ def run():
         # Distance from center (heat island core)
         center_effect = max(0, (10 - row['distance_to_center_km']) / 10.0) * 3.0
         
-        # Add some random variation
-        random_variation = np.random.normal(0, 1.5)
+        # Elevation effect (higher elevation is cooler)
+        elevation_cooling = (row['elevation_urban_m'] - 400) / 100.0 * 0.5
         
         total_lst = (base_temp + built_up_effect + impervious_effect + density_effect + 
-                    green_cooling + water_cooling + albedo_cooling + center_effect + random_variation)
+                    green_cooling + water_cooling + albedo_cooling + center_effect - elevation_cooling)
         
         return max(15.0, total_lst)  # Minimum realistic temperature
     

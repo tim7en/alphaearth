@@ -1,6 +1,6 @@
 region,total_sites_analyzed,suitable_sites,high_suitability_sites,priority_sites,avg_suitability_score,avg_survival_probability,recommended_area_km2,estimated_trees,estimated_cost_usd,best_species
-Karakalpakstan,33,30,16,0,0.7252337,0.4403439549935635,0.0,0,0,Ulmus pumila (Siberian Elm)
-Tashkent,33,31,17,0,0.7631641,0.46226892445440537,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
-Samarkand,50,49,25,0,0.7429017,0.44941354627601726,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
-Bukhara,34,32,16,0,0.7127359,0.43201499131314325,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
-Namangan,42,38,21,0,0.7157453,0.4282248428900953,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
+Karakalpakstan,50,0,0,0,0.00011200316,0.09999999999999998,0.0,0,0,Populus alba (White Poplar)
+Tashkent,50,50,10,0,0.74427176,0.5093945994293689,0.0,0,0,Populus alba (White Poplar)
+Samarkand,50,50,17,0,0.7626158,0.5144366490089892,0.0,0,0,Populus alba (White Poplar)
+Bukhara,50,0,0,0,0.19404621,0.11765275398798782,0.0,0,0,Populus alba (White Poplar)
+Namangan,50,50,30,0,0.7937706,0.5543757465410232,0.0,0,0,Populus alba (White Poplar)

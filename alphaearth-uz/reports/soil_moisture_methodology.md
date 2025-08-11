@@ -5,7 +5,7 @@
 - **Primary Data**: AlphaEarth satellite embeddings (optical + radar fusion)
 - **Geographic Scope**: Republic of Uzbekistan administrative boundaries
 - **Temporal Coverage**: 2017-2025 time series analysis
-- **Sample Size**: 100 observation points
+- **Sample Size**: 250 observation points
 - **Spatial Resolution**: Regional analysis with coordinate-based sampling
 
 ## Statistical Framework
@@ -33,7 +33,7 @@
 ### Study Regions
 - **Target Areas**: Tashkent, Karakalpakstan, Namangan
 - **Comparative Analysis**: Paired regional comparison with statistical testing
-- **Sample Distribution**: 54 total observations
+- **Sample Distribution**: 150 total observations
 
 ### Statistical Testing Protocol
 - **Mean Comparison**: Independent samples t-test
@@ -50,9 +50,9 @@
 ## Model Performance Assessment
 
 ### Cross-Validation Results
-- **Mean R² Score**: 0.531 (95% CI: 0.366 - 0.696)
-- **Mean RMSE**: 0.105 (95% CI: 0.091 - 0.119)
-- **Model Stability**: Standard deviation R² = 0.119
+- **Mean R² Score**: 0.999 (95% CI: 0.997 - 1.000)
+- **Mean RMSE**: 0.011 (95% CI: -0.000 - 0.022)
+- **Model Stability**: Standard deviation R² = 0.001
 
 ### Confidence Assessment
 - **Prediction Intervals**: Bootstrap-based 95% confidence bounds
@@ -82,5 +82,5 @@ All analyses conducted with fixed random seeds (seed=42) for reproducible result
 Code and methodology available in associated repository with complete parameter documentation.
 
 ---
-Generated: 2025-08-11 05:42 UTC
+Generated: 2025-08-11 06:22 UTC
 Analysis Framework: AlphaEarth Environmental Monitoring System
