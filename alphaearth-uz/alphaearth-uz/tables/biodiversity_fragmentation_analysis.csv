@@ -1,0 +1,16 @@
+patch_count,mean_patch_size,fragmentation_index,connectivity_index,region,ecosystem,total_area_samples,mean_habitat_quality,mean_species_richness
+332,1.0,1.0,0.0,Karakalpakstan,Desert/Arid,332,0.429482214571724,23.86144578313253
+259,1.0,1.0,0.0,Karakalpakstan,Riparian/Wetland,259,0.3578061649888908,22.285714285714285
+1,1.0,0.0,1.0,Karakalpakstan,Mountain/Forest,1,0.4902307944999541,24.0
+528,1.0,1.0,0.0,Tashkent,Agricultural,528,0.3957681786203318,22.89962121212121
+92,1.0,1.0,0.0,Tashkent,Urban/Developed,92,0.45427370329080496,24.27173913043478
+1,1.0,0.0,1.0,Tashkent,Steppe/Grassland,1,0.4915506608964997,20.0
+73,1.0,1.0,0.0,Samarkand,Urban/Developed,73,0.5085511888306626,25.164383561643834
+510,1.0,1.0,0.0,Samarkand,Steppe/Grassland,510,0.3895657455611768,22.819607843137256
+5,1.0,1.0,0.0,Bukhara,Desert/Arid,5,0.5641257616575434,27.4
+4,1.0,1.0,0.0,Bukhara,Riparian/Wetland,4,0.2754875107929802,18.25
+4,1.0,1.0,0.0,Bukhara,Steppe/Grassland,4,0.49318426255955133,25.5
+581,1.0,1.0,0.0,Bukhara,Mountain/Forest,581,0.41685942764941863,23.380378657487093
+26,1.0,1.0,0.0,Namangan,Agricultural,26,0.3698392512133646,21.307692307692307
+543,1.0,1.0,0.0,Namangan,Urban/Developed,543,0.3994849303322359,23.206261510128915
+41,1.0,1.0,0.0,Namangan,Steppe/Grassland,41,0.31106659583871626,21.365853658536587

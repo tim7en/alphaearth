@@ -1,0 +1,129 @@
+{
+  "qa_timestamp": "2025-08-10T19:58:51.170284",
+  "overall_status": "FAIL",
+  "module_checks": {
+    "soil_moisture": {
+      "missing": [
+        "tables/soil_moisture_regional_summary.csv",
+        "tables/soil_moisture_model_performance.csv",
+        "figs/soil_moisture_comprehensive_analysis.png"
+      ],
+      "existing": [],
+      "sizes": {}
+    },
+    "biodiversity": {
+      "missing": [
+        "tables/biodiversity_regional_summary.csv",
+        "tables/biodiversity_fragmentation_analysis.csv",
+        "figs/biodiversity_ecosystem_analysis.png"
+      ],
+      "existing": [],
+      "sizes": {}
+    },
+    "afforestation": {
+      "missing": [
+        "tables/afforestation_regional_analysis.csv",
+        "tables/afforestation_model_performance.csv"
+      ],
+      "existing": [
+        "data_final/afforestation_candidates.geojson"
+      ],
+      "sizes": {
+        "data_final/afforestation_candidates.geojson": 45
+      }
+    },
+    "degradation": {
+      "missing": [
+        "tables/degradation_regional_analysis.csv",
+        "figs/degradation_overview_analysis.png"
+      ],
+      "existing": [
+        "tables/degradation_hotspots.csv"
+      ],
+      "sizes": {
+        "tables/degradation_hotspots.csv": 44
+      }
+    },
+    "urban_heat": {
+      "missing": [
+        "tables/urban_heat_regional_analysis.csv",
+        "figs/urban_heat_overview_analysis.png"
+      ],
+      "existing": [
+        "tables/urban_heat_scores.csv"
+      ],
+      "sizes": {
+        "tables/urban_heat_scores.csv": 32
+      }
+    }
+  },
+  "data_quality_checks": {
+    "tables/degradation_hotspots.csv": {
+      "rows": 3,
+      "columns": 2,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 2,
+      "text_columns": 0,
+      "data_types": {
+        "cell_id": "int64",
+        "degradation_score": "float64"
+      },
+      "status": "PASS"
+    },
+    "tables/urban_heat_scores.csv": {
+      "rows": 1,
+      "columns": 2,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 0,
+      "text_columns": 2,
+      "data_types": {
+        "district": "object",
+        "heat_risk": "object"
+      },
+      "status": "PASS"
+    }
+  },
+  "file_integrity_checks": {
+    "total_expected": 15,
+    "total_existing": 3,
+    "total_missing": 12,
+    "missing_files": [
+      "tables/soil_moisture_regional_summary.csv",
+      "tables/soil_moisture_model_performance.csv",
+      "figs/soil_moisture_comprehensive_analysis.png",
+      "tables/biodiversity_regional_summary.csv",
+      "tables/biodiversity_fragmentation_analysis.csv",
+      "figs/biodiversity_ecosystem_analysis.png",
+      "tables/afforestation_regional_analysis.csv",
+      "tables/afforestation_model_performance.csv",
+      "tables/degradation_regional_analysis.csv",
+      "figs/degradation_overview_analysis.png",
+      "tables/urban_heat_regional_analysis.csv",
+      "figs/urban_heat_overview_analysis.png"
+    ],
+    "file_sizes": {
+      "data_final/afforestation_candidates.geojson": 45,
+      "tables/degradation_hotspots.csv": 44,
+      "tables/urban_heat_scores.csv": 32
+    }
+  },
+  "statistical_validation": {},
+  "recommendations": [
+    "Re-run missing modules to generate all expected outputs",
+    "Implement cross-validation for model robustness assessment",
+    "Add uncertainty quantification to predictions",
+    "Validate results with external ground-truth data where available",
+    "Implement automated monitoring for data drift",
+    "Document model limitations and appropriate use cases"
+  ],
+  "critical_issues": [
+    "Missing 12 expected output files"
+  ],
+  "warnings": [
+    "GeoJSON file data_final/afforestation_candidates.geojson is very small (45 bytes)",
+    "CSV file tables/degradation_hotspots.csv is very small (44 bytes)",
+    "CSV file tables/urban_heat_scores.csv is very small (32 bytes)"
+  ]
+}

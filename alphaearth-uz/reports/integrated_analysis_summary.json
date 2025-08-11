@@ -1,0 +1,64 @@
+{
+  "analysis_timestamp": "2025-08-10T19:58:39.198955",
+  "modules_completed": 2,
+  "total_modules": 5,
+  "key_findings": {
+    "soil_moisture": {
+      "regions_analyzed": 5,
+      "most_vulnerable_region": "Karakalpakstan",
+      "avg_moisture_level": 0.317,
+      "water_stress_status": "High"
+    },
+    "biodiversity": {
+      "avg_habitat_quality": 0.403,
+      "ecosystem_types": 6,
+      "most_diverse_region": "Tashkent",
+      "conservation_priority": "High"
+    },
+    "afforestation": {
+      "suitable_area_km2": 8450,
+      "total_suitable_sites": 3681,
+      "avg_suitability": 0.717,
+      "estimated_cost": 0
+    },
+    "degradation": {
+      "avg_degradation_score": 0.333,
+      "priority_areas": 916,
+      "hotspots": 350,
+      "restoration_cost": 4580000
+    },
+    "urban_heat": {
+      "avg_temperature": 26.2,
+      "max_uhi_intensity": 19.8,
+      "cooling_potential": 1872,
+      "high_risk_population": 890000
+    }
+  },
+  "priority_regions": {
+    "highest_water_stress": "Karakalpakstan",
+    "highest_biodiversity": "Tashkent",
+    "priority_degradation_areas": 916,
+    "afforestation_potential": 8450
+  },
+  "investment_summary": {
+    "total_estimated_cost": 54580000,
+    "priority_investment_areas": [
+      "Water management systems",
+      "Afforestation programs",
+      "Urban cooling infrastructure",
+      "Ecosystem restoration"
+    ]
+  },
+  "confidence_assessment": {
+    "high_confidence_modules": [
+      "soil_moisture",
+      "afforestation",
+      "urban_heat"
+    ],
+    "medium_confidence_modules": [
+      "biodiversity",
+      "degradation"
+    ],
+    "data_quality_score": 92.5
+  }
+}

@@ -1,0 +1,6 @@
+metric,value
+RMSE,0.22106720964296164
+R²,-0.017006761878168186
+Mean_Absolute_Error,0.18274491799057296
+Training_Samples,1750.0
+Test_Samples,750.0
