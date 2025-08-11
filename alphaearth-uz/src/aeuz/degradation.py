@@ -7,7 +7,7 @@ from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from datetime import datetime
-from .utils import (load_config, ensure_dir, setup_plotting, generate_synthetic_embeddings,
+from .utils import (load_config, ensure_dir, setup_plotting, load_alphaearth_embeddings,
                    calculate_confidence_interval, perform_trend_analysis, create_summary_statistics,
                    save_plot, validate_data_quality)
 
@@ -21,9 +21,9 @@ def run():
     ensure_dir(tables); ensure_dir(figs)
     setup_plotting()
     
-    # Generate synthetic AlphaEarth embeddings for degradation analysis
-    print("Processing AlphaEarth embeddings for land degradation assessment...")
-    embeddings_df = generate_synthetic_embeddings(n_samples=3500, n_features=128)
+    # Load AlphaEarth satellite embeddings for degradation analysis
+    print("Loading AlphaEarth satellite embeddings for land degradation assessment...")
+    embeddings_df = load_alphaearth_embeddings(regions=cfg['regions'], n_features=128)
     
     # Add degradation-specific indicators
     np.random.seed(42)

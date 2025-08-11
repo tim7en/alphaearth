@@ -1,6 +1,6 @@
 region,total_sites_analyzed,suitable_sites,high_suitability_sites,priority_sites,avg_suitability_score,avg_survival_probability,recommended_area_km2,estimated_trees,estimated_cost_usd,best_species
-Karakalpakstan,800,736,343,0,0.7192055,0.4284656081269091,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
-Tashkent,786,725,326,0,0.7170775,0.4311877454616834,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
-Samarkand,839,761,362,0,0.7159002,0.4299446418059408,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
-Bukhara,792,735,335,0,0.716992,0.4285428268567047,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
-Namangan,783,724,351,0,0.71768963,0.4320222841039611,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
+Karakalpakstan,33,30,16,0,0.7252337,0.4403439549935635,0.0,0,0,Ulmus pumila (Siberian Elm)
+Tashkent,33,31,17,0,0.7631641,0.46226892445440537,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
+Samarkand,50,49,25,0,0.7429017,0.44941354627601726,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
+Bukhara,34,32,16,0,0.7127359,0.43201499131314325,0.0,0,0,Elaeagnus angustifolia (Russian Olive)
+Namangan,42,38,21,0,0.7157453,0.4282248428900953,0.0,0,0,Elaeagnus angustifolia (Russian Olive)

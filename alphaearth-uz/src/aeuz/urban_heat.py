@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error
 from datetime import datetime
-from .utils import (load_config, ensure_dir, setup_plotting, generate_synthetic_embeddings,
+from .utils import (load_config, ensure_dir, setup_plotting, load_alphaearth_embeddings,
                    calculate_confidence_interval, perform_trend_analysis, create_summary_statistics,
                    save_plot, validate_data_quality, perform_cross_validation, 
                    enhance_model_with_feature_selection, create_pilot_study_analysis,
@@ -24,9 +24,9 @@ def run():
     ensure_dir(tables); ensure_dir(figs)
     setup_plotting()
     
-    # Generate synthetic AlphaEarth embeddings for urban heat analysis
-    print("Processing AlphaEarth embeddings for urban heat assessment...")
-    embeddings_df = generate_synthetic_embeddings(n_samples=2800, n_features=96)
+    # Load AlphaEarth satellite embeddings for urban heat analysis
+    print("Loading AlphaEarth satellite embeddings for urban heat assessment...")
+    embeddings_df = load_alphaearth_embeddings(regions=cfg['regions'], n_features=96)
     
     # Add urban heat-specific variables
     np.random.seed(42)
