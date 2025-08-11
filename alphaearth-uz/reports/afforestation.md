@@ -150,7 +150,7 @@ degradation_risk_index       0.10       0.70         0.10         0.20
 ## Risk Assessment & Mitigation
 
 ### High-Risk Factors
-1. **Water Scarcity:** Drought stress in several regions
+1. **Water Scarcity:** Drought stress in multiple regions
 2. **Climate Variability:** Temperature and precipitation fluctuations
 3. **Soil Degradation:** Site preparation challenges
 4. **Maintenance Requirements:** Long-term care for establishment

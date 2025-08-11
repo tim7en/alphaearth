@@ -1,5 +1,5 @@
 land_use_change_5yr,disturbance_score_count,disturbance_score_mean,agricultural_encroachment_m_mean,settlement_proximity_m_mean,pollution_sources_nearby_mean
-agricultural_expansion,57,0.431,37.398,85631.909,1.491
-restoration,17,0.388,0.0,108502.09,2.059
-stable,156,0.386,16.11,91189.258,1.596
-urbanization,20,0.422,20.733,99260.318,1.55
+agricultural_expansion,65,0.422,35.54,89704.378,1.308
+restoration,11,0.377,0.307,99994.543,1.455
+stable,149,0.381,17.035,93432.59,1.557
+urbanization,25,0.428,8.315,83364.178,1.92

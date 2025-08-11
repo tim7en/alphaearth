@@ -495,7 +495,7 @@
         "area_size_km2": 212.08716761784314,
         "forest_cover": 0.74,
         "biodiversity_index": 0.425,
-        "anomaly_score": 2.081976536464786,
+        "anomaly_score": 2.0819765364647864,
         "primary_threat": "none",
         "management_issue": "limited",
         "incident_type": "conservation_concern"
@@ -520,7 +520,7 @@
         "area_size_km2": 194.33489171476373,
         "forest_cover": 0.74,
         "biodiversity_index": 0.425,
-        "anomaly_score": 2.36070520444453,
+        "anomaly_score": 2.3607052044445305,
         "primary_threat": "low",
         "management_issue": "limited",
         "incident_type": "conservation_concern"
@@ -545,7 +545,7 @@
         "area_size_km2": 176.80652766204497,
         "forest_cover": 0.74,
         "biodiversity_index": 0.425,
-        "anomaly_score": 2.36070520444453,
+        "anomaly_score": 2.3607052044445305,
         "primary_threat": "low",
         "management_issue": "limited",
         "incident_type": "conservation_concern"
@@ -604,7 +604,7 @@
   ],
   "metadata": {
     "total_incidents": 24,
-    "generation_date": "2025-08-11T06:22:46.826602",
+    "generation_date": "2025-08-11T11:33:56.788009",
     "analysis_type": "AlphaEarth Protected Area Disturbance Assessment",
     "critical_areas": 0
   }

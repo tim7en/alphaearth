@@ -1,0 +1,19 @@
+# Google Earth Engine Enhanced Urban Heat Analysis Requirements
+# Add these packages to your existing requirements.txt
+
+# Google Earth Engine API
+earthengine-api>=0.1.384
+
+# Enhanced geospatial libraries
+geopandas>=0.14.0
+rasterio>=1.3.9
+pyproj>=3.6.1
+cartopy>=0.22.0
+
+# Optional: Additional Earth Engine utilities
+geemap>=0.28.0
+
+# Note: After installation, you need to authenticate GEE:
+# 1. Run: earthengine authenticate
+# 2. Follow the authentication flow in your browser
+# 3. Or use service account authentication for automated workflows

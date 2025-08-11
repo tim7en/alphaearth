@@ -12,7 +12,9 @@ import xgboost as xgb
 from datetime import datetime
 from .utils import (load_config, ensure_dir, setup_plotting, load_alphaearth_embeddings,
                    calculate_confidence_interval, perform_trend_analysis, create_summary_statistics,
-                   save_plot, validate_data_quality)
+                   save_plot, validate_data_quality, perform_cross_validation, 
+                   enhance_model_with_feature_selection, create_pilot_study_analysis,
+                   generate_scientific_methodology_report, create_confidence_visualization)
 
 def run():
     """Comprehensive afforestation suitability analysis with ML-based site selection"""
@@ -809,7 +811,7 @@ The most critical factors for afforestation success:
 ## Risk Assessment & Mitigation
 
 ### High-Risk Factors
-1. **Water Scarcity:** Drought stress in {declining_trends if 'declining_trends' in locals() else 'several'} regions
+1. **Water Scarcity:** Drought stress in multiple regions
 2. **Climate Variability:** Temperature and precipitation fluctuations
 3. **Soil Degradation:** Site preparation challenges
 4. **Maintenance Requirements:** Long-term care for establishment

@@ -10,7 +10,9 @@ from scipy.spatial.distance import pdist, squareform
 from datetime import datetime
 from .utils import (load_config, ensure_dir, setup_plotting, load_alphaearth_embeddings,
                    calculate_confidence_interval, perform_trend_analysis, create_summary_statistics,
-                   save_plot, validate_data_quality)
+                   save_plot, validate_data_quality, perform_cross_validation, 
+                   enhance_model_with_feature_selection, create_pilot_study_analysis,
+                   generate_scientific_methodology_report, create_confidence_visualization)
 
 def run():
     """Comprehensive biodiversity analysis with ecosystem fragmentation assessment"""
