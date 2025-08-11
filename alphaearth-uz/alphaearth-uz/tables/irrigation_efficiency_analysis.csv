@@ -1,0 +1,6 @@
+,irrigation_efficiency,irrigation_efficiency,irrigation_efficiency,estimated_crop_yield,estimated_crop_yield
+,mean,std,count,mean,std
+irrigation_system,,,,,
+drip,0.598,0.165,63,7.842,8.373
+furrow,0.586,0.164,138,7.919,8.577
+sprinkler,0.571,0.125,49,6.69,8.418
