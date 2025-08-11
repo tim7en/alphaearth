@@ -1,0 +1,6 @@
+region,soil_moisture_volumetric_mean,soil_moisture_volumetric_std,soil_moisture_volumetric_min,soil_moisture_volumetric_max,irrigation_efficiency_mean,irrigation_efficiency_std,water_use_efficiency_mean,water_use_efficiency_std,estimated_crop_yield_mean,estimated_crop_yield_std,comprehensive_water_stress_mean,comprehensive_water_stress_std,biomass_productivity_mean,biomass_productivity_std,agricultural_area_pct_first,sample_id_count
+Bukhara,0.395,0.0,0.395,0.395,0.489,0.101,0.425,0.0,0.324,0.0,0.283,0.0,0.157,0.0,35,80
+Karakalpakstan,0.327,0.0,0.327,0.327,0.453,0.105,0.382,0.0,0.191,0.0,0.388,0.0,0.094,0.0,15,80
+Namangan,0.55,0.0,0.55,0.55,0.692,0.105,0.595,0.0,0.88,0.0,0.192,0.0,0.402,0.0,60,80
+Samarkand,0.55,0.0,0.55,0.55,0.611,0.098,0.51,0.0,0.683,0.0,0.184,0.0,0.293,0.0,55,80
+Tashkent,0.532,0.0,0.532,0.532,0.736,0.096,0.638,0.0,1.102,0.0,0.132,0.0,0.567,0.0,45,80
