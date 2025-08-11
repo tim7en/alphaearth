@@ -3,93 +3,565 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+from sklearn.linear_model import ElasticNet
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.preprocessing import StandardScaler
 from datetime import datetime
+import warnings
+warnings.filterwarnings('ignore')
 from .utils import (load_config, ensure_dir, setup_plotting, generate_synthetic_embeddings,
                    calculate_confidence_interval, perform_trend_analysis, create_summary_statistics,
-                   save_plot, validate_data_quality)
+                   save_plot, validate_data_quality, perform_cross_validation, 
+                   enhance_model_with_feature_selection, create_pilot_study_analysis,
+                   generate_scientific_methodology_report, create_confidence_visualization)
 
 def run():
-    """Comprehensive soil moisture analysis with AlphaEarth embeddings"""
-    print("Running comprehensive soil moisture analysis...")
+    """Enhanced comprehensive soil moisture analysis with cross-validation and pilot studies"""
+    print("Running enhanced comprehensive soil moisture analysis...")
     
     cfg = load_config()
     tables = cfg["paths"]["tables"]
     figs = cfg["paths"]["figs"]
-    ensure_dir(tables); ensure_dir(figs)
+    reports = "reports"
+    ensure_dir(tables); ensure_dir(figs); ensure_dir(reports)
     setup_plotting()
     
-    # Generate synthetic AlphaEarth embeddings for analysis
-    print("Processing AlphaEarth embeddings...")
-    embeddings_df = generate_synthetic_embeddings(n_samples=2500, n_features=128)
+    # Generate enhanced synthetic AlphaEarth embeddings for analysis
+    print("Processing AlphaEarth embeddings with enhanced soil moisture modeling...")
+    embeddings_df = generate_synthetic_embeddings(n_samples=2000, n_features=64)  # Reduced for efficiency
+    
+    # Enhanced soil moisture feature engineering
+    np.random.seed(42)
+    
+    # Add soil texture and composition features
+    embeddings_df['clay_content'] = np.clip(np.random.beta(2, 5, len(embeddings_df)) * 100, 5, 60)
+    embeddings_df['sand_content'] = np.clip(np.random.beta(3, 2, len(embeddings_df)) * 100, 10, 80)
+    embeddings_df['silt_content'] = 100 - embeddings_df['clay_content'] - embeddings_df['sand_content']
+    embeddings_df['silt_content'] = np.clip(embeddings_df['silt_content'], 5, 85)
+    
+    # Topographic and drainage features
+    embeddings_df['elevation'] = np.clip(np.random.normal(500, 300, len(embeddings_df)), 100, 2000)
+    embeddings_df['slope'] = np.clip(np.random.exponential(5, len(embeddings_df)), 0, 30)
+    embeddings_df['aspect'] = np.random.uniform(0, 360, len(embeddings_df))
+    embeddings_df['drainage_class'] = np.random.choice(['well', 'moderate', 'poor'], 
+                                                       len(embeddings_df), p=[0.4, 0.4, 0.2])
+    
+    # Climate and weather factors
+    embeddings_df['annual_precip'] = np.clip(np.random.gamma(2, 150, len(embeddings_df)), 50, 800)
+    embeddings_df['potential_evapotranspiration'] = np.clip(
+        np.random.normal(1200, 200, len(embeddings_df)), 800, 1800)
+    embeddings_df['growing_season_days'] = np.clip(np.random.normal(180, 30, len(embeddings_df)), 120, 250)
+    
+    # Land use and management
+    embeddings_df['irrigation_type'] = np.random.choice(['none', 'furrow', 'drip', 'sprinkler'], 
+                                                        len(embeddings_df), p=[0.3, 0.4, 0.2, 0.1])
+    embeddings_df['crop_type'] = np.random.choice(['cotton', 'wheat', 'rice', 'fruit', 'fallow'], 
+                                                  len(embeddings_df), p=[0.35, 0.25, 0.15, 0.15, 0.1])
+    
+    # Enhanced soil moisture calculation
+    def calculate_enhanced_soil_moisture(row):
+        """Enhanced soil moisture calculation with multiple factors"""
+        base_moisture = 0.3  # Base moisture level
+        
+        # Precipitation effect (40% weight)
+        precip_effect = min(0.4, row['annual_precip'] / 1000.0)
+        
+        # Soil texture effect (25% weight)
+        clay_effect = row['clay_content'] / 100.0 * 0.15  # Clay retains water
+        sand_penalty = row['sand_content'] / 100.0 * 0.1  # Sand drains quickly
+        
+        # Topographic effect (15% weight)
+        slope_penalty = min(0.1, row['slope'] / 30.0 * 0.1)  # Steep slopes drain
+        elevation_effect = max(-0.05, min(0.05, (1000 - row['elevation']) / 1000.0 * 0.05))
+        
+        # Irrigation effect (10% weight)
+        irrigation_bonus = {'none': 0, 'furrow': 0.05, 'drip': 0.08, 'sprinkler': 0.06}
+        irrigation_effect = irrigation_bonus.get(row['irrigation_type'], 0)
+        
+        # Drainage effect (10% weight)
+        drainage_effect = {'well': -0.03, 'moderate': 0, 'poor': 0.05}
+        drainage_bonus = drainage_effect.get(row['drainage_class'], 0)
+        
+        # Regional climate factors
+        regional_factors = {
+            'Karakalpakstan': -0.15,  # Arid region
+            'Tashkent': 0.05,         # Moderate
+            'Samarkand': 0.0,         # Balanced
+            'Bukhara': -0.10,         # Dry
+            'Namangan': 0.10          # Valley, more water
+        }
+        regional_effect = regional_factors.get(row['region'], 0)
+        
+        # Add random variation (realistic measurement uncertainty)
+        random_variation = np.random.normal(0, 0.05)
+        
+        total_moisture = (base_moisture + precip_effect + clay_effect - sand_penalty 
+                         - slope_penalty + elevation_effect + irrigation_effect 
+                         + drainage_bonus + regional_effect + random_variation)
+        
+        return np.clip(total_moisture, 0.05, 0.9)
+    
+    # Calculate enhanced soil moisture
+    embeddings_df['soil_moisture_enhanced'] = embeddings_df.apply(calculate_enhanced_soil_moisture, axis=1)
+    
+    # Add measurement uncertainty
+    embeddings_df['soil_moisture_uncertainty'] = np.random.uniform(0.02, 0.08, len(embeddings_df))
     
     # Data quality validation
-    required_cols = ['region', 'latitude', 'longitude', 'year', 'soil_moisture_est']
+    required_cols = ['region', 'latitude', 'longitude', 'year', 'soil_moisture_enhanced']
     quality_report = validate_data_quality(embeddings_df, required_cols)
     print(f"Data quality score: {quality_report['quality_score']:.1f}%")
     
-    # Soil moisture modeling using machine learning
-    print("Building soil moisture prediction models...")
+    # Enhanced soil moisture modeling using machine learning
+    print("Building enhanced soil moisture prediction models with feature selection...")
     
     # Feature engineering
     embedding_cols = [col for col in embeddings_df.columns if col.startswith('embed_')]
-    feature_cols = embedding_cols + ['latitude', 'longitude', 'water_stress_indicator', 
-                                   'vegetation_index', 'temperature_anomaly']
+    environmental_features = [
+        'latitude', 'longitude', 'elevation', 'slope', 'annual_precip',
+        'potential_evapotranspiration', 'clay_content', 'sand_content', 'silt_content',
+        'water_stress_indicator', 'vegetation_index', 'temperature_anomaly'
+    ]
     
-    X = embeddings_df[feature_cols].fillna(0)
-    y = embeddings_df['soil_moisture_est'].fillna(embeddings_df['soil_moisture_est'].mean())
+    # Create categorical feature encodings
+    irrigation_dummies = pd.get_dummies(embeddings_df['irrigation_type'], prefix='irrigation')
+    drainage_dummies = pd.get_dummies(embeddings_df['drainage_class'], prefix='drainage')
+    crop_dummies = pd.get_dummies(embeddings_df['crop_type'], prefix='crop')
     
-    # Train-test split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+    # Combine all features
+    feature_df = pd.concat([
+        embeddings_df[embedding_cols + environmental_features],
+        irrigation_dummies,
+        drainage_dummies,
+        crop_dummies
+    ], axis=1)
     
-    # Random Forest model for soil moisture prediction
-    rf_model = RandomForestRegressor(n_estimators=100, random_state=42, max_depth=10)
-    rf_model.fit(X_train, y_train)
+    # Enhanced model comparison
+    models_to_test = {
+        'Random Forest': RandomForestRegressor(n_estimators=200, max_depth=15, random_state=42),
+        'Gradient Boosting': GradientBoostingRegressor(n_estimators=150, max_depth=8, random_state=42),
+        'Elastic Net': ElasticNet(alpha=0.1, l1_ratio=0.5, random_state=42)
+    }
     
-    # Model evaluation
-    y_pred = rf_model.predict(X_test)
-    rmse = np.sqrt(mean_squared_error(y_test, y_pred))
-    r2 = r2_score(y_test, y_pred)
+    best_model_results = {}
+    best_r2 = -np.inf
+    best_model_name = ""
     
-    print(f"Soil moisture model - RMSE: {rmse:.3f}, R²: {r2:.3f}")
+    X = feature_df.fillna(feature_df.mean())
+    y = embeddings_df['soil_moisture_enhanced']
     
-    # Generate predictions for all data
-    embeddings_df['soil_moisture_predicted'] = rf_model.predict(X)
+    # Test multiple models with cross-validation (reduced complexity)
+    for model_name, model in models_to_test.items():
+        print(f"Testing {model_name}...")
+        
+        # Perform cross-validation with fewer folds for efficiency
+        cv_results = perform_cross_validation(X.values, y.values, model, 'regression', cv_folds=5)
+        
+        if cv_results['r2_mean'] > best_r2:
+            best_r2 = cv_results['r2_mean']
+            best_model_name = model_name
+            best_model_results = cv_results
+            best_model_results['model_name'] = model_name
     
-    # Water stress analysis by region
-    print("Analyzing water stress patterns...")
+    print(f"Best model: {best_model_name} with R² = {best_r2:.3f}")
     
-    # Define water stress categories
-    def categorize_water_stress(moisture_level):
-        if moisture_level < 0.2:
+    # Enhanced feature selection with best model
+    best_model = models_to_test[best_model_name]
+    model_enhancement = enhance_model_with_feature_selection(
+        X, y, best_model, 'regression'
+    )
+    
+    # Final model training with selected features
+    final_model = model_enhancement['model']
+    X_selected = model_enhancement['X_selected']
+    y_clean = model_enhancement['y_clean']
+    
+    # Generate predictions with confidence intervals
+    embeddings_df['soil_moisture_predicted'] = final_model.predict(X_selected)
+    
+    # Calculate prediction intervals using bootstrap (reduced iterations)
+    n_bootstrap = 50  # Reduced for efficiency
+    bootstrap_predictions = []
+    
+    for i in range(n_bootstrap):
+        # Bootstrap sample
+        idx = np.random.choice(len(X_selected), size=len(X_selected), replace=True)
+        X_boot = X_selected.iloc[idx]
+        y_boot = y_clean.iloc[idx]
+        
+        # Fit model on bootstrap sample
+        boot_model = models_to_test[best_model_name]
+        boot_model.fit(X_boot, y_boot)
+        
+        # Predict on original data
+        pred_boot = boot_model.predict(X_selected)
+        bootstrap_predictions.append(pred_boot)
+    
+    # Calculate prediction confidence intervals
+    bootstrap_predictions = np.array(bootstrap_predictions)
+    embeddings_df['soil_moisture_pred_lower'] = np.percentile(bootstrap_predictions, 2.5, axis=0)
+    embeddings_df['soil_moisture_pred_upper'] = np.percentile(bootstrap_predictions, 97.5, axis=0)
+    embeddings_df['prediction_uncertainty'] = (embeddings_df['soil_moisture_pred_upper'] - 
+                                             embeddings_df['soil_moisture_pred_lower']) / 2
+    
+    # Pilot study: Regional comparison
+    print("Conducting pilot study: Regional soil moisture comparison...")
+    
+    pilot_regions = ['Tashkent', 'Karakalpakstan', 'Namangan']  # Urban, arid, agricultural
+    pilot_study = create_pilot_study_analysis(
+        embeddings_df, pilot_regions, 'soil_moisture_enhanced', 
+        model_enhancement['selected_features'], "Soil Moisture Regional Pilot Study"
+    )
+    
+    # Water stress analysis with confidence intervals
+    print("Analyzing water stress patterns with statistical confidence...")
+    
+    def categorize_water_stress_enhanced(moisture_level, uncertainty):
+        """Enhanced water stress categorization with uncertainty consideration"""
+        # Adjust thresholds based on uncertainty
+        if moisture_level - uncertainty < 0.15:
             return "Severe"
-        elif moisture_level < 0.35:
+        elif moisture_level - uncertainty < 0.25:
             return "High"
-        elif moisture_level < 0.5:
+        elif moisture_level - uncertainty < 0.4:
             return "Moderate"
         else:
             return "Low"
     
-    embeddings_df['water_stress_category'] = embeddings_df['soil_moisture_predicted'].apply(categorize_water_stress)
+    embeddings_df['water_stress_category'] = embeddings_df.apply(
+        lambda row: categorize_water_stress_enhanced(row['soil_moisture_predicted'], 
+                                                   row['prediction_uncertainty']), axis=1)
     
-    # Regional summary statistics
-    summary_stats = create_summary_statistics(
-        embeddings_df, 'region', 
-        ['soil_moisture_predicted', 'water_stress_indicator', 'vegetation_index']
-    )
+    # Regional summary statistics with confidence intervals
+    regional_stats = []
+    for region in cfg['regions']:
+        region_data = embeddings_df[embeddings_df['region'] == region]
+        
+        if len(region_data) > 0:
+            moisture_values = region_data['soil_moisture_predicted'].values
+            ci_low, ci_high = calculate_confidence_interval(moisture_values)
+            
+            stats = {
+                'region': region,
+                'n_samples': len(region_data),
+                'mean_moisture': moisture_values.mean(),
+                'std_moisture': moisture_values.std(),
+                'ci_lower': ci_low,
+                'ci_upper': ci_high,
+                'severe_stress_pct': (region_data['water_stress_category'] == 'Severe').mean() * 100,
+                'high_stress_pct': (region_data['water_stress_category'] == 'High').mean() * 100,
+                'avg_prediction_uncertainty': region_data['prediction_uncertainty'].mean(),
+                'model_confidence_score': (1 - region_data['prediction_uncertainty'].mean()) * 100
+            }
+            regional_stats.append(stats)
     
-    # Temporal trend analysis
-    print("Performing temporal trend analysis...")
+    regional_summary_df = pd.DataFrame(regional_stats)
+    
+    # Temporal trend analysis with enhanced statistics
+    print("Performing enhanced temporal trend analysis...")
     trend_results = {}
     
     for region in cfg['regions']:
         region_data = embeddings_df[embeddings_df['region'] == region]
-        yearly_moisture = region_data.groupby('year')['soil_moisture_predicted'].mean()
+        yearly_moisture = region_data.groupby('year')['soil_moisture_predicted'].agg(['mean', 'std', 'count'])
         
         if len(yearly_moisture) > 2:
-            trend_stats = perform_trend_analysis(yearly_moisture.values, yearly_moisture.index.values)
+            # Calculate weighted trends (accounting for sample size)
+            weights = yearly_moisture['count'] / yearly_moisture['count'].sum()
+            weighted_means = yearly_moisture['mean'].values
+            
+            trend_stats = perform_trend_analysis(weighted_means, yearly_moisture.index.values)
+            
+            # Add confidence in trend
+            trend_stats['trend_confidence'] = 1 - yearly_moisture['std'].mean()
+            trend_stats['sample_representativeness'] = yearly_moisture['count'].mean()
+            
+            trend_results[region] = trend_stats
+    
+    # Create enhanced comprehensive visualizations
+    print("Generating enhanced visualizations with confidence intervals...")
+    
+    # 1. Enhanced regional water stress distribution with confidence intervals
+    fig, axes = plt.subplots(2, 2, figsize=(18, 14))
+    
+    # Moisture by region with confidence intervals
+    sns.boxplot(data=embeddings_df, x='region', y='soil_moisture_predicted', ax=axes[0,0])
+    axes[0,0].set_title('Soil Moisture Distribution by Region\n(with 95% Confidence Intervals)')
+    axes[0,0].tick_params(axis='x', rotation=45)
+    
+    # Add confidence intervals to boxplot
+    for i, region in enumerate(cfg['regions']):
+        region_data = embeddings_df[embeddings_df['region'] == region]['soil_moisture_predicted']
+        if len(region_data) > 0:
+            ci_low, ci_high = calculate_confidence_interval(region_data.values)
+            axes[0,0].plot([i-0.2, i+0.2], [ci_low, ci_low], 'r-', linewidth=2)
+            axes[0,0].plot([i-0.2, i+0.2], [ci_high, ci_high], 'r-', linewidth=2)
+            axes[0,0].plot([i, i], [ci_low, ci_high], 'r-', linewidth=1)
+    
+    # Water stress category distribution
+    stress_counts = embeddings_df['water_stress_category'].value_counts()
+    colors = {'Severe': 'darkred', 'High': 'red', 'Moderate': 'orange', 'Low': 'green'}
+    axes[0,1].pie(stress_counts.values, labels=stress_counts.index, autopct='%1.1f%%',
+                  colors=[colors.get(x, 'gray') for x in stress_counts.index])
+    axes[0,1].set_title('Water Stress Category Distribution\n(Enhanced Classification)')
+    
+    # Model performance comparison
+    model_comparison_data = pd.DataFrame({
+        'Model': list(models_to_test.keys()),
+        'Cross_Val_R2': [perform_cross_validation(X.values, y.values, model, 'regression')['r2_mean'] 
+                        for model in models_to_test.values()]
+    })
+    
+    sns.barplot(data=model_comparison_data, x='Model', y='Cross_Val_R2', ax=axes[1,0])
+    axes[1,0].set_title('Model Performance Comparison\n(8-Fold Cross-Validation)')
+    axes[1,0].tick_params(axis='x', rotation=45)
+    axes[1,0].set_ylabel('R² Score')
+    
+    # Prediction uncertainty analysis
+    axes[1,1].scatter(embeddings_df['soil_moisture_predicted'], 
+                     embeddings_df['prediction_uncertainty'],
+                     alpha=0.6, c=embeddings_df['region'].astype('category').cat.codes, cmap='tab10')
+    axes[1,1].set_xlabel('Predicted Soil Moisture')
+    axes[1,1].set_ylabel('Prediction Uncertainty')
+    axes[1,1].set_title('Prediction Confidence Analysis\n(Lower uncertainty = Higher confidence)')
+    
+    save_plot(fig, f"{figs}/soil_moisture_enhanced_analysis.png", 
+              "Enhanced Soil Moisture Analysis - Uzbekistan")
+    
+    # 2. Spatial analysis with confidence mapping
+    fig, axes = plt.subplots(1, 3, figsize=(22, 7))
+    
+    # Spatial moisture distribution
+    scatter1 = axes[0].scatter(embeddings_df['longitude'], embeddings_df['latitude'], 
+                              c=embeddings_df['soil_moisture_predicted'], cmap='Blues', 
+                              alpha=0.7, s=20)
+    axes[0].set_xlabel('Longitude')
+    axes[0].set_ylabel('Latitude')
+    axes[0].set_title('Predicted Soil Moisture Distribution')
+    plt.colorbar(scatter1, ax=axes[0], label='Soil Moisture')
+    
+    # Uncertainty mapping
+    scatter2 = axes[1].scatter(embeddings_df['longitude'], embeddings_df['latitude'], 
+                              c=embeddings_df['prediction_uncertainty'], cmap='Reds', 
+                              alpha=0.7, s=20)
+    axes[1].set_xlabel('Longitude')
+    axes[1].set_ylabel('Latitude')
+    axes[1].set_title('Prediction Uncertainty Map')
+    plt.colorbar(scatter2, ax=axes[1], label='Uncertainty')
+    
+    # High confidence predictions (low uncertainty)
+    high_confidence = embeddings_df[embeddings_df['prediction_uncertainty'] < 
+                                   embeddings_df['prediction_uncertainty'].quantile(0.25)]
+    scatter3 = axes[2].scatter(high_confidence['longitude'], high_confidence['latitude'], 
+                              c=high_confidence['soil_moisture_predicted'], cmap='viridis', 
+                              alpha=0.8, s=25)
+    axes[2].set_xlabel('Longitude')
+    axes[2].set_ylabel('Latitude')
+    axes[2].set_title('High Confidence Predictions\n(Top 25% confidence)')
+    plt.colorbar(scatter3, ax=axes[2], label='Soil Moisture (High Confidence)')
+    
+    save_plot(fig, f"{figs}/soil_moisture_spatial_confidence.png", 
+              "Spatial Soil Moisture Analysis with Confidence - Uzbekistan")
+    
+    # 3. Pilot study visualization
+    if pilot_study and 'statistical_comparisons' in pilot_study:
+        fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+        
+        # Regional comparison in pilot study
+        pilot_data = embeddings_df[embeddings_df['region'].isin(pilot_regions)]
+        sns.boxplot(data=pilot_data, x='region', y='soil_moisture_predicted', ax=axes[0,0])
+        axes[0,0].set_title('Pilot Study: Regional Moisture Comparison')
+        
+        # Statistical significance visualization
+        comparison_results = pilot_study['statistical_comparisons']
+        comp_names = list(comparison_results.keys())
+        p_values = [comparison_results[comp]['t_p_value'] for comp in comp_names]
+        effect_sizes = [comparison_results[comp]['cohens_d'] for comp in comp_names]
+        
+        axes[0,1].bar(comp_names, [-np.log10(p) for p in p_values])
+        axes[0,1].axhline(y=1.3, color='r', linestyle='--', label='p=0.05')
+        axes[0,1].set_title('Statistical Significance\n(-log10(p-value))')
+        axes[0,1].tick_params(axis='x', rotation=45)
+        axes[0,1].legend()
+        
+        # Effect sizes
+        axes[1,0].bar(comp_names, [abs(es) for es in effect_sizes])
+        axes[1,0].set_title('Effect Sizes (|Cohen\'s d|)')
+        axes[1,0].tick_params(axis='x', rotation=45)
+        
+        # Pilot study model performance
+        if 'model_performance' in pilot_study:
+            perf_data = pilot_study['model_performance']
+            regions_perf = list(perf_data.keys())
+            r2_scores = [perf_data[region]['r2_mean'] for region in regions_perf]
+            r2_errors = [perf_data[region]['r2_std'] for region in regions_perf]
+            
+            axes[1,1].bar(regions_perf, r2_scores, yerr=r2_errors, capsize=5)
+            axes[1,1].set_title('Model Performance by Pilot Region')
+            axes[1,1].set_ylabel('R² Score')
+            axes[1,1].tick_params(axis='x', rotation=45)
+        
+        save_plot(fig, f"{figs}/soil_moisture_pilot_study.png", 
+                  "Soil Moisture Pilot Study Analysis")
+    
+    # Generate model confidence visualization
+    model_results = {
+        'cv_results': model_enhancement['cv_results'],
+        'feature_importance': model_enhancement['feature_importance'],
+        'analysis_type': 'Soil Moisture',
+        'total_samples': len(embeddings_df)
+    }
+    
+    create_confidence_visualization(model_results, f"{figs}/soil_moisture_model_confidence.png")
+    
+    # Generate comprehensive data tables
+    print("Generating enhanced data tables with confidence metrics...")
+    
+    # 1. Regional analysis with confidence intervals
+    regional_summary_df.to_csv(f"{tables}/soil_moisture_regional_analysis_enhanced.csv", index=False)
+    
+    # 2. Model performance comparison
+    model_comparison_detailed = []
+    for model_name, model in models_to_test.items():
+        cv_results = perform_cross_validation(X.values, y.values, model, 'regression')
+        model_comparison_detailed.append({
+            'model_name': model_name,
+            'cv_r2_mean': cv_results['r2_mean'],
+            'cv_r2_std': cv_results['r2_std'],
+            'cv_r2_ci_low': cv_results['r2_ci_low'],
+            'cv_r2_ci_high': cv_results['r2_ci_high'],
+            'cv_rmse_mean': cv_results['rmse_mean'],
+            'cv_rmse_std': cv_results['rmse_std']
+        })
+    
+    model_comparison_df = pd.DataFrame(model_comparison_detailed)
+    model_comparison_df.to_csv(f"{tables}/soil_moisture_model_comparison.csv", index=False)
+    
+    # 3. Feature importance with confidence
+    feature_importance_df = pd.DataFrame(model_enhancement['feature_importance'])
+    feature_importance_df.to_csv(f"{tables}/soil_moisture_feature_importance.csv", index=False)
+    
+    # 4. Pilot study results
+    if pilot_study:
+        pilot_summary = pd.DataFrame([{
+            'study_name': pilot_study['study_name'],
+            'pilot_regions': ', '.join(pilot_study['pilot_regions']),
+            'total_samples': pilot_study['total_samples'],
+            'statistical_tests_performed': len(pilot_study['statistical_comparisons']),
+            'significant_differences': sum(1 for comp in pilot_study['statistical_comparisons'].values() 
+                                         if comp['t_p_value'] < 0.05)
+        }])
+        pilot_summary.to_csv(f"{tables}/soil_moisture_pilot_study_summary.csv", index=False)
+        
+        # Detailed pilot comparisons
+        pilot_comparisons = []
+        for comp_name, comp_data in pilot_study['statistical_comparisons'].items():
+            pilot_comparisons.append({
+                'comparison': comp_name,
+                **comp_data
+            })
+        pd.DataFrame(pilot_comparisons).to_csv(f"{tables}/soil_moisture_pilot_comparisons.csv", index=False)
+    
+    # 5. Trend analysis with confidence
+    if trend_results:
+        trend_df = pd.DataFrame.from_dict(trend_results, orient='index').reset_index()
+        trend_df.rename(columns={'index': 'region'}, inplace=True)
+        trend_df.to_csv(f"{tables}/soil_moisture_trend_analysis_enhanced.csv", index=False)
+    
+    # 6. Water stress assessment with uncertainty
+    stress_assessment = embeddings_df.groupby(['region', 'water_stress_category']).agg({
+        'sample_id': 'count',
+        'prediction_uncertainty': 'mean'
+    }).reset_index()
+    stress_assessment.columns = ['region', 'stress_category', 'count', 'avg_uncertainty']
+    stress_assessment['confidence_level'] = (1 - stress_assessment['avg_uncertainty']) * 100
+    stress_assessment.to_csv(f"{tables}/soil_moisture_stress_assessment.csv", index=False)
+    
+    # 7. High confidence predictions
+    high_confidence_predictions = embeddings_df[
+        embeddings_df['prediction_uncertainty'] < embeddings_df['prediction_uncertainty'].quantile(0.1)
+    ][['region', 'latitude', 'longitude', 'soil_moisture_predicted', 'prediction_uncertainty']].copy()
+    high_confidence_predictions.to_csv(f"{tables}/soil_moisture_high_confidence.csv", index=False)
+    
+    # Generate scientific methodology report
+    print("Generating scientific methodology documentation...")
+    
+    methodology_report = generate_scientific_methodology_report(
+        "Enhanced Soil Moisture Analysis", model_results, pilot_study
+    )
+    
+    with open(f"{reports}/soil_moisture_methodology.md", 'w') as f:
+        f.write(methodology_report)
+    
+    # Generate executive summary statistics
+    total_samples = len(embeddings_df)
+    high_stress_areas = (embeddings_df['water_stress_category'].isin(['High', 'Severe'])).sum()
+    avg_moisture = embeddings_df['soil_moisture_predicted'].mean()
+    model_confidence = (1 - embeddings_df['prediction_uncertainty'].mean()) * 100
+    
+    print("Enhanced soil moisture analysis completed successfully!")
+    print(f"Key findings:")
+    print(f"  - Total samples analyzed: {total_samples}")
+    print(f"  - Best model performance: {best_model_name} (R² = {best_r2:.3f})")
+    print(f"  - Average soil moisture: {avg_moisture:.3f}")
+    print(f"  - High/severe stress areas: {high_stress_areas} ({(high_stress_areas/total_samples*100):.1f}%)")
+    print(f"  - Model confidence: {model_confidence:.1f}%")
+    print(f"  - Selected features: {len(model_enhancement['selected_features'])}")
+    
+    artifacts = [
+        "tables/soil_moisture_regional_analysis_enhanced.csv",
+        "tables/soil_moisture_model_comparison.csv",
+        "tables/soil_moisture_feature_importance.csv",
+        "tables/soil_moisture_pilot_study_summary.csv",
+        "tables/soil_moisture_pilot_comparisons.csv",
+        "tables/soil_moisture_trend_analysis_enhanced.csv",
+        "tables/soil_moisture_stress_assessment.csv",
+        "tables/soil_moisture_high_confidence.csv",
+        "figs/soil_moisture_enhanced_analysis.png",
+        "figs/soil_moisture_spatial_confidence.png",
+        "figs/soil_moisture_pilot_study.png",
+        "figs/soil_moisture_model_confidence.png",
+        "reports/soil_moisture_methodology.md"
+    ]
+    
+    return {
+        "status": "ok",
+        "artifacts": artifacts,
+        "summary_stats": {
+            "total_samples": int(total_samples),
+            "best_model": best_model_name,
+            "model_r2": float(best_r2),
+            "avg_moisture": float(avg_moisture),
+            "high_stress_areas": int(high_stress_areas),
+            "model_confidence": float(model_confidence),
+            "selected_features": len(model_enhancement['selected_features']),
+            "pilot_regions_tested": len(pilot_regions)
+        }
+    }
+    
+    regional_summary_df = pd.DataFrame(regional_stats)
+    
+    # Temporal trend analysis with enhanced statistics
+    print("Performing enhanced temporal trend analysis...")
+    trend_results = {}
+    
+    for region in cfg['regions']:
+        region_data = embeddings_df[embeddings_df['region'] == region]
+        yearly_moisture = region_data.groupby('year')['soil_moisture_predicted'].agg(['mean', 'std', 'count'])
+        
+        if len(yearly_moisture) > 2:
+            # Calculate weighted trends (accounting for sample size)
+            weights = yearly_moisture['count'] / yearly_moisture['count'].sum()
+            weighted_means = yearly_moisture['mean'].values
+            
+            trend_stats = perform_trend_analysis(weighted_means, yearly_moisture.index.values)
+            
+            # Add confidence in trend
+            trend_stats['trend_confidence'] = 1 - yearly_moisture['std'].mean()
+            trend_stats['sample_representativeness'] = yearly_moisture['count'].mean()
+            
             trend_results[region] = trend_stats
     
     # Create comprehensive visualizations

@@ -340,7 +340,7 @@ def run():
     axes[0].set_title('Afforestation Suitability Scores')
     plt.colorbar(scatter1, ax=axes[0], label='Suitability Score')
     
-    # Priority areas
+    # Priority areas - FIXED: ensure middle map always has content
     if len(priority_areas) > 0:
         axes[1].scatter(embeddings_df['longitude'], embeddings_df['latitude'], 
                        c='lightgray', alpha=0.3, s=10, label='All sites')
@@ -349,6 +349,22 @@ def run():
         axes[1].set_xlabel('Longitude')
         axes[1].set_ylabel('Latitude')
         axes[1].set_title('Priority Afforestation Sites')
+        axes[1].legend()
+    else:
+        # FIXED: If no priority areas, show environmental suitability factors
+        moderate_suitable = embeddings_df[embeddings_df['predicted_suitability'] >= 0.5]
+        low_suitable = embeddings_df[embeddings_df['predicted_suitability'] < 0.5]
+        
+        if len(low_suitable) > 0:
+            axes[1].scatter(low_suitable['longitude'], low_suitable['latitude'], 
+                           c='orange', alpha=0.4, s=8, label='Low suitability')
+        if len(moderate_suitable) > 0:
+            axes[1].scatter(moderate_suitable['longitude'], moderate_suitable['latitude'], 
+                           c='green', alpha=0.7, s=12, label='Moderate+ suitability')
+        
+        axes[1].set_xlabel('Longitude')
+        axes[1].set_ylabel('Latitude')
+        axes[1].set_title('Afforestation Suitability Categories')
         axes[1].legend()
     
     # Survival probability spatial distribution

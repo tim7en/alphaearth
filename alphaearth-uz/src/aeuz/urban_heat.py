@@ -3,14 +3,16 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_squared_error
 from datetime import datetime
 from .utils import (load_config, ensure_dir, setup_plotting, generate_synthetic_embeddings,
                    calculate_confidence_interval, perform_trend_analysis, create_summary_statistics,
-                   save_plot, validate_data_quality)
+                   save_plot, validate_data_quality, perform_cross_validation, 
+                   enhance_model_with_feature_selection, create_pilot_study_analysis,
+                   generate_scientific_methodology_report, create_confidence_visualization)
 
 def run():
     """Comprehensive urban heat island analysis with LST modeling and mitigation strategies"""
