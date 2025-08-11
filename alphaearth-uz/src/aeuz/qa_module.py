@@ -25,32 +25,42 @@ def run():
         "warnings": []
     }
     
-    # Define expected artifacts from each module
+    # Define expected artifacts from each module (check in both current dir and alphaearth-uz subdir)
     expected_artifacts = {
         "soil_moisture": [
-            "tables/soil_moisture_regional_summary.csv",
-            "tables/soil_moisture_model_performance.csv",
-            "figs/soil_moisture_comprehensive_analysis.png"
+            "alphaearth-uz/tables/soil_moisture_regional_summary.csv",
+            "alphaearth-uz/tables/soil_moisture_model_performance.csv",
+            "alphaearth-uz/figs/soil_moisture_comprehensive_analysis.png"
         ],
         "biodiversity": [
-            "tables/biodiversity_regional_summary.csv",
-            "tables/biodiversity_fragmentation_analysis.csv",
-            "figs/biodiversity_ecosystem_analysis.png"
+            "alphaearth-uz/tables/biodiversity_regional_summary.csv",
+            "alphaearth-uz/tables/biodiversity_fragmentation_analysis.csv",
+            "alphaearth-uz/figs/biodiversity_ecosystem_analysis.png"
         ],
         "afforestation": [
-            "tables/afforestation_regional_analysis.csv",
-            "tables/afforestation_model_performance.csv",
-            "data_final/afforestation_candidates.geojson"
+            "alphaearth-uz/tables/afforestation_regional_analysis.csv",
+            "alphaearth-uz/tables/afforestation_model_performance.csv",
+            "alphaearth-uz/data_final/afforestation_candidates.geojson"
         ],
         "degradation": [
-            "tables/degradation_regional_analysis.csv",
-            "tables/degradation_hotspots.csv",
-            "figs/degradation_overview_analysis.png"
+            "alphaearth-uz/tables/degradation_regional_analysis.csv",
+            "alphaearth-uz/tables/degradation_hotspots.csv",
+            "alphaearth-uz/figs/degradation_overview_analysis.png"
         ],
         "urban_heat": [
-            "tables/urban_heat_regional_analysis.csv",
-            "tables/urban_heat_scores.csv",
-            "figs/urban_heat_overview_analysis.png"
+            "alphaearth-uz/tables/urban_heat_regional_analysis.csv",
+            "alphaearth-uz/tables/urban_heat_scores.csv",
+            "alphaearth-uz/figs/urban_heat_overview_analysis.png"
+        ],
+        "riverbank": [
+            "alphaearth-uz/tables/riverbank_regional_analysis.csv",
+            "alphaearth-uz/figs/riverbank_disturbance_overview.png",
+            "alphaearth-uz/data_final/riverbank_flags.geojson"
+        ],
+        "protected_areas": [
+            "alphaearth-uz/tables/protected_areas_regional_analysis.csv",
+            "alphaearth-uz/figs/protected_areas_conservation_analysis.png",
+            "alphaearth-uz/data_final/protected_area_incidents.geojson"
         ]
     }
     
