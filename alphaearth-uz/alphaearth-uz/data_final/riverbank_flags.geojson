@@ -13,12 +13,12 @@
       "properties": {
         "site_id": "Karakalpakstan_42.000_55.900",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 40.805162966836384,
+        "water_quality": 87.79949876320873,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -35,14 +35,14 @@
       "properties": {
         "site_id": "Karakalpakstan_42.073_56.008",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
-        "disturbance_category": "High",
+        "disturbance_score": 0.6000000000000001,
+        "disturbance_category": "Severe",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 72.49568023175323,
+        "water_quality": 33.43897122308998,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -57,12 +57,12 @@
       "properties": {
         "site_id": "Karakalpakstan_42.147_56.116",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 72.07233110312342,
+        "water_quality": 49.68766742038919,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -79,12 +79,12 @@
       "properties": {
         "site_id": "Karakalpakstan_42.220_56.224",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.55,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 62.653373377866515,
+        "water_quality": 94.4078554473521,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -101,14 +101,14 @@
       "properties": {
         "site_id": "Karakalpakstan_42.294_56.333",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.55,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 35.28115166247027,
+        "water_quality": 68.69206322122112,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -128,7 +128,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 39.33652667080873,
+        "water_quality": 34.27270236148946,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -145,14 +145,14 @@
       "properties": {
         "site_id": "Karakalpakstan_42.441_56.549",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.4,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 65.32621313225192,
+        "water_quality": 29.73424666218384,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -167,12 +167,12 @@
       "properties": {
         "site_id": "Karakalpakstan_42.514_56.657",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.4,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 84.96500421712909,
+        "water_quality": 50.37881655912643,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -194,7 +194,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 77.48333506059174,
+        "water_quality": 83.36184119657379,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -211,14 +211,14 @@
       "properties": {
         "site_id": "Karakalpakstan_42.661_56.873",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.55,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 72.69347085356218,
+        "water_quality": 82.15460184770957,
         "priority_intervention": false,
-        "dominant_issue": "restoration"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -233,14 +233,14 @@
       "properties": {
         "site_id": "Karakalpakstan_42.735_56.982",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 65.69492178012621,
+        "water_quality": 77.08326545404117,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -255,14 +255,14 @@
       "properties": {
         "site_id": "Karakalpakstan_42.808_57.090",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 36.16336756681539,
+        "water_quality": 62.48089287381083,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -277,12 +277,12 @@
       "properties": {
         "site_id": "Karakalpakstan_42.882_57.198",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 29.76251415350436,
+        "water_quality": 40.35574191227837,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -299,12 +299,12 @@
       "properties": {
         "site_id": "Karakalpakstan_42.955_57.306",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 59.22720595529975,
+        "water_quality": 37.26443340345506,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -326,7 +326,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 71.29887790655944,
+        "water_quality": 65.07031607780522,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -343,12 +343,12 @@
       "properties": {
         "site_id": "Karakalpakstan_43.102_57.522",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.55,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 45.58942753936138,
+        "water_quality": 28.893477183650614,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -370,7 +370,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 83.99381286584234,
+        "water_quality": 71.58268722104256,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -392,9 +392,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 20.0,
+        "water_quality": 82.76597365323613,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "restoration"
       }
     },
     {
@@ -409,14 +409,14 @@
       "properties": {
         "site_id": "Karakalpakstan_43.322_57.847",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 33.90925034377449,
+        "water_quality": 80.79932347017711,
         "priority_intervention": false,
-        "dominant_issue": "restoration"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -431,12 +431,12 @@
       "properties": {
         "site_id": "Karakalpakstan_43.396_57.955",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 71.48114624618364,
+        "water_quality": 97.6961101095862,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -458,7 +458,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 83.91228024373505,
+        "water_quality": 48.21211684689908,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -475,14 +475,14 @@
       "properties": {
         "site_id": "Karakalpakstan_43.543_58.171",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.4,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 68.75047945781154,
+        "water_quality": 51.29187137634098,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -497,12 +497,12 @@
       "properties": {
         "site_id": "Karakalpakstan_43.616_58.280",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 51.14325086202969,
+        "water_quality": 61.69823012462754,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -519,12 +519,12 @@
       "properties": {
         "site_id": "Karakalpakstan_43.690_58.388",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 85.11968832816792,
+        "water_quality": 53.54073538246814,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -541,14 +541,14 @@
       "properties": {
         "site_id": "Karakalpakstan_43.763_58.496",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 38.67051137044732,
+        "water_quality": 31.91206738971722,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -563,12 +563,12 @@
       "properties": {
         "site_id": "Karakalpakstan_43.837_58.604",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.4,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 35.140373048729884,
+        "water_quality": 89.01883066943404,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -585,14 +585,14 @@
       "properties": {
         "site_id": "Karakalpakstan_43.910_58.712",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
-        "disturbance_category": "High",
+        "disturbance_score": 0.6000000000000001,
+        "disturbance_category": "Severe",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 61.613086388655724,
+        "water_quality": 91.39317683985088,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -607,14 +607,14 @@
       "properties": {
         "site_id": "Karakalpakstan_43.984_58.820",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 56.076262733377035,
+        "water_quality": 84.33229458621382,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -629,12 +629,12 @@
       "properties": {
         "site_id": "Karakalpakstan_44.057_58.929",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 71.84942109572813,
+        "water_quality": 60.97472067671204,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -651,12 +651,12 @@
       "properties": {
         "site_id": "Karakalpakstan_44.131_59.037",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.55,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 43.79085625689997,
+        "water_quality": 69.09264379336334,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -673,14 +673,14 @@
       "properties": {
         "site_id": "Karakalpakstan_44.204_59.145",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 78.63030693389811,
+        "water_quality": 45.92411423981266,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -700,9 +700,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 20.0,
+        "water_quality": 20.544425052670064,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -717,12 +717,12 @@
       "properties": {
         "site_id": "Karakalpakstan_44.351_59.361",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.55,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 70.15892060366292,
+        "water_quality": 45.605450004995745,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -739,14 +739,14 @@
       "properties": {
         "site_id": "Karakalpakstan_44.424_59.469",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
-        "disturbance_category": "High",
+        "disturbance_score": 0.6000000000000001,
+        "disturbance_category": "Severe",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 71.92794376423451,
+        "water_quality": 54.970935764247386,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -766,9 +766,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 42.41756881563424,
+        "water_quality": 64.47550482048317,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -783,14 +783,14 @@
       "properties": {
         "site_id": "Karakalpakstan_44.571_59.686",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 46.069712521693006,
+        "water_quality": 77.78593482490152,
         "priority_intervention": false,
-        "dominant_issue": "restoration"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -810,9 +810,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 79.56698771382511,
+        "water_quality": 56.7142011845356,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -827,14 +827,14 @@
       "properties": {
         "site_id": "Karakalpakstan_44.718_59.902",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 75.3115242319805,
+        "water_quality": 36.193003997643885,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "restoration"
       }
     },
     {
@@ -854,7 +854,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 75.11418530522981,
+        "water_quality": 71.81836415266328,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -871,14 +871,14 @@
       "properties": {
         "site_id": "Karakalpakstan_44.865_60.118",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 63.75467470886365,
+        "water_quality": 43.08107829833368,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -893,12 +893,12 @@
       "properties": {
         "site_id": "Karakalpakstan_44.939_60.227",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 93.42677567606968,
+        "water_quality": 27.67863670097366,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -915,12 +915,12 @@
       "properties": {
         "site_id": "Karakalpakstan_45.012_60.335",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 47.40905314086466,
+        "water_quality": 64.6271211490139,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -942,9 +942,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 55.557794675380634,
+        "water_quality": 81.71676555247788,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "restoration"
       }
     },
     {
@@ -959,14 +959,14 @@
       "properties": {
         "site_id": "Karakalpakstan_45.159_60.551",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 44.86231263375505,
+        "water_quality": 84.42679570426688,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -981,12 +981,12 @@
       "properties": {
         "site_id": "Karakalpakstan_45.233_60.659",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 80.75212234235963,
+        "water_quality": 76.41615286170186,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1003,12 +1003,12 @@
       "properties": {
         "site_id": "Karakalpakstan_45.306_60.767",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.6000000000000001,
-        "disturbance_category": "Severe",
+        "disturbance_score": 0.55,
+        "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 74.09933590971787,
+        "water_quality": 34.61566870105689,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -1025,14 +1025,14 @@
       "properties": {
         "site_id": "Karakalpakstan_45.380_60.876",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.55,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 67.54696169434992,
+        "water_quality": 20.0,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -1047,14 +1047,14 @@
       "properties": {
         "site_id": "Karakalpakstan_45.453_60.984",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 26.15922771630213,
+        "water_quality": 74.24619285944699,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1069,14 +1069,14 @@
       "properties": {
         "site_id": "Karakalpakstan_45.527_61.092",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.6000000000000001,
-        "disturbance_category": "Severe",
+        "disturbance_score": 0.5,
+        "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 41.542014599435866,
+        "water_quality": 80.84698262662873,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1091,12 +1091,12 @@
       "properties": {
         "site_id": "Karakalpakstan_45.600_61.200",
         "region": "Karakalpakstan",
-        "disturbance_score": 0.6500000000000001,
-        "disturbance_category": "Severe",
+        "disturbance_score": 0.55,
+        "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 2.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 81.85691595620438,
+        "water_quality": 50.71588192985562,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -1106,19 +1106,19 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          69.34285714285714,
-          41.1
+          69.24489795918367,
+          41.01428571428571
         ]
       },
       "properties": {
-        "site_id": "Tashkent_41.100_69.343",
+        "site_id": "Tashkent_41.014_69.245",
         "region": "Tashkent",
-        "disturbance_score": 0.4,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "reservoir",
         "buffer_width_m": 22.5,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 67.227256560604,
+        "water_quality": 36.735240614391515,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1135,14 +1135,14 @@
       "properties": {
         "site_id": "Tashkent_41.357_69.637",
         "region": "Tashkent",
-        "disturbance_score": 0.44999999999999996,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "reservoir",
         "buffer_width_m": 22.5,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 43.993039835836164,
+        "water_quality": 58.34935445179211,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1150,21 +1150,21 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          66.7795918367347,
-          39.53469387755102
+          66.68163265306121,
+          39.46122448979592
         ]
       },
       "properties": {
-        "site_id": "Samarkand_39.535_66.780",
+        "site_id": "Samarkand_39.461_66.682",
         "region": "Samarkand",
         "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "reservoir",
         "buffer_width_m": 24.750000000000004,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 37.94245878330068,
+        "water_quality": 46.24890040715502,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "restoration"
       }
     },
     {
@@ -1179,14 +1179,14 @@
       "properties": {
         "site_id": "Samarkand_39.596_66.861",
         "region": "Samarkand",
-        "disturbance_score": 0.4,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "reservoir",
         "buffer_width_m": 24.750000000000004,
         "agricultural_pressure_m": 191.7809805132843,
-        "water_quality": 70.84061372192302,
+        "water_quality": 65.66707931200018,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1194,21 +1194,21 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          67.0734693877551,
-          39.755102040816325
+          66.99183673469388,
+          39.69387755102041
         ]
       },
       "properties": {
-        "site_id": "Samarkand_39.755_67.073",
+        "site_id": "Samarkand_39.694_66.992",
         "region": "Samarkand",
         "disturbance_score": 0.45,
         "disturbance_category": "High",
-        "water_body_type": "reservoir",
+        "water_body_type": "river",
         "buffer_width_m": 24.750000000000004,
-        "agricultural_pressure_m": 0.0,
-        "water_quality": 70.82051707279858,
+        "agricultural_pressure_m": 244.587362551131,
+        "water_quality": 45.88633500454753,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1223,36 +1223,14 @@
       "properties": {
         "site_id": "Samarkand_39.780_67.106",
         "region": "Samarkand",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "reservoir",
         "buffer_width_m": 24.750000000000004,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 40.178328536756894,
+        "water_quality": 83.01552489121133,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          67.12244897959184,
-          39.791836734693874
-        ]
-      },
-      "properties": {
-        "site_id": "Samarkand_39.792_67.122",
-        "region": "Samarkand",
-        "disturbance_score": 0.45,
-        "disturbance_category": "High",
-        "water_body_type": "reservoir",
-        "buffer_width_m": 24.750000000000004,
-        "agricultural_pressure_m": 0.0,
-        "water_quality": 75.10217714607433,
-        "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1272,9 +1250,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 62.05030430114389,
+        "water_quality": 62.353949397956555,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1289,14 +1267,14 @@
       "properties": {
         "site_id": "Bukhara_39.233_63.437",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 98.83335584887162,
+        "water_quality": 30.14527131836403,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1311,14 +1289,14 @@
       "properties": {
         "site_id": "Bukhara_39.265_63.473",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 61.81307519247592,
+        "water_quality": 70.73962972730861,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1338,9 +1316,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 56.7511930249881,
+        "water_quality": 43.23685413078904,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1360,9 +1338,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 51.64301792532243,
+        "water_quality": 54.04825695787727,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1382,9 +1360,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 78.52775244649793,
+        "water_quality": 87.11006449030286,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1404,9 +1382,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 65.51905760778693,
+        "water_quality": 80.9289123639896,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -1426,9 +1404,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 86.09071722207689,
+        "water_quality": 46.25815228353083,
         "priority_intervention": false,
-        "dominant_issue": "restoration"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1448,9 +1426,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 74.12998847900606,
+        "water_quality": 61.28764764526867,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1470,7 +1448,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 80.90013184873429,
+        "water_quality": 65.6050566146376,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1492,7 +1470,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 84.39609826961527,
+        "water_quality": 78.94458891288303,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1509,12 +1487,12 @@
       "properties": {
         "site_id": "Bukhara_39.559_63.804",
         "region": "Bukhara",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.55,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 69.72115481773592,
+        "water_quality": 57.31947220294769,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1536,9 +1514,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 36.719259926511064,
+        "water_quality": 42.529513489553,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1558,9 +1536,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 86.76126717437369,
+        "water_quality": 54.11421821969105,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1580,9 +1558,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 78.99618243321524,
+        "water_quality": 20.0,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1602,7 +1580,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 49.92337982311826,
+        "water_quality": 68.84230109787181,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -1619,12 +1597,12 @@
       "properties": {
         "site_id": "Bukhara_39.722_63.988",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 73.95042191084528,
+        "water_quality": 82.32890556952714,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1641,14 +1619,14 @@
       "properties": {
         "site_id": "Bukhara_39.755_64.024",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 86.01730465967091,
+        "water_quality": 84.37225849676754,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -1668,7 +1646,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 58.42410035426071,
+        "water_quality": 70.62089113280572,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1690,7 +1668,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 62.18388321315197,
+        "water_quality": 70.01003049980847,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1712,7 +1690,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 29.858636332208494,
+        "water_quality": 83.17954744794487,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1734,9 +1712,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 96.90859096143093,
+        "water_quality": 45.61930616167854,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1751,12 +1729,12 @@
       "properties": {
         "site_id": "Bukhara_39.918_64.208",
         "region": "Bukhara",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.55,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 55.86453527135345,
+        "water_quality": 52.18577177820293,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1773,14 +1751,14 @@
       "properties": {
         "site_id": "Bukhara_39.951_64.245",
         "region": "Bukhara",
-        "disturbance_score": 0.55,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 84.84807598740495,
+        "water_quality": 20.569820135546628,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1795,14 +1773,14 @@
       "properties": {
         "site_id": "Bukhara_39.984_64.282",
         "region": "Bukhara",
-        "disturbance_score": 0.6000000000000001,
-        "disturbance_category": "Severe",
+        "disturbance_score": 0.5,
+        "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 24.757902020776008,
+        "water_quality": 72.07433203954156,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1817,14 +1795,14 @@
       "properties": {
         "site_id": "Bukhara_40.016_64.318",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 93.35661912984243,
+        "water_quality": 85.41608709258368,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -1839,12 +1817,12 @@
       "properties": {
         "site_id": "Bukhara_40.049_64.355",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 29.33311634557112,
+        "water_quality": 20.0,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1861,12 +1839,12 @@
       "properties": {
         "site_id": "Bukhara_40.082_64.392",
         "region": "Bukhara",
-        "disturbance_score": 0.55,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 66.45425273015498,
+        "water_quality": 61.08650291447293,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -1888,9 +1866,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 59.04139565526303,
+        "water_quality": 86.8935551308172,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -1905,14 +1883,14 @@
       "properties": {
         "site_id": "Bukhara_40.147_64.465",
         "region": "Bukhara",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.55,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 36.71766111104627,
+        "water_quality": 63.95920428571564,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -1927,14 +1905,14 @@
       "properties": {
         "site_id": "Bukhara_40.180_64.502",
         "region": "Bukhara",
-        "disturbance_score": 0.6000000000000001,
-        "disturbance_category": "Severe",
+        "disturbance_score": 0.55,
+        "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 62.41279443452379,
+        "water_quality": 87.78492564986753,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -1954,7 +1932,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 94.89289894011237,
+        "water_quality": 21.674637602908025,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -1971,14 +1949,14 @@
       "properties": {
         "site_id": "Bukhara_40.245_64.576",
         "region": "Bukhara",
-        "disturbance_score": 0.55,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 74.73064567022509,
+        "water_quality": 73.1569079824127,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -1993,12 +1971,12 @@
       "properties": {
         "site_id": "Bukhara_40.278_64.612",
         "region": "Bukhara",
-        "disturbance_score": 0.4,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 35.81624881029462,
+        "water_quality": 49.69979590560433,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -2015,12 +1993,12 @@
       "properties": {
         "site_id": "Bukhara_40.310_64.649",
         "region": "Bukhara",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 72.09182224175599,
+        "water_quality": 92.18649153519085,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -2042,7 +2020,7 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 81.59016140147027,
+        "water_quality": 29.93155149422977,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -2064,9 +2042,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 85.62118088394668,
+        "water_quality": 29.06774611150057,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -2081,14 +2059,14 @@
       "properties": {
         "site_id": "Bukhara_40.408_64.759",
         "region": "Bukhara",
-        "disturbance_score": 0.55,
-        "disturbance_category": "High",
+        "disturbance_score": 0.6000000000000001,
+        "disturbance_category": "Severe",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 44.17149321805861,
+        "water_quality": 43.818439497099284,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -2103,14 +2081,14 @@
       "properties": {
         "site_id": "Bukhara_40.441_64.796",
         "region": "Bukhara",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 74.20220072566018,
+        "water_quality": 25.803330064572634,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -2130,9 +2108,9 @@
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 55.72883350579073,
+        "water_quality": 82.99720154442333,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -2147,14 +2125,14 @@
       "properties": {
         "site_id": "Bukhara_40.506_64.869",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 74.86381268816778,
+        "water_quality": 57.16826597091104,
         "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -2169,14 +2147,14 @@
       "properties": {
         "site_id": "Bukhara_40.539_64.906",
         "region": "Bukhara",
-        "disturbance_score": 0.4,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 77.97084635089806,
+        "water_quality": 96.49229997154339,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -2191,14 +2169,14 @@
       "properties": {
         "site_id": "Bukhara_40.571_64.943",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.55,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 52.35736358625475,
+        "water_quality": 66.16947295662295,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "urbanization"
       }
     },
     {
@@ -2213,14 +2191,14 @@
       "properties": {
         "site_id": "Bukhara_40.604_64.980",
         "region": "Bukhara",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.45,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 64.00116029366093,
+        "water_quality": 94.97541505449988,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "stable"
       }
     },
     {
@@ -2235,12 +2213,12 @@
       "properties": {
         "site_id": "Bukhara_40.637_65.016",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.55,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 63.30138477737858,
+        "water_quality": 40.50591659913893,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -2257,12 +2235,12 @@
       "properties": {
         "site_id": "Bukhara_40.669_65.053",
         "region": "Bukhara",
-        "disturbance_score": 0.5,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 63.86851903220915,
+        "water_quality": 79.48857012149006,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -2279,14 +2257,14 @@
       "properties": {
         "site_id": "Bukhara_40.702_65.090",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.55,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 86.01824217934129,
+        "water_quality": 50.5446716100989,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -2301,12 +2279,12 @@
       "properties": {
         "site_id": "Bukhara_40.735_65.127",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 72.4442104904881,
+        "water_quality": 58.81747055419305,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -2323,12 +2301,12 @@
       "properties": {
         "site_id": "Bukhara_40.767_65.163",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 36.383792707681465,
+        "water_quality": 51.48948482328727,
         "priority_intervention": false,
         "dominant_issue": "stable"
       }
@@ -2345,34 +2323,12 @@
       "properties": {
         "site_id": "Bukhara_40.800_65.200",
         "region": "Bukhara",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.5,
         "disturbance_category": "High",
         "water_body_type": "canal",
         "buffer_width_m": 6.124999999999999,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 60.76492540162227,
-        "priority_intervention": false,
-        "dominant_issue": "stable"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          70.97142857142858,
-          40.857142857142854
-        ]
-      },
-      "properties": {
-        "site_id": "Namangan_40.857_70.971",
-        "region": "Namangan",
-        "disturbance_score": 0.45,
-        "disturbance_category": "High",
-        "water_body_type": "reservoir",
-        "buffer_width_m": 21.25,
-        "agricultural_pressure_m": 0.0,
-        "water_quality": 20.0,
+        "water_quality": 35.267018168601226,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -2382,43 +2338,21 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          71.16734693877551,
-          40.922448979591834
+          71.04489795918367,
+          40.881632653061224
         ]
       },
       "properties": {
-        "site_id": "Namangan_40.922_71.167",
+        "site_id": "Namangan_40.882_71.045",
         "region": "Namangan",
         "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "reservoir",
         "buffer_width_m": 21.25,
         "agricultural_pressure_m": 0.0,
-        "water_quality": 78.30197364836245,
+        "water_quality": 26.80676102735955,
         "priority_intervention": false,
         "dominant_issue": "stable"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          71.31428571428572,
-          40.97142857142857
-        ]
-      },
-      "properties": {
-        "site_id": "Namangan_40.971_71.314",
-        "region": "Namangan",
-        "disturbance_score": 0.45,
-        "disturbance_category": "High",
-        "water_body_type": "reservoir",
-        "buffer_width_m": 21.25,
-        "agricultural_pressure_m": 0.0,
-        "water_quality": 57.9005889388837,
-        "priority_intervention": false,
-        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -2433,14 +2367,14 @@
       "properties": {
         "site_id": "Namangan_41.061_71.584",
         "region": "Namangan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "reservoir",
         "buffer_width_m": 21.25,
         "agricultural_pressure_m": 135.21361151306394,
-        "water_quality": 93.19270002963837,
+        "water_quality": 42.26329979213684,
         "priority_intervention": false,
-        "dominant_issue": "urbanization"
+        "dominant_issue": "agricultural_expansion"
       }
     },
     {
@@ -2455,12 +2389,12 @@
       "properties": {
         "site_id": "Namangan_41.110_71.731",
         "region": "Namangan",
-        "disturbance_score": 0.45,
+        "disturbance_score": 0.4,
         "disturbance_category": "High",
         "water_body_type": "reservoir",
         "buffer_width_m": 21.25,
         "agricultural_pressure_m": 182.6044192078794,
-        "water_quality": 68.162915975695,
+        "water_quality": 64.30074356183853,
         "priority_intervention": false,
         "dominant_issue": "agricultural_expansion"
       }
@@ -2470,27 +2404,27 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          71.75510204081633,
-          41.118367346938776
+          72.0,
+          41.2
         ]
       },
       "properties": {
-        "site_id": "Namangan_41.118_71.755",
+        "site_id": "Namangan_41.200_72.000",
         "region": "Namangan",
-        "disturbance_score": 0.4,
+        "disturbance_score": 0.44999999999999996,
         "disturbance_category": "High",
         "water_body_type": "reservoir",
         "buffer_width_m": 21.25,
-        "agricultural_pressure_m": 137.68377750178246,
-        "water_quality": 51.56267521596728,
+        "agricultural_pressure_m": 0.0,
+        "water_quality": 20.0,
         "priority_intervention": false,
-        "dominant_issue": "stable"
+        "dominant_issue": "agricultural_expansion"
       }
     }
   ],
   "metadata": {
-    "total_flags": 113,
-    "generation_date": "2025-08-11T11:34:13.574432",
+    "total_flags": 110,
+    "generation_date": "2025-08-11T14:37:52.022349",
     "analysis_type": "AlphaEarth Riverbank Disturbance Assessment",
     "priority_sites": 0
   }

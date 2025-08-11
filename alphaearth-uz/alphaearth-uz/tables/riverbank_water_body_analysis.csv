@@ -1,7 +1,7 @@
 region,water_body_type,disturbance_score_count,disturbance_score_mean,water_quality_index_mean,riparian_vegetation_width_m_mean
-Bukhara,canal,50,0.483,66.274,6.125
-Karakalpakstan,canal,50,0.484,59.449,2.25
-Namangan,reservoir,50,0.341,62.993,21.25
-Samarkand,reservoir,48,0.333,62.607,24.75
-Samarkand,river,2,0.35,62.569,24.75
-Tashkent,reservoir,50,0.339,58.086,22.5
+Bukhara,canal,50,0.493,59.776,6.125
+Karakalpakstan,canal,50,0.487,60.236,2.25
+Namangan,reservoir,50,0.316,62.958,21.25
+Samarkand,reservoir,48,0.339,57.935,24.75
+Samarkand,river,2,0.4,43.739,24.75
+Tashkent,reservoir,50,0.34,60.009,22.5
