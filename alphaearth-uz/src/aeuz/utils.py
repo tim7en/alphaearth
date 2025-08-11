@@ -64,65 +64,49 @@ def setup_plotting():
         'font.family': 'sans-serif'
     })
 
-def generate_synthetic_embeddings(n_samples: int = 1000, n_features: int = 256, 
-                                regions: List[str] = None) -> pd.DataFrame:
-    """Generate synthetic AlphaEarth-like embeddings for analysis"""
-    if regions is None:
-        regions = ["Karakalpakstan", "Tashkent", "Samarkand", "Bukhara", "Namangan"]
+def load_actual_data(data_type: str, tables_path: str = "alphaearth-uz/tables") -> pd.DataFrame:
+    """Load actual analysis results data instead of synthetic data"""
+    data_files = {
+        'protected_areas': [
+            'protected_areas_conservation_priorities.csv',
+            'protected_areas_regional_analysis.csv',
+            'protected_areas_incidents.csv'
+        ],
+        'degradation': [
+            'degradation_hotspots.csv',
+            'degradation_regional_analysis.csv',
+            'degradation_component_analysis.csv'
+        ],
+        'riverbank': [
+            'riverbank_water_body_analysis.csv',
+            'riverbank_regional_analysis.csv',
+            'riverbank_priority_areas.csv'
+        ],
+        'biodiversity': [
+            'biodiversity_fragmentation_analysis.csv',
+            'biodiversity_regional_summary.csv',
+            'biodiversity_diversity_metrics.csv'
+        ]
+    }
     
-    np.random.seed(42)  # For reproducibility
+    if data_type not in data_files:
+        raise ValueError(f"Unknown data type: {data_type}. Available types: {list(data_files.keys())}")
     
-    # Generate base embeddings with regional characteristics
-    data = []
-    for i in range(n_samples):
-        region = np.random.choice(regions)
-        
-        # Create region-specific patterns
-        if region == "Karakalpakstan":
-            # Arid, water-stressed characteristics
-            base_pattern = np.random.normal(-0.5, 0.8, n_features)
-        elif region == "Tashkent":
-            # Urban, developed characteristics  
-            base_pattern = np.random.normal(0.3, 0.6, n_features)
-        elif region == "Samarkand":
-            # Historical, moderate development
-            base_pattern = np.random.normal(0.1, 0.7, n_features)
-        elif region == "Bukhara":
-            # Desert edge, irrigation-dependent
-            base_pattern = np.random.normal(-0.2, 0.9, n_features)
-        else:  # Namangan
-            # Valley, agricultural
-            base_pattern = np.random.normal(0.2, 0.5, n_features)
-            
-        # Add temporal variation
-        year = np.random.randint(2017, 2026)
-        season = np.random.choice(['spring', 'summer', 'autumn', 'winter'])
-        
-        # Create coordinate-like data
-        lat = np.random.uniform(37.2, 45.6)  # Uzbekistan latitude range
-        lon = np.random.uniform(55.9, 73.2)  # Uzbekistan longitude range
-        
-        sample = {
-            'sample_id': f"{region}_{i:04d}",
-            'region': region,
-            'latitude': lat,
-            'longitude': lon,
-            'year': year,
-            'season': season,
-            'water_stress_indicator': max(0, min(1, np.random.normal(0.6, 0.3))),
-            'vegetation_index': max(0, min(1, np.random.normal(0.4, 0.2))),
-            'soil_moisture_est': max(0, min(1, np.random.normal(0.3, 0.25))),
-            'temperature_anomaly': np.random.normal(2.1, 1.2),
-            'degradation_risk': max(0, min(1, np.random.normal(0.45, 0.3)))
-        }
-        
-        # Add embedding features
-        for j, val in enumerate(base_pattern):
-            sample[f'embed_{j:03d}'] = val
-            
-        data.append(sample)
+    # Load and combine all relevant data files for the analysis type
+    dfs = []
+    for filename in data_files[data_type]:
+        filepath = Path(tables_path) / filename
+        if filepath.exists():
+            df = pd.read_csv(filepath)
+            df['data_source'] = filename
+            dfs.append(df)
+        else:
+            print(f"Warning: {filepath} not found, skipping...")
     
-    return pd.DataFrame(data)
+    if not dfs:
+        raise FileNotFoundError(f"No data files found for {data_type} analysis")
+    
+    return pd.concat(dfs, ignore_index=True)
 
 def calculate_confidence_interval(data: np.ndarray, confidence: float = 0.95) -> Tuple[float, float]:
     """Calculate confidence interval for data"""

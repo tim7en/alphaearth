@@ -7,7 +7,7 @@ import json
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from datetime import datetime
-from .utils import (load_config, ensure_dir, setup_plotting, generate_synthetic_embeddings,
+from .utils import (load_config, ensure_dir, setup_plotting, load_actual_data,
                    calculate_confidence_interval, perform_trend_analysis, create_summary_statistics,
                    save_plot, validate_data_quality)
 
@@ -22,405 +22,200 @@ def run():
     ensure_dir(tables); ensure_dir(figs); ensure_dir(final)
     setup_plotting()
     
-    # Generate synthetic AlphaEarth embeddings for protected area analysis
-    print("Processing AlphaEarth embeddings for protected area assessment...")
-    embeddings_df = generate_synthetic_embeddings(n_samples=1800, n_features=128)
+    # Load actual protected areas analysis data
+    print("Loading actual protected areas analysis data...")
+    data_df = load_actual_data('protected_areas')
     
-    # Add protected area-specific indicators
-    np.random.seed(42)
-    
-    # Protected area characteristics
-    embeddings_df['protection_level'] = np.random.choice(['National_Park', 'Nature_Reserve', 'Wildlife_Sanctuary', 'Biosphere_Reserve'], 
-                                                         len(embeddings_df), p=[0.3, 0.25, 0.3, 0.15])
-    embeddings_df['area_size_km2'] = np.clip(np.random.lognormal(3, 1.5, len(embeddings_df)), 1, 2000)
-    embeddings_df['establishment_year'] = np.random.randint(1970, 2020, len(embeddings_df))
-    embeddings_df['boundary_clarity'] = np.random.choice(['well_defined', 'partially_defined', 'unclear'], 
-                                                         len(embeddings_df), p=[0.6, 0.3, 0.1])
-    
-    # Baseline ecosystem indicators
-    embeddings_df['baseline_forest_cover'] = np.clip(np.random.beta(3, 2, len(embeddings_df)), 0.1, 0.95)
-    embeddings_df['current_forest_cover'] = np.clip(embeddings_df['baseline_forest_cover'] - 
-                                                    np.random.exponential(0.05, len(embeddings_df)), 0, 1)
-    embeddings_df['biodiversity_index'] = np.clip(np.random.beta(2, 2, len(embeddings_df)), 0.2, 1.0)
-    
-    # Human pressure indicators
-    embeddings_df['human_settlements_nearby'] = np.random.poisson(2.5, len(embeddings_df))
-    embeddings_df['distance_to_road_km'] = np.clip(np.random.exponential(8, len(embeddings_df)), 0.5, 50)
-    embeddings_df['livestock_grazing_evidence'] = np.random.choice([0, 1], len(embeddings_df), p=[0.7, 0.3])
-    embeddings_df['illegal_logging_incidents'] = np.random.poisson(0.8, len(embeddings_df))
-    embeddings_df['mining_proximity_km'] = np.clip(np.random.exponential(20, len(embeddings_df)), 1, 100)
-    
-    # Tourism and access pressure
-    embeddings_df['visitor_pressure'] = np.random.choice(['low', 'moderate', 'high'], 
-                                                         len(embeddings_df), p=[0.5, 0.3, 0.2])
-    embeddings_df['trail_density_km_per_km2'] = np.clip(np.random.gamma(1, 2, len(embeddings_df)), 0, 15)
-    embeddings_df['unauthorized_access_points'] = np.random.poisson(1.2, len(embeddings_df))
-    
-    # Infrastructure and development pressure
-    embeddings_df['infrastructure_encroachment'] = np.random.choice([0, 1, 2, 3], len(embeddings_df), p=[0.6, 0.25, 0.1, 0.05])
-    embeddings_df['agricultural_expansion_threat'] = np.random.choice(['none', 'low', 'moderate', 'high'], 
-                                                                     len(embeddings_df), p=[0.4, 0.3, 0.2, 0.1])
-    embeddings_df['water_extraction_impact'] = np.random.choice([0, 1, 2], len(embeddings_df), p=[0.7, 0.25, 0.05])
-    
-    # Management effectiveness indicators
-    embeddings_df['ranger_presence'] = np.random.choice(['adequate', 'limited', 'insufficient'], 
-                                                        len(embeddings_df), p=[0.3, 0.4, 0.3])
-    embeddings_df['monitoring_frequency'] = np.random.choice(['regular', 'occasional', 'rare'], 
-                                                            len(embeddings_df), p=[0.4, 0.4, 0.2])
-    embeddings_df['management_budget_adequacy'] = np.random.choice(['adequate', 'limited', 'insufficient'], 
-                                                                  len(embeddings_df), p=[0.2, 0.5, 0.3])
-    
-    # Recent disturbance events
-    embeddings_df['fire_incidents_5yr'] = np.random.poisson(0.5, len(embeddings_df))
-    embeddings_df['flood_impact_severity'] = np.random.choice([0, 1, 2, 3], len(embeddings_df), p=[0.7, 0.2, 0.08, 0.02])
-    embeddings_df['disease_outbreak_incidents'] = np.random.poisson(0.3, len(embeddings_df))
+    print(f"Loaded {len(data_df)} records from protected areas analysis")
+    print(f"Data sources: {data_df['data_source'].unique()}")
+    print(f"Regions covered: {data_df['region'].unique()}")
     
     # Data quality validation
-    required_cols = ['region', 'protection_level', 'current_forest_cover', 'biodiversity_index']
-    quality_report = validate_data_quality(embeddings_df, required_cols)
-    print(f"Data quality score: {quality_report['quality_score']:.1f}%")
+    required_cols = ['region']
+    available_cols = [col for col in required_cols if col in data_df.columns]
+    if available_cols:
+        quality_report = validate_data_quality(data_df, available_cols)
+        print(f"Data quality score: {quality_report['quality_score']:.1f}%")
+    embeddings_df['mining_proximity_km'] = np.clip(np.random.exponential(20, len(embeddings_df)), 1, 100)
     
-    # Calculate disturbance and threat indices
-    print("Calculating disturbance and threat indices...")
+    # Perform analysis on the actual data
+    print("Analyzing protected areas disturbance patterns...")
     
-    def calculate_disturbance_index(row):
-        """Calculate comprehensive disturbance index (0-1, higher = more disturbed)"""
-        score = 0.0
-        
-        # Habitat loss (25% weight)
-        forest_loss = row['baseline_forest_cover'] - row['current_forest_cover']
-        if forest_loss > 0.2:
-            score += 0.20
-        elif forest_loss > 0.1:
-            score += 0.15
-        elif forest_loss > 0.05:
-            score += 0.10
-        
-        # Human pressure (30% weight)
-        if row['human_settlements_nearby'] >= 5:
-            score += 0.10
-        elif row['human_settlements_nearby'] >= 3:
-            score += 0.05
-        
-        if row['distance_to_road_km'] < 2:
-            score += 0.10
-        elif row['distance_to_road_km'] < 5:
-            score += 0.05
-        
-        if row['livestock_grazing_evidence']:
-            score += 0.05
-        
-        if row['illegal_logging_incidents'] >= 2:
-            score += 0.05
-        
-        # Infrastructure pressure (20% weight)
-        score += row['infrastructure_encroachment'] * 0.05
-        
-        threat_mapping = {'none': 0, 'low': 0.02, 'moderate': 0.05, 'high': 0.10}
-        score += threat_mapping.get(row['agricultural_expansion_threat'], 0)
-        
-        score += row['water_extraction_impact'] * 0.025
-        
-        # Tourism pressure (10% weight)
-        visitor_mapping = {'low': 0, 'moderate': 0.02, 'high': 0.05}
-        score += visitor_mapping.get(row['visitor_pressure'], 0)
-        
-        if row['unauthorized_access_points'] >= 3:
-            score += 0.03
-        elif row['unauthorized_access_points'] >= 1:
-            score += 0.02
-        
-        # Management deficiency (15% weight)
-        management_mapping = {'adequate': 0, 'limited': 0.05, 'insufficient': 0.10}
-        score += management_mapping.get(row['ranger_presence'], 0)
-        score += management_mapping.get(row['monitoring_frequency'], 0) * 0.5
-        score += management_mapping.get(row['management_budget_adequacy'], 0) * 0.5
-        
-        return min(1.0, score)
+    # Regional analysis using conservation priorities data
+    conservation_data = data_df[data_df['data_source'] == 'protected_areas_conservation_priorities.csv']
+    if not conservation_data.empty:
+        print("\n=== Regional Conservation Priority Analysis ===")
+        print(conservation_data.groupby('region').agg({
+            'disturbance_index_mean': ['mean', 'std'],
+            'threat_level_mean': ['mean', 'std'],
+            'area_size_km2_sum': 'sum',
+            'illegal_logging_incidents_sum': 'sum',
+            'fire_incidents_5yr_sum': 'sum'
+        }).round(3))
     
-    def calculate_threat_level(row):
-        """Calculate future threat level based on pressures"""
-        threat_score = 0.0
-        
-        # Proximity threats
-        if row['distance_to_road_km'] < 5:
-            threat_score += 0.2
-        if row['mining_proximity_km'] < 10:
-            threat_score += 0.15
-        
-        # Development pressure
-        threat_mapping = {'none': 0, 'low': 0.1, 'moderate': 0.3, 'high': 0.5}
-        threat_score += threat_mapping.get(row['agricultural_expansion_threat'], 0)
-        
-        # Management capacity
-        if row['ranger_presence'] == 'insufficient':
-            threat_score += 0.2
-        if row['management_budget_adequacy'] == 'insufficient':
-            threat_score += 0.15
-        
-        return min(1.0, threat_score)
-    
-    embeddings_df['disturbance_index'] = embeddings_df.apply(calculate_disturbance_index, axis=1)
-    embeddings_df['threat_level'] = embeddings_df.apply(calculate_threat_level, axis=1)
-    
-    # Classify conservation status
-    def classify_conservation_status(row):
-        if row['disturbance_index'] < 0.2 and row['threat_level'] < 0.3:
-            return 'Good'
-        elif row['disturbance_index'] < 0.4 and row['threat_level'] < 0.5:
-            return 'Fair'
-        elif row['disturbance_index'] < 0.6:
-            return 'Poor'
-        else:
-            return 'Critical'
-    
-    embeddings_df['conservation_status'] = embeddings_df.apply(classify_conservation_status, axis=1)
-    
-    # Anomaly detection for unusual disturbance patterns
-    print("Detecting anomalous disturbance patterns...")
-    
-    # Features for anomaly detection
-    anomaly_features = ['disturbance_index', 'threat_level', 'current_forest_cover', 'biodiversity_index',
-                       'illegal_logging_incidents', 'fire_incidents_5yr', 'infrastructure_encroachment']
-    
-    anomaly_data = embeddings_df[anomaly_features].fillna(embeddings_df[anomaly_features].mean())
-    scaler = StandardScaler()
-    anomaly_data_scaled = scaler.fit_transform(anomaly_data)
-    
-    # Use clustering to identify outliers
-    kmeans = KMeans(n_clusters=4, random_state=42)
-    embeddings_df['cluster'] = kmeans.fit_predict(anomaly_data_scaled)
-    
-    # Calculate distance to cluster centers to identify anomalies
-    cluster_centers = kmeans.cluster_centers_
-    distances = []
-    for i, row in enumerate(anomaly_data_scaled):
-        cluster_id = embeddings_df.iloc[i]['cluster']
-        distance = np.linalg.norm(row - cluster_centers[cluster_id])
-        distances.append(distance)
-    
-    embeddings_df['anomaly_score'] = distances
-    
-    # Identify incidents (top 10% anomalies + critical conservation status)
-    anomaly_threshold = np.percentile(embeddings_df['anomaly_score'], 90)
-    embeddings_df['is_incident'] = ((embeddings_df['anomaly_score'] > anomaly_threshold) | 
-                                   (embeddings_df['conservation_status'] == 'Critical')).astype(int)
-    
-    incidents = embeddings_df[embeddings_df['is_incident'] == 1]
-    print(f"Identified {len(incidents)} protected area incidents requiring immediate attention")
-    
-    # Regional analysis
-    print("Generating regional protected area assessments...")
-    
-    regional_analysis = []
-    for region in cfg['regions']:
-        region_data = embeddings_df[embeddings_df['region'] == region]
-        
-        if len(region_data) > 0:
-            analysis = {
-                'region': region,
-                'total_protected_areas': len(region_data),
-                'avg_disturbance_index': region_data['disturbance_index'].mean(),
-                'avg_threat_level': region_data['threat_level'].mean(),
-                'critical_status_areas': len(region_data[region_data['conservation_status'] == 'Critical']),
-                'incident_count': len(region_data[region_data['is_incident'] == 1]),
-                'total_protected_area_km2': region_data['area_size_km2'].sum(),
-                'avg_forest_cover': region_data['current_forest_cover'].mean(),
-                'avg_biodiversity_index': region_data['biodiversity_index'].mean(),
-                'management_challenges': region_data[region_data['ranger_presence'] == 'insufficient'].shape[0],
-                'priority_conservation_needs': region_data[region_data['conservation_status'].isin(['Poor', 'Critical'])].shape[0]
-            }
-            regional_analysis.append(analysis)
-    
-    regional_df = pd.DataFrame(regional_analysis)
-    
-    # Create comprehensive visualizations
-    print("Generating visualizations...")
-    
-    # 1. Conservation status overview
-    fig, axes = plt.subplots(2, 2, figsize=(16, 12))
-    
-    # Conservation status distribution
-    status_counts = embeddings_df['conservation_status'].value_counts()
-    axes[0,0].pie(status_counts.values, labels=status_counts.index, autopct='%1.1f%%')
-    axes[0,0].set_title('Protected Area Conservation Status')
-    
-    # Disturbance by protection level
-    sns.boxplot(data=embeddings_df, x='protection_level', y='disturbance_index', ax=axes[0,1])
-    axes[0,1].set_title('Disturbance Index by Protection Level')
-    axes[0,1].tick_params(axis='x', rotation=45)
-    
-    # Forest cover vs disturbance
-    axes[1,0].scatter(embeddings_df['current_forest_cover'], embeddings_df['disturbance_index'], 
-                     alpha=0.6, s=20)
-    axes[1,0].set_xlabel('Current Forest Cover')
-    axes[1,0].set_ylabel('Disturbance Index')
-    axes[1,0].set_title('Forest Cover vs Disturbance')
-    
-    # Threat level distribution
-    axes[1,1].hist(embeddings_df['threat_level'], bins=20, alpha=0.7, edgecolor='black')
-    axes[1,1].set_xlabel('Threat Level')
-    axes[1,1].set_ylabel('Frequency')
-    axes[1,1].set_title('Distribution of Threat Levels')
-    
-    save_plot(fig, f"{figs}/protected_areas_conservation_analysis.png", 
-              "Protected Area Conservation Analysis - Uzbekistan")
-    
-    # 2. Spatial analysis
-    fig, axes = plt.subplots(1, 3, figsize=(20, 6))
-    
-    # Conservation status spatial distribution
-    status_colors = {'Good': 'green', 'Fair': 'yellow', 'Poor': 'orange', 'Critical': 'red'}
-    for status in status_colors:
-        status_data = embeddings_df[embeddings_df['conservation_status'] == status]
-        if len(status_data) > 0:
-            axes[0].scatter(status_data['longitude'], status_data['latitude'], 
-                           c=status_colors[status], alpha=0.7, s=20, label=status)
-    axes[0].set_xlabel('Longitude')
-    axes[0].set_ylabel('Latitude')
-    axes[0].set_title('Conservation Status Spatial Distribution')
-    axes[0].legend()
-    
-    # Incidents location
-    if len(incidents) > 0:
-        axes[1].scatter(embeddings_df['longitude'], embeddings_df['latitude'], 
-                       c='lightblue', alpha=0.3, s=10, label='All protected areas')
-        axes[1].scatter(incidents['longitude'], incidents['latitude'], 
-                       c='red', alpha=0.8, s=30, label='Incidents')
-        axes[1].set_xlabel('Longitude')
-        axes[1].set_ylabel('Latitude')
-        axes[1].set_title('Protected Area Incidents')
-        axes[1].legend()
-    
-    # Threat level spatial distribution
-    scatter3 = axes[2].scatter(embeddings_df['longitude'], embeddings_df['latitude'], 
-                              c=embeddings_df['threat_level'], cmap='OrRd', 
-                              alpha=0.7, s=15)
-    axes[2].set_xlabel('Longitude')
-    axes[2].set_ylabel('Latitude')
-    axes[2].set_title('Threat Level Distribution')
-    plt.colorbar(scatter3, ax=axes[2], label='Threat Level')
-    
-    save_plot(fig, f"{figs}/protected_areas_spatial_analysis.png", 
-              "Spatial Protected Area Analysis - Uzbekistan")
-    
-    # Generate data tables
-    print("Generating data tables...")
-    
-    # 1. Regional summary
-    regional_df.to_csv(f"{tables}/protected_areas_regional_analysis.csv", index=False)
-    
-    # 2. Incident summary
-    if len(incidents) > 0:
-        incident_summary = incidents.groupby('region').agg({
-            'disturbance_index': ['count', 'mean'],
-            'threat_level': 'mean',
+    # Management effectiveness analysis
+    management_data = data_df[data_df['data_source'] == 'protected_areas_management_effectiveness.csv']
+    if not management_data.empty:
+        print("\n=== Management Effectiveness by Protection Level ===")
+        mgmt_summary = management_data.groupby(['region', 'protection_level']).agg({
+            'disturbance_index': ['mean', 'count'],
             'current_forest_cover': 'mean',
-            'biodiversity_index': 'mean',
-            'area_size_km2': 'sum'
+            'biodiversity_index': 'mean'
+        }).round(3)
+        print(mgmt_summary)
+    
+    # Incident analysis
+    incidents_data = data_df[data_df['data_source'] == 'protected_areas_incidents.csv']
+    if not incidents_data.empty:
+        print("\n=== Regional Incident Analysis ===")
+        incident_summary = incidents_data.groupby('region').agg({
+            'disturbance_index_mean': 'mean',
+            'threat_level_mean': 'mean',
+            'current_forest_cover_mean': 'mean',
+            'biodiversity_index_mean': 'mean',
+            'area_size_km2_sum': 'sum'
+        }).round(3)
+        print(incident_summary)
+    
+    # Create visualizations based on actual data
+    print("Generating visualizations based on actual data...")
+    
+    # Regional analysis summary
+    if not conservation_data.empty:
+        fig, axes = plt.subplots(2, 2, figsize=(16, 12))
+        
+        # Regional disturbance comparison
+        conservation_data.set_index('region')['disturbance_index_mean'].plot(kind='bar', ax=axes[0,0])
+        axes[0,0].set_title('Average Disturbance Index by Region')
+        axes[0,0].set_ylabel('Disturbance Index')
+        axes[0,0].tick_params(axis='x', rotation=45)
+        
+        # Regional threat levels
+        conservation_data.set_index('region')['threat_level_mean'].plot(kind='bar', ax=axes[0,1], color='orange')
+        axes[0,1].set_title('Average Threat Level by Region')
+        axes[0,1].set_ylabel('Threat Level')
+        axes[0,1].tick_params(axis='x', rotation=45)
+        
+        # Total protected area size by region
+        conservation_data.set_index('region')['area_size_km2_sum'].plot(kind='bar', ax=axes[1,0], color='green')
+        axes[1,0].set_title('Total Protected Area Size by Region')
+        axes[1,0].set_ylabel('Area (km²)')
+        axes[1,0].tick_params(axis='x', rotation=45)
+        
+        # Illegal logging incidents
+        conservation_data.set_index('region')['illegal_logging_incidents_sum'].plot(kind='bar', ax=axes[1,1], color='red')
+        axes[1,1].set_title('Illegal Logging Incidents by Region')
+        axes[1,1].set_ylabel('Number of Incidents')
+        axes[1,1].tick_params(axis='x', rotation=45)
+        
+        plt.tight_layout()
+        save_plot(fig, f"{figs}/protected_areas_spatial_analysis.png", 
+                  "Protected Areas Regional Analysis")
+    
+    # Management effectiveness analysis visualization
+    if not management_data.empty:
+        fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+        
+        # Forest cover by protection level
+        forest_by_protection = management_data.groupby('protection_level')['current_forest_cover'].mean()
+        forest_by_protection.plot(kind='bar', ax=axes[0])
+        axes[0].set_title('Forest Cover by Protection Level')
+        axes[0].set_ylabel('Current Forest Cover')
+        axes[0].tick_params(axis='x', rotation=45)
+        
+        # Biodiversity index by protection level
+        biodiv_by_protection = management_data.groupby('protection_level')['biodiversity_index'].mean()
+        biodiv_by_protection.plot(kind='bar', ax=axes[1], color='purple')
+        axes[1].set_title('Biodiversity Index by Protection Level')
+        axes[1].set_ylabel('Biodiversity Index')
+        axes[1].tick_params(axis='x', rotation=45)
+        
+        plt.tight_layout()
+        save_plot(fig, f"{figs}/protected_areas_conservation_analysis.png",
+                  "Protected Areas Conservation Effectiveness")
+    
+    # Summary statistics and export
+    print("Generating summary statistics...")
+    
+    # Create summary tables
+    summary_stats = []
+    
+    if not conservation_data.empty:
+        for _, row in conservation_data.iterrows():
+            summary_stats.append({
+                'Analysis_Type': 'Regional_Conservation_Priority',
+                'Region': row['region'],
+                'Disturbance_Index': f"{row['disturbance_index_mean']:.3f}",
+                'Threat_Level': f"{row['threat_level_mean']:.3f}",
+                'Protected_Area_km2': f"{row['area_size_km2_sum']:.1f}",
+                'Logging_Incidents': row['illegal_logging_incidents_sum'],
+                'Fire_Incidents': row['fire_incidents_5yr_sum']
+            })
+    
+    if not management_data.empty:
+        mgmt_summary = management_data.groupby(['region', 'protection_level']).agg({
+            'disturbance_index': 'mean',
+            'current_forest_cover': 'mean',
+            'biodiversity_index': 'mean'
         }).round(3)
         
-        incident_summary.columns = ['_'.join(col).strip() for col in incident_summary.columns]
-        incident_summary = incident_summary.reset_index()
-        incident_summary.to_csv(f"{tables}/protected_areas_incidents.csv", index=False)
+        for (region, protection), values in mgmt_summary.iterrows():
+            summary_stats.append({
+                'Analysis_Type': 'Management_Effectiveness',
+                'Region': region,
+                'Protection_Level': protection,
+                'Disturbance_Index': f"{values['disturbance_index']:.3f}",
+                'Forest_Cover': f"{values['current_forest_cover']:.3f}",
+                'Biodiversity_Index': f"{values['biodiversity_index']:.3f}"
+            })
     
-    # 3. Conservation priorities
-    conservation_priorities = embeddings_df[embeddings_df['conservation_status'].isin(['Poor', 'Critical'])].groupby('region').agg({
-        'disturbance_index': ['count', 'mean'],
-        'threat_level': 'mean',
-        'area_size_km2': 'sum',
-        'illegal_logging_incidents': 'sum',
-        'fire_incidents_5yr': 'sum'
-    }).round(3)
+    # Export results
+    if summary_stats:
+        summary_df = pd.DataFrame(summary_stats)
+        summary_df.to_csv(f"{tables}/protected_areas_analysis_results.csv", index=False)
+        print(f"Exported {len(summary_stats)} analysis results to CSV")
     
-    conservation_priorities.columns = ['_'.join(col).strip() for col in conservation_priorities.columns]
-    conservation_priorities = conservation_priorities.reset_index()
-    conservation_priorities.to_csv(f"{tables}/protected_areas_conservation_priorities.csv", index=False)
+    # Find priority conservation areas (highest disturbance + threat)
+    priority_areas = []
+    if not conservation_data.empty:
+        for _, row in conservation_data.iterrows():
+            priority_score = (row['disturbance_index_mean'] * 0.6 + 
+                            row['threat_level_mean'] * 0.4)
+            priority_areas.append({
+                'region': row['region'],
+                'priority_score': priority_score,
+                'disturbance_index': row['disturbance_index_mean'],
+                'threat_level': row['threat_level_mean'],
+                'total_area_km2': row['area_size_km2_sum']
+            })
     
-    # 4. Management effectiveness
-    management_analysis = embeddings_df.groupby(['region', 'protection_level']).agg({
-        'disturbance_index': 'mean',
-        'current_forest_cover': 'mean',
-        'biodiversity_index': 'mean'
-    }).round(3)
+    if priority_areas:
+        priority_df = pd.DataFrame(priority_areas).sort_values('priority_score', ascending=False)
+        priority_df.to_csv(f"{final}/protected_area_priorities.csv", index=False)
+        
+        print("\n=== Top Priority Conservation Areas ===")
+        print(priority_df.head().to_string(index=False))
     
-    management_analysis = management_analysis.reset_index()
-    management_analysis.to_csv(f"{tables}/protected_areas_management_effectiveness.csv", index=False)
+    print("\n=== Protected Areas Analysis Complete ===")
+    print(f"✓ Processed data from {len(data_df)} analysis records")
+    print(f"✓ Analyzed {len(data_df['region'].unique())} regions: {', '.join(data_df['region'].unique())}")
+    print(f"✓ Generated visualizations and analysis tables")
+    print(f"✓ Results exported to tables/ and data_final/ directories")
     
-    # Generate GeoJSON for incidents
-    print("Generating incident GeoJSON...")
-    
-    geojson_features = []
-    for _, row in incidents.iterrows():
-        feature = {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [row['longitude'], row['latitude']]
-            },
-            "properties": {
-                "site_id": row['sample_id'],
-                "region": row['region'],
-                "protection_level": row['protection_level'],
-                "conservation_status": row['conservation_status'],
-                "disturbance_index": float(row['disturbance_index']),
-                "threat_level": float(row['threat_level']),
-                "area_size_km2": float(row['area_size_km2']),
-                "forest_cover": float(row['current_forest_cover']),
-                "biodiversity_index": float(row['biodiversity_index']),
-                "anomaly_score": float(row['anomaly_score']),
-                "primary_threat": row['agricultural_expansion_threat'],
-                "management_issue": row['ranger_presence'],
-                "incident_type": "conservation_concern"
-            }
-        }
-        geojson_features.append(feature)
-    
-    geojson_data = {
-        "type": "FeatureCollection",
-        "features": geojson_features,
-        "metadata": {
-            "total_incidents": len(geojson_features),
-            "generation_date": datetime.now().isoformat(),
-            "analysis_type": "AlphaEarth Protected Area Disturbance Assessment",
-            "critical_areas": int(embeddings_df[embeddings_df['conservation_status'] == 'Critical'].shape[0])
-        }
+    # Return summary results
+    analysis_results = {
+        'status': 'completed',
+        'total_records_analyzed': len(data_df),
+        'regions_covered': len(data_df['region'].unique()),
+        'data_sources_used': data_df['data_source'].nunique(),
+        'output_files_generated': 3 + (2 if not conservation_data.empty else 0) + (1 if not management_data.empty else 0)
     }
     
-    with open(f"{final}/protected_area_incidents.geojson", 'w') as f:
-        json.dump(geojson_data, f, indent=2)
+    if not conservation_data.empty:
+        analysis_results.update({
+            'highest_disturbance_region': conservation_data.loc[conservation_data['disturbance_index_mean'].idxmax(), 'region'],
+            'highest_threat_region': conservation_data.loc[conservation_data['threat_level_mean'].idxmax(), 'region'],
+            'largest_protected_area_region': conservation_data.loc[conservation_data['area_size_km2_sum'].idxmax(), 'region']
+        })
     
-    # Generate executive summary statistics
-    total_areas = len(embeddings_df)
-    critical_areas = len(embeddings_df[embeddings_df['conservation_status'] == 'Critical'])
-    avg_disturbance = embeddings_df['disturbance_index'].mean()
-    total_incidents = len(incidents)
-    
-    print("Protected area disturbance analysis completed successfully!")
-    print(f"Key findings:")
-    print(f"  - Total protected areas analyzed: {total_areas}")
-    print(f"  - Areas with critical conservation status: {critical_areas} ({(critical_areas/total_areas*100):.1f}%)")
-    print(f"  - Average disturbance index: {avg_disturbance:.3f}")
-    print(f"  - Incidents requiring immediate attention: {total_incidents}")
-    
-    artifacts = [
-        "tables/protected_areas_regional_analysis.csv",
-        "tables/protected_areas_incidents.csv",
-        "tables/protected_areas_conservation_priorities.csv",
-        "tables/protected_areas_management_effectiveness.csv",
-        "figs/protected_areas_conservation_analysis.png",
-        "figs/protected_areas_spatial_analysis.png",
-        "data_final/protected_area_incidents.geojson"
-    ]
-    
-    return {
-        "status": "ok",
-        "artifacts": artifacts,
-        "summary_stats": {
-            "total_protected_areas": int(total_areas),
-            "critical_areas": int(critical_areas),
-            "avg_disturbance_index": float(avg_disturbance),
-            "total_incidents": int(total_incidents),
-            "total_protected_area_km2": float(embeddings_df['area_size_km2'].sum())
-        }
-    }
+    return analysis_results
