@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaEarth Uzbekistan - Environmental Research Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-globe-asia"></i>
+                    <h1>AlphaEarth Uzbekistan</h1>
+                    <span class="subtitle">Environmental Research Dashboard</span>
+                </div>
+                <div class="status-indicators">
+                    <div class="status-item">
+                        <span class="status-label">Analysis Status</span>
+                        <span class="status-value complete">100% Complete</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Data Quality</span>
+                        <span class="status-value excellent">100%</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Modules</span>
+                        <span class="status-value">7/7 Active</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="sidebar">
+            <div class="nav-section">
+                <h3>Research Modules</h3>
+                <a href="#overview" class="nav-item active" data-module="overview">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Overview Dashboard</span>
+                </a>
+                <a href="#soil-moisture" class="nav-item" data-module="soil-moisture">
+                    <i class="fas fa-tint"></i>
+                    <span>Soil Moisture</span>
+                </a>
+                <a href="#afforestation" class="nav-item" data-module="afforestation">
+                    <i class="fas fa-tree"></i>
+                    <span>Afforestation</span>
+                </a>
+                <a href="#urban-heat" class="nav-item" data-module="urban-heat">
+                    <i class="fas fa-thermometer-half"></i>
+                    <span>Urban Heat</span>
+                </a>
+                <a href="#biodiversity" class="nav-item" data-module="biodiversity">
+                    <i class="fas fa-leaf"></i>
+                    <span>Biodiversity</span>
+                </a>
+                <a href="#degradation" class="nav-item" data-module="degradation">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Land Degradation</span>
+                </a>
+                <a href="#protected-areas" class="nav-item" data-module="protected-areas">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Protected Areas</span>
+                </a>
+                <a href="#riverbank" class="nav-item" data-module="riverbank">
+                    <i class="fas fa-water"></i>
+                    <span>Riverbank Monitoring</span>
+                </a>
+            </div>
+            
+            <div class="nav-section">
+                <h3>Analysis Tools</h3>
+                <a href="#reports" class="nav-item" data-module="reports">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Research Reports</span>
+                </a>
+                <a href="#data" class="nav-item" data-module="data">
+                    <i class="fas fa-database"></i>
+                    <span>Data Downloads</span>
+                </a>
+                <a href="#methodology" class="nav-item" data-module="methodology">
+                    <i class="fas fa-cogs"></i>
+                    <span>Methodology</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Overview Dashboard -->
+            <section id="overview-panel" class="content-panel active">
+                <div class="panel-header">
+                    <h2>Executive Overview</h2>
+                    <p class="panel-description">Comprehensive environmental assessment of Uzbekistan using AlphaEarth satellite embeddings</p>
+                </div>
+                
+                <!-- Key Metrics Cards -->
+                <div class="metrics-grid">
+                    <div class="metric-card critical">
+                        <div class="metric-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Water Stress</h3>
+                            <div class="metric-value">67.4%</div>
+                            <div class="metric-label">Areas under high water stress</div>
+                            <div class="metric-trend negative">
+                                <i class="fas fa-arrow-down"></i> Critical
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card positive">
+                        <div class="metric-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Afforestation Potential</h3>
+                            <div class="metric-value">3,681</div>
+                            <div class="metric-label">Suitable sites identified</div>
+                            <div class="metric-trend positive">
+                                <i class="fas fa-arrow-up"></i> High Potential
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card warning">
+                        <div class="metric-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Urban Heat</h3>
+                            <div class="metric-value">26.2°C</div>
+                            <div class="metric-label">Average land surface temperature</div>
+                            <div class="metric-trend neutral">
+                                <i class="fas fa-thermometer-half"></i> Monitoring
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="metric-card info">
+                        <div class="metric-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="metric-content">
+                            <h3>Biodiversity</h3>
+                            <div class="metric-value">6</div>
+                            <div class="metric-label">Ecosystem types classified</div>
+                            <div class="metric-trend positive">
+                                <i class="fas fa-check"></i> Assessed
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Map -->
+                <div class="map-container">
+                    <h3>Interactive Regional Analysis Map</h3>
+                    <div id="main-map" class="map"></div>
+                    <div class="map-controls">
+                        <div class="layer-selector">
+                            <label>Display Layer:</label>
+                            <select id="layer-select">
+                                <option value="water-stress">Water Stress</option>
+                                <option value="afforestation">Afforestation Suitability</option>
+                                <option value="urban-heat">Urban Heat Islands</option>
+                                <option value="biodiversity">Biodiversity Hotspots</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Priority Actions -->
+                <div class="priority-section">
+                    <h3>Priority Action Areas</h3>
+                    <div class="priority-grid">
+                        <div class="priority-card urgent">
+                            <h4>Immediate Action (0-6 months)</h4>
+                            <ul>
+                                <li><strong>Emergency irrigation</strong> in Karakalpakstan</li>
+                                <li><strong>Water stress monitoring</strong> in 50 critical areas</li>
+                                <li><strong>Degradation hotspot intervention</strong> - 350 sites</li>
+                            </ul>
+                            <div class="priority-cost">Investment: $23-37M</div>
+                        </div>
+                        
+                        <div class="priority-card medium">
+                            <h4>Medium-term (6-18 months)</h4>
+                            <ul>
+                                <li><strong>Strategic afforestation</strong> across 8,450 km²</li>
+                                <li><strong>Urban cooling initiative</strong> in major cities</li>
+                                <li><strong>Ecosystem restoration</strong> programs</li>
+                            </ul>
+                            <div class="priority-cost">Investment: $65-90M</div>
+                        </div>
+                        
+                        <div class="priority-card long-term">
+                            <h4>Long-term (18+ months)</h4>
+                            <ul>
+                                <li><strong>Climate adaptation infrastructure</strong></li>
+                                <li><strong>Comprehensive biodiversity conservation</strong></li>
+                                <li><strong>Regional water management systems</strong></li>
+                            </ul>
+                            <div class="priority-cost">Investment: $280-420M</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Soil Moisture Panel -->
+            <section id="soil-moisture-panel" class="content-panel">
+                <div class="panel-header">
+                    <h2>Soil Moisture Analysis</h2>
+                    <p class="panel-description">Water stress assessment and vulnerability mapping using AlphaEarth embeddings</p>
+                </div>
+                
+                <div class="analysis-summary">
+                    <div class="summary-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">31.7%</span>
+                            <span class="stat-label">National Average Soil Moisture</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">1,685</span>
+                            <span class="stat-label">High Water Stress Areas</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">156</span>
+                            <span class="stat-label">Severe Water Stress Areas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h4>Regional Water Stress Distribution</h4>
+                        <div id="soil-moisture-chart" class="chart"></div>
+                    </div>
+                    <div class="chart-container">
+                        <h4>Temporal Trends (2017-2025)</h4>
+                        <div id="soil-moisture-trends" class="chart"></div>
+                    </div>
+                </div>
+
+                <div class="recommendations-section">
+                    <h4>Key Recommendations</h4>
+                    <div class="recommendation-cards">
+                        <div class="rec-card">
+                            <h5>Emergency Water Management</h5>
+                            <p>Deploy smart irrigation systems in Karakalpakstan (most vulnerable region)</p>
+                            <span class="rec-cost">Cost: $15-25M | Confidence: 95%</span>
+                        </div>
+                        <div class="rec-card">
+                            <h5>Degradation Hotspot Intervention</h5>
+                            <p>Target 350 identified hotspot areas with restoration programs</p>
+                            <span class="rec-cost">Cost: $8-12M | Confidence: 85%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Afforestation Panel -->
+            <section id="afforestation-panel" class="content-panel">
+                <div class="panel-header">
+                    <h2>Afforestation Suitability Analysis</h2>
+                    <p class="panel-description">Site suitability modeling and species selection using machine learning</p>
+                </div>
+                
+                <div class="analysis-summary">
+                    <div class="summary-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">3,681</span>
+                            <span class="stat-label">Suitable Sites Identified</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">71.7%</span>
+                            <span class="stat-label">Average Suitability Score</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">97.1%</span>
+                            <span class="stat-label">Model Accuracy (AUC)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid">
+                    <div class="chart-container">
+                        <h4>Regional Suitability Analysis</h4>
+                        <div id="afforestation-chart" class="chart"></div>
+                    </div>
+                    <div class="chart-container">
+                        <h4>Species Suitability by Region</h4>
+                        <div id="species-chart" class="chart"></div>
+                    </div>
+                </div>
+
+                <div class="species-section">
+                    <h4>Recommended Species</h4>
+                    <div class="species-grid">
+                        <div class="species-card">
+                            <h5>Elaeagnus angustifolia</h5>
+                            <span class="species-name">(Russian Olive)</span>
+                            <div class="species-suitability">
+                                <span class="suitability-score">High Suitability</span>
+                                <div class="suitability-bar">
+                                    <div class="bar-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <p>Excellent drought tolerance, suitable for water-stressed regions</p>
+                        </div>
+                        <div class="species-card">
+                            <h5>Populus alba</h5>
+                            <span class="species-name">(White Poplar)</span>
+                            <div class="species-suitability">
+                                <span class="suitability-score">Medium Suitability</span>
+                                <div class="suitability-bar">
+                                    <div class="bar-fill" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <p>Fast growth, suitable for riparian restoration</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reports Panel -->
+            <section id="reports-panel" class="content-panel">
+                <div class="panel-header">
+                    <h2>Research Reports</h2>
+                    <p class="panel-description">Comprehensive analysis reports and documentation</p>
+                </div>
+                
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="report-content">
+                            <h4>Executive Summary</h4>
+                            <p>High-level overview of key findings and recommendations</p>
+                            <div class="report-meta">
+                                <span class="report-pages">5 pages</span>
+                                <span class="report-date">August 2025</span>
+                            </div>
+                            <a href="../alphaearth-uz/reports/executive_summary.md" class="report-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> View Report
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="report-content">
+                            <h4>Soil Moisture Analysis</h4>
+                            <p>Detailed water stress assessment and regional vulnerability analysis</p>
+                            <div class="report-meta">
+                                <span class="report-pages">12 pages</span>
+                                <span class="report-date">August 2025</span>
+                            </div>
+                            <a href="../alphaearth-uz/reports/soil_moisture.md" class="report-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> View Report
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <div class="report-content">
+                            <h4>Afforestation Suitability</h4>
+                            <p>Site selection and species recommendations for reforestation programs</p>
+                            <div class="report-meta">
+                                <span class="report-pages">15 pages</span>
+                                <span class="report-date">August 2025</span>
+                            </div>
+                            <a href="../alphaearth-uz/reports/afforestation.md" class="report-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> View Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Data Downloads Panel -->
+            <section id="data-panel" class="content-panel">
+                <div class="panel-header">
+                    <h2>Data Downloads</h2>
+                    <p class="panel-description">Access raw data, processed results, and GIS files</p>
+                </div>
+                
+                <div class="data-sections">
+                    <div class="data-section">
+                        <h4>CSV Data Tables</h4>
+                        <div class="data-files">
+                            <div class="file-item">
+                                <i class="fas fa-file-csv"></i>
+                                <span class="file-name">soil_moisture_regional_summary.csv</span>
+                                <span class="file-size">15 KB</span>
+                                <a href="../alphaearth-uz/alphaearth-uz/tables/soil_moisture_regional_summary.csv" class="download-btn">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                            <div class="file-item">
+                                <i class="fas fa-file-csv"></i>
+                                <span class="file-name">afforestation_regional_analysis.csv</span>
+                                <span class="file-size">12 KB</span>
+                                <a href="../alphaearth-uz/alphaearth-uz/tables/afforestation_regional_analysis.csv" class="download-btn">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="data-section">
+                        <h4>Visualization Figures</h4>
+                        <div class="data-files">
+                            <div class="file-item">
+                                <i class="fas fa-image"></i>
+                                <span class="file-name">soil_moisture_comprehensive_analysis.png</span>
+                                <span class="file-size">245 KB</span>
+                                <a href="../alphaearth-uz/alphaearth-uz/figs/soil_moisture_comprehensive_analysis.png" class="download-btn">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                            <div class="file-item">
+                                <i class="fas fa-image"></i>
+                                <span class="file-name">afforestation_suitability_analysis.png</span>
+                                <span class="file-size">198 KB</span>
+                                <a href="../alphaearth-uz/alphaearth-uz/figs/afforestation_suitability_analysis.png" class="download-btn">
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
