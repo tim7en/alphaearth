@@ -1,1 +1,4586 @@
-{"type": "FeatureCollection", "features": []}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.37257126995736,
+          40.372897958497425
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0004",
+        "region": "Samarkand",
+        "protection_level": "National_Park",
+        "conservation_status": "Good",
+        "disturbance_index": 0.125,
+        "threat_level": 0.0,
+        "area_size_km2": 4.1771680877919355,
+        "forest_cover": 0.2459731603212962,
+        "biodiversity_index": 0.9297457001067375,
+        "anomaly_score": 2.986567918451934,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.038357846681194,
+          40.48881586469377
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0010",
+        "region": "Tashkent",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.41500000000000004,
+        "threat_level": 0.8500000000000001,
+        "area_size_km2": 2.3804367991229243,
+        "forest_cover": 0.0,
+        "biodiversity_index": 0.4292517460426581,
+        "anomaly_score": 2.9979670271167884,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.89109389805395,
+          41.69692125171792
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0028",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.39,
+        "threat_level": 0.30000000000000004,
+        "area_size_km2": 4.1903581557006175,
+        "forest_cover": 0.35513067342858096,
+        "biodiversity_index": 0.889396155927064,
+        "anomaly_score": 3.2907140133895862,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.25822072424745,
+          37.24926371425216
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0037",
+        "region": "Karakalpakstan",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.2,
+        "threat_level": 0.44999999999999996,
+        "area_size_km2": 8.376111975960793,
+        "forest_cover": 0.8017222010926192,
+        "biodiversity_index": 0.792044543451616,
+        "anomaly_score": 3.1329988435487595,
+        "primary_threat": "moderate",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.9266611395779,
+          45.3318090244413
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0047",
+        "region": "Namangan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.215,
+        "threat_level": 0.1,
+        "area_size_km2": 2.871263216523544,
+        "forest_cover": 0.6462912495692817,
+        "biodiversity_index": 0.2858530685704571,
+        "anomaly_score": 2.9692268295081035,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.164160568817984,
+          42.032348596779904
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0055",
+        "region": "Tashkent",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.29000000000000004,
+        "threat_level": 0.30000000000000004,
+        "area_size_km2": 258.0936276485876,
+        "forest_cover": 0.14826189228817166,
+        "biodiversity_index": 0.21451014923685713,
+        "anomaly_score": 3.1700353449965295,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.29694202183873,
+          41.598848159991476
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0062",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.49999999999999994,
+        "threat_level": 0.5,
+        "area_size_km2": 139.02157419517897,
+        "forest_cover": 0.38071861793734907,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.2026885533519156,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.40665390240964,
+          43.77430209286687
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0069",
+        "region": "Tashkent",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.4650000000000001,
+        "threat_level": 0.45000000000000007,
+        "area_size_km2": 48.56327596225362,
+        "forest_cover": 0.5295831612170286,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.2149262768225553,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.41268229687529,
+          44.669503386772746
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0071",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6250000000000001,
+        "threat_level": 0.65,
+        "area_size_km2": 36.30688144291116,
+        "forest_cover": 0.36016349744914167,
+        "biodiversity_index": 0.8852703188823855,
+        "anomaly_score": 4.5092388889173245,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.24062509718049,
+          43.28241683928803
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0081",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.62,
+        "threat_level": 0.7,
+        "area_size_km2": 37.68637660411865,
+        "forest_cover": 0.4890501344204197,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 2.8687947414316763,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.595877498476,
+          38.90758631689054
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0086",
+        "region": "Karakalpakstan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.37999999999999995,
+        "threat_level": 0.65,
+        "area_size_km2": 267.85499666062765,
+        "forest_cover": 0.09069947359237787,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.2763531275898723,
+        "primary_threat": "high",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.7362982493257,
+          44.53606698387864
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0116",
+        "region": "Bukhara",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.43000000000000005,
+        "threat_level": 0.85,
+        "area_size_km2": 6.8535483064241465,
+        "forest_cover": 0.9120270421267753,
+        "biodiversity_index": 0.9184731236299241,
+        "anomaly_score": 3.1009668974047124,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.89396494662756,
+          42.13673546393217
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0135",
+        "region": "Namangan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.42,
+        "threat_level": 0.35,
+        "area_size_km2": 1.4152991917196642,
+        "forest_cover": 0.7919383931854418,
+        "biodiversity_index": 0.7815075365648864,
+        "anomaly_score": 3.3802351028420814,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.11837443926564,
+          38.8160187222837
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0136",
+        "region": "Samarkand",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.4650000000000001,
+        "threat_level": 0.45000000000000007,
+        "area_size_km2": 32.61432376855003,
+        "forest_cover": 0.7791079934787052,
+        "biodiversity_index": 0.8263765565586714,
+        "anomaly_score": 3.127360280807923,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.38326383680416,
+          40.58029207619252
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0149",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.34,
+        "threat_level": 0.4,
+        "area_size_km2": 40.5753761608782,
+        "forest_cover": 0.4452778891044319,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.5274898379682265,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.54683301716557,
+          38.13272511855475
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0155",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6950000000000001,
+        "threat_level": 1.0,
+        "area_size_km2": 14.797960611197603,
+        "forest_cover": 0.41472745903767255,
+        "biodiversity_index": 0.6479105756384489,
+        "anomaly_score": 3.9499235992420547,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.7310239585935,
+          45.337571859445795
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0162",
+        "region": "Bukhara",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.495,
+        "threat_level": 0.65,
+        "area_size_km2": 188.48771897498438,
+        "forest_cover": 0.2113604955711182,
+        "biodiversity_index": 0.4809005631801408,
+        "anomaly_score": 3.113562770813256,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.70038573737617,
+          37.67671144029126
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0177",
+        "region": "Bukhara",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.38500000000000006,
+        "threat_level": 0.30000000000000004,
+        "area_size_km2": 2.625121795006367,
+        "forest_cover": 0.7947249665889586,
+        "biodiversity_index": 0.6926828916561442,
+        "anomaly_score": 3.6365870078399767,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.41099096792145,
+          37.2756059292555
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0186",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.465,
+        "threat_level": 0.65,
+        "area_size_km2": 4.376578573506803,
+        "forest_cover": 0.38409536954839985,
+        "biodiversity_index": 0.5912615471273334,
+        "anomaly_score": 2.9100479877739547,
+        "primary_threat": "high",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.847826506252105,
+          43.02467426235318
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0196",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.645,
+        "threat_level": 0.8499999999999999,
+        "area_size_km2": 38.661323449413544,
+        "forest_cover": 0.6584728683010178,
+        "biodiversity_index": 0.257878200683316,
+        "anomaly_score": 3.287010854632171,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.07779938169514,
+          39.17576337758898
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0199",
+        "region": "Bukhara",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.22000000000000003,
+        "threat_level": 0.3,
+        "area_size_km2": 4.4167491671089785,
+        "forest_cover": 0.8390087465272078,
+        "biodiversity_index": 0.8099113324618754,
+        "anomaly_score": 3.0108696831458794,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.6278972563396,
+          39.47028783711571
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0207",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.675,
+        "threat_level": 0.55,
+        "area_size_km2": 6.056984021811402,
+        "forest_cover": 0.5502589864302503,
+        "biodiversity_index": 0.6940694518936821,
+        "anomaly_score": 3.0408712290741753,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.32179022646932,
+          42.17783528499449
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0211",
+        "region": "Karakalpakstan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.44000000000000006,
+        "threat_level": 0.45,
+        "area_size_km2": 229.75595668336555,
+        "forest_cover": 0.3404834107767315,
+        "biodiversity_index": 0.46813573913667783,
+        "anomaly_score": 4.0012232508640695,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.11766856020104,
+          41.44508853569108
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0223",
+        "region": "Bukhara",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.15000000000000002,
+        "threat_level": 0.3,
+        "area_size_km2": 112.46798054945911,
+        "forest_cover": 0.5677614503446246,
+        "biodiversity_index": 0.9076082487231434,
+        "anomaly_score": 3.9858448157927815,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.89975462458304,
+          42.70553978209965
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0235",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.44,
+        "threat_level": 0.65,
+        "area_size_km2": 5.643277521250081,
+        "forest_cover": 0.4175568239187672,
+        "biodiversity_index": 0.9359806051585873,
+        "anomaly_score": 3.1127102616566384,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.57928689595123,
+          38.04140010781226
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0240",
+        "region": "Bukhara",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.245,
+        "threat_level": 0.0,
+        "area_size_km2": 4.793765075612637,
+        "forest_cover": 0.41865880237487785,
+        "biodiversity_index": 0.7091156362569475,
+        "anomaly_score": 3.0348888950064277,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.36047742943377,
+          37.452764288513464
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0246",
+        "region": "Samarkand",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6200000000000001,
+        "threat_level": 0.65,
+        "area_size_km2": 17.823858288829282,
+        "forest_cover": 0.027559105341158546,
+        "biodiversity_index": 0.7671587540582374,
+        "anomaly_score": 3.824877554226541,
+        "primary_threat": "moderate",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.93754102468279,
+          37.960671341729864
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0260",
+        "region": "Karakalpakstan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.3,
+        "threat_level": 0.15,
+        "area_size_km2": 25.85984719528142,
+        "forest_cover": 0.28608151679935945,
+        "biodiversity_index": 0.3531022543572484,
+        "anomaly_score": 4.818604111383049,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.019430758412334,
+          41.567189637669635
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0279",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.37,
+        "threat_level": 0.2,
+        "area_size_km2": 12.385411600537424,
+        "forest_cover": 0.4799787532309398,
+        "biodiversity_index": 0.38676700734568764,
+        "anomaly_score": 3.7923029145084173,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.54909187869778,
+          42.398207813263014
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0301",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.24,
+        "threat_level": 0.1,
+        "area_size_km2": 7.267283364590474,
+        "forest_cover": 0.6880295059674744,
+        "biodiversity_index": 0.560703824168369,
+        "anomaly_score": 3.233284953412854,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.99522226906777,
+          43.36954784957584
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0307",
+        "region": "Bukhara",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.29,
+        "threat_level": 0.25,
+        "area_size_km2": 106.11779629938967,
+        "forest_cover": 0.9189739387286945,
+        "biodiversity_index": 0.8539805727297322,
+        "anomaly_score": 4.457721346252497,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.63606493040508,
+          43.205886422313455
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0326",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.195,
+        "threat_level": 0.35,
+        "area_size_km2": 60.838068600376815,
+        "forest_cover": 0.11917957125844036,
+        "biodiversity_index": 0.38878811712739675,
+        "anomaly_score": 3.118944612699566,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.20609028998656,
+          41.24712167667607
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0338",
+        "region": "Bukhara",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6900000000000001,
+        "threat_level": 0.9999999999999999,
+        "area_size_km2": 66.68051977465834,
+        "forest_cover": 0.5032225613602832,
+        "biodiversity_index": 0.5416929546229131,
+        "anomaly_score": 3.592516403216226,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.85093980051859,
+          38.812602669257004
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0344",
+        "region": "Samarkand",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.49500000000000005,
+        "threat_level": 0.7,
+        "area_size_km2": 17.172790305075655,
+        "forest_cover": 0.16266534607288521,
+        "biodiversity_index": 0.4237841643630283,
+        "anomaly_score": 3.21414014307951,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.168309362645346,
+          44.66145535652779
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0347",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5900000000000001,
+        "threat_level": 0.5,
+        "area_size_km2": 114.75706938824722,
+        "forest_cover": 0.3520589739912862,
+        "biodiversity_index": 0.3191884939279946,
+        "anomaly_score": 3.421654792390226,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.64473820477717,
+          44.27264710617349
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0362",
+        "region": "Bukhara",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.27,
+        "threat_level": 0.4,
+        "area_size_km2": 225.52192598896622,
+        "forest_cover": 0.8813894198339279,
+        "biodiversity_index": 0.7169887261823795,
+        "anomaly_score": 3.3698810106337396,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.53695988003945,
+          39.42785466581779
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0363",
+        "region": "Samarkand",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.3700000000000001,
+        "threat_level": 0.30000000000000004,
+        "area_size_km2": 144.36887849984385,
+        "forest_cover": 0.9258289462976641,
+        "biodiversity_index": 0.8022715598531766,
+        "anomaly_score": 3.4517724066557007,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.71489087997583,
+          44.10928276824061
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0369",
+        "region": "Samarkand",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.27,
+        "threat_level": 0.0,
+        "area_size_km2": 5.669665419123938,
+        "forest_cover": 0.6741820453843107,
+        "biodiversity_index": 0.2884870363609935,
+        "anomaly_score": 3.058515091530522,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.99842901021859,
+          44.09242883924815
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0382",
+        "region": "Bukhara",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.37000000000000005,
+        "threat_level": 0.35,
+        "area_size_km2": 10.549164507921008,
+        "forest_cover": 0.5302082594546559,
+        "biodiversity_index": 0.9904293812989141,
+        "anomaly_score": 3.634396686517036,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.66866748598063,
+          38.24005220914779
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0383",
+        "region": "Samarkand",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.67,
+        "threat_level": 0.4,
+        "area_size_km2": 7.109049359677812,
+        "forest_cover": 0.5901306105700014,
+        "biodiversity_index": 0.9393243196645673,
+        "anomaly_score": 3.3785090936586086,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.98696118678118,
+          38.52200293760395
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0391",
+        "region": "Samarkand",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.39999999999999997,
+        "threat_level": 0.35,
+        "area_size_km2": 6.499760900029178,
+        "forest_cover": 0.01485696266407327,
+        "biodiversity_index": 0.6999767332262151,
+        "anomaly_score": 2.968377679670988,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.065885311109014,
+          39.201045597217735
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0392",
+        "region": "Samarkand",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.27,
+        "threat_level": 0.5,
+        "area_size_km2": 32.41955420605961,
+        "forest_cover": 0.8741667965158575,
+        "biodiversity_index": 0.960646189888563,
+        "anomaly_score": 2.947014883379881,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.95931444117392,
+          40.97249412386074
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0405",
+        "region": "Bukhara",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.55,
+        "threat_level": 1.0,
+        "area_size_km2": 18.3386119428584,
+        "forest_cover": 0.4515801256776064,
+        "biodiversity_index": 0.733795216212021,
+        "anomaly_score": 3.5201197474549297,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.10997429609318,
+          37.58586211594932
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0432",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5400000000000001,
+        "threat_level": 0.55,
+        "area_size_km2": 17.324432728108903,
+        "forest_cover": 0.8527250260954103,
+        "biodiversity_index": 0.31205389849185344,
+        "anomaly_score": 2.938334779942319,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.82906095187745,
+          38.86196373080846
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0434",
+        "region": "Karakalpakstan",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.395,
+        "threat_level": 0.5,
+        "area_size_km2": 58.109062623401904,
+        "forest_cover": 0.03958534699416694,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.1191440611000845,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.68338147066643,
+          44.61541003548311
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0449",
+        "region": "Samarkand",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.2,
+        "threat_level": 0.85,
+        "area_size_km2": 4.299450778497549,
+        "forest_cover": 0.630872078502869,
+        "biodiversity_index": 0.7850518132611177,
+        "anomaly_score": 3.4878453399242413,
+        "primary_threat": "high",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.13040464184138,
+          45.21178555406276
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0457",
+        "region": "Samarkand",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.315,
+        "threat_level": 0.1,
+        "area_size_km2": 79.73680396219484,
+        "forest_cover": 0.11356296439980482,
+        "biodiversity_index": 0.6892160168430016,
+        "anomaly_score": 3.560348078505372,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.96571150933784,
+          37.93529231486507
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0470",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.31500000000000006,
+        "threat_level": 0.1,
+        "area_size_km2": 94.52074238131142,
+        "forest_cover": 0.10364444707438625,
+        "biodiversity_index": 0.9115895929735255,
+        "anomaly_score": 3.8387351376558154,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.49567092617082,
+          37.20941693301035
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0473",
+        "region": "Namangan",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.245,
+        "threat_level": 0.0,
+        "area_size_km2": 10.84580715603023,
+        "forest_cover": 0.8991747210326605,
+        "biodiversity_index": 0.6026898162657012,
+        "anomaly_score": 3.14597460473792,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.22094914493742,
+          40.608756051082686
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0487",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.275,
+        "threat_level": 0.15,
+        "area_size_km2": 8.259000796515165,
+        "forest_cover": 0.7490905212150817,
+        "biodiversity_index": 0.7423602122108826,
+        "anomaly_score": 3.323295006245326,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.39479688150843,
+          40.44446691754484
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0490",
+        "region": "Namangan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.42500000000000004,
+        "threat_level": 0.2,
+        "area_size_km2": 5.963125283806339,
+        "forest_cover": 0.4614908573982685,
+        "biodiversity_index": 0.9236234025780878,
+        "anomaly_score": 3.347940852246719,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.39146408189931,
+          37.62361736617294
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0503",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.47500000000000003,
+        "threat_level": 1.0,
+        "area_size_km2": 12.894224822618618,
+        "forest_cover": 0.776280560131733,
+        "biodiversity_index": 0.4738645601913783,
+        "anomaly_score": 3.2697630005175697,
+        "primary_threat": "high",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.84246376519763,
+          42.02777272014765
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0518",
+        "region": "Karakalpakstan",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5499999999999999,
+        "threat_level": 0.8999999999999999,
+        "area_size_km2": 1.3477188180367137,
+        "forest_cover": 0.5457577806046232,
+        "biodiversity_index": 0.7096244632794624,
+        "anomaly_score": 3.533145439340776,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.14940327641735,
+          40.14288149991644
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0519",
+        "region": "Samarkand",
+        "protection_level": "National_Park",
+        "conservation_status": "Good",
+        "disturbance_index": 0.195,
+        "threat_level": 0.15,
+        "area_size_km2": 8.899448427674164,
+        "forest_cover": 0.8966300221577521,
+        "biodiversity_index": 0.644625278733474,
+        "anomaly_score": 3.0442692664016753,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.82128403090515,
+          38.916715273497125
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0524",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.22000000000000003,
+        "threat_level": 0.35,
+        "area_size_km2": 1.0315373728577464,
+        "forest_cover": 0.3318035490981426,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 5.155390585140149,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.36039936882847,
+          45.35282259781462
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0526",
+        "region": "Tashkent",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.45000000000000007,
+        "threat_level": 0.5,
+        "area_size_km2": 4.01840662207386,
+        "forest_cover": 0.1661534621002256,
+        "biodiversity_index": 0.6062284676882355,
+        "anomaly_score": 3.2572547181906777,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.00707059333465,
+          43.84469385365609
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0530",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.55,
+        "threat_level": 1.0,
+        "area_size_km2": 1.0,
+        "forest_cover": 0.6520293674806978,
+        "biodiversity_index": 0.36400343169759153,
+        "anomaly_score": 3.6110398238120935,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.15986768978985,
+          43.46492449389894
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0535",
+        "region": "Karakalpakstan",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.52,
+        "threat_level": 0.55,
+        "area_size_km2": 42.31107342351232,
+        "forest_cover": 0.2776908987950694,
+        "biodiversity_index": 0.48957227749456816,
+        "anomaly_score": 3.123261709149335,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.790806085639915,
+          45.22237397396026
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0556",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.24500000000000002,
+        "threat_level": 0.30000000000000004,
+        "area_size_km2": 5.162399799010109,
+        "forest_cover": 0.40867549191188257,
+        "biodiversity_index": 0.5927673417453676,
+        "anomaly_score": 2.9629078669674067,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.86991484281242,
+          44.71431506426148
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0560",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Good",
+        "disturbance_index": 0.19499999999999998,
+        "threat_level": 0.15,
+        "area_size_km2": 1.0,
+        "forest_cover": 0.19454738072041888,
+        "biodiversity_index": 0.38663659946826845,
+        "anomaly_score": 2.941878717999133,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.13380066407612,
+          43.075376068233034
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0561",
+        "region": "Karakalpakstan",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.34500000000000003,
+        "threat_level": 0.44999999999999996,
+        "area_size_km2": 2000.0,
+        "forest_cover": 0.42026759056528723,
+        "biodiversity_index": 0.49628406011255954,
+        "anomaly_score": 3.9325855093095305,
+        "primary_threat": "moderate",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.21101244952563,
+          38.037002342826845
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0587",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.47500000000000003,
+        "threat_level": 0.3,
+        "area_size_km2": 73.22890415794933,
+        "forest_cover": 0.674594448296284,
+        "biodiversity_index": 0.8718337004753801,
+        "anomaly_score": 3.5377271561195225,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.46447638725711,
+          37.717593125188216
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0588",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.44,
+        "threat_level": 0.65,
+        "area_size_km2": 83.90519815120537,
+        "forest_cover": 0.19889491533328504,
+        "biodiversity_index": 0.8711425003155094,
+        "anomaly_score": 3.2328535964729332,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.30095419229988,
+          37.2995642551815
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0602",
+        "region": "Tashkent",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.27,
+        "threat_level": 0.3,
+        "area_size_km2": 15.72732356395449,
+        "forest_cover": 0.6384533146594377,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.2700653133608815,
+        "primary_threat": "moderate",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.67493141501381,
+          45.18131829856395
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0634",
+        "region": "Samarkand",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.42000000000000004,
+        "threat_level": 0.15,
+        "area_size_km2": 67.40262036327692,
+        "forest_cover": 0.43246438525469033,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.6674871547461727,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.93643043841573,
+          42.28575080931359
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0646",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.25,
+        "threat_level": 0.35,
+        "area_size_km2": 9.15103880183099,
+        "forest_cover": 0.44344041575693305,
+        "biodiversity_index": 0.46413646658307395,
+        "anomaly_score": 3.346338900652692,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.4607674975376,
+          38.989550480056636
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0652",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.275,
+        "threat_level": 0.0,
+        "area_size_km2": 12.282284323281127,
+        "forest_cover": 0.4413083696567646,
+        "biodiversity_index": 0.6880577152851625,
+        "anomaly_score": 4.405801300084867,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.12601004016255,
+          41.37098935960195
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0657",
+        "region": "Namangan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Good",
+        "disturbance_index": 0.195,
+        "threat_level": 0.15,
+        "area_size_km2": 12.735723984998124,
+        "forest_cover": 0.7250923784539156,
+        "biodiversity_index": 0.6662583588909871,
+        "anomaly_score": 5.1204892466909575,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.18102270029273,
+          42.7734862007669
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0673",
+        "region": "Bukhara",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.315,
+        "threat_level": 0.30000000000000004,
+        "area_size_km2": 80.58585222212463,
+        "forest_cover": 0.1384932381304743,
+        "biodiversity_index": 0.8369656253445084,
+        "anomaly_score": 2.9087771732324077,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.11438931598165,
+          44.07393456826838
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0680",
+        "region": "Karakalpakstan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.27,
+        "threat_level": 0.7,
+        "area_size_km2": 50.58508270648487,
+        "forest_cover": 0.5754825138369023,
+        "biodiversity_index": 0.315396607276987,
+        "anomaly_score": 3.5443341396433024,
+        "primary_threat": "high",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.77337661772187,
+          39.564189843334944
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0687",
+        "region": "Samarkand",
+        "protection_level": "National_Park",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.7450000000000001,
+        "threat_level": 0.7,
+        "area_size_km2": 1.0,
+        "forest_cover": 0.4338697626757449,
+        "biodiversity_index": 0.7851455461169464,
+        "anomaly_score": 3.8730947905782385,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.76861790653707,
+          42.98881444199982
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0692",
+        "region": "Bukhara",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.215,
+        "threat_level": 0.1,
+        "area_size_km2": 10.176970631822485,
+        "forest_cover": 0.3947270904339464,
+        "biodiversity_index": 0.454775589701996,
+        "anomaly_score": 2.9995061315449414,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.00800513612026,
+          39.23416460464882
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0697",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.29500000000000004,
+        "threat_level": 0.15,
+        "area_size_km2": 3.63915067481832,
+        "forest_cover": 0.4807043588086344,
+        "biodiversity_index": 0.9722229913168287,
+        "anomaly_score": 3.1053455315981506,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.37885242298709,
+          44.941437503694374
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0700",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.25,
+        "threat_level": 0.0,
+        "area_size_km2": 54.91139717917094,
+        "forest_cover": 0.5696113336408126,
+        "biodiversity_index": 0.5243594746118782,
+        "anomaly_score": 3.2275351029381754,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.539146461649075,
+          37.54245220629967
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0709",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.195,
+        "threat_level": 0.30000000000000004,
+        "area_size_km2": 236.0419231897572,
+        "forest_cover": 0.6369629148494288,
+        "biodiversity_index": 0.49926801991270925,
+        "anomaly_score": 3.7790014508586243,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.72145672442971,
+          44.1659315047274
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0746",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.29000000000000004,
+        "threat_level": 0.6,
+        "area_size_km2": 26.049862674041925,
+        "forest_cover": 0.7329705625433685,
+        "biodiversity_index": 0.7709316214021497,
+        "anomaly_score": 3.352248056562541,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.34601883085179,
+          43.49911645197088
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0751",
+        "region": "Bukhara",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.4700000000000001,
+        "threat_level": 0.2,
+        "area_size_km2": 5.7965010184527435,
+        "forest_cover": 0.5281982245669075,
+        "biodiversity_index": 0.893802535202547,
+        "anomaly_score": 3.410033084481071,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.60255026584538,
+          42.49728660160624
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0754",
+        "region": "Samarkand",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5700000000000001,
+        "threat_level": 1.0,
+        "area_size_km2": 15.428530007278829,
+        "forest_cover": 0.8606110797161928,
+        "biodiversity_index": 0.6135830003713759,
+        "anomaly_score": 3.0214495030447837,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.196012286290944,
+          44.82139962885023
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0755",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.22500000000000003,
+        "threat_level": 0.3,
+        "area_size_km2": 242.7920337186328,
+        "forest_cover": 0.8374482536149828,
+        "biodiversity_index": 0.8878428159956464,
+        "anomaly_score": 2.9560445273582445,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.03830151064781,
+          40.386490187042
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0781",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.42500000000000004,
+        "threat_level": 0.35,
+        "area_size_km2": 26.49910260200749,
+        "forest_cover": 0.5367002531953817,
+        "biodiversity_index": 0.30120793770045234,
+        "anomaly_score": 3.6116198455105235,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.95481358823231,
+          40.90480887650614
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0795",
+        "region": "Tashkent",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.3700000000000001,
+        "threat_level": 0.2,
+        "area_size_km2": 40.17556596927244,
+        "forest_cover": 0.6909793726734217,
+        "biodiversity_index": 0.2802974973024477,
+        "anomaly_score": 3.84140683499212,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.80551341334755,
+          39.91124220600147
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0797",
+        "region": "Karakalpakstan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.395,
+        "threat_level": 0.2,
+        "area_size_km2": 2.5992917215070026,
+        "forest_cover": 0.3999679587991719,
+        "biodiversity_index": 0.5651986054760214,
+        "anomaly_score": 3.1506521937117475,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.028935000706205,
+          39.35170628037829
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0824",
+        "region": "Namangan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5700000000000001,
+        "threat_level": 0.65,
+        "area_size_km2": 11.733990160628549,
+        "forest_cover": 0.1489061802661698,
+        "biodiversity_index": 0.7540854459515874,
+        "anomaly_score": 2.981778952027971,
+        "primary_threat": "moderate",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.64677591058572,
+          43.77750338634618
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0830",
+        "region": "Tashkent",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5700000000000001,
+        "threat_level": 1.0,
+        "area_size_km2": 168.91649945723165,
+        "forest_cover": 0.8160792817253876,
+        "biodiversity_index": 0.8076599278498238,
+        "anomaly_score": 3.0652094406297508,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.3478589436301,
+          37.96699257650619
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0834",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.34500000000000003,
+        "threat_level": 0.8999999999999999,
+        "area_size_km2": 7.192618281033968,
+        "forest_cover": 0.47305326362294997,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 4.133588773519511,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.714454138149996,
+          40.0588660162749
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0837",
+        "region": "Tashkent",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.28,
+        "threat_level": 0.5,
+        "area_size_km2": 76.62290151461765,
+        "forest_cover": 0.39151578379983126,
+        "biodiversity_index": 0.3075379029758894,
+        "anomaly_score": 3.1098987780792893,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.53929489670674,
+          38.30025112665842
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0840",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.255,
+        "threat_level": 0.15,
+        "area_size_km2": 20.520196612338648,
+        "forest_cover": 0.1885716017937825,
+        "biodiversity_index": 0.775122775286509,
+        "anomaly_score": 2.944546877535793,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.1303548541533,
+          44.905429529905
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0842",
+        "region": "Karakalpakstan",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.24,
+        "threat_level": 0.4,
+        "area_size_km2": 10.90744442200285,
+        "forest_cover": 0.7836929416337208,
+        "biodiversity_index": 0.29339312318005306,
+        "anomaly_score": 3.0075631083318535,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.12590207886687,
+          43.49094645253807
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0843",
+        "region": "Bukhara",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.42000000000000004,
+        "threat_level": 0.65,
+        "area_size_km2": 56.23153302675025,
+        "forest_cover": 0.5858292785384718,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.8605391605266277,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.58308067469814,
+          39.61183579943878
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0853",
+        "region": "Namangan",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6450000000000001,
+        "threat_level": 0.7,
+        "area_size_km2": 80.0358907055096,
+        "forest_cover": 0.18991767257097497,
+        "biodiversity_index": 0.41571892091359997,
+        "anomaly_score": 3.8219572553113776,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.26436457013214,
+          39.6341119881119
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0855",
+        "region": "Tashkent",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.4,
+        "threat_level": 0.8999999999999999,
+        "area_size_km2": 193.78172472993197,
+        "forest_cover": 0.9414047113689,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.9363542179814743,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.96484941833311,
+          43.095745075984304
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0868",
+        "region": "Namangan",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.35000000000000003,
+        "threat_level": 0.2,
+        "area_size_km2": 55.71916472245465,
+        "forest_cover": 0.21248489168521723,
+        "biodiversity_index": 0.2054868614317113,
+        "anomaly_score": 2.9484710959696376,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.17311014313304,
+          42.47338260225808
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0871",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.33,
+        "threat_level": 0.2,
+        "area_size_km2": 32.44277405104022,
+        "forest_cover": 0.6867486952783342,
+        "biodiversity_index": 0.7375296197837385,
+        "anomaly_score": 3.2493088257985274,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.10917811201881,
+          39.91562847429428
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0883",
+        "region": "Karakalpakstan",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.4000000000000001,
+        "threat_level": 0.0,
+        "area_size_km2": 40.20080174296407,
+        "forest_cover": 0.7246655893721454,
+        "biodiversity_index": 0.7560746462281439,
+        "anomaly_score": 2.951272451741345,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.0386479006668,
+          40.065250983305326
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0886",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.29000000000000004,
+        "threat_level": 0.44999999999999996,
+        "area_size_km2": 120.44149358058527,
+        "forest_cover": 0.7940805180283407,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 2.988151146895927,
+        "primary_threat": "moderate",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.49795692503918,
+          40.14246633606524
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0906",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.24500000000000002,
+        "threat_level": 0.6499999999999999,
+        "area_size_km2": 11.291419399260036,
+        "forest_cover": 0.7257593376933632,
+        "biodiversity_index": 0.3390193316525647,
+        "anomaly_score": 3.3805237712176868,
+        "primary_threat": "moderate",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.1922997441443,
+          39.12237477463641
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0914",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Good",
+        "disturbance_index": 0.09,
+        "threat_level": 0.25,
+        "area_size_km2": 12.416156420526415,
+        "forest_cover": 0.7976581557600962,
+        "biodiversity_index": 0.8816296730821604,
+        "anomaly_score": 3.435300406057433,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.188591730315125,
+          37.64176862144833
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0926",
+        "region": "Tashkent",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.525,
+        "threat_level": 0.6499999999999999,
+        "area_size_km2": 39.91129231339496,
+        "forest_cover": 0.0,
+        "biodiversity_index": 0.6737594379051182,
+        "anomaly_score": 3.3223365589911467,
+        "primary_threat": "moderate",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.01413147666253,
+          38.77389853894391
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0934",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.53,
+        "threat_level": 1.0,
+        "area_size_km2": 12.923528677312515,
+        "forest_cover": 0.6655150281424737,
+        "biodiversity_index": 0.7329691179471565,
+        "anomaly_score": 3.544528703688698,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.0313452172577,
+          41.05535847513546
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_0942",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.52,
+        "threat_level": 0.5,
+        "area_size_km2": 20.29946920039855,
+        "forest_cover": 0.36232818790543186,
+        "biodiversity_index": 0.44948176660919903,
+        "anomaly_score": 2.9207674665994676,
+        "primary_threat": "moderate",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.58474570344262,
+          44.67358903355616
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0947",
+        "region": "Bukhara",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5950000000000001,
+        "threat_level": 1.0,
+        "area_size_km2": 9.124359780797187,
+        "forest_cover": 0.6143768592923122,
+        "biodiversity_index": 0.32402420218787187,
+        "anomaly_score": 3.516341042794172,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.95786993932004,
+          42.1007626368726
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_0962",
+        "region": "Samarkand",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5,
+        "threat_level": 0.85,
+        "area_size_km2": 1.3988453560495948,
+        "forest_cover": 0.8442499882670724,
+        "biodiversity_index": 0.25517702271081316,
+        "anomaly_score": 3.0059444097984063,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.897677619365176,
+          43.39495578305951
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_0965",
+        "region": "Namangan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Good",
+        "disturbance_index": 0.06,
+        "threat_level": 0.1,
+        "area_size_km2": 2.640569388155122,
+        "forest_cover": 0.9307871184085016,
+        "biodiversity_index": 0.7581215455329268,
+        "anomaly_score": 3.1323923178477724,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.6431218244064,
+          40.47979733931708
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_0976",
+        "region": "Bukhara",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6700000000000002,
+        "threat_level": 0.85,
+        "area_size_km2": 25.53441981767421,
+        "forest_cover": 0.4282449346848048,
+        "biodiversity_index": 0.5118062746444711,
+        "anomaly_score": 3.3847620368984694,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.7917792238334,
+          40.78117427445762
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0982",
+        "region": "Karakalpakstan",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.37,
+        "threat_level": 0.8499999999999999,
+        "area_size_km2": 10.802766495465123,
+        "forest_cover": 0.874935397377279,
+        "biodiversity_index": 0.612478180184025,
+        "anomaly_score": 3.2743296847606858,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.93923697073036,
+          38.230715683577955
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_0985",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.37,
+        "threat_level": 0.35,
+        "area_size_km2": 4.779202194502698,
+        "forest_cover": 0.18572528929222226,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 2.974874755047279,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.4547050956597,
+          41.12863008017195
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1009",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.33,
+        "threat_level": 0.15,
+        "area_size_km2": 150.0084427759826,
+        "forest_cover": 0.9254545248826711,
+        "biodiversity_index": 0.27040009065260884,
+        "anomaly_score": 3.113694018911525,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.35079884278748,
+          43.397109287897436
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_1028",
+        "region": "Samarkand",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.225,
+        "threat_level": 0.15,
+        "area_size_km2": 2.0204873529825473,
+        "forest_cover": 0.6796843355174422,
+        "biodiversity_index": 0.2329008773052257,
+        "anomaly_score": 3.6772371921041658,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.0021731204969,
+          37.8490669928397
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1030",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Good",
+        "disturbance_index": 0.125,
+        "threat_level": 0.0,
+        "area_size_km2": 47.3745972748254,
+        "forest_cover": 0.7363715417029773,
+        "biodiversity_index": 0.4320890087350732,
+        "anomaly_score": 3.5408340058670422,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.826846603885876,
+          38.06445529173185
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_1053",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.41,
+        "threat_level": 0.65,
+        "area_size_km2": 7.129124397787492,
+        "forest_cover": 0.45304195647104295,
+        "biodiversity_index": 0.8048177482831068,
+        "anomaly_score": 2.916202509803581,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.89787920864694,
+          37.65419800238354
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1059",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.39000000000000007,
+        "threat_level": 0.85,
+        "area_size_km2": 186.95524057747514,
+        "forest_cover": 0.516517185440806,
+        "biodiversity_index": 0.3079510093805151,
+        "anomaly_score": 3.16655103996014,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.1403745166596,
+          39.36856190608957
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1070",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.43500000000000005,
+        "threat_level": 0.25,
+        "area_size_km2": 6.392151078419424,
+        "forest_cover": 0.7574197408184552,
+        "biodiversity_index": 0.8691188086512702,
+        "anomaly_score": 4.045603985189626,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.014651636574726,
+          38.29925860003246
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1091",
+        "region": "Karakalpakstan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.41500000000000004,
+        "threat_level": 0.45000000000000007,
+        "area_size_km2": 18.762931094817876,
+        "forest_cover": 0.8898145655048251,
+        "biodiversity_index": 0.8145262690691075,
+        "anomaly_score": 3.336393587921491,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.6734682850693,
+          40.38583131120428
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1094",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.265,
+        "threat_level": 0.1,
+        "area_size_km2": 19.672926099783513,
+        "forest_cover": 0.8482121227876815,
+        "biodiversity_index": 0.47585634287646145,
+        "anomaly_score": 3.246656000664222,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.80536820065379,
+          39.858790898802965
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1108",
+        "region": "Bukhara",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.34,
+        "threat_level": 0.35,
+        "area_size_km2": 3.9443106946170503,
+        "forest_cover": 0.4836895110203065,
+        "biodiversity_index": 0.720226460420035,
+        "anomaly_score": 3.070875847375067,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.77299281966418,
+          45.00719084130551
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1114",
+        "region": "Karakalpakstan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.30000000000000004,
+        "threat_level": 0.0,
+        "area_size_km2": 41.380058770414614,
+        "forest_cover": 0.9262229049626776,
+        "biodiversity_index": 0.7844213691412234,
+        "anomaly_score": 3.2855640614381603,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.33009652489405,
+          40.93917756812495
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1125",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6000000000000002,
+        "threat_level": 0.35,
+        "area_size_km2": 1768.5026443685438,
+        "forest_cover": 0.4910517444700649,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.1787829315026537,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.61485156056289,
+          43.30805706922007
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1133",
+        "region": "Tashkent",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.44,
+        "threat_level": 0.45000000000000007,
+        "area_size_km2": 3.682777956959619,
+        "forest_cover": 0.4596527801821004,
+        "biodiversity_index": 0.7510432109870002,
+        "anomaly_score": 3.706644181907415,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.02488576876569,
+          42.992501242604995
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1166",
+        "region": "Karakalpakstan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Good",
+        "disturbance_index": 0.195,
+        "threat_level": 0.2,
+        "area_size_km2": 5.012140457638582,
+        "forest_cover": 0.6478390073291301,
+        "biodiversity_index": 0.3332606361660508,
+        "anomaly_score": 3.0795855287089124,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.360097309924235,
+          38.85757133264348
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1184",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.27,
+        "threat_level": 0.0,
+        "area_size_km2": 35.098493485521644,
+        "forest_cover": 0.35863894843457983,
+        "biodiversity_index": 0.6070621554514971,
+        "anomaly_score": 3.331183631377809,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.56360612851542,
+          39.16227426508259
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1189",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.455,
+        "threat_level": 0.2,
+        "area_size_km2": 7.857622413465387,
+        "forest_cover": 0.8785558216443113,
+        "biodiversity_index": 0.3435521511899047,
+        "anomaly_score": 3.6564454356475857,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.89369236910683,
+          45.082476740561084
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1214",
+        "region": "Bukhara",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.33999999999999997,
+        "threat_level": 0.45,
+        "area_size_km2": 53.37182510713204,
+        "forest_cover": 0.47315317056439776,
+        "biodiversity_index": 0.6904971712001635,
+        "anomaly_score": 3.6575146503037868,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.54780234795133,
+          40.238850123215656
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_1237",
+        "region": "Samarkand",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6450000000000001,
+        "threat_level": 0.5,
+        "area_size_km2": 32.039291538204765,
+        "forest_cover": 0.6825026050819425,
+        "biodiversity_index": 0.8791437219192112,
+        "anomaly_score": 3.1223486179242426,
+        "primary_threat": "moderate",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.96588966850712,
+          44.27915658076427
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1239",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.45,
+        "threat_level": 0.55,
+        "area_size_km2": 100.21468435399086,
+        "forest_cover": 0.15211245527924117,
+        "biodiversity_index": 0.27797719006375693,
+        "anomaly_score": 2.961178157068116,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.92210950511496,
+          38.61575375534896
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1243",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Good",
+        "disturbance_index": 0.065,
+        "threat_level": 0.0,
+        "area_size_km2": 36.48461171784656,
+        "forest_cover": 0.7304890147535532,
+        "biodiversity_index": 0.5128017687101667,
+        "anomaly_score": 3.073039318780821,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.48445828995902,
+          44.55893252293108
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1250",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.3400000000000001,
+        "threat_level": 0.5,
+        "area_size_km2": 11.521764962869797,
+        "forest_cover": 0.9134860160339344,
+        "biodiversity_index": 0.6141663930163405,
+        "anomaly_score": 5.02623238603954,
+        "primary_threat": "moderate",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.9880561768664,
+          39.19645837899025
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1254",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.52,
+        "threat_level": 0.85,
+        "area_size_km2": 5.146751452785365,
+        "forest_cover": 0.5532474040967882,
+        "biodiversity_index": 0.43569409938218834,
+        "anomaly_score": 3.789468874576518,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.641438884666904,
+          44.61943217810393
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1269",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.29500000000000004,
+        "threat_level": 0.0,
+        "area_size_km2": 2.5838829587926355,
+        "forest_cover": 0.5016741728024694,
+        "biodiversity_index": 0.4492489610791221,
+        "anomaly_score": 3.065525660389986,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.37596691860658,
+          37.2506371358262
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1273",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.29,
+        "threat_level": 0.4,
+        "area_size_km2": 51.33877940734504,
+        "forest_cover": 0.5257424959620929,
+        "biodiversity_index": 0.8470657559274595,
+        "anomaly_score": 5.35544862991006,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.77421637927907,
+          43.1308191896302
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1277",
+        "region": "Namangan",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.52,
+        "threat_level": 0.7000000000000001,
+        "area_size_km2": 8.95074899798487,
+        "forest_cover": 0.2722036731566377,
+        "biodiversity_index": 0.878614780605733,
+        "anomaly_score": 3.2040294664148505,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.69586751974862,
+          42.42056292409691
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_1280",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.31500000000000006,
+        "threat_level": 0.2,
+        "area_size_km2": 33.935954971274995,
+        "forest_cover": 0.4843552198454728,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 2.971772422946109,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.34793236175314,
+          45.18582310110743
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_1283",
+        "region": "Samarkand",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.265,
+        "threat_level": 0.30000000000000004,
+        "area_size_km2": 13.528893747106592,
+        "forest_cover": 0.3850672475780522,
+        "biodiversity_index": 0.588274200069536,
+        "anomaly_score": 2.9421666009329166,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.901360225684094,
+          42.73350664044821
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_1291",
+        "region": "Samarkand",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.47000000000000003,
+        "threat_level": 1.0,
+        "area_size_km2": 2.0070014959684643,
+        "forest_cover": 0.7825076568439155,
+        "biodiversity_index": 0.44346150530193335,
+        "anomaly_score": 3.0503669785972622,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.61852763017052,
+          45.26643908893455
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1304",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6150000000000001,
+        "threat_level": 0.65,
+        "area_size_km2": 35.88117486832907,
+        "forest_cover": 0.5691769838021357,
+        "biodiversity_index": 0.24078015356941143,
+        "anomaly_score": 2.81091531727676,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.43955335081237,
+          41.452639186529105
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1325",
+        "region": "Namangan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.52,
+        "threat_level": 0.35,
+        "area_size_km2": 9.406302502616578,
+        "forest_cover": 0.09216747141582203,
+        "biodiversity_index": 0.21382624775109174,
+        "anomaly_score": 4.711114482081238,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.776949953586154,
+          39.79611163818445
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1333",
+        "region": "Karakalpakstan",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.29500000000000004,
+        "threat_level": 0.5,
+        "area_size_km2": 9.699179040699844,
+        "forest_cover": 0.637306533843603,
+        "biodiversity_index": 0.3044625444050895,
+        "anomaly_score": 3.2253884112969744,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.66909428601966,
+          39.56686510296879
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1347",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.545,
+        "threat_level": 0.45,
+        "area_size_km2": 46.395815490811465,
+        "forest_cover": 0.5041640393732185,
+        "biodiversity_index": 0.9108451332194348,
+        "anomaly_score": 4.107274626317882,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.1988350371252,
+          41.92327166396225
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1364",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.37,
+        "threat_level": 0.8500000000000001,
+        "area_size_km2": 51.639886926818534,
+        "forest_cover": 0.2748217341760419,
+        "biodiversity_index": 0.3300902999500795,
+        "anomaly_score": 2.9621186134499924,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.384979206572986,
+          43.83795431656212
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1374",
+        "region": "Tashkent",
+        "protection_level": "National_Park",
+        "conservation_status": "Good",
+        "disturbance_index": 0.19,
+        "threat_level": 0.25,
+        "area_size_km2": 14.74952462834194,
+        "forest_cover": 0.8799544890455621,
+        "biodiversity_index": 0.35888159893744287,
+        "anomaly_score": 3.3491361667087984,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.10863815019735,
+          43.646513861306225
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1379",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.39,
+        "threat_level": 0.5,
+        "area_size_km2": 13.10097637595695,
+        "forest_cover": 0.7207032776272803,
+        "biodiversity_index": 0.7645152539837587,
+        "anomaly_score": 3.028514880302648,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.48511679866141,
+          44.54201317434056
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1388",
+        "region": "Tashkent",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.275,
+        "threat_level": 0.85,
+        "area_size_km2": 9.671618010888979,
+        "forest_cover": 0.9098978965054847,
+        "biodiversity_index": 0.2524815006243763,
+        "anomaly_score": 3.7342751782893155,
+        "primary_threat": "high",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.80114157891974,
+          40.55054556207755
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1411",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.29500000000000004,
+        "threat_level": 0.30000000000000004,
+        "area_size_km2": 5.756996596492482,
+        "forest_cover": 0.817023425939977,
+        "biodiversity_index": 0.8413820341768897,
+        "anomaly_score": 2.9397876173338005,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.98379957530817,
+          40.859819049747884
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1416",
+        "region": "Karakalpakstan",
+        "protection_level": "National_Park",
+        "conservation_status": "Good",
+        "disturbance_index": 0.185,
+        "threat_level": 0.1,
+        "area_size_km2": 272.67402327040764,
+        "forest_cover": 0.5699881703782586,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.3855551238270745,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.1589574693024,
+          38.13121278074497
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1440",
+        "region": "Namangan",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Good",
+        "disturbance_index": 0.07,
+        "threat_level": 0.0,
+        "area_size_km2": 349.39562786620314,
+        "forest_cover": 0.42061994729009095,
+        "biodiversity_index": 0.8157611106021383,
+        "anomaly_score": 3.301344177529487,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          60.250683640861,
+          39.03477640348083
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1448",
+        "region": "Namangan",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.4799999999999999,
+        "threat_level": 0.35,
+        "area_size_km2": 27.80353985888778,
+        "forest_cover": 0.0,
+        "biodiversity_index": 0.3938939125537757,
+        "anomaly_score": 3.233238270586144,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.891460924176414,
+          38.72726548685629
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1470",
+        "region": "Bukhara",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.29000000000000004,
+        "threat_level": 0.15,
+        "area_size_km2": 5.70944203841847,
+        "forest_cover": 0.25618360976373655,
+        "biodiversity_index": 0.2277413938635845,
+        "anomaly_score": 2.96532528476804,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.91674899905026,
+          38.26469285040548
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1472",
+        "region": "Tashkent",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6000000000000001,
+        "threat_level": 1.0,
+        "area_size_km2": 44.80080036353635,
+        "forest_cover": 0.5588141636032432,
+        "biodiversity_index": 0.7141147262349818,
+        "anomaly_score": 3.6105773902128737,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.3765253566664,
+          43.16524348771995
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1475",
+        "region": "Namangan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6,
+        "threat_level": 0.7999999999999999,
+        "area_size_km2": 39.94805780265414,
+        "forest_cover": 0.8359775961137556,
+        "biodiversity_index": 0.29078692157322256,
+        "anomaly_score": 3.2282348332816175,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.87190168271453,
+          45.46336487062395
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1476",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.32,
+        "threat_level": 0.35,
+        "area_size_km2": 1.0,
+        "forest_cover": 0.21013188870065097,
+        "biodiversity_index": 0.8142218372864471,
+        "anomaly_score": 3.6081773736350327,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.782446005916896,
+          39.283347391401904
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1481",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.52,
+        "threat_level": 0.5,
+        "area_size_km2": 7.376731580894727,
+        "forest_cover": 0.351872428913935,
+        "biodiversity_index": 0.5521861794876689,
+        "anomaly_score": 4.036695008256542,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.44776148069215,
+          44.75303348416062
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1483",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.25,
+        "threat_level": 0.0,
+        "area_size_km2": 15.165247665426975,
+        "forest_cover": 0.8234227356921673,
+        "biodiversity_index": 0.6637000847437754,
+        "anomaly_score": 3.4779150358251134,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.65110617195035,
+          45.53404235929064
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1484",
+        "region": "Tashkent",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.27,
+        "threat_level": 0.6499999999999999,
+        "area_size_km2": 1.0,
+        "forest_cover": 0.2901941134939239,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.1551708442135906,
+        "primary_threat": "moderate",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.68977372751056,
+          37.46343535636051
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1492",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.25,
+        "threat_level": 1.0,
+        "area_size_km2": 11.273640283642685,
+        "forest_cover": 0.13144861950176956,
+        "biodiversity_index": 0.7897799612668517,
+        "anomaly_score": 3.017488967574117,
+        "primary_threat": "high",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.317135885389696,
+          42.663176833472875
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1517",
+        "region": "Bukhara",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.55,
+        "threat_level": 0.2,
+        "area_size_km2": 62.607355730517845,
+        "forest_cover": 0.33733171743716484,
+        "biodiversity_index": 0.5141628482619004,
+        "anomaly_score": 3.2665647064740573,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          64.89250000995084,
+          42.43002579216362
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1518",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.255,
+        "threat_level": 0.0,
+        "area_size_km2": 56.16319270069808,
+        "forest_cover": 0.6714830573149901,
+        "biodiversity_index": 0.8368528676371465,
+        "anomaly_score": 3.1059483689555223,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.93866010467556,
+          40.961783140667166
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1530",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.41000000000000014,
+        "threat_level": 0.44999999999999996,
+        "area_size_km2": 16.872016739404327,
+        "forest_cover": 0.8393308640562216,
+        "biodiversity_index": 0.773006946583781,
+        "anomaly_score": 3.1958406657658727,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.07128513649761,
+          44.88738856805733
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1536",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.33999999999999997,
+        "threat_level": 0.4,
+        "area_size_km2": 5.291695779098924,
+        "forest_cover": 0.8710609811107088,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.2294777552205516,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.01312393980695,
+          43.43785973894459
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1563",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.39,
+        "threat_level": 0.15,
+        "area_size_km2": 3.8211817422309204,
+        "forest_cover": 0.08989313405781552,
+        "biodiversity_index": 0.42738365163210684,
+        "anomaly_score": 3.030418284511063,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.75649070784348,
+          38.33781231350884
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1565",
+        "region": "Tashkent",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.3950000000000001,
+        "threat_level": 0.25,
+        "area_size_km2": 8.061627144713684,
+        "forest_cover": 0.327487983998035,
+        "biodiversity_index": 0.8190074140985961,
+        "anomaly_score": 4.429059436345713,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.91296532521024,
+          43.42042625937702
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1580",
+        "region": "Karakalpakstan",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.48,
+        "threat_level": 0.7,
+        "area_size_km2": 133.69485697733847,
+        "forest_cover": 0.4018984569008097,
+        "biodiversity_index": 0.6440765787987667,
+        "anomaly_score": 3.8689665990480337,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.5671611700857,
+          42.81780995178349
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_1589",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5250000000000001,
+        "threat_level": 0.85,
+        "area_size_km2": 4.758490790172673,
+        "forest_cover": 0.40843677228162567,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 3.196110614128554,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          62.998632472215164,
+          41.560888888659505
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1595",
+        "region": "Tashkent",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.375,
+        "threat_level": 0.35,
+        "area_size_km2": 49.55967408597658,
+        "forest_cover": 0.7585148532987906,
+        "biodiversity_index": 0.36553203820955793,
+        "anomaly_score": 3.8341091038501673,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.47496094084545,
+          40.96976316882042
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_1610",
+        "region": "Samarkand",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.31500000000000006,
+        "threat_level": 0.45,
+        "area_size_km2": 41.639716448375616,
+        "forest_cover": 0.3795255215707991,
+        "biodiversity_index": 0.5348472976455687,
+        "anomaly_score": 3.5968386853546255,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.30595593681156,
+          38.50296935251194
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_1611",
+        "region": "Samarkand",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.37500000000000006,
+        "threat_level": 0.0,
+        "area_size_km2": 1.9719916395502022,
+        "forest_cover": 0.5398370583198622,
+        "biodiversity_index": 0.4484774721654109,
+        "anomaly_score": 2.947368243482803,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.68468614333639,
+          38.169189817800344
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1619",
+        "region": "Bukhara",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.4650000000000001,
+        "threat_level": 0.5,
+        "area_size_km2": 95.3513296156812,
+        "forest_cover": 0.08945804819741271,
+        "biodiversity_index": 0.8425006738308876,
+        "anomaly_score": 3.565059929518056,
+        "primary_threat": "moderate",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.62636975090211,
+          40.59823873701829
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1620",
+        "region": "Bukhara",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Good",
+        "disturbance_index": 0.12000000000000001,
+        "threat_level": 0.0,
+        "area_size_km2": 2.0564493656785947,
+        "forest_cover": 0.6590938579186908,
+        "biodiversity_index": 0.5589621396457354,
+        "anomaly_score": 3.631624108054201,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.31129636717935,
+          45.43383140335725
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1634",
+        "region": "Tashkent",
+        "protection_level": "Biosphere_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.24,
+        "threat_level": 0.15,
+        "area_size_km2": 1.0,
+        "forest_cover": 0.27016820216193416,
+        "biodiversity_index": 0.3897131532962194,
+        "anomaly_score": 3.822731750680551,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.15570013540602,
+          44.86439468953115
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1640",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.375,
+        "threat_level": 0.6499999999999999,
+        "area_size_km2": 12.015244261724774,
+        "forest_cover": 0.6393598908501278,
+        "biodiversity_index": 0.3438991780273612,
+        "anomaly_score": 3.5241831020571097,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.01545211949791,
+          45.16277573067012
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1676",
+        "region": "Tashkent",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.29,
+        "threat_level": 0.3,
+        "area_size_km2": 27.207514257988635,
+        "forest_cover": 0.8147171304162691,
+        "biodiversity_index": 0.44583355476742653,
+        "anomaly_score": 3.02274998102781,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.75573851532961,
+          39.2086613627737
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_1677",
+        "region": "Samarkand",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.47500000000000003,
+        "threat_level": 0.85,
+        "area_size_km2": 232.24325809860503,
+        "forest_cover": 0.7134826338925132,
+        "biodiversity_index": 0.29686012730766564,
+        "anomaly_score": 3.098742776299719,
+        "primary_threat": "high",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          59.91595154126459,
+          41.6938028718095
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1680",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.24,
+        "threat_level": 0.5,
+        "area_size_km2": 64.24688506054832,
+        "forest_cover": 0.13645339475188867,
+        "biodiversity_index": 0.2040214445780595,
+        "anomaly_score": 3.183057981796441,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          61.41537031712459,
+          40.96644996245686
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1693",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.225,
+        "threat_level": 0.35,
+        "area_size_km2": 24.91280441314887,
+        "forest_cover": 0.7232205230941606,
+        "biodiversity_index": 0.23933683276446183,
+        "anomaly_score": 3.1211675345626726,
+        "primary_threat": "none",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.87002468198594,
+          42.21227141529214
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1714",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.42,
+        "threat_level": 0.85,
+        "area_size_km2": 3.5160008941488834,
+        "forest_cover": 0.20354013201491902,
+        "biodiversity_index": 0.6862624259607618,
+        "anomaly_score": 3.3587177516232165,
+        "primary_threat": "moderate",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          65.1373731490059,
+          40.66944969211059
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1733",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.22,
+        "threat_level": 0.0,
+        "area_size_km2": 10.834768655374514,
+        "forest_cover": 0.8658476479142597,
+        "biodiversity_index": 0.860714206157188,
+        "anomaly_score": 2.9522816613123677,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.57190851899318,
+          45.27571320916862
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1737",
+        "region": "Namangan",
+        "protection_level": "National_Park",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.165,
+        "threat_level": 0.5,
+        "area_size_km2": 189.12484285068138,
+        "forest_cover": 0.4478140613207637,
+        "biodiversity_index": 0.7897962074056286,
+        "anomaly_score": 3.9610011238822924,
+        "primary_threat": "high",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.93634787098783,
+          44.66877281096308
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_1738",
+        "region": "Namangan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5950000000000001,
+        "threat_level": 0.7999999999999999,
+        "area_size_km2": 21.37000810083154,
+        "forest_cover": 0.7445251903688178,
+        "biodiversity_index": 0.38488759172364556,
+        "anomaly_score": 2.9888807796554144,
+        "primary_threat": "moderate",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.70240052404558,
+          39.63237007111387
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1740",
+        "region": "Bukhara",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Critical",
+        "disturbance_index": 0.6200000000000001,
+        "threat_level": 0.5,
+        "area_size_km2": 83.70717158642408,
+        "forest_cover": 0.6368903311906778,
+        "biodiversity_index": 0.2,
+        "anomaly_score": 2.798108683906247,
+        "primary_threat": "low",
+        "management_issue": "insufficient",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.03821561375533,
+          41.295349015923186
+        ]
+      },
+      "properties": {
+        "site_id": "Bukhara_1747",
+        "region": "Bukhara",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.295,
+        "threat_level": 0.0,
+        "area_size_km2": 8.131691970211344,
+        "forest_cover": 0.30594778465972183,
+        "biodiversity_index": 0.5618922345264651,
+        "anomaly_score": 2.9309405027965214,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          63.41107727097476,
+          40.7383060246658
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1757",
+        "region": "Tashkent",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.52,
+        "threat_level": 0.6,
+        "area_size_km2": 11.447449053222703,
+        "forest_cover": 0.7230264487795731,
+        "biodiversity_index": 0.3042869600449148,
+        "anomaly_score": 3.2792338894548823,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.694444933826574,
+          38.956965450874286
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1759",
+        "region": "Karakalpakstan",
+        "protection_level": "Nature_Reserve",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.35,
+        "threat_level": 0.30000000000000004,
+        "area_size_km2": 1.738610579666599,
+        "forest_cover": 0.41181313203950365,
+        "biodiversity_index": 0.8433618001861918,
+        "anomaly_score": 3.287571009622181,
+        "primary_threat": "low",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.03443745911397,
+          41.015988437354544
+        ]
+      },
+      "properties": {
+        "site_id": "Karakalpakstan_1791",
+        "region": "Karakalpakstan",
+        "protection_level": "Wildlife_Sanctuary",
+        "conservation_status": "Poor",
+        "disturbance_index": 0.5400000000000001,
+        "threat_level": 0.35,
+        "area_size_km2": 76.74947408135749,
+        "forest_cover": 0.8109047442098987,
+        "biodiversity_index": 0.6323571164795236,
+        "anomaly_score": 2.962942570744728,
+        "primary_threat": "none",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          56.99507227716135,
+          38.43332021707743
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1795",
+        "region": "Tashkent",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.32,
+        "threat_level": 0.25,
+        "area_size_km2": 58.46821301937809,
+        "forest_cover": 0.544348057546621,
+        "biodiversity_index": 0.730915804410867,
+        "anomaly_score": 4.133295351956506,
+        "primary_threat": "low",
+        "management_issue": "limited",
+        "incident_type": "conservation_concern"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.42646278224285,
+          43.72253071790662
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_1798",
+        "region": "Tashkent",
+        "protection_level": "National_Park",
+        "conservation_status": "Fair",
+        "disturbance_index": 0.39,
+        "threat_level": 0.15,
+        "area_size_km2": 2.008603347785337,
+        "forest_cover": 0.29280574962564015,
+        "biodiversity_index": 0.673043179779439,
+        "anomaly_score": 3.208435344651007,
+        "primary_threat": "none",
+        "management_issue": "adequate",
+        "incident_type": "conservation_concern"
+      }
+    }
+  ],
+  "metadata": {
+    "total_incidents": 183,
+    "generation_date": "2025-08-11T02:36:25.872285",
+    "analysis_type": "AlphaEarth Protected Area Disturbance Assessment",
+    "critical_areas": 17
+  }
+}

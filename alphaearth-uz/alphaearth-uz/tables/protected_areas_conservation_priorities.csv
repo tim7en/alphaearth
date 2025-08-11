@@ -1,0 +1,6 @@
+region,disturbance_index_count,disturbance_index_mean,threat_level_mean,area_size_km2_sum,illegal_logging_incidents_sum,fire_incidents_5yr_sum
+Bukhara,144,0.394,0.621,5621.741,120,67
+Karakalpakstan,165,0.351,0.59,9754.417,134,96
+Namangan,145,0.377,0.6,12635.196,109,79
+Samarkand,161,0.392,0.582,6589.509,123,71
+Tashkent,168,0.399,0.609,8187.397,141,74

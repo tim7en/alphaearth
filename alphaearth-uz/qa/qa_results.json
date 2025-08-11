@@ -1,129 +1,1326 @@
 {
-  "qa_timestamp": "2025-08-10T19:58:51.170284",
-  "overall_status": "FAIL",
+  "qa_timestamp": "2025-08-11T02:47:11.878768",
+  "overall_status": "WARNING",
   "module_checks": {
     "soil_moisture": {
-      "missing": [
-        "tables/soil_moisture_regional_summary.csv",
-        "tables/soil_moisture_model_performance.csv",
-        "figs/soil_moisture_comprehensive_analysis.png"
-      ],
-      "existing": [],
-      "sizes": {}
-    },
-    "biodiversity": {
-      "missing": [
-        "tables/biodiversity_regional_summary.csv",
-        "tables/biodiversity_fragmentation_analysis.csv",
-        "figs/biodiversity_ecosystem_analysis.png"
-      ],
-      "existing": [],
-      "sizes": {}
-    },
-    "afforestation": {
-      "missing": [
-        "tables/afforestation_regional_analysis.csv",
-        "tables/afforestation_model_performance.csv"
-      ],
+      "missing": [],
       "existing": [
-        "data_final/afforestation_candidates.geojson"
+        "alphaearth-uz/tables/soil_moisture_regional_summary.csv",
+        "alphaearth-uz/tables/soil_moisture_model_performance.csv",
+        "alphaearth-uz/figs/soil_moisture_comprehensive_analysis.png"
       ],
       "sizes": {
-        "data_final/afforestation_candidates.geojson": 45
+        "alphaearth-uz/tables/soil_moisture_regional_summary.csv": 3129,
+        "alphaearth-uz/tables/soil_moisture_model_performance.csv": 147,
+        "alphaearth-uz/figs/soil_moisture_comprehensive_analysis.png": 857209
+      }
+    },
+    "biodiversity": {
+      "missing": [],
+      "existing": [
+        "alphaearth-uz/tables/biodiversity_regional_summary.csv",
+        "alphaearth-uz/tables/biodiversity_fragmentation_analysis.csv",
+        "alphaearth-uz/figs/biodiversity_ecosystem_analysis.png"
+      ],
+      "sizes": {
+        "alphaearth-uz/tables/biodiversity_regional_summary.csv": 2739,
+        "alphaearth-uz/tables/biodiversity_fragmentation_analysis.csv": 1302,
+        "alphaearth-uz/figs/biodiversity_ecosystem_analysis.png": 1711636
+      }
+    },
+    "afforestation": {
+      "missing": [],
+      "existing": [
+        "alphaearth-uz/tables/afforestation_regional_analysis.csv",
+        "alphaearth-uz/tables/afforestation_model_performance.csv",
+        "alphaearth-uz/data_final/afforestation_candidates.geojson"
+      ],
+      "sizes": {
+        "alphaearth-uz/tables/afforestation_regional_analysis.csv": 698,
+        "alphaearth-uz/tables/afforestation_model_performance.csv": 205,
+        "alphaearth-uz/data_final/afforestation_candidates.geojson": 52217
       }
     },
     "degradation": {
-      "missing": [
-        "tables/degradation_regional_analysis.csv",
-        "figs/degradation_overview_analysis.png"
-      ],
+      "missing": [],
       "existing": [
-        "tables/degradation_hotspots.csv"
+        "alphaearth-uz/tables/degradation_regional_analysis.csv",
+        "alphaearth-uz/tables/degradation_hotspots.csv",
+        "alphaearth-uz/figs/degradation_overview_analysis.png"
       ],
       "sizes": {
-        "tables/degradation_hotspots.csv": 44
+        "alphaearth-uz/tables/degradation_regional_analysis.csv": 783,
+        "alphaearth-uz/tables/degradation_hotspots.csv": 409,
+        "alphaearth-uz/figs/degradation_overview_analysis.png": 970249
       }
     },
     "urban_heat": {
-      "missing": [
-        "tables/urban_heat_regional_analysis.csv",
-        "figs/urban_heat_overview_analysis.png"
-      ],
+      "missing": [],
       "existing": [
-        "tables/urban_heat_scores.csv"
+        "alphaearth-uz/tables/urban_heat_regional_analysis.csv",
+        "alphaearth-uz/tables/urban_heat_scores.csv",
+        "alphaearth-uz/figs/urban_heat_overview_analysis.png"
       ],
       "sizes": {
-        "tables/urban_heat_scores.csv": 32
+        "alphaearth-uz/tables/urban_heat_regional_analysis.csv": 947,
+        "alphaearth-uz/tables/urban_heat_scores.csv": 572,
+        "alphaearth-uz/figs/urban_heat_overview_analysis.png": 2857693
+      }
+    },
+    "riverbank": {
+      "missing": [],
+      "existing": [
+        "alphaearth-uz/tables/riverbank_regional_analysis.csv",
+        "alphaearth-uz/figs/riverbank_disturbance_overview.png",
+        "alphaearth-uz/data_final/riverbank_flags.geojson"
+      ],
+      "sizes": {
+        "alphaearth-uz/tables/riverbank_regional_analysis.csv": 816,
+        "alphaearth-uz/figs/riverbank_disturbance_overview.png": 801182,
+        "alphaearth-uz/data_final/riverbank_flags.geojson": 637265
+      }
+    },
+    "protected_areas": {
+      "missing": [],
+      "existing": [
+        "alphaearth-uz/tables/protected_areas_regional_analysis.csv",
+        "alphaearth-uz/figs/protected_areas_conservation_analysis.png",
+        "alphaearth-uz/data_final/protected_area_incidents.geojson"
+      ],
+      "sizes": {
+        "alphaearth-uz/tables/protected_areas_regional_analysis.csv": 828,
+        "alphaearth-uz/figs/protected_areas_conservation_analysis.png": 819816,
+        "alphaearth-uz/data_final/protected_area_incidents.geojson": 136852
       }
     }
   },
   "data_quality_checks": {
-    "tables/degradation_hotspots.csv": {
-      "rows": 3,
-      "columns": 2,
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv": {
+      "rows": 5,
+      "columns": 29,
       "missing_values": "0",
       "duplicate_rows": "0",
-      "numeric_columns": 2,
-      "text_columns": 0,
+      "numeric_columns": 28,
+      "text_columns": 1,
       "data_types": {
-        "cell_id": "int64",
-        "degradation_score": "float64"
+        "group": "object",
+        "n_samples": "int64",
+        "soil_moisture_predicted_mean": "float64",
+        "soil_moisture_predicted_std": "float64",
+        "soil_moisture_predicted_median": "float64",
+        "soil_moisture_predicted_min": "float64",
+        "soil_moisture_predicted_max": "float64",
+        "soil_moisture_predicted_q25": "float64",
+        "soil_moisture_predicted_q75": "float64",
+        "soil_moisture_predicted_ci_low": "float64",
+        "soil_moisture_predicted_ci_high": "float64",
+        "water_stress_indicator_mean": "float64",
+        "water_stress_indicator_std": "float64",
+        "water_stress_indicator_median": "float64",
+        "water_stress_indicator_min": "float64",
+        "water_stress_indicator_max": "float64",
+        "water_stress_indicator_q25": "float64",
+        "water_stress_indicator_q75": "float64",
+        "water_stress_indicator_ci_low": "float64",
+        "water_stress_indicator_ci_high": "float64",
+        "vegetation_index_mean": "float64",
+        "vegetation_index_std": "float64",
+        "vegetation_index_median": "float64",
+        "vegetation_index_min": "float64",
+        "vegetation_index_max": "float64",
+        "vegetation_index_q25": "float64",
+        "vegetation_index_q75": "float64",
+        "vegetation_index_ci_low": "float64",
+        "vegetation_index_ci_high": "float64"
       },
       "status": "PASS"
     },
-    "tables/urban_heat_scores.csv": {
-      "rows": 1,
+    "alphaearth-uz/tables/soil_moisture_model_performance.csv": {
+      "rows": 5,
       "columns": 2,
       "missing_values": "0",
       "duplicate_rows": "0",
-      "numeric_columns": 0,
+      "numeric_columns": 1,
+      "text_columns": 1,
+      "data_types": {
+        "metric": "object",
+        "value": "float64"
+      },
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv": {
+      "rows": 5,
+      "columns": 29,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 28,
+      "text_columns": 1,
+      "data_types": {
+        "group": "object",
+        "n_samples": "int64",
+        "habitat_quality_mean": "float64",
+        "habitat_quality_std": "float64",
+        "habitat_quality_median": "float64",
+        "habitat_quality_min": "float64",
+        "habitat_quality_max": "float64",
+        "habitat_quality_q25": "float64",
+        "habitat_quality_q75": "float64",
+        "habitat_quality_ci_low": "float64",
+        "habitat_quality_ci_high": "float64",
+        "species_richness_est_mean": "float64",
+        "species_richness_est_std": "float64",
+        "species_richness_est_median": "float64",
+        "species_richness_est_min": "int64",
+        "species_richness_est_max": "int64",
+        "species_richness_est_q25": "float64",
+        "species_richness_est_q75": "float64",
+        "species_richness_est_ci_low": "float64",
+        "species_richness_est_ci_high": "float64",
+        "forest_cover_pct_mean": "float64",
+        "forest_cover_pct_std": "float64",
+        "forest_cover_pct_median": "float64",
+        "forest_cover_pct_min": "float64",
+        "forest_cover_pct_max": "float64",
+        "forest_cover_pct_q25": "float64",
+        "forest_cover_pct_q75": "float64",
+        "forest_cover_pct_ci_low": "float64",
+        "forest_cover_pct_ci_high": "float64"
+      },
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_fragmentation_analysis.csv": {
+      "rows": 15,
+      "columns": 9,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 7,
       "text_columns": 2,
       "data_types": {
-        "district": "object",
-        "heat_risk": "object"
+        "patch_count": "int64",
+        "mean_patch_size": "float64",
+        "fragmentation_index": "float64",
+        "connectivity_index": "float64",
+        "region": "object",
+        "ecosystem": "object",
+        "total_area_samples": "int64",
+        "mean_habitat_quality": "float64",
+        "mean_species_richness": "float64"
+      },
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv": {
+      "rows": 5,
+      "columns": 11,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 9,
+      "text_columns": 2,
+      "data_types": {
+        "region": "object",
+        "total_sites_analyzed": "int64",
+        "suitable_sites": "int64",
+        "high_suitability_sites": "int64",
+        "priority_sites": "int64",
+        "avg_suitability_score": "float64",
+        "avg_survival_probability": "float64",
+        "recommended_area_km2": "float64",
+        "estimated_trees": "int64",
+        "estimated_cost_usd": "int64",
+        "best_species": "object"
+      },
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/afforestation_model_performance.csv": {
+      "rows": 2,
+      "columns": 5,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 2,
+      "text_columns": 3,
+      "data_types": {
+        "model": "object",
+        "metric": "object",
+        "value": "float64",
+        "additional_metric": "object",
+        "additional_value": "float64"
+      },
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv": {
+      "rows": 5,
+      "columns": 12,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 10,
+      "text_columns": 2,
+      "data_types": {
+        "region": "object",
+        "total_area_assessed": "int64",
+        "avg_degradation_score": "float64",
+        "severe_degradation_areas": "int64",
+        "high_degradation_areas": "int64",
+        "hotspots_identified": "int64",
+        "priority_intervention_areas": "int64",
+        "avg_soil_erosion_rate": "float64",
+        "avg_soil_salinity": "float64",
+        "high_grazing_pressure_areas": "int64",
+        "estimated_restoration_cost": "int64",
+        "trend_direction": "object"
+      },
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/degradation_hotspots.csv": {
+      "rows": 5,
+      "columns": 8,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 7,
+      "text_columns": 1,
+      "data_types": {
+        "region": "object",
+        "degradation_score_count": "int64",
+        "degradation_score_mean": "float64",
+        "degradation_score_std": "float64",
+        "soil_erosion_rate_mean": "float64",
+        "soil_salinity_mean": "float64",
+        "vegetation_degradation_mean": "float64",
+        "soil_degradation_mean": "float64"
+      },
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv": {
+      "rows": 5,
+      "columns": 14,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 13,
+      "text_columns": 1,
+      "data_types": {
+        "region": "object",
+        "total_areas_assessed": "int64",
+        "urban_areas": "int64",
+        "avg_lst": "float64",
+        "max_lst": "float64",
+        "avg_uhi_intensity": "float64",
+        "high_risk_areas": "int64",
+        "very_high_risk_areas": "int64",
+        "avg_green_space_ratio": "float64",
+        "avg_cooling_potential": "float64",
+        "priority_green_sites": "int64",
+        "priority_albedo_sites": "int64",
+        "priority_water_sites": "int64",
+        "estimated_affected_population": "float64"
+      },
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_scores.csv": {
+      "rows": 5,
+      "columns": 12,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 11,
+      "text_columns": 1,
+      "data_types": {
+        "region": "object",
+        "lst_celsius_mean": "float64",
+        "lst_celsius_max": "float64",
+        "lst_celsius_std": "float64",
+        "uhi_intensity_mean": "float64",
+        "uhi_intensity_max": "float64",
+        "heat_risk_score_mean": "float64",
+        "heat_risk_score_std": "float64",
+        "cooling_potential_mean": "float64",
+        "cooling_potential_max": "float64",
+        "green_space_ratio_mean": "float64",
+        "population_density_mean": "float64"
+      },
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/riverbank_regional_analysis.csv": {
+      "rows": 5,
+      "columns": 10,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 8,
+      "text_columns": 2,
+      "data_types": {
+        "region": "object",
+        "total_riverbank_sites": "int64",
+        "avg_disturbance_score": "float64",
+        "high_disturbance_sites": "int64",
+        "priority_intervention_sites": "int64",
+        "avg_buffer_width": "float64",
+        "natural_buffers_intact_pct": "float64",
+        "avg_agricultural_pressure": "float64",
+        "avg_water_quality": "float64",
+        "dominant_disturbance_type": "object"
+      },
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv": {
+      "rows": 5,
+      "columns": 11,
+      "missing_values": "0",
+      "duplicate_rows": "0",
+      "numeric_columns": 10,
+      "text_columns": 1,
+      "data_types": {
+        "region": "object",
+        "total_protected_areas": "int64",
+        "avg_disturbance_index": "float64",
+        "avg_threat_level": "float64",
+        "critical_status_areas": "int64",
+        "incident_count": "int64",
+        "total_protected_area_km2": "float64",
+        "avg_forest_cover": "float64",
+        "avg_biodiversity_index": "float64",
+        "management_challenges": "int64",
+        "priority_conservation_needs": "int64"
       },
       "status": "PASS"
     }
   },
   "file_integrity_checks": {
-    "total_expected": 15,
-    "total_existing": 3,
-    "total_missing": 12,
-    "missing_files": [
-      "tables/soil_moisture_regional_summary.csv",
-      "tables/soil_moisture_model_performance.csv",
-      "figs/soil_moisture_comprehensive_analysis.png",
-      "tables/biodiversity_regional_summary.csv",
-      "tables/biodiversity_fragmentation_analysis.csv",
-      "figs/biodiversity_ecosystem_analysis.png",
-      "tables/afforestation_regional_analysis.csv",
-      "tables/afforestation_model_performance.csv",
-      "tables/degradation_regional_analysis.csv",
-      "figs/degradation_overview_analysis.png",
-      "tables/urban_heat_regional_analysis.csv",
-      "figs/urban_heat_overview_analysis.png"
-    ],
+    "total_expected": 21,
+    "total_existing": 21,
+    "total_missing": 0,
+    "missing_files": [],
     "file_sizes": {
-      "data_final/afforestation_candidates.geojson": 45,
-      "tables/degradation_hotspots.csv": 44,
-      "tables/urban_heat_scores.csv": 32
+      "alphaearth-uz/tables/soil_moisture_regional_summary.csv": 3129,
+      "alphaearth-uz/tables/soil_moisture_model_performance.csv": 147,
+      "alphaearth-uz/figs/soil_moisture_comprehensive_analysis.png": 857209,
+      "alphaearth-uz/tables/biodiversity_regional_summary.csv": 2739,
+      "alphaearth-uz/tables/biodiversity_fragmentation_analysis.csv": 1302,
+      "alphaearth-uz/figs/biodiversity_ecosystem_analysis.png": 1711636,
+      "alphaearth-uz/tables/afforestation_regional_analysis.csv": 698,
+      "alphaearth-uz/tables/afforestation_model_performance.csv": 205,
+      "alphaearth-uz/data_final/afforestation_candidates.geojson": 52217,
+      "alphaearth-uz/tables/degradation_regional_analysis.csv": 783,
+      "alphaearth-uz/tables/degradation_hotspots.csv": 409,
+      "alphaearth-uz/figs/degradation_overview_analysis.png": 970249,
+      "alphaearth-uz/tables/urban_heat_regional_analysis.csv": 947,
+      "alphaearth-uz/tables/urban_heat_scores.csv": 572,
+      "alphaearth-uz/figs/urban_heat_overview_analysis.png": 2857693,
+      "alphaearth-uz/tables/riverbank_regional_analysis.csv": 816,
+      "alphaearth-uz/figs/riverbank_disturbance_overview.png": 801182,
+      "alphaearth-uz/data_final/riverbank_flags.geojson": 637265,
+      "alphaearth-uz/tables/protected_areas_regional_analysis.csv": 828,
+      "alphaearth-uz/figs/protected_areas_conservation_analysis.png": 819816,
+      "alphaearth-uz/data_final/protected_area_incidents.geojson": 136852
     }
   },
-  "statistical_validation": {},
+  "statistical_validation": {
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_n_samples_stats": {
+      "mean": 500.0,
+      "std": 17.131841699011815,
+      "min": 482.0,
+      "max": 523.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_soil_moisture_predicted_mean_stats": {
+      "mean": 0.316910298464924,
+      "std": 0.0069292328133331305,
+      "min": 0.3063334192240252,
+      "max": 0.3244986161093642,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_soil_moisture_predicted_std_stats": {
+      "mean": 0.08124021392852271,
+      "std": 0.005554539606075168,
+      "min": 0.0732427908729205,
+      "max": 0.08892624784385,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_soil_moisture_predicted_median_stats": {
+      "mean": 0.31097003460898376,
+      "std": 0.007738791381845015,
+      "min": 0.2986196190692903,
+      "max": 0.3172597277089282,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_soil_moisture_predicted_min_stats": {
+      "mean": 0.1496652701558689,
+      "std": 0.010370010661082795,
+      "min": 0.1335565017981801,
+      "max": 0.1592790818109587,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_soil_moisture_predicted_max_stats": {
+      "mean": 0.6724197061490349,
+      "std": 0.046702231273769705,
+      "min": 0.606139342020563,
+      "max": 0.7372865834319068,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_soil_moisture_predicted_q25_stats": {
+      "mean": 0.267084416302063,
+      "std": 0.005303643218324967,
+      "min": 0.2619675267998287,
+      "max": 0.2729213249801168,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_soil_moisture_predicted_q75_stats": {
+      "mean": 0.3527515405032601,
+      "std": 0.009366809528677683,
+      "min": 0.3375928692690173,
+      "max": 0.3619282873245664,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_soil_moisture_predicted_ci_low_stats": {
+      "mean": 0.3097665632470368,
+      "std": 0.006625246751950281,
+      "min": 0.2999427102622087,
+      "max": 0.3175071063403025,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_soil_moisture_predicted_ci_high_stats": {
+      "mean": 0.3240540336828112,
+      "std": 0.00726315186901469,
+      "min": 0.3127241281858416,
+      "max": 0.3314901258784259,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_water_stress_indicator_mean_stats": {
+      "mean": 0.5905054956521151,
+      "std": 0.007208942485879242,
+      "min": 0.5811494450671841,
+      "max": 0.5993041026970363,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_water_stress_indicator_std_stats": {
+      "mean": 0.2679179179721302,
+      "std": 0.006767726925222199,
+      "min": 0.2596802671622186,
+      "max": 0.274952019965582,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_water_stress_indicator_median_stats": {
+      "mean": 0.6011406219713112,
+      "std": 0.009163579831677754,
+      "min": 0.5934984737978442,
+      "max": 0.6149013168900793,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_water_stress_indicator_min_stats": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_water_stress_indicator_max_stats": {
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_water_stress_indicator_q25_stats": {
+      "mean": 0.4000849065985017,
+      "std": 0.02403852174883345,
+      "min": 0.3741939974988483,
+      "max": 0.4259303154298681,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_water_stress_indicator_q75_stats": {
+      "mean": 0.795110140963335,
+      "std": 0.008946010518548965,
+      "min": 0.7855827652815783,
+      "max": 0.8076658310968815,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_water_stress_indicator_ci_low_stats": {
+      "mean": 0.566962535891184,
+      "std": 0.007235658121859869,
+      "min": 0.5580083206383649,
+      "max": 0.5758426239650173,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_water_stress_indicator_ci_high_stats": {
+      "mean": 0.6140484554130462,
+      "std": 0.007204367433986303,
+      "min": 0.6042905694960033,
+      "max": 0.6227655814290552,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_vegetation_index_mean_stats": {
+      "mean": 0.40295401627108385,
+      "std": 0.006117904137280491,
+      "min": 0.3955046512583404,
+      "max": 0.4093098194198359,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_vegetation_index_std_stats": {
+      "mean": 0.1959610485232633,
+      "std": 0.011275320791490151,
+      "min": 0.1809691628949126,
+      "max": 0.2082795815931304,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_vegetation_index_median_stats": {
+      "mean": 0.4009859054374041,
+      "std": 0.013945623810266018,
+      "min": 0.3843383390007322,
+      "max": 0.4192013541238798,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_vegetation_index_min_stats": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_vegetation_index_max_stats": {
+      "mean": 0.9739054600317447,
+      "std": 0.05376944300643011,
+      "min": 0.8779407920743063,
+      "max": 1.0,
+      "outliers": 1,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_vegetation_index_q25_stats": {
+      "mean": 0.2687113493334834,
+      "std": 0.008803898749636958,
+      "min": 0.2573764770350566,
+      "max": 0.2777166323099648,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_vegetation_index_q75_stats": {
+      "mean": 0.5353361815467867,
+      "std": 0.01924158447472503,
+      "min": 0.5050756607687118,
+      "max": 0.5565058717791462,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_vegetation_index_ci_low_stats": {
+      "mean": 0.38571852039874077,
+      "std": 0.005621635302148342,
+      "min": 0.3797144111904606,
+      "max": 0.39148350807919,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/soil_moisture_regional_summary.csv_vegetation_index_ci_high_stats": {
+      "mean": 0.4201895121434269,
+      "std": 0.006809672146437627,
+      "min": 0.4112948913262202,
+      "max": 0.4279506575199736,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_n_samples_stats": {
+      "mean": 600.0,
+      "std": 15.247950681976906,
+      "min": 583.0,
+      "max": 621.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_habitat_quality_mean_stats": {
+      "mean": 0.40344407742499805,
+      "std": 0.009438864132793686,
+      "min": 0.3922784723464573,
+      "max": 0.4176610157676937,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_habitat_quality_std_stats": {
+      "mean": 0.21687227476132032,
+      "std": 0.0063068338567952645,
+      "min": 0.2102511166864089,
+      "max": 0.224942755685726,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_habitat_quality_median_stats": {
+      "mean": 0.39159624875909105,
+      "std": 0.0161299922358846,
+      "min": 0.3637206699925936,
+      "max": 0.4025927652166262,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_habitat_quality_min_stats": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_habitat_quality_max_stats": {
+      "mean": 1.0,
+      "std": 0.0,
+      "min": 1.0,
+      "max": 1.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_habitat_quality_q25_stats": {
+      "mean": 0.2399102352555813,
+      "std": 0.01699680121733673,
+      "min": 0.2212263802400321,
+      "max": 0.2588788987674624,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_habitat_quality_q75_stats": {
+      "mean": 0.5563811868275481,
+      "std": 0.012709272887576983,
+      "min": 0.5416876726154446,
+      "max": 0.5740890187792694,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_habitat_quality_ci_low_stats": {
+      "mean": 0.3860571367906296,
+      "std": 0.009657495431398043,
+      "min": 0.3747392655411553,
+      "max": 0.4006664785555949,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_habitat_quality_ci_high_stats": {
+      "mean": 0.4208310180593665,
+      "std": 0.009226102020685014,
+      "min": 0.4098176791517593,
+      "max": 0.4346555529797924,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_species_richness_est_mean_stats": {
+      "mean": 23.15586244922297,
+      "std": 0.14652354407448553,
+      "min": 23.00163934426229,
+      "max": 23.393939393939394,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_species_richness_est_std_stats": {
+      "mean": 6.4126642886537155,
+      "std": 0.1686173532819187,
+      "min": 6.190910128268729,
+      "max": 6.593398494864267,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_species_richness_est_median_stats": {
+      "mean": 23.0,
+      "std": 0.0,
+      "min": 23.0,
+      "max": 23.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_species_richness_est_min_stats": {
+      "mean": 7.6,
+      "std": 1.3416407864998738,
+      "min": 6.0,
+      "max": 9.0,
+      "outliers": 1,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_species_richness_est_max_stats": {
+      "mean": 45.0,
+      "std": 2.5495097567963922,
+      "min": 42.0,
+      "max": 48.0,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_species_richness_est_q25_stats": {
+      "mean": 18.6,
+      "std": 0.5477225575051661,
+      "min": 18.0,
+      "max": 19.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_species_richness_est_q75_stats": {
+      "mean": 27.4,
+      "std": 0.5477225575051661,
+      "min": 27.0,
+      "max": 28.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_species_richness_est_ci_low_stats": {
+      "mean": 22.641738301620826,
+      "std": 0.14758054685069752,
+      "min": 22.477367576967765,
+      "max": 22.87627541325513,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_species_richness_est_ci_high_stats": {
+      "mean": 23.66998659682511,
+      "std": 0.14590647475211813,
+      "min": 23.525911111556823,
+      "max": 23.91160337462366,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_forest_cover_pct_mean_stats": {
+      "mean": 27.171335321569906,
+      "std": 0.3511764051885531,
+      "min": 26.575297003808863,
+      "max": 27.481430446249743,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_forest_cover_pct_std_stats": {
+      "mean": 17.346125464510358,
+      "std": 0.7724053562232661,
+      "min": 16.36769777613211,
+      "max": 18.169255776824187,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_forest_cover_pct_median_stats": {
+      "mean": 24.504411274683026,
+      "std": 0.17721221074488844,
+      "min": 24.324271200903823,
+      "max": 24.748595103065227,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_forest_cover_pct_min_stats": {
+      "mean": 0.6106302530066626,
+      "std": 0.24116651426319813,
+      "min": 0.3231493875900105,
+      "max": 0.9475195915773188,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_forest_cover_pct_max_stats": {
+      "mean": 85.1760375580495,
+      "std": 5.347791041072045,
+      "min": 80.49295846939243,
+      "max": 94.41736695491608,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_forest_cover_pct_q25_stats": {
+      "mean": 13.35463606291905,
+      "std": 0.9353932114746173,
+      "min": 12.185755700111091,
+      "max": 14.438940952595448,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_forest_cover_pct_q75_stats": {
+      "mean": 37.985625293675106,
+      "std": 0.8417739697698234,
+      "min": 36.70560768963778,
+      "max": 38.83589139050287,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_forest_cover_pct_ci_low_stats": {
+      "mean": 25.780174123974263,
+      "std": 0.3000178972568207,
+      "min": 25.273825259560503,
+      "max": 26.02754213616418,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/biodiversity_regional_summary.csv_forest_cover_pct_ci_high_stats": {
+      "mean": 28.562496519165553,
+      "std": 0.40721577517621366,
+      "min": 27.876768748057223,
+      "max": 28.935318756335317,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv_regional_coverage": {
+      "expected_regions": 5,
+      "regions_present": 5,
+      "missing_regions": [],
+      "extra_regions": [],
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv_total_sites_analyzed_stats": {
+      "mean": 800.0,
+      "std": 22.74862633215465,
+      "min": 783.0,
+      "max": 839.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv_suitable_sites_stats": {
+      "mean": 736.2,
+      "std": 14.923136399564267,
+      "min": 724.0,
+      "max": 761.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv_high_suitability_sites_stats": {
+      "mean": 343.4,
+      "std": 13.939153489362257,
+      "min": 326.0,
+      "max": 362.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv_priority_sites_stats": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv_avg_suitability_score_stats": {
+      "mean": 0.7173729659999999,
+      "std": 0.0012103648097908561,
+      "min": 0.7159002,
+      "max": 0.7192055,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv_avg_survival_probability_stats": {
+      "mean": 0.4300326212710398,
+      "std": 0.0015792267143811304,
+      "min": 0.4284656081269091,
+      "max": 0.4320222841039611,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv_recommended_area_km2_stats": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv_estimated_trees_stats": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/afforestation_regional_analysis.csv_estimated_cost_usd_stats": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_regional_coverage": {
+      "expected_regions": 5,
+      "regions_present": 5,
+      "missing_regions": [],
+      "extra_regions": [],
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_total_area_assessed_stats": {
+      "mean": 700.0,
+      "std": 25.179356624028344,
+      "min": 659.0,
+      "max": 726.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_avg_degradation_score_stats": {
+      "mean": 0.3326717256363042,
+      "std": 0.001465171726292084,
+      "min": 0.3305654537598886,
+      "max": 0.3340239420274267,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_severe_degradation_areas_stats": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_high_degradation_areas_stats": {
+      "mean": 19.2,
+      "std": 5.495452665613635,
+      "min": 11.0,
+      "max": 25.0,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_hotspots_identified_stats": {
+      "mean": 70.0,
+      "std": 12.884098726725126,
+      "min": 60.0,
+      "max": 90.0,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_priority_intervention_areas_stats": {
+      "mean": 183.2,
+      "std": 13.827508813954884,
+      "min": 162.0,
+      "max": 196.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_avg_soil_erosion_rate_stats": {
+      "mean": 2.0891424078324112,
+      "std": 0.08538400009993362,
+      "min": 2.01340944312177,
+      "max": 2.2165184976501,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_avg_soil_salinity_stats": {
+      "mean": 2.956839187005527,
+      "std": 0.09997110035905762,
+      "min": 2.8099857381053006,
+      "max": 3.0916819021362683,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_high_grazing_pressure_areas_stats": {
+      "mean": 208.4,
+      "std": 11.260550608207398,
+      "min": 191.0,
+      "max": 221.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/degradation_regional_analysis.csv_estimated_restoration_cost_stats": {
+      "mean": 916000.0,
+      "std": 69137.54406977442,
+      "min": 810000.0,
+      "max": 980000.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_regional_coverage": {
+      "expected_regions": 5,
+      "regions_present": 5,
+      "missing_regions": [],
+      "extra_regions": [],
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_total_areas_assessed_stats": {
+      "mean": 560.0,
+      "std": 28.115831839019098,
+      "min": 537.0,
+      "max": 602.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_urban_areas_stats": {
+      "mean": 238.2,
+      "std": 14.822280526288795,
+      "min": 221.0,
+      "max": 256.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_avg_lst_stats": {
+      "mean": 26.17983003722578,
+      "std": 0.2803261293100365,
+      "min": 25.745348231331505,
+      "max": 26.402038153604444,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_max_lst_stats": {
+      "mean": 40.46943702255022,
+      "std": 1.1606344948425769,
+      "min": 38.93627413015976,
+      "max": 41.70087922492561,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_avg_uhi_intensity_stats": {
+      "mean": 4.22995145593876,
+      "std": 0.28032612931003575,
+      "min": 3.795469650044486,
+      "max": 4.452159572317422,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_high_risk_areas_stats": {
+      "mean": 10.8,
+      "std": 3.96232255123179,
+      "min": 6.0,
+      "max": 14.0,
+      "outliers": 1,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_very_high_risk_areas_stats": {
+      "mean": 0.4,
+      "std": 0.5477225575051662,
+      "min": 0.0,
+      "max": 1.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_avg_green_space_ratio_stats": {
+      "mean": 0.6965331040154454,
+      "std": 0.011731366297562561,
+      "min": 0.6853824635086416,
+      "max": 0.7162031119715405,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_avg_cooling_potential_stats": {
+      "mean": 0.66953836243591,
+      "std": 0.03716713226514322,
+      "min": 0.6134064266420202,
+      "max": 0.7099312575671016,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_priority_green_sites_stats": {
+      "mean": 6.6,
+      "std": 3.361547262794322,
+      "min": 3.0,
+      "max": 11.0,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_priority_albedo_sites_stats": {
+      "mean": 1.8,
+      "std": 1.4832396974191326,
+      "min": 0.0,
+      "max": 4.0,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_priority_water_sites_stats": {
+      "mean": 0.4,
+      "std": 0.5477225575051662,
+      "min": 0.0,
+      "max": 1.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/urban_heat_regional_analysis.csv_estimated_affected_population_stats": {
+      "mean": 110.92800299580453,
+      "std": 56.55331285083561,
+      "min": 25.954618457049783,
+      "max": 151.30714474663958,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/riverbank_regional_analysis.csv_regional_coverage": {
+      "expected_regions": 5,
+      "regions_present": 5,
+      "missing_regions": [],
+      "extra_regions": [],
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/riverbank_regional_analysis.csv_total_riverbank_sites_stats": {
+      "mean": 440.0,
+      "std": 29.656365252673833,
+      "min": 398.0,
+      "max": 470.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/riverbank_regional_analysis.csv_avg_disturbance_score_stats": {
+      "mean": 0.39384351326160955,
+      "std": 0.0028417010014172655,
+      "min": 0.3903225806451613,
+      "max": 0.3973981900452489,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/riverbank_regional_analysis.csv_high_disturbance_sites_stats": {
+      "mean": 203.6,
+      "std": 11.371015785759864,
+      "min": 188.0,
+      "max": 217.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/riverbank_regional_analysis.csv_priority_intervention_sites_stats": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "outliers": 0,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/riverbank_regional_analysis.csv_avg_buffer_width_stats": {
+      "mean": 24.976070828477667,
+      "std": 0.6769137286902667,
+      "min": 23.906502876884414,
+      "max": 25.589952750661748,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/riverbank_regional_analysis.csv_natural_buffers_intact_pct_stats": {
+      "mean": 55.243566318275,
+      "std": 1.3646326061942093,
+      "min": 52.94117647058824,
+      "max": 56.23529411764706,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/riverbank_regional_analysis.csv_avg_agricultural_pressure_stats": {
+      "mean": 104.66156642167861,
+      "std": 3.8343142484927637,
+      "min": 99.9561577826321,
+      "max": 109.18532705069146,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/riverbank_regional_analysis.csv_avg_water_quality_stats": {
+      "mean": 60.597892839564075,
+      "std": 0.5235466584303685,
+      "min": 60.00369626481888,
+      "max": 61.17124488388389,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_regional_coverage": {
+      "expected_regions": 5,
+      "regions_present": 5,
+      "missing_regions": [],
+      "extra_regions": [],
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_total_protected_areas_stats": {
+      "mean": 360.0,
+      "std": 16.777961735562517,
+      "min": 341.0,
+      "max": 385.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_avg_disturbance_index_stats": {
+      "mean": 0.3089922344975971,
+      "std": 0.010641940583050147,
+      "min": 0.2962857142857143,
+      "max": 0.3195428571428572,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_avg_threat_level_stats": {
+      "mean": 0.40856796198905804,
+      "std": 0.011034308021755276,
+      "min": 0.3937150837988827,
+      "max": 0.4245901639344262,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_critical_status_areas_stats": {
+      "mean": 3.4,
+      "std": 2.073644135332772,
+      "min": 0.0,
+      "max": 5.0,
+      "outliers": 1,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_incident_count_stats": {
+      "mean": 36.6,
+      "std": 3.9115214431215892,
+      "min": 33.0,
+      "max": 43.0,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_total_protected_area_km2_stats": {
+      "mean": 21818.30209730642,
+      "std": 3633.4032013850942,
+      "min": 18687.7460163313,
+      "max": 27183.941058490396,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_avg_forest_cover_stats": {
+      "mean": 0.5544935310172753,
+      "std": 0.013736699792220499,
+      "min": 0.5381016781442995,
+      "max": 0.5722227334447574,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_avg_biodiversity_index_stats": {
+      "mean": 0.5130725154023812,
+      "std": 0.007237664050527996,
+      "min": 0.5063066715230293,
+      "max": 0.5230133887781311,
+      "outliers": 2,
+      "status": "PASS"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_management_challenges_stats": {
+      "mean": 118.0,
+      "std": 4.301162633521313,
+      "min": 113.0,
+      "max": 123.0,
+      "outliers": 2,
+      "status": "WARNING"
+    },
+    "alphaearth-uz/tables/protected_areas_regional_analysis.csv_priority_conservation_needs_stats": {
+      "mean": 156.6,
+      "std": 11.326958991715296,
+      "min": 144.0,
+      "max": 168.0,
+      "outliers": 2,
+      "status": "WARNING"
+    }
+  },
   "recommendations": [
-    "Re-run missing modules to generate all expected outputs",
     "Implement cross-validation for model robustness assessment",
     "Add uncertainty quantification to predictions",
     "Validate results with external ground-truth data where available",
     "Implement automated monitoring for data drift",
     "Document model limitations and appropriate use cases"
   ],
-  "critical_issues": [
-    "Missing 12 expected output files"
-  ],
+  "critical_issues": [],
   "warnings": [
-    "GeoJSON file data_final/afforestation_candidates.geojson is very small (45 bytes)",
-    "CSV file tables/degradation_hotspots.csv is very small (44 bytes)",
-    "CSV file tables/urban_heat_scores.csv is very small (32 bytes)"
+    "Extreme values in alphaearth-uz/tables/soil_moisture_regional_summary.csv:n_samples",
+    "Extreme values in alphaearth-uz/tables/biodiversity_regional_summary.csv:n_samples",
+    "Extreme values in alphaearth-uz/tables/afforestation_regional_analysis.csv:total_sites_analyzed",
+    "Extreme values in alphaearth-uz/tables/afforestation_regional_analysis.csv:suitable_sites",
+    "Extreme values in alphaearth-uz/tables/afforestation_regional_analysis.csv:high_suitability_sites",
+    "Extreme values in alphaearth-uz/tables/degradation_regional_analysis.csv:total_area_assessed",
+    "Extreme values in alphaearth-uz/tables/degradation_regional_analysis.csv:priority_intervention_areas",
+    "Extreme values in alphaearth-uz/tables/degradation_regional_analysis.csv:high_grazing_pressure_areas",
+    "Extreme values in alphaearth-uz/tables/degradation_regional_analysis.csv:estimated_restoration_cost",
+    "Extreme values in alphaearth-uz/tables/urban_heat_regional_analysis.csv:total_areas_assessed",
+    "Extreme values in alphaearth-uz/tables/urban_heat_regional_analysis.csv:urban_areas",
+    "Extreme values in alphaearth-uz/tables/urban_heat_regional_analysis.csv:estimated_affected_population",
+    "Extreme values in alphaearth-uz/tables/riverbank_regional_analysis.csv:total_riverbank_sites",
+    "Extreme values in alphaearth-uz/tables/riverbank_regional_analysis.csv:high_disturbance_sites",
+    "Extreme values in alphaearth-uz/tables/riverbank_regional_analysis.csv:avg_agricultural_pressure",
+    "Extreme values in alphaearth-uz/tables/protected_areas_regional_analysis.csv:total_protected_areas",
+    "Extreme values in alphaearth-uz/tables/protected_areas_regional_analysis.csv:total_protected_area_km2",
+    "Extreme values in alphaearth-uz/tables/protected_areas_regional_analysis.csv:management_challenges",
+    "Extreme values in alphaearth-uz/tables/protected_areas_regional_analysis.csv:priority_conservation_needs"
   ]
 }

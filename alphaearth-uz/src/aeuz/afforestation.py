@@ -462,7 +462,45 @@ def run():
             "metadata": {
                 "total_sites": len(geojson_features),
                 "generation_date": datetime.now().isoformat(),
-                "analysis_type": "AlphaEarth Afforestation Suitability"
+                "analysis_type": "AlphaEarth Afforestation Suitability - Priority Sites"
+            }
+        }
+        
+        with open(f"{final}/afforestation_candidates.geojson", 'w') as f:
+            json.dump(geojson_data, f, indent=2)
+    else:
+        # If no priority sites, create GeoJSON with top suitable sites
+        print("No priority sites found, creating GeoJSON with top suitable sites...")
+        top_suitable = embeddings_df[embeddings_df['predicted_suitability'] >= 0.8].head(100)
+        
+        geojson_features = []
+        for _, row in top_suitable.iterrows():
+            feature = {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [row['longitude'], row['latitude']]
+                },
+                "properties": {
+                    "site_id": row['sample_id'],
+                    "region": row['region'],
+                    "suitability_score": float(row['predicted_suitability']),
+                    "survival_probability": float(row['survival_probability']),
+                    "recommended_species": "Multiple suitable species",
+                    "estimated_cost": 2500,
+                    "priority_rank": "High_Suitability"
+                }
+            }
+            geojson_features.append(feature)
+        
+        geojson_data = {
+            "type": "FeatureCollection",
+            "features": geojson_features,
+            "metadata": {
+                "total_sites": len(geojson_features),
+                "generation_date": datetime.now().isoformat(),
+                "analysis_type": "AlphaEarth Afforestation Suitability - High Suitability Sites",
+                "note": "No sites met strict priority criteria, showing top suitable sites instead"
             }
         }
         

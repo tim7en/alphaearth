@@ -1,0 +1,6 @@
+region,disturbance_index_count,disturbance_index_mean,threat_level_mean,current_forest_cover_mean,biodiversity_index_mean,area_size_km2_sum
+Bukhara,43,0.391,0.402,0.5,0.633,1866.651
+Karakalpakstan,33,0.352,0.405,0.562,0.507,3735.494
+Namangan,36,0.352,0.397,0.528,0.555,3691.214
+Samarkand,34,0.412,0.45,0.514,0.591,1010.402
+Tashkent,37,0.387,0.508,0.535,0.449,1469.927
