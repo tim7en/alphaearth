@@ -10,6 +10,8 @@
 
 Discover ongoing geospatial research into Uzbekistan's landscapes, ecosystems, and urban environments, powered by **AlphaEarth satellite embeddings** (radar + optical fusion). This repository provides a complete, reproducible pipeline for environmental analysis with research-grade outputs and comprehensive quality assurance.
 
+**🎯 NEW: Standalone Analysis Scripts** - Each environmental domain can now be run independently using real AlphaEarth Satellite Embedding V1 dataset. See `STANDALONE_ANALYSIS_GUIDE.md` for details.
+
 ## 🎯 Analysis Domains
 
 | Module | Description | Status | Key Outputs |
@@ -26,7 +28,21 @@ Discover ongoing geospatial research into Uzbekistan's landscapes, ecosystems, a
 
 ## 🚀 Quick Start
 
-### Option 1: Jupyter Notebook (Recommended)
+### Option 1: Standalone Analysis Scripts (Recommended)
+```bash
+git clone https://github.com/tim7en/alphaearth.git
+cd alphaearth
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+
+# Run individual analyses with real satellite data
+python soil_moisture_standalone.py
+python afforestation_standalone.py
+python urban_heat_standalone.py
+# ... etc for each domain
+```
+
+### Option 2: Jupyter Notebook
 ```bash
 git clone https://github.com/tim7en/alphaearth.git
 cd alphaearth
@@ -35,7 +51,7 @@ pip install -r requirements.txt
 jupyter notebook AlphaEarth_Uzbekistan_Comprehensive_Analysis.ipynb
 ```
 
-### Option 2: Command Line
+### Option 3: Command Line (All Modules)
 ```bash
 git clone https://github.com/tim7en/alphaearth.git
 cd alphaearth/alphaearth-uz
@@ -43,11 +59,6 @@ python -m venv ../.venv && source ../.venv/bin/activate
 pip install -r ../requirements.txt
 PYTHONPATH=$(pwd)/src python -m aeuz.orchestrator --run all
 ```
-
-### Option 3: Make Commands
-```bash
-make setup  # Install dependencies
-make run    # Execute all analyses
 make qa     # Run quality assurance
 ```
 

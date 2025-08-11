@@ -10,7 +10,7 @@ from sklearn.metrics import classification_report, roc_auc_score
 from sklearn.preprocessing import StandardScaler
 import xgboost as xgb
 from datetime import datetime
-from .utils import (load_config, ensure_dir, setup_plotting, generate_synthetic_embeddings,
+from .utils import (load_config, ensure_dir, setup_plotting, load_alphaearth_embeddings,
                    calculate_confidence_interval, perform_trend_analysis, create_summary_statistics,
                    save_plot, validate_data_quality)
 
@@ -25,9 +25,9 @@ def run():
     ensure_dir(tables); ensure_dir(figs); ensure_dir(final)
     setup_plotting()
     
-    # Generate synthetic AlphaEarth embeddings for afforestation analysis
-    print("Processing AlphaEarth embeddings for afforestation suitability...")
-    embeddings_df = generate_synthetic_embeddings(n_samples=4000, n_features=192)
+    # Load AlphaEarth satellite embeddings for afforestation analysis
+    print("Loading AlphaEarth satellite embeddings for afforestation suitability...")
+    embeddings_df = load_alphaearth_embeddings(regions=cfg['regions'], n_features=192)
     
     # Add afforestation-specific environmental variables
     np.random.seed(42)

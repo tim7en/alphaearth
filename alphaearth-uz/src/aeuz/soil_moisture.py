@@ -11,7 +11,7 @@ from sklearn.preprocessing import StandardScaler
 from datetime import datetime
 import warnings
 warnings.filterwarnings('ignore')
-from .utils import (load_config, ensure_dir, setup_plotting, generate_synthetic_embeddings,
+from .utils import (load_config, ensure_dir, setup_plotting, load_alphaearth_embeddings,
                    calculate_confidence_interval, perform_trend_analysis, create_summary_statistics,
                    save_plot, validate_data_quality, perform_cross_validation, 
                    enhance_model_with_feature_selection, create_pilot_study_analysis,
@@ -28,9 +28,9 @@ def run():
     ensure_dir(tables); ensure_dir(figs); ensure_dir(reports)
     setup_plotting()
     
-    # Generate enhanced synthetic AlphaEarth embeddings for analysis
-    print("Processing AlphaEarth embeddings with enhanced soil moisture modeling...")
-    embeddings_df = generate_synthetic_embeddings(n_samples=2000, n_features=64)  # Reduced for efficiency
+    # Load AlphaEarth satellite embeddings for soil moisture analysis
+    print("Loading AlphaEarth satellite embeddings for soil moisture modeling...")
+    embeddings_df = load_alphaearth_embeddings(regions=cfg['regions'], n_features=64)
     
     # Enhanced soil moisture feature engineering
     np.random.seed(42)
