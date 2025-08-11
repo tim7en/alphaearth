@@ -1,6 +1,6 @@
 # AlphaEarth Uzbekistan Analysis - Quality Assurance Report
 
-**Generated:** 2025-08-11T02:40:07.664174  
+**Generated:** 2025-08-11T02:47:11.878768  
 **Overall Status:** WARNING
 
 ## Executive Summary
