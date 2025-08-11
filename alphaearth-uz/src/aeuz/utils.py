@@ -480,8 +480,8 @@ def generate_scientific_methodology_report(analysis_type: str, model_results: Di
 ### Model Validation Approach
 - **Cross-Validation**: {model_results.get('cv_folds', 5)}-fold cross-validation with stratified sampling
 - **Performance Metrics**: 
-  - R² Score: {model_results.get('r2_mean', 'N/A'):.3f} ± {model_results.get('r2_std', 0):.3f}
-  - RMSE: {model_results.get('rmse_mean', 'N/A'):.3f} ± {model_results.get('rmse_std', 0):.3f}
+  - R² Score: {model_results.get('r2_mean', 0):.3f} ± {model_results.get('r2_std', 0):.3f}
+  - RMSE: {model_results.get('rmse_mean', 0):.3f} ± {model_results.get('rmse_std', 0):.3f}
   - 95% Confidence Intervals calculated using t-distribution
 
 ### Feature Selection Protocol
@@ -524,9 +524,9 @@ def generate_scientific_methodology_report(analysis_type: str, model_results: Di
 ## Model Performance Assessment
 
 ### Cross-Validation Results
-- **Mean R² Score**: {cv.get('r2_mean', 'N/A'):.3f} (95% CI: {cv.get('r2_ci_low', 'N/A'):.3f} - {cv.get('r2_ci_high', 'N/A'):.3f})
-- **Mean RMSE**: {cv.get('rmse_mean', 'N/A'):.3f} (95% CI: {cv.get('rmse_ci_low', 'N/A'):.3f} - {cv.get('rmse_ci_high', 'N/A'):.3f})
-- **Model Stability**: Standard deviation R² = {cv.get('r2_std', 'N/A'):.3f}
+- **Mean R² Score**: {cv.get('r2_mean', 0):.3f} (95% CI: {cv.get('r2_ci_low', 0):.3f} - {cv.get('r2_ci_high', 0):.3f})
+- **Mean RMSE**: {cv.get('rmse_mean', 0):.3f} (95% CI: {cv.get('rmse_ci_low', 0):.3f} - {cv.get('rmse_ci_high', 0):.3f})
+- **Model Stability**: Standard deviation R² = {cv.get('r2_std', 0):.3f}
 
 ### Confidence Assessment
 - **Prediction Intervals**: Bootstrap-based 95% confidence bounds

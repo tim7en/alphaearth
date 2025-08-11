@@ -1,0 +1,3 @@
+Analysis Domain,Original R²,Enhanced R²,Improvement,Confidence Intervals,Cross-Validation,Pilot Study
+Soil Moisture,-0.017,0.696 ± 0.028,+0.713,✓,✓,✓
+Urban Heat (Pilot),N/A,Tashkent vs Namangan,Comparative Analysis,✓,✓,✓
