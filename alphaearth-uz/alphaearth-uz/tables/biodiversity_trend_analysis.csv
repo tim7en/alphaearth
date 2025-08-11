@@ -1,6 +1,1 @@
-region,habitat_quality_trend,habitat_quality_significance,species_richness_trend,species_richness_significance,quality_slope,richness_slope
-Karakalpakstan,decreasing,not significant,decreasing,not significant,-0.004357376283657331,-0.0033099783573669345
-Tashkent,decreasing,not significant,decreasing,not significant,-0.0032708226622110204,-0.08240887521474712
-Samarkand,increasing,not significant,increasing,not significant,-0.0018693137641922375,0.0648951971991093
-Bukhara,no trend,not significant,decreasing,not significant,8.754501644053134e-05,-0.02908512331478151
-Namangan,decreasing,not significant,decreasing,not significant,-0.0032675088294322734,-0.10828594623302669
+region

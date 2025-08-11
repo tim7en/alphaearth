@@ -6,338 +6,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          72.94544867651322,
-          41.23510868767738
+          69.40816326530611,
+          41.15714285714286
         ]
       },
       "properties": {
-        "site_id": "sample_Samarkand_0001",
-        "region": "Samarkand",
-        "suitability_score": 0.9036688208580017,
-        "survival_probability": 0.5579155098490506,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          57.231290388185315,
-          38.21276184052915
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Bukhara_0003",
-        "region": "Bukhara",
-        "suitability_score": 0.8189688324928284,
-        "survival_probability": 0.4787031647815582,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          69.59640980024298,
-          41.75738474852155
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0007",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.818731427192688,
-        "survival_probability": 0.4974788017218184,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          70.35255547356878,
-          42.26574017183234
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0010",
-        "region": "Namangan",
-        "suitability_score": 0.8496484160423279,
-        "survival_probability": 0.5647291994913158,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          63.29517093728372,
-          39.82239378718069
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Bukhara_0017",
-        "region": "Bukhara",
-        "suitability_score": 0.9498425126075745,
-        "survival_probability": 0.645932184922165,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          66.774198731198,
-          43.650947815719384
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0018",
-        "region": "Samarkand",
-        "suitability_score": 0.8500165939331055,
-        "survival_probability": 0.5715507449930665,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          61.361064724138345,
-          39.45240312874014
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0021",
-        "region": "Samarkand",
-        "suitability_score": 0.8500336408615112,
-        "survival_probability": 0.5416268706637317,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          59.35357837251657,
-          41.61129271053768
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0022",
-        "region": "Namangan",
-        "suitability_score": 0.9996317028999329,
-        "survival_probability": 0.6723916663716805,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          67.62011602835155,
-          42.29364338265765
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0024",
-        "region": "Samarkand",
-        "suitability_score": 0.9182717800140381,
-        "survival_probability": 0.6374900982691775,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          59.23612523470085,
-          40.85129644585835
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0026",
-        "region": "Samarkand",
-        "suitability_score": 0.8000226020812988,
-        "survival_probability": 0.5319866400873355,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          57.14956772511387,
-          42.17118642437194
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0029",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.8499407768249512,
-        "survival_probability": 0.4777095513360722,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          70.18168324389876,
-          41.9981968407643
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0030",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.8497774004936218,
-        "survival_probability": 0.5855827468990126,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          60.07805772460986,
-          37.2312451508717
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0032",
-        "region": "Samarkand",
-        "suitability_score": 0.8005596399307251,
-        "survival_probability": 0.45574728669248843,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          60.26442600067927,
-          42.90567481112391
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0035",
-        "region": "Samarkand",
-        "suitability_score": 0.8497412800788879,
-        "survival_probability": 0.5341405655115183,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          63.56701530000261,
-          42.36791690352171
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Bukhara_0036",
-        "region": "Bukhara",
-        "suitability_score": 0.8007071614265442,
-        "survival_probability": 0.41582964946275414,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          68.97737992301488,
-          42.181103305773085
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0042",
-        "region": "Namangan",
-        "suitability_score": 0.9998881816864014,
-        "survival_probability": 0.6647196965576557,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          57.67152605147082,
-          38.68513399829814
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0046",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.8500398397445679,
-        "survival_probability": 0.5164135810681498,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          56.69069346624756,
-          43.5172986949831
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Tashkent_0049",
+        "site_id": "Tashkent_41.157_69.408",
         "region": "Tashkent",
-        "suitability_score": 0.8499782085418701,
-        "survival_probability": 0.49591242424526827,
+        "suitability_score": 0.8994014263153076,
+        "survival_probability": 0.6159400767882663,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -348,15 +25,72 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          59.473991640585844,
-          42.92607544621622
+          69.42448979591836,
+          41.17142857142857
         ]
       },
       "properties": {
-        "site_id": "sample_Samarkand_0050",
+        "site_id": "Tashkent_41.171_69.424",
+        "region": "Tashkent",
+        "suitability_score": 0.8994014263153076,
+        "survival_probability": 0.6159400767882663,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.44081632653061,
+          41.18571428571428
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_41.186_69.441",
+        "region": "Tashkent",
+        "suitability_score": 0.8466582298278809,
+        "survival_probability": 0.579819777727127,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.45714285714286,
+          41.199999999999996
+        ]
+      },
+      "properties": {
+        "site_id": "Tashkent_41.200_69.457",
+        "region": "Tashkent",
+        "suitability_score": 0.8389887809753418,
+        "survival_probability": 0.5745674835046132,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.02448979591837,
+          39.71836734693878
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_39.718_67.024",
         "region": "Samarkand",
-        "suitability_score": 0.8199319243431091,
-        "survival_probability": 0.5248930421675368,
+        "suitability_score": 0.8834086656570435,
+        "survival_probability": 0.5967425536513328,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -367,15 +101,148 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          61.37557194553796,
-          37.88052509978262
+          67.04081632653062,
+          39.730612244897955
         ]
       },
       "properties": {
-        "site_id": "sample_Namangan_0051",
+        "site_id": "Samarkand_39.731_67.041",
+        "region": "Samarkand",
+        "suitability_score": 0.8992395997047424,
+        "survival_probability": 0.6074363496005534,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.05714285714286,
+          39.74285714285714
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_39.743_67.057",
+        "region": "Samarkand",
+        "suitability_score": 0.8992395997047424,
+        "survival_probability": 0.6074363496005534,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.0734693877551,
+          39.755102040816325
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_39.755_67.073",
+        "region": "Samarkand",
+        "suitability_score": 0.8992395997047424,
+        "survival_probability": 0.6074363496005534,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.08979591836734,
+          39.76734693877551
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_39.767_67.090",
+        "region": "Samarkand",
+        "suitability_score": 0.8505471348762512,
+        "survival_probability": 0.5745445896089076,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.10612244897959,
+          39.779591836734696
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_39.780_67.106",
+        "region": "Samarkand",
+        "suitability_score": 0.8502684235572815,
+        "survival_probability": 0.5743563201129436,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.12244897959184,
+          39.791836734693874
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_39.792_67.122",
+        "region": "Samarkand",
+        "suitability_score": 0.8499851226806641,
+        "survival_probability": 0.5741649503707885,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          67.13877551020408,
+          39.80408163265306
+        ]
+      },
+      "properties": {
+        "site_id": "Samarkand_39.804_67.139",
+        "region": "Samarkand",
+        "suitability_score": 0.8499851226806641,
+        "survival_probability": 0.5741649503707885,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.19183673469388,
+          40.93061224489796
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_40.931_71.192",
         "region": "Namangan",
-        "suitability_score": 0.8498156666755676,
-        "survival_probability": 0.5870187985646327,
+        "suitability_score": 0.8098645210266113,
+        "survival_probability": 0.5659603227774301,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -386,72 +253,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          62.42271409452199,
-          38.939406273278045
+          71.21632653061225,
+          40.93877551020408
         ]
       },
       "properties": {
-        "site_id": "sample_Karakalpakstan_0052",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.850083589553833,
-        "survival_probability": 0.5362166440985465,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          65.4202314064421,
-          44.23142534488039
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Bukhara_0054",
-        "region": "Bukhara",
-        "suitability_score": 0.8498596549034119,
-        "survival_probability": 0.5079722643121475,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          56.564892585581724,
-          42.89195067455794
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0057",
-        "region": "Samarkand",
-        "suitability_score": 0.8079574704170227,
-        "survival_probability": 0.4825268239342692,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          65.3972611852602,
-          41.2157253747572
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0058",
+        "site_id": "Namangan_40.939_71.216",
         "region": "Namangan",
-        "suitability_score": 0.8995020985603333,
-        "survival_probability": 0.5336641842507567,
+        "suitability_score": 0.8047439455986023,
+        "survival_probability": 0.5623818939824898,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -462,91 +272,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          59.058930367806816,
-          39.702842403250216
+          71.2408163265306,
+          40.946938775510205
         ]
       },
       "properties": {
-        "site_id": "sample_Bukhara_0059",
-        "region": "Bukhara",
-        "suitability_score": 0.8505374193191528,
-        "survival_probability": 0.5408012947952203,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          65.56156424493751,
-          39.14386602628805
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0060",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.8896161913871765,
-        "survival_probability": 0.5933634919839177,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          67.43244740297796,
-          44.62631985124228
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Tashkent_0061",
-        "region": "Tashkent",
-        "suitability_score": 0.9086282253265381,
-        "survival_probability": 0.5959440514751841,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          64.48041017378442,
-          40.84062902592346
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Tashkent_0067",
-        "region": "Tashkent",
-        "suitability_score": 0.8498197793960571,
-        "survival_probability": 0.5347297018714687,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          67.55987601107633,
-          44.294273555982144
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0070",
+        "site_id": "Namangan_40.947_71.241",
         "region": "Namangan",
-        "suitability_score": 0.9121081829071045,
-        "survival_probability": 0.5956360063620358,
+        "suitability_score": 0.8047439455986023,
+        "survival_probability": 0.5623818939824898,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -557,53 +291,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          69.12216911078384,
-          40.702704267581446
+          71.26530612244898,
+          40.95510204081633
         ]
       },
       "properties": {
-        "site_id": "sample_Tashkent_0071",
-        "region": "Tashkent",
-        "suitability_score": 0.8499920964241028,
-        "survival_probability": 0.5057147943998966,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          72.70515541891832,
-          41.767837595410924
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0077",
-        "region": "Samarkand",
-        "suitability_score": 0.9996936321258545,
-        "survival_probability": 0.6509194917529377,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          58.653451251003325,
-          40.48781739599526
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0080",
+        "site_id": "Namangan_40.955_71.265",
         "region": "Namangan",
-        "suitability_score": 0.8117415904998779,
-        "survival_probability": 0.4725842714420996,
+        "suitability_score": 0.8091661930084229,
+        "survival_probability": 0.5654723078807194,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -614,148 +310,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          65.64618072280503,
-          42.74185319746347
+          71.28979591836735,
+          40.96326530612245
         ]
       },
       "properties": {
-        "site_id": "sample_Tashkent_0081",
-        "region": "Tashkent",
-        "suitability_score": 0.899746835231781,
-        "survival_probability": 0.5381993965182102,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          60.47425345316795,
-          42.635388155727455
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0083",
-        "region": "Samarkand",
-        "suitability_score": 0.9000903964042664,
-        "survival_probability": 0.5854164556235419,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          59.12994433285872,
-          40.77933606542514
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0085",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.8497084975242615,
-        "survival_probability": 0.48727365703584585,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          58.42213300931574,
-          39.16811969947926
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Tashkent_0087",
-        "region": "Tashkent",
-        "suitability_score": 0.843906819820404,
-        "survival_probability": 0.5634184134763328,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          60.8605966272998,
-          40.788268233253284
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Tashkent_0092",
-        "region": "Tashkent",
-        "suitability_score": 0.9993159770965576,
-        "survival_probability": 0.6913535613610132,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          71.96263707670596,
-          44.25547315636529
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0097",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.9990184307098389,
-        "survival_probability": 0.6745987465425075,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          57.76221389771892,
-          37.80793608134704
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0098",
-        "region": "Samarkand",
-        "suitability_score": 0.9191370606422424,
-        "survival_probability": 0.6061942200362158,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          63.98479683439491,
-          37.31632013825361
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0104",
+        "site_id": "Namangan_40.963_71.290",
         "region": "Namangan",
-        "suitability_score": 0.9503029584884644,
-        "survival_probability": 0.6466628844975113,
+        "suitability_score": 0.8091661930084229,
+        "survival_probability": 0.5654723078807194,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -766,129 +329,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          70.90086029122517,
-          41.2304895238225
+          71.31428571428572,
+          40.97142857142857
         ]
       },
       "properties": {
-        "site_id": "sample_Tashkent_0105",
-        "region": "Tashkent",
-        "suitability_score": 0.8498601317405701,
-        "survival_probability": 0.4716265037336468,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          59.57930223026136,
-          40.075174786397106
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Tashkent_0107",
-        "region": "Tashkent",
-        "suitability_score": 0.9993733167648315,
-        "survival_probability": 0.6685421798895118,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          71.54792164307277,
-          41.236309084010585
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Tashkent_0109",
-        "region": "Tashkent",
-        "suitability_score": 0.8998907804489136,
-        "survival_probability": 0.5895362815079949,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          58.788628160616376,
-          40.316470451344244
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0111",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.8998383283615112,
-        "survival_probability": 0.5670550965620715,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          69.67228254546364,
-          41.00988408961219
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Bukhara_0112",
-        "region": "Bukhara",
-        "suitability_score": 0.854664146900177,
-        "survival_probability": 0.5957783924941453,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          60.791237130860544,
-          43.07284373886854
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Bukhara_0127",
-        "region": "Bukhara",
-        "suitability_score": 0.8497594594955444,
-        "survival_probability": 0.4876228390487522,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          65.98413312388885,
-          40.805556700716394
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0128",
+        "site_id": "Namangan_40.971_71.314",
         "region": "Namangan",
-        "suitability_score": 0.9998859167098999,
-        "survival_probability": 0.6458653684028416,
+        "suitability_score": 0.8113837242126465,
+        "survival_probability": 0.5670219926039377,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -899,205 +348,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          58.241305492807946,
-          38.62172846602554
+          71.33877551020409,
+          40.97959183673469
         ]
       },
       "properties": {
-        "site_id": "sample_Samarkand_0129",
-        "region": "Samarkand",
-        "suitability_score": 0.9995090961456299,
-        "survival_probability": 0.6818334192268599,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          60.69608718626556,
-          41.52275562135944
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0131",
-        "region": "Samarkand",
-        "suitability_score": 0.8500531315803528,
-        "survival_probability": 0.5421657848716,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          66.88390965383311,
-          44.54562953423086
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0136",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.8500723242759705,
-        "survival_probability": 0.4859852373943881,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          61.089601397610444,
-          43.68275345950679
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0138",
-        "region": "Samarkand",
-        "suitability_score": 0.8121399283409119,
-        "survival_probability": 0.5087503838629684,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          64.23363064208515,
-          41.533690384471015
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0141",
-        "region": "Samarkand",
-        "suitability_score": 0.8252206444740295,
-        "survival_probability": 0.5253249026857325,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          64.31161487849072,
-          44.7613415397516
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Tashkent_0144",
-        "region": "Tashkent",
-        "suitability_score": 0.9501937627792358,
-        "survival_probability": 0.660964745628369,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          71.01102419618772,
-          43.65849488955194
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Tashkent_0148",
-        "region": "Tashkent",
-        "suitability_score": 0.8497121334075928,
-        "survival_probability": 0.5435492007824619,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          62.19689102023077,
-          42.65079954770968
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Bukhara_0149",
-        "region": "Bukhara",
-        "suitability_score": 0.8495267033576965,
-        "survival_probability": 0.5433996195799088,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          59.406832476073866,
-          45.15410674686956
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Bukhara_0152",
-        "region": "Bukhara",
-        "suitability_score": 0.8995363116264343,
-        "survival_probability": 0.5776693947024549,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          60.36714402969381,
-          38.80202735179055
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0153",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.8995018601417542,
-        "survival_probability": 0.5226181206036227,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          69.68596882729865,
-          45.1489459132352
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0154",
+        "site_id": "Namangan_40.980_71.339",
         "region": "Namangan",
-        "suitability_score": 0.9002137780189514,
-        "survival_probability": 0.527233590720332,
+        "suitability_score": 0.8880588412284851,
+        "survival_probability": 0.6206051202118397,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -1108,72 +367,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          65.82399734519281,
-          42.71566885101341
+          71.36326530612244,
+          40.987755102040815
         ]
       },
       "properties": {
-        "site_id": "sample_Samarkand_0155",
-        "region": "Samarkand",
-        "suitability_score": 0.8993262648582458,
-        "survival_probability": 0.5367824910018079,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          65.84709244507044,
-          37.788770936882244
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Tashkent_0157",
-        "region": "Tashkent",
-        "suitability_score": 1.0001107454299927,
-        "survival_probability": 0.6409290708939247,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          60.42535123375741,
-          41.23568241068869
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Karakalpakstan_0160",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.8067155480384827,
-        "survival_probability": 0.542997606509089,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          57.232965214908845,
-          40.45419178618404
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0164",
+        "site_id": "Namangan_40.988_71.363",
         "region": "Namangan",
-        "suitability_score": 0.8002057671546936,
-        "survival_probability": 0.45574468700264653,
+        "suitability_score": 0.9080797433853149,
+        "survival_probability": 0.6345963940024376,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -1184,34 +386,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          61.660240443313825,
-          40.495257716870455
+          71.38775510204081,
+          40.99591836734694
         ]
       },
       "properties": {
-        "site_id": "sample_Karakalpakstan_0165",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.8000644445419312,
-        "survival_probability": 0.5450529400081339,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          67.18406592629492,
-          38.46413248678412
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0167",
+        "site_id": "Namangan_40.996_71.388",
         "region": "Namangan",
-        "suitability_score": 0.8502076864242554,
-        "survival_probability": 0.530056574534412,
+        "suitability_score": 0.896130383014679,
+        "survival_probability": 0.6262457826634248,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -1222,53 +405,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          66.69698231054282,
-          44.03086465057163
+          71.41224489795918,
+          41.00408163265306
         ]
       },
       "properties": {
-        "site_id": "sample_Karakalpakstan_0173",
-        "region": "Karakalpakstan",
-        "suitability_score": 0.949981153011322,
-        "survival_probability": 0.660376991704169,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          57.2553905129898,
-          43.267697695059404
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Bukhara_0174",
-        "region": "Bukhara",
-        "suitability_score": 0.89966881275177,
-        "survival_probability": 0.5752669624471557,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          62.83400068830419,
-          45.13877154527205
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0178",
+        "site_id": "Namangan_41.004_71.412",
         "region": "Namangan",
-        "suitability_score": 0.9004258513450623,
-        "survival_probability": 0.5524432641591192,
+        "suitability_score": 0.9109703302383423,
+        "survival_probability": 0.6366164324482282,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -1279,53 +424,338 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          57.18543210482338,
-          43.59441458659675
+          71.43673469387755,
+          41.012244897959185
         ]
       },
       "properties": {
-        "site_id": "sample_Samarkand_0183",
-        "region": "Samarkand",
-        "suitability_score": 0.999148964881897,
-        "survival_probability": 0.6841847880797683,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          69.07464477314056,
-          41.65493692203274
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Samarkand_0184",
-        "region": "Samarkand",
-        "suitability_score": 0.9499663710594177,
-        "survival_probability": 0.6511869099410795,
-        "recommended_species": "Multiple suitable species",
-        "estimated_cost": 2500,
-        "priority_rank": "High_Suitability"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          55.92471831208865,
-          37.436300769926696
-        ]
-      },
-      "properties": {
-        "site_id": "sample_Namangan_0187",
+        "site_id": "Namangan_41.012_71.437",
         "region": "Namangan",
-        "suitability_score": 0.9425456523895264,
-        "survival_probability": 0.5761914390864201,
+        "suitability_score": 0.9102721214294434,
+        "survival_probability": 0.6361285008589426,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.46122448979591,
+          41.02040816326531
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.020_71.461",
+        "region": "Namangan",
+        "suitability_score": 0.9593362808227539,
+        "survival_probability": 0.6704161709149677,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.48571428571428,
+          41.02857142857143
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.029_71.486",
+        "region": "Namangan",
+        "suitability_score": 0.9593362808227539,
+        "survival_probability": 0.6704161709149677,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.51020408163265,
+          41.03673469387755
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.037_71.510",
+        "region": "Namangan",
+        "suitability_score": 0.9593362808227539,
+        "survival_probability": 0.6704161709149677,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.53469387755102,
+          41.04489795918367
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.045_71.535",
+        "region": "Namangan",
+        "suitability_score": 0.9593362808227539,
+        "survival_probability": 0.6704161709149677,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.55918367346939,
+          41.053061224489795
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.053_71.559",
+        "region": "Namangan",
+        "suitability_score": 0.9593362808227539,
+        "survival_probability": 0.6704161709149677,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.58367346938775,
+          41.06122448979592
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.061_71.584",
+        "region": "Namangan",
+        "suitability_score": 0.8706231713294983,
+        "survival_probability": 0.608420492897431,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.60816326530612,
+          41.06938775510204
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.069_71.608",
+        "region": "Namangan",
+        "suitability_score": 0.8104882836341858,
+        "survival_probability": 0.5663962288796901,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.7795918367347,
+          41.1265306122449
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.127_71.780",
+        "region": "Namangan",
+        "suitability_score": 0.8593844175338745,
+        "survival_probability": 0.6005664771199226,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.80408163265307,
+          41.13469387755102
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.135_71.804",
+        "region": "Namangan",
+        "suitability_score": 0.8593844175338745,
+        "survival_probability": 0.6005664771199226,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.82857142857142,
+          41.142857142857146
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.143_71.829",
+        "region": "Namangan",
+        "suitability_score": 0.8593844175338745,
+        "survival_probability": 0.6005664771199226,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.85306122448979,
+          41.15102040816327
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.151_71.853",
+        "region": "Namangan",
+        "suitability_score": 0.810094952583313,
+        "survival_probability": 0.5661213560303052,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.87755102040816,
+          41.15918367346939
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.159_71.878",
+        "region": "Namangan",
+        "suitability_score": 0.810094952583313,
+        "survival_probability": 0.5661213560303052,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.90204081632653,
+          41.16734693877551
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.167_71.902",
+        "region": "Namangan",
+        "suitability_score": 0.810094952583313,
+        "survival_probability": 0.5661213560303052,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.9265306122449,
+          41.17551020408163
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.176_71.927",
+        "region": "Namangan",
+        "suitability_score": 0.810094952583313,
+        "survival_probability": 0.5661213560303052,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.95102040816326,
+          41.183673469387756
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.184_71.951",
+        "region": "Namangan",
+        "suitability_score": 0.810094952583313,
+        "survival_probability": 0.5661213560303052,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.97551020408163,
+          41.19183673469388
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.192_71.976",
+        "region": "Namangan",
+        "suitability_score": 0.810094952583313,
+        "survival_probability": 0.5661213560303052,
+        "recommended_species": "Multiple suitable species",
+        "estimated_cost": 2500,
+        "priority_rank": "High_Suitability"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.0,
+          41.2
+        ]
+      },
+      "properties": {
+        "site_id": "Namangan_41.200_72.000",
+        "region": "Namangan",
+        "suitability_score": 0.810094952583313,
+        "survival_probability": 0.5661213560303052,
         "recommended_species": "Multiple suitable species",
         "estimated_cost": 2500,
         "priority_rank": "High_Suitability"
@@ -1333,8 +763,8 @@
     }
   ],
   "metadata": {
-    "total_sites": 70,
-    "generation_date": "2025-08-11T05:43:02.709195",
+    "total_sites": 40,
+    "generation_date": "2025-08-11T06:11:06.136695",
     "analysis_type": "AlphaEarth Afforestation Suitability - High Suitability Sites",
     "note": "No sites met strict priority criteria, showing top suitable sites instead"
   }

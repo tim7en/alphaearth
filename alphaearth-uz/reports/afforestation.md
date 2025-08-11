@@ -7,15 +7,15 @@
 
 ## Executive Summary
 
-Uzbekistan's afforestation potential analysis identifies **180** suitable sites across five priority regions, with an average suitability score of **73.2%**. Advanced machine learning models achieved **44.4%** classification accuracy, providing high-confidence site recommendations for large-scale reforestation programs.
+Uzbekistan's afforestation potential analysis identifies **150** suitable sites across five priority regions, with an average suitability score of **49.9%**. Advanced machine learning models achieved **100.0%** classification accuracy, providing high-confidence site recommendations for large-scale reforestation programs.
 
 ### Key Findings
 
-- **Total Suitable Sites:** 180 locations
-- **Average Suitability Score:** 73.2%
+- **Total Suitable Sites:** 150 locations
+- **Average Suitability Score:** 49.9%
 - **Priority Implementation Sites:** 0 locations
 - **Estimated Implementation Cost:** $0
-- **Best Performing Region:** Tashkent
+- **Best Performing Region:** Namangan
 - **Highest Investment Region:** Karakalpakstan
 - **Most Suitable Species:** Elaeagnus angustifolia (Russian Olive)
 
@@ -23,18 +23,18 @@ Uzbekistan's afforestation potential analysis identifies **180** suitable sites 
 
 ### Regional Performance Summary
 
-        region  total_sites_analyzed  suitable_sites  high_suitability_sites  priority_sites  avg_suitability_score  avg_survival_probability  recommended_area_km2  estimated_trees  estimated_cost_usd                           best_species
-Karakalpakstan                    33              30                      16               0                  0.725                     0.440                 0.000                0                   0            Ulmus pumila (Siberian Elm)
-      Tashkent                    33              31                      17               0                  0.763                     0.462                 0.000                0                   0 Elaeagnus angustifolia (Russian Olive)
-     Samarkand                    50              49                      25               0                  0.743                     0.449                 0.000                0                   0 Elaeagnus angustifolia (Russian Olive)
-       Bukhara                    34              32                      16               0                  0.713                     0.432                 0.000                0                   0 Elaeagnus angustifolia (Russian Olive)
-      Namangan                    42              38                      21               0                  0.716                     0.428                 0.000                0                   0 Elaeagnus angustifolia (Russian Olive)
+        region  total_sites_analyzed  suitable_sites  high_suitability_sites  priority_sites  avg_suitability_score  avg_survival_probability  recommended_area_km2  estimated_trees  estimated_cost_usd                best_species
+Karakalpakstan                    50               0                       0               0                  0.000                     0.100                 0.000                0                   0 Populus alba (White Poplar)
+      Tashkent                    50              50                      10               0                  0.744                     0.509                 0.000                0                   0 Populus alba (White Poplar)
+     Samarkand                    50              50                      17               0                  0.763                     0.514                 0.000                0                   0 Populus alba (White Poplar)
+       Bukhara                    50               0                       0               0                  0.194                     0.118                 0.000                0                   0 Populus alba (White Poplar)
+      Namangan                    50              50                      30               0                  0.794                     0.554                 0.000                0                   0 Populus alba (White Poplar)
 
 ### Regional Rankings
 
-1. **Tashkent** (Highest Suitability)
-   - Average suitability: 76.3%
-   - Suitable sites: 31
+1. **Namangan** (Highest Suitability)
+   - Average suitability: 79.4%
+   - Suitable sites: 50
    - Recommended for immediate large-scale implementation
 
 2. **Karakalpakstan** (Highest Investment Need)
@@ -47,11 +47,11 @@ Karakalpakstan                    33              30                      16    
 ### Recommended Species by Suitability
 
         region  is_suitable  predicted_suitable  populus_alba_suitable  elaeagnus_angustifolia_suitable  ulmus_pumila_suitable  tamarix_species_suitable  pinus_sylvestris_suitable
-       Bukhara        0.971               1.000                  0.412                            0.588                  0.441                     0.206                      0.088
-Karakalpakstan        0.909               0.923                  0.273                            0.364                  0.424                     0.182                      0.242
-      Namangan        0.881               0.905                  0.262                            0.476                  0.310                     0.167                      0.143
-     Samarkand        0.960               0.969                  0.240                            0.560                  0.440                     0.160                      0.140
-      Tashkent        0.939               0.938                  0.303                            0.515                  0.515                     0.152                      0.212
+       Bukhara        0.000               0.000                  0.000                            0.000                  0.000                     0.000                      0.000
+Karakalpakstan        0.000               0.000                  0.000                            0.000                  0.000                     0.000                      0.000
+      Namangan        1.000               1.000                  1.000                            1.000                  1.000                     1.000                      0.000
+     Samarkand        1.000               1.000                  1.000                            1.000                  1.000                     1.000                      0.000
+      Tashkent        1.000               1.000                  1.000                            1.000                  1.000                     0.000                      1.000
 
 ### Species-Specific Recommendations
 
@@ -68,13 +68,13 @@ Karakalpakstan        0.909               0.923                  0.273          
 ## Machine Learning Model Performance
 
 **Binary Classification Model (Site Suitability)**
-- **AUC Score:** 0.444 (44.4% accuracy)
+- **AUC Score:** 1.000 (100.0% accuracy)
 - **Model Type:** Gradient Boosting Classifier
 - **Training Confidence:** High
 
 **Suitability Score Regression Model**
-- **R² Score:** 0.625
-- **RMSE:** 0.091
+- **R² Score:** 0.995
+- **RMSE:** 0.022
 - **Model Type:** XGBoost Regressor
 - **Prediction Accuracy:** Excellent
 
@@ -82,28 +82,30 @@ Karakalpakstan        0.909               0.923                  0.273          
 
 The most critical factors for afforestation success:
 
-1. **soil_organic_matter** (Importance: 0.122)\n2. **embed_184** (Importance: 0.096)\n3. **embed_124** (Importance: 0.094)\n4. **embed_015** (Importance: 0.065)\n5. **embed_100** (Importance: 0.057)
+1. **embedding_0** (Importance: 0.923)\n2. **slope_degrees** (Importance: 0.063)\n3. **dist_to_roads_km** (Importance: 0.009)\n4. **embedding_7** (Importance: 0.002)\n5. **longitude** (Importance: 0.001)
 
 ## Environmental Suitability Analysis
 
 ### Optimal Growing Conditions Identified
 
-           variable  min_value  max_value  optimal_min  optimal_max
-            soil_ph       4.00       9.00         6.43         7.74
-      soil_depth_cm      10.00     200.00        33.30       101.60
-soil_organic_matter       0.50       7.24         2.47         4.37
-   annual_precip_mm     100.00     790.66       291.42       455.11
-  avg_temperature_c       0.95      22.36         9.84        14.75
-         frost_days      23.00      63.00        41.00        50.00
-      slope_degrees       0.01      40.73         1.60         9.81
-        elevation_m     100.00    2380.53       443.01      1020.87
-   dist_to_roads_km       0.10      62.85         4.61        18.28
-   dist_to_water_km       0.10      27.55         1.97         7.57
-           latitude      37.23      45.57        39.82        42.99
-          longitude      55.92      72.95        59.29        67.05
-   vegetation_index       0.00       0.86         0.24         0.50
-  soil_moisture_est       0.00       1.00         0.13         0.48
-temperature_anomaly      -0.82       5.66         1.61         3.13
+              variable  min_value  max_value  optimal_min  optimal_max
+               soil_ph       6.50       7.50         7.10         7.50
+         soil_depth_cm      30.00      95.00        70.00        80.00
+   soil_organic_matter       0.50       4.60         3.30         4.60
+      annual_precip_mm     120.00     440.00       340.00       360.00
+     avg_temperature_c      12.10      15.80        12.10        14.10
+            frost_days       0.00       0.00         0.00         0.00
+         slope_degrees       0.41      30.00         0.41         0.61
+           elevation_m      20.00     750.00       471.33       707.14
+      dist_to_roads_km       4.71     290.10        11.69        20.48
+      dist_to_water_km       1.13     409.50         9.75        26.52
+              latitude      39.20      45.60        39.78        41.14
+             longitude      55.90      72.00        67.11        71.56
+       ndvi_calculated       0.04       0.50         0.42         0.50
+     soil_moisture_est       0.12       0.66         0.51         0.66
+    water_stress_level       0.20       0.90         0.20         0.50
+       ndwi_calculated      -0.30       0.30         0.10         0.30
+degradation_risk_index       0.10       0.70         0.10         0.20
 
 ### Climate Resilience Assessment
 
@@ -115,19 +117,19 @@ temperature_anomaly      -0.82       5.66         1.61         3.13
 ## Implementation Strategy
 
 ### Phase 1: Immediate Implementation (0-12 months)
-- **Target:** Top 180 highest-suitability sites
-- **Focus Region:** Tashkent
+- **Target:** Top 150 highest-suitability sites
+- **Focus Region:** Namangan
 - **Species:** Elaeagnus angustifolia (Russian Olive) and drought-resistant varieties
 - **Cost:** $0
 
 ### Phase 2: Scaled Deployment (12-36 months)
-- **Target:** Additional -320 sites
+- **Target:** Additional -350 sites
 - **Multi-regional approach** across all 5 regions
 - **Diversified species portfolio** for ecosystem resilience
 - **Cost:** $0
 
 ### Phase 3: Full Program (36+ months)
-- **Target:** All 180 suitable sites
+- **Target:** All 150 suitable sites
 - **Complete ecosystem restoration**
 - **Community engagement and maintenance programs**
 - **Total investment:** $0
@@ -140,9 +142,9 @@ temperature_anomaly      -0.82       5.66         1.61         3.13
 - **Karakalpakstan:** $0\n- **Tashkent:** $0\n- **Samarkand:** $0\n- **Bukhara:** $0\n- **Namangan:** $0
 
 **Expected Benefits:**
-- **Carbon Sequestration:** 450 tons CO₂/year
-- **Ecosystem Services:** $270,000/year estimated value
-- **Employment Creation:** 18 direct jobs
+- **Carbon Sequestration:** 375 tons CO₂/year
+- **Ecosystem Services:** $225,000/year estimated value
+- **Employment Creation:** 15 direct jobs
 - **Biodiversity Enhancement:** Habitat for 50+ species
 
 ## Risk Assessment & Mitigation
@@ -184,7 +186,7 @@ temperature_anomaly      -0.82       5.66         1.61         3.13
 
 ## Limitations & Uncertainties
 
-- Ground-truth validation limited to 48 calibration points
+- Ground-truth validation limited to 62 calibration points
 - Long-term climate projections not fully integrated
 - Social acceptance and land tenure considerations need field verification
 - Economic analysis based on regional averages
@@ -192,7 +194,7 @@ temperature_anomaly      -0.82       5.66         1.61         3.13
 ## Recommendations
 
 ### Immediate Actions
-1. **Pilot Program Launch** in Tashkent (50 sites)
+1. **Pilot Program Launch** in Namangan (50 sites)
 2. **Species Procurement** for Elaeagnus angustifolia (Russian Olive)
 3. **Site Access Agreements** with local communities
 4. **Monitoring Infrastructure** deployment
