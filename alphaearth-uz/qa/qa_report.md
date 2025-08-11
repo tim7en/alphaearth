@@ -1,7 +1,7 @@
 # AlphaEarth Uzbekistan Analysis - Quality Assurance Report
 
-**Generated:** 2025-08-11T02:47:11.878768  
-**Overall Status:** WARNING
+**Generated:** 2025-08-11T06:22:53.736732  
+**Overall Status:** PASS
 
 ## Executive Summary
 
@@ -11,8 +11,8 @@ This QA report provides a comprehensive assessment of the AlphaEarth Uzbekistan 
 
 - **Files Generated:** 21/21 expected outputs
 - **Critical Issues:** 0
-- **Warnings:** 19
-- **Overall Status:** ⚠️ WARNING
+- **Warnings:** 3
+- **Overall Status:** ✅ PASS
 
 ## Module Completeness
 
@@ -35,13 +35,13 @@ This QA report provides a comprehensive assessment of the AlphaEarth Uzbekistan 
 | alphaearth-uz/tables/soil_moisture_regional_summary.csv | 5 | 29 | 0 | PASS |
 | alphaearth-uz/tables/soil_moisture_model_performance.csv | 5 | 2 | 0 | PASS |
 | alphaearth-uz/tables/biodiversity_regional_summary.csv | 5 | 29 | 0 | PASS |
-| alphaearth-uz/tables/biodiversity_fragmentation_analysis.csv | 15 | 9 | 0 | PASS |
+| alphaearth-uz/tables/biodiversity_fragmentation_analysis.csv | 7 | 9 | 0 | PASS |
 | alphaearth-uz/tables/afforestation_regional_analysis.csv | 5 | 11 | 0 | PASS |
 | alphaearth-uz/tables/afforestation_model_performance.csv | 2 | 5 | 0 | PASS |
 | alphaearth-uz/tables/degradation_regional_analysis.csv | 5 | 12 | 0 | PASS |
 | alphaearth-uz/tables/degradation_hotspots.csv | 5 | 8 | 0 | PASS |
-| alphaearth-uz/tables/urban_heat_regional_analysis.csv | 5 | 14 | 0 | PASS |
-| alphaearth-uz/tables/urban_heat_scores.csv | 5 | 12 | 0 | PASS |
+| alphaearth-uz/tables/urban_heat_regional_analysis.csv | 5 | 14 | 5 | PASS |
+| alphaearth-uz/tables/urban_heat_scores.csv | 5 | 12 | 10 | PASS |
 | alphaearth-uz/tables/riverbank_regional_analysis.csv | 5 | 10 | 0 | PASS |
 | alphaearth-uz/tables/protected_areas_regional_analysis.csv | 5 | 11 | 0 | PASS |
 
@@ -49,26 +49,10 @@ This QA report provides a comprehensive assessment of the AlphaEarth Uzbekistan 
 
 ### Critical Issues (0)
 
-### Warnings (19)
+### Warnings (3)
 - ⚠️ Extreme values in alphaearth-uz/tables/soil_moisture_regional_summary.csv:n_samples
-- ⚠️ Extreme values in alphaearth-uz/tables/biodiversity_regional_summary.csv:n_samples
-- ⚠️ Extreme values in alphaearth-uz/tables/afforestation_regional_analysis.csv:total_sites_analyzed
-- ⚠️ Extreme values in alphaearth-uz/tables/afforestation_regional_analysis.csv:suitable_sites
-- ⚠️ Extreme values in alphaearth-uz/tables/afforestation_regional_analysis.csv:high_suitability_sites
-- ⚠️ Extreme values in alphaearth-uz/tables/degradation_regional_analysis.csv:total_area_assessed
-- ⚠️ Extreme values in alphaearth-uz/tables/degradation_regional_analysis.csv:priority_intervention_areas
-- ⚠️ Extreme values in alphaearth-uz/tables/degradation_regional_analysis.csv:high_grazing_pressure_areas
 - ⚠️ Extreme values in alphaearth-uz/tables/degradation_regional_analysis.csv:estimated_restoration_cost
-- ⚠️ Extreme values in alphaearth-uz/tables/urban_heat_regional_analysis.csv:total_areas_assessed
-- ⚠️ Extreme values in alphaearth-uz/tables/urban_heat_regional_analysis.csv:urban_areas
-- ⚠️ Extreme values in alphaearth-uz/tables/urban_heat_regional_analysis.csv:estimated_affected_population
-- ⚠️ Extreme values in alphaearth-uz/tables/riverbank_regional_analysis.csv:total_riverbank_sites
-- ⚠️ Extreme values in alphaearth-uz/tables/riverbank_regional_analysis.csv:high_disturbance_sites
-- ⚠️ Extreme values in alphaearth-uz/tables/riverbank_regional_analysis.csv:avg_agricultural_pressure
-- ⚠️ Extreme values in alphaearth-uz/tables/protected_areas_regional_analysis.csv:total_protected_areas
 - ⚠️ Extreme values in alphaearth-uz/tables/protected_areas_regional_analysis.csv:total_protected_area_km2
-- ⚠️ Extreme values in alphaearth-uz/tables/protected_areas_regional_analysis.csv:management_challenges
-- ⚠️ Extreme values in alphaearth-uz/tables/protected_areas_regional_analysis.csv:priority_conservation_needs
 
 ### Recommendations
 
@@ -86,7 +70,7 @@ This QA report provides a comprehensive assessment of the AlphaEarth Uzbekistan 
 
 ### Data Volume
 - Total files generated: 21
-- Total data size: 8.45 MB
+- Total data size: 3.29 MB
 
 ## Model Performance Summary
 
