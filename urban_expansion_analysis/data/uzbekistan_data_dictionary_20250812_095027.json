@@ -1,0 +1,62 @@
+{
+  "dataset_info": {
+    "title": "Uzbekistan Urban Expansion Impact Analysis Dataset",
+    "description": "Comprehensive satellite-based analysis of urban expansion impacts across 14 major cities",
+    "temporal_range": "2016-2025",
+    "spatial_resolution": "100m",
+    "cities_analyzed": 3,
+    "total_samples": 1445,
+    "analysis_date": "20250812_095027",
+    "data_sources": [
+      "Google Earth Engine",
+      "MODIS Land Surface Temperature",
+      "Dynamic World Land Cover",
+      "Landsat 8/9 Surface Reflectance",
+      "VIIRS Nighttime Lights"
+    ]
+  },
+  "variables": {
+    "satellite_data": {
+      "LST_Day": "Land Surface Temperature Day (\u00b0C)",
+      "LST_Night": "Land Surface Temperature Night (\u00b0C)",
+      "Built_Probability": "Built-up area probability (0-1)",
+      "Green_Probability": "Green space probability (0-1)",
+      "Water_Probability": "Water body probability (0-1)",
+      "NDVI": "Normalized Difference Vegetation Index",
+      "NDBI": "Normalized Difference Built-up Index",
+      "NDWI": "Normalized Difference Water Index",
+      "EUI": "Enhanced Urban Index",
+      "UHI_Intensity": "Urban Heat Island Intensity (\u00b0C)",
+      "Green_Connectivity": "Green space connectivity index",
+      "Impervious_Surface": "Impervious surface fraction",
+      "Nighttime_Lights": "VIIRS nighttime lights radiance"
+    },
+    "impact_metrics": {
+      "temp_day_change_10yr": "10-year day temperature change (\u00b0C)",
+      "temp_night_change_10yr": "10-year night temperature change (\u00b0C)",
+      "uhi_change_10yr": "10-year UHI intensity change (\u00b0C)",
+      "built_change_10yr": "10-year built-up expansion",
+      "green_change_10yr": "10-year green space change",
+      "water_change_10yr": "10-year water body change",
+      "ndvi_change_10yr": "10-year vegetation health change",
+      "connectivity_change_10yr": "10-year green connectivity change"
+    },
+    "spatial_info": {
+      "Sample_Longitude": "Sample point longitude (degrees)",
+      "Sample_Latitude": "Sample point latitude (degrees)",
+      "City": "City name",
+      "Period": "Analysis period"
+    }
+  },
+  "city_buffers": {
+    "Tashkent": "10km radius",
+    "Samarkand": "8km radius",
+    "Namangan": "6km radius"
+  },
+  "methodology": {
+    "processing": "Google Earth Engine server-side computation",
+    "sampling": "50 samples per city per period",
+    "temporal_analysis": "Annual composites with year-to-year tracking",
+    "quality_control": "Cloud filtering and invalid data removal"
+  }
+}

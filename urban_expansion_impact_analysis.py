@@ -24,17 +24,17 @@ UZBEKISTAN_CITIES = {
     "Tashkent": {"lat": 41.2995, "lon": 69.2401, "buffer": 10000, "samples": 50},  # Reduced from 25km to 10km
     "Samarkand": {"lat": 39.6542, "lon": 66.9597, "buffer": 8000, "samples": 50},   # Reduced from 20km to 8km
     "Namangan": {"lat": 40.9983, "lon": 71.6726, "buffer": 6000, "samples": 50},    # Reduced from 15km to 6km
-    "Andijan": {"lat": 40.7821, "lon": 72.3442, "buffer": 6000, "samples": 50},     # Reduced from 15km to 6km
-    "Nukus": {"lat": 42.4731, "lon": 59.6103, "buffer": 6000, "samples": 50},       # Reduced from 15km to 6km
-    "Bukhara": {"lat": 39.7748, "lon": 64.4286, "buffer": 6000, "samples": 50},     # Reduced from 15km to 6km
-    "Qarshi": {"lat": 38.8606, "lon": 65.7887, "buffer": 5000, "samples": 50},      # Reduced from 12km to 5km
-    "Kokand": {"lat": 40.5219, "lon": 70.9428, "buffer": 5000, "samples": 50},      # Reduced from 12km to 5km
-    "Margilan": {"lat": 40.4731, "lon": 71.7244, "buffer": 4000, "samples": 50},    # Reduced from 10km to 4km
-    "Urgench": {"lat": 41.5506, "lon": 60.6317, "buffer": 5000, "samples": 50},     # Reduced from 12km to 5km
-    "Fergana": {"lat": 40.3842, "lon": 71.7843, "buffer": 6000, "samples": 50},     # Reduced from 15km to 6km
-    "Jizzakh": {"lat": 40.1158, "lon": 67.8422, "buffer": 4000, "samples": 50},     # Reduced from 10km to 4km
-    "Sirdaryo": {"lat": 40.8375, "lon": 68.6736, "buffer": 4000, "samples": 50},     # Reduced from 8km to 4km
-    "Termez": {"lat": 37.2242, "lon": 67.2783, "buffer": 5000, "samples": 50}        # Reduced from 12km to 5km
+    #"Andijan": {"lat": 40.7821, "lon": 72.3442, "buffer": 6000, "samples": 50},     # Reduced from 15km to 6km
+    #"Nukus": {"lat": 42.4731, "lon": 59.6103, "buffer": 6000, "samples": 50},       # Reduced from 15km to 6km
+    #"Bukhara": {"lat": 39.7748, "lon": 64.4286, "buffer": 6000, "samples": 50},     # Reduced from 15km to 6km
+    #"Qarshi": {"lat": 38.8606, "lon": 65.7887, "buffer": 5000, "samples": 50},      # Reduced from 12km to 5km
+    #"Kokand": {"lat": 40.5219, "lon": 70.9428, "buffer": 5000, "samples": 50},      # Reduced from 12km to 5km
+    #"Margilan": {"lat": 40.4731, "lon": 71.7244, "buffer": 4000, "samples": 50},    # Reduced from 10km to 4km
+    #"Urgench": {"lat": 41.5506, "lon": 60.6317, "buffer": 5000, "samples": 50},     # Reduced from 12km to 5km
+    #"Fergana": {"lat": 40.3842, "lon": 71.7843, "buffer": 6000, "samples": 50},     # Reduced from 15km to 6km
+    #"Jizzakh": {"lat": 40.1158, "lon": 67.8422, "buffer": 4000, "samples": 50},     # Reduced from 10km to 4km
+    #"Sirdaryo": {"lat": 40.8375, "lon": 68.6736, "buffer": 4000, "samples": 50},     # Reduced from 8km to 4km
+    #"Termez": {"lat": 37.2242, "lon": 67.2783, "buffer": 5000, "samples": 50}        # Reduced from 12km to 5km
 }
 
 def authenticate_gee():
@@ -47,6 +47,32 @@ def authenticate_gee():
     except Exception as e:
         print(f"❌ GEE Authentication failed: {e}")
         return False
+
+def setup_output_directories():
+    """Create organized directory structure for urban expansion analysis outputs"""
+    base_dir = Path(__file__).parent / "urban_expansion_analysis"
+    
+    # Create main output directories
+    directories = {
+        'base': base_dir,
+        'images': base_dir / "images",
+        'data': base_dir / "data", 
+        'reports': base_dir / "reports",
+        'gis_maps': base_dir / "images" / "gis_maps",
+        'analysis_plots': base_dir / "images" / "analysis_plots",
+        'individual_cities': base_dir / "images" / "individual_cities"
+    }
+    
+    # Create all directories
+    for dir_name, dir_path in directories.items():
+        dir_path.mkdir(parents=True, exist_ok=True)
+        
+    print(f"📁 Output directories created in: {base_dir}")
+    print(f"   📊 Images: {directories['images']}")
+    print(f"   💾 Data: {directories['data']}")  
+    print(f"   📄 Reports: {directories['reports']}")
+    
+    return directories
 
 def analyze_urban_expansion_impacts():
     """
@@ -467,7 +493,7 @@ def calculate_expansion_impacts(expansion_data):
     
     return impacts_df, regional_impacts
 
-def create_detailed_city_gis_maps(impacts_df, expansion_data):
+def create_detailed_city_gis_maps(impacts_df, expansion_data, output_dirs):
     """
     Create detailed GIS maps for each city showing crucial information at close scale
     with real basemap layers, topography, and boundaries
@@ -759,8 +785,8 @@ Green Loss: {city_row['green_change_10yr']:+.4f}"""
     
     plt.tight_layout()
     
-    # Save with high resolution
-    gis_path = '/tmp/uzbekistan_cities_enhanced_gis_maps.png'
+    # Save with high resolution to organized directory
+    gis_path = output_dirs['gis_maps'] / 'uzbekistan_cities_enhanced_gis_maps.png'
     plt.savefig(gis_path, dpi=300, bbox_inches='tight', facecolor='white', 
                edgecolor='none')
     plt.close()
@@ -768,7 +794,7 @@ Green Loss: {city_row['green_change_10yr']:+.4f}"""
     print(f"📍 Enhanced GIS maps with basemaps saved to: {gis_path}")
     return gis_path
 
-def create_city_boundary_maps(impacts_df):
+def create_city_boundary_maps(impacts_df, output_dirs):
     """
     Create maps showing city boundaries and key indicators
     """
@@ -920,15 +946,15 @@ def create_city_boundary_maps(impacts_df):
     
     plt.tight_layout()
     
-    # Save the map
-    map_path = '/tmp/uzbekistan_cities_boundary_maps.png'
+    # Save the map to organized directory
+    map_path = output_dirs['gis_maps'] / 'uzbekistan_cities_boundary_maps.png'
     plt.savefig(map_path, dpi=300, bbox_inches='tight')
     plt.close()
     
     print(f"📍 City boundary maps saved to: {map_path}")
     return map_path
 
-def create_expansion_impact_visualizations(impacts_df, regional_impacts):
+def create_expansion_impact_visualizations(impacts_df, regional_impacts, output_dirs):
     """Create comprehensive visualizations of urban expansion impacts"""
     print("\n📊 Creating expansion impact visualizations...")
     
@@ -1089,8 +1115,8 @@ Key Regional Changes (2016-2025):
     # Adjust layout and save
     plt.tight_layout()
     
-    # Save figure with enhanced naming
-    output_path = f'/tmp/uzbekistan_urban_expansion_impacts_enhanced.png'
+    # Save figure with enhanced naming to organized directory
+    output_path = output_dirs['analysis_plots'] / 'uzbekistan_urban_expansion_impacts_enhanced.png'
     plt.savefig(output_path, dpi=150, bbox_inches='tight')
     plt.show()
     
@@ -1139,8 +1165,8 @@ Key Regional Changes (2016-2025):
     
     plt.tight_layout()
     
-    # Save visualization with simple filename
-    output_path = f'/tmp/uzbekistan_urban_expansion_impacts_simplified.png'
+    # Save visualization with organized directory structure  
+    output_path = output_dirs['analysis_plots'] / 'uzbekistan_urban_expansion_impacts_simplified.png'
     plt.savefig(output_path, dpi=150, bbox_inches='tight')
     plt.show()
     
@@ -1405,7 +1431,7 @@ def export_original_data(expansion_data, impacts_df, regional_impacts, output_di
         'summary_file': summary_path
     }
 
-def generate_comprehensive_report(impacts_df, regional_impacts):
+def generate_comprehensive_report(impacts_df, regional_impacts, output_dirs):
     """Generate comprehensive report analyzing all 14 major Uzbekistan cities"""
     print("📋 Generating comprehensive urban expansion impact report for all 14 cities...")
     
@@ -1505,8 +1531,8 @@ This comprehensive analysis examines urban expansion impacts across **all 14 maj
 *This represents the most comprehensive multi-city urban expansion impact analysis for Uzbekistan, providing critical insights for climate-resilient urban planning across all major population centers.*
 """
     
-    # Save comprehensive report
-    report_path = '/tmp/uzbekistan_urban_expansion_comprehensive_report_14_cities.md'
+    # Save comprehensive report to organized directory
+    report_path = output_dirs['reports'] / 'uzbekistan_urban_expansion_comprehensive_report_14_cities.md'
     with open(report_path, 'w', encoding='utf-8') as f:
         f.write(report)
     
@@ -1523,9 +1549,13 @@ def main():
     print("="*80)
     
     try:
-        # Initialize GEE
+        # Initialize GEE and setup output directories
         if not authenticate_gee():
             return
+            
+        # Setup organized output directory structure
+        print("\n📁 Setting up organized output directories...")
+        output_dirs = setup_output_directories()
         
         # Analyze urban expansion impacts across all 14 cities
         print("\n📡 Phase 1: Collecting urban expansion data for all 14 cities...")
@@ -1541,22 +1571,22 @@ def main():
         
         # Create enhanced visualizations
         print("\n📈 Phase 3: Creating comprehensive impact visualizations...")
-        viz_path = create_expansion_impact_visualizations(impacts_df, regional_impacts)
+        viz_path = create_expansion_impact_visualizations(impacts_df, regional_impacts, output_dirs)
         
         # Create detailed GIS maps for individual cities
         print("\n🗺️ Phase 3b: Creating enhanced GIS maps with basemaps for individual cities...")
-        gis_path = create_detailed_city_gis_maps(impacts_df, expansion_data)
+        gis_path = create_detailed_city_gis_maps(impacts_df, expansion_data, output_dirs)
         
         # Create city boundary maps with key indicators
-        map_path = create_city_boundary_maps(impacts_df)
+        map_path = create_city_boundary_maps(impacts_df, output_dirs)
         
         # Generate comprehensive report
         print("\n📋 Phase 4: Generating comprehensive impact report...")
-        report_path = generate_comprehensive_report(impacts_df, regional_impacts)
+        report_path = generate_comprehensive_report(impacts_df, regional_impacts, output_dirs)
         
         # Export original data for download
         print("\n💾 Phase 5: Exporting original data for download...")
-        export_info = export_original_data(expansion_data, impacts_df, regional_impacts)
+        export_info = export_original_data(expansion_data, impacts_df, regional_impacts, output_dirs['data'])
         
         print("\n" + "="*80)
         print("🎉 Comprehensive Urban Expansion Impact Analysis Complete!")
