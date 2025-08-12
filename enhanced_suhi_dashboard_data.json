@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "title": "Enhanced SUHI Analysis Dashboard - Uzbekistan Cities",
+    "analysisDate": "2025-08-12T20:26:04.453403",
+    "dataSource": "Real Google Earth Engine Analysis - Landsat 8/9 + Multi-dataset Classification",
+    "temporalRange": "2015-2024",
+    "totalObservations": 140,
+    "citiesCount": 14,
+    "yearsCount": 10,
+    "spatialResolution": "200m",
+    "analysisMethod": "Multi-dataset Urban Classification + LST Difference Analysis",
+    "dataQuality": {
+      "good": 131,
+      "improved": 0,
+      "goodPercentage": 93.6
+    }
+  },
+  "scientificMethodology": {
+    "title": "Surface Urban Heat Island (SUHI) Analysis Methodology",
+    "overview": "Multi-dataset approach combining satellite-derived land surface temperature with advanced urban classification techniques for comprehensive SUHI assessment across Uzbekistan cities.",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Multi-Dataset Urban Classification",
+        "description": "Combined urban probability using five global datasets for robust urban area identification",
+        "formula": "P(urban) = (DW_urban + GHSL_built + ESA_built + MODIS_urban + GLAD_urban) / 5",
+        "datasets": [
+          "Dynamic World",
+          "GHSL",
+          "ESA WorldCover",
+          "MODIS LC",
+          "GLAD"
+        ],
+        "threshold": "Urban pixels: P(urban) > 0.15, Rural pixels: P(urban) < 0.2"
+      },
+      {
+        "step": 2,
+        "title": "Land Surface Temperature Extraction",
+        "description": "MODIS LST data processing for warm season months with quality control",
+        "formula": "LST_Celsius = (MODIS_LST × 0.02) - 273.15",
+        "processing": "Monthly median composite during June-August for robust temperature estimates",
+        "quality": "Cloud masking and quality flags applied"
+      },
+      {
+        "step": 3,
+        "title": "SUHI Intensity Calculation",
+        "description": "Surface Urban Heat Island intensity calculated as urban-rural temperature difference",
+        "dayFormula": "SUHI_Day = mean(LST_Day_Urban) - mean(LST_Day_Rural)",
+        "nightFormula": "SUHI_Night = mean(LST_Night_Urban) - mean(LST_Night_Rural)",
+        "units": "Temperature difference in degrees Celsius (°C)"
+      },
+      {
+        "step": 4,
+        "title": "Spatial Aggregation and Buffer Analysis",
+        "description": "Urban and rural zone definition using spatial buffers for representative sampling",
+        "urbanZone": "Pixels with P(urban) > 0.15 within administrative city boundaries",
+        "ruralZone": "Pixels with P(urban) < 0.2 within 25km ring buffer around urban area",
+        "minimumPixels": "Urban: 10 pixels, Rural: 25 pixels for statistical validity",
+        "spatialScale": "200m spatial resolution for detailed analysis"
+      },
+      {
+        "step": 5,
+        "title": "Temporal Trend Analysis",
+        "description": "Linear regression analysis for detecting warming/cooling trends over time",
+        "formula": "Trend = Δ(SUHI) / Δ(time) = (SUHI_final - SUHI_initial) / (year_final - year_initial)",
+        "significance": "Statistical significance tested using t-test with α = 0.05",
+        "interpretation": "Positive trend indicates warming, negative indicates cooling"
+      },
+      {
+        "step": 6,
+        "title": "Quality Control and Data Improvement",
+        "description": "Multi-step quality assessment and data gap filling procedures",
+        "qualityFlags": [
+          "Good: Original high-quality data",
+          "Improved: Gap-filled using nearest year"
+        ],
+        "validation": "Cross-validation with independent temperature measurements where available"
+      }
+    ],
+    "keyFormulas": [
+      {
+        "name": "Urban Heat Island Intensity",
+        "formula": "SUHI = LST_urban - LST_rural",
+        "description": "Core SUHI calculation measuring temperature difference"
+      },
+      {
+        "name": "Temporal Trend",
+        "formula": "β = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)²",
+        "description": "Linear regression slope for trend analysis"
+      },
+      {
+        "name": "Urban Probability",
+        "formula": "P(urban) = Σ(dataset_i) / n_datasets",
+        "description": "Multi-dataset consensus for urban classification"
+      }
+    ]
+  },
+  "analysisResults": {
+    "SUHI_Day_Change_mean": 1.523,
+    "SUHI_Day_Change_std": 2.681,
+    "SUHI_Day_Change_min": -2.269,
+    "SUHI_Day_Change_max": 4.98,
+    "SUHI_Night_Change_mean": -0.444,
+    "SUHI_Night_Change_std": 0.519,
+    "SUHI_Night_Change_min": -0.755,
+    "SUHI_Night_Change_max": 0.481,
+    "cities_with_valid_data": 5,
+    "analysis_type": "multi_dataset_suhi",
+    "method": "combined_urban_classification",
+    "warm_months": [
+      6,
+      7,
+      8
+    ],
+    "analysis_scale_m": 200,
+    "urban_threshold": 0.15,
+    "rural_threshold": 0.2,
+    "min_urban_pixels": 10,
+    "min_rural_pixels": 25,
+    "ring_width_km": 25,
+    "cities_analyzed": 14,
+    "cities_with_valid_suhi": 5,
+    "analysis_span_years": 9,
+    "first_period": "2015",
+    "last_period": "2024"
+  },
+  "cities": [
+    {
+      "name": "Fergana",
+      "records": 10,
+      "dayMean": 3.6,
+      "dayStd": 1.02,
+      "dayMin": 2.096,
+      "dayMax": 5.256,
+      "nightMean": 1.316,
+      "nightStd": 0.705,
+      "dayTrend": 0.1659,
+      "nightTrend": 0.2747,
+      "urbanSize": "Small",
+      "avgUrbanPixels": 91,
+      "dataQualityGood": 9
+    },
+    {
+      "name": "Jizzakh",
+      "records": 10,
+      "dayMean": 3.259,
+      "dayStd": 1.529,
+      "dayMin": 0.803,
+      "dayMax": 5.782,
+      "nightMean": 0.985,
+      "nightStd": 0.519,
+      "dayTrend": 0.5533,
+      "nightTrend": -0.0715,
+      "urbanSize": "Small",
+      "avgUrbanPixels": 48,
+      "dataQualityGood": 10
+    },
+    {
+      "name": "Nukus",
+      "records": 10,
+      "dayMean": 2.079,
+      "dayStd": 0.498,
+      "dayMin": 1.611,
+      "dayMax": 3.225,
+      "nightMean": 0.625,
+      "nightStd": 0.433,
+      "dayTrend": -0.0262,
+      "nightTrend": 0.1589,
+      "urbanSize": "Medium",
+      "avgUrbanPixels": 523,
+      "dataQualityGood": 9
+    },
+    {
+      "name": "Tashkent",
+      "records": 10,
+      "dayMean": 2.011,
+      "dayStd": 1.283,
+      "dayMin": -0.332,
+      "dayMax": 3.704,
+      "nightMean": 1.407,
+      "nightStd": 0.512,
+      "dayTrend": 0.042,
+      "nightTrend": 0.0534,
+      "urbanSize": "Small",
+      "avgUrbanPixels": 474,
+      "dataQualityGood": 10
+    },
+    {
+      "name": "Samarkand",
+      "records": 10,
+      "dayMean": 1.773,
+      "dayStd": 0.776,
+      "dayMin": 0.786,
+      "dayMax": 2.767,
+      "nightMean": 0.949,
+      "nightStd": 0.317,
+      "dayTrend": -0.0044,
+      "nightTrend": 0.1169,
+      "urbanSize": "Medium",
+      "avgUrbanPixels": 663,
+      "dataQualityGood": 9
+    },
+    {
+      "name": "Navoiy",
+      "records": 10,
+      "dayMean": 1.425,
+      "dayStd": 0.866,
+      "dayMin": -0.08,
+      "dayMax": 2.728,
+      "nightMean": 0.805,
+      "nightStd": 0.261,
+      "dayTrend": 0.0168,
+      "nightTrend": 0.0429,
+      "urbanSize": "Small",
+      "avgUrbanPixels": 246,
+      "dataQualityGood": 9
+    },
+    {
+      "name": "Andijan",
+      "records": 10,
+      "dayMean": 1.394,
+      "dayStd": 0.768,
+      "dayMin": -0.096,
+      "dayMax": 2.135,
+      "nightMean": 0.405,
+      "nightStd": 0.381,
+      "dayTrend": 0.222,
+      "nightTrend": 0.1315,
+      "urbanSize": "Large",
+      "avgUrbanPixels": 2445,
+      "dataQualityGood": 9
+    },
+    {
+      "name": "Urgench",
+      "records": 10,
+      "dayMean": 1.267,
+      "dayStd": 0.53,
+      "dayMin": 0.276,
+      "dayMax": 2.311,
+      "nightMean": 0.401,
+      "nightStd": 0.189,
+      "dayTrend": -0.0163,
+      "nightTrend": -0.0065,
+      "urbanSize": "Medium",
+      "avgUrbanPixels": 1388,
+      "dataQualityGood": 9
+    },
+    {
+      "name": "Gulistan",
+      "records": 10,
+      "dayMean": 1.133,
+      "dayStd": 0.913,
+      "dayMin": -0.337,
+      "dayMax": 2.407,
+      "nightMean": 0.562,
+      "nightStd": 0.447,
+      "dayTrend": 0.2576,
+      "nightTrend": -0.0839,
+      "urbanSize": "Small",
+      "avgUrbanPixels": 141,
+      "dataQualityGood": 10
+    },
+    {
+      "name": "Namangan",
+      "records": 10,
+      "dayMean": 0.525,
+      "dayStd": 0.644,
+      "dayMin": -0.714,
+      "dayMax": 1.503,
+      "nightMean": 0.327,
+      "nightStd": 0.408,
+      "dayTrend": 0.1334,
+      "nightTrend": 0.0497,
+      "urbanSize": "Medium",
+      "avgUrbanPixels": 965,
+      "dataQualityGood": 9
+    },
+    {
+      "name": "Nurafshon",
+      "records": 10,
+      "dayMean": -0.136,
+      "dayStd": 1.168,
+      "dayMin": -2.101,
+      "dayMax": 2.251,
+      "nightMean": 0.29,
+      "nightStd": 0.318,
+      "dayTrend": -0.2521,
+      "nightTrend": -0.0741,
+      "urbanSize": "Small",
+      "avgUrbanPixels": 101,
+      "dataQualityGood": 10
+    },
+    {
+      "name": "Termez",
+      "records": 10,
+      "dayMean": -0.374,
+      "dayStd": 1.307,
+      "dayMin": -2.429,
+      "dayMax": 2.29,
+      "nightMean": 0.229,
+      "nightStd": 0.277,
+      "dayTrend": 0.0465,
+      "nightTrend": 0.0326,
+      "urbanSize": "Small",
+      "avgUrbanPixels": 91,
+      "dataQualityGood": 9
+    },
+    {
+      "name": "Qarshi",
+      "records": 10,
+      "dayMean": -1.247,
+      "dayStd": 0.811,
+      "dayMin": -2.327,
+      "dayMax": 0.366,
+      "nightMean": 1.371,
+      "nightStd": 0.462,
+      "dayTrend": -0.1147,
+      "nightTrend": 0.0169,
+      "urbanSize": "Small",
+      "avgUrbanPixels": 109,
+      "dataQualityGood": 9
+    },
+    {
+      "name": "Bukhara",
+      "records": 10,
+      "dayMean": -1.772,
+      "dayStd": 1.125,
+      "dayMin": -3.145,
+      "dayMax": -0.065,
+      "nightMean": 0.208,
+      "nightStd": 0.287,
+      "dayTrend": 0.2453,
+      "nightTrend": -0.0703,
+      "urbanSize": "Medium",
+      "avgUrbanPixels": 1676,
+      "dataQualityGood": 10
+    }
+  ],
+  "regionalTrends": {
+    "years": [
+      

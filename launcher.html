@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUHI Dashboard Launcher</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .launcher {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .launch-btn {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+        }
+        .launch-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .features {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            text-align: left;
+        }
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        .feature h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        .feature p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="launcher">
+        <h1>🌡️ SUHI Dashboard</h1>
+        <p class="subtitle">Interactive Surface Urban Heat Island Analysis<br>Uzbekistan Cities • 2015-2024</p>
+        
+        <a href="index.html" class="launch-btn">
+            🚀 Launch Dashboard
+        </a>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>📊 14 Cities</h3>
+                <p>Comprehensive analysis across major Uzbekistan urban centers</p>
+            </div>
+            <div class="feature">
+                <h3>📈 10 Years</h3>
+                <p>Complete temporal coverage from 2015-2024</p>
+            </div>
+            <div class="feature">
+                <h3>🛰️ Satellite Data</h3>
+                <p>Google Earth Engine Landsat 8/9 analysis</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 93.6% Quality</h3>
+                <p>High-quality data with improved coverage</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

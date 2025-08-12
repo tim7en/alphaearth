@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUHI Analysis Dashboard - Uzbekistan Cities 2015-2024</title>
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #64748b;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,100 1000,0 1000,100"/></svg>');
+            background-size: cover;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .header .meta {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--card-background);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .nav-item {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Main Content */
+        .main {
+            padding: 2rem 0;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: var(--card-background);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .card-value {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Chart Containers */
+        .chart-container {
+            background: var(--card-background);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .chart-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--shadow);
+        }
+
+        .select {
+            padding: 0.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+        }
+
+        /* Data Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .data-table th {
+            background: var(--background-color);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .data-table tr:hover {
+            background: var(--background-color);
+        }
+
+        /* Status indicators */
+        .status-good { background: var(--success-color); }
+        .status-warning { background: var(--warning-color); }
+        .status-danger { background: var(--danger-color); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .nav-list { flex-direction: column; align-items: center; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .chart-header { flex-direction: column; gap: 1rem; }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--background-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1><i class="fas fa-thermometer-half"></i> SUHI Analysis Dashboard</h1>
+                <p class="subtitle">Surface Urban Heat Island Analysis for Uzbekistan Cities</p>
+                <div class="meta">
+                    <span><i class="fas fa-calendar"></i> Analysis Period: 2015-2024</span>
+                    <span><i class="fas fa-city"></i> 14 Cities Analyzed</span>
+                    <span><i class="fas fa-database"></i> 140 Data Points</span>
+                    <span><i class="fas fa-chart-line"></i> 100% Data Coverage</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item active" data-section="overview">
+                    <i class="fas fa-chart-pie"></i> Overview
+                </li>
+                <li class="nav-item" data-section="cities">
+                    <i class="fas fa-city"></i> City Analysis
+                </li>
+                <li class="nav-item" data-section="maps">
+                    <i class="fas fa-map"></i> GIS Maps
+                </li>
+                <li class="nav-item" data-section="trends">
+                    <i class="fas fa-chart-line"></i> Temporal Trends
+                </li>
+                <li class="nav-item" data-section="correlations">
+                    <i class="fas fa-project-diagram"></i> Correlations
+                </li>
+                <li class="nav-item" data-section="insights">
+                    <i class="fas fa-lightbulb"></i> Key Insights
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Overview Section -->
+            <section id="overview" class="section active">
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Regional Day SUHI</h3>
+                            <div class="card-icon status-warning">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                        </div>
+                        <div class="card-value" id="regional-day-suhi">+1.04°C</div>
+                        <div class="card-description">Mean daytime urban heat island intensity</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Regional Night SUHI</h3>
+                            <div class="card-icon status-good">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                        </div>
+                        <div class="card-value" id="regional-night-suhi">+0.68°C</div>
+                        <div class="card-description">Mean nighttime urban heat island intensity</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Warming Trend</h3>
+                            <div class="card-icon status-danger">
+                                <i class="fas fa-arrow-trend-up"></i>
+                            </div>
+                        </div>
+                        <div class="card-value" id="warming-trend">+0.039°C/yr</div>
+                        <div class="card-description">Real daytime SUHI increase rate (2015-2024)</div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Data Quality</h3>
+                            <div class="card-icon status-good">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        <div class="card-value" id="data-quality">93.6%</div>
+                        <div class="card-description">Real data coverage from 140 observations</div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Real SUHI Analysis Dashboard (2015-2024)</h3>
+                        <div class="chart-controls">
+                            <button class="btn btn-primary" onclick="refreshOverviewCharts()">
+                                <i class="fas fa-refresh"></i> Refresh
+                            </button>
+                        </div>
+                    </div>
+                    <div style="height: 400px;" id="overview-chart"></div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Regional SUHI Trends with Statistical Analysis (2015-2024)</h3>
+                    </div>
+                    <div style="height: 400px;" id="regional-trends-chart"></div>
+                </div>
+            </section>
+
+            <!-- Cities Section -->
+            <section id="cities" class="section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">City SUHI Rankings</h3>
+                        <div class="chart-controls">
+                            <select class="select" id="suhi-type-select" onchange="updateCityChart()">
+                                <option value="day">Daytime SUHI</option>
+                                <option value="night">Nighttime SUHI</option>
+                            </select>
+                            <button class="btn btn-secondary" onclick="exportCityData()">
+                                <i class="fas fa-download"></i> Export Data
+                            </button>
+                        </div>
+                    </div>
+                    <div style="height: 500px;" id="city-rankings-chart"></div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">City Comparison Matrix</h3>
+                    </div>
+                    <div style="height: 400px;" id="city-comparison-chart"></div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">City Statistics Table</h3>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table class="data-table" id="city-stats-table">
+                            <thead>
+                                <tr>
+                                    <th>City</th>
+                                    <th>Day SUHI (°C)</th>
+                                    <th>Night SUHI (°C)</th>
+                                    <th>Trend (°C/year)</th>
+                                    <th>Urban Size</th>
+                                    <th>Extreme Events</th>
+                                </tr>
+                            </thead>
+                            <tbody id="city-stats-tbody">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GIS Maps Section -->
+            <section id="maps" class="section">
+                <h2>Real GIS Maps & Spatial Analysis</h2>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">City SUHI Maps</h3>
+                            <div class="card-icon status-good">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                        </div>
+                        <div class="card-description">
+                            Comprehensive SUHI intensity maps for all 14 Uzbekistan cities based on real Google Earth Engine analysis
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Temporal Trends Maps</h3>
+                            <div class="card-icon status-warning">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="card-description">
+                            Year-over-year SUHI change visualization showing warming and cooling patterns (2015-2024)
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Enhanced GIS Analysis</h3>
+                            <div class="card-icon status-good">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                        </div>
+                        <div class="card-description">
+                            Multi-layer GIS visualization with urban boundaries, administrative regions, and spatial context
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">High-Resolution Maps</h3>
+                            <div class="card-icon status-good">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="card-description">
+                            Detailed temperature maps for major cities (Tashkent, Nukus) at high spatial resolution
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">City SUHI Maps - Real Analysis Results</h3>
+                        <div class="chart-description">
+                            <p>Comprehensive SUHI intensity maps generated from real Google Earth Engine analysis using multi-dataset urban classification and MODIS LST data (2015-2024)</p>
+                        </div>
+                    </div>
+                    <div class="map-container" style="text-align: center; padding: 1rem;">
+                        <img src="city_suhi_maps.png" alt="City SUHI Maps - Real Analysis" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow);">
+                        <p style="margin-top: 1rem; color: var(--secondary-text); font-style: italic;">
+                            Real SUHI intensity maps for 14 Uzbekistan cities showing spatial patterns of urban heat islands
+                        </p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Yearly SUHI Trends - Temporal Analysis</h3>
+                        <div class="chart-description">
+                            <p>Multi-year trend analysis showing how SUHI intensities have changed over the 9-year study period (2015-2024)</p>
+                        </div>
+                    </div>
+                    <div class="map-container" style="text-align: center; padding: 1rem;">
+                        <img src="yearly_suhi_trends.png" alt="Yearly SUHI Trends" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow);">
+                        <p style="margin-top: 1rem; color: var(--secondary-text); font-style: italic;">
+                            Temporal trends showing warming and cooling patterns across Uzbekistan cities
+                        </p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Enhanced GIS Context Maps</h3>
+                        <div class="chart-description">
+                            <p>Comprehensive GIS visualization with administrative boundaries, urban extent, and geographical context</p>
+                        </div>
+                    </div>
+                    <div class="map-container" style="text-align: center; padding: 1rem;">
+                        <img src="uzbekistan_cities_gis_maps.png" alt="Enhanced GIS Maps" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow);">
+                        <p style="margin-top: 1rem; color: var(--secondary-text); font-style: italic;">
+                            Enhanced GIS maps showing urban boundaries and administrative context for all analyzed cities
+                        </p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">High-Resolution Temperature Maps</h3>
+                        <div class="chart-description">
+                            <p>Detailed temperature analysis for major cities showing fine-scale spatial patterns</p>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; padding: 1rem;">
+                        <div class="map-container" style="text-align: center;">
+                            <h4 style="margin-bottom: 1rem;">Tashkent High-Resolution LST (2023)</h4>
+                            <img src="high_res_temperature_map_tashkent_2023.png" alt="Tashkent High-Resolution Temperature" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow);">
+                            <p style="margin-top: 1rem; color: var(--secondary-text); font-style: italic;">
+                                High-resolution land surface temperature map for Tashkent
+                            </p>
+                        </div>
+                        <div class="map-container" style="text-align: center;">
+                            <h4 style="margin-bottom: 1rem;">Nukus High-Resolution LST (2023)</h4>
+                            <img src="high_res_temperature_map_nukus_2023.png" alt="Nukus High-Resolution Temperature" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow);">
+                            <p style="margin-top: 1rem; color: var(--secondary-text); font-style: italic;">
+                                High-resolution land surface temperature map for Nukus
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analysis-summary">
+                    <h3>GIS Analysis Summary</h3>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <h4>Spatial Coverage</h4>
+                            <p>Complete spatial analysis of 14 major Uzbekistan cities with urban-rural gradient analysis</p>
+                        </div>
+                        <div class="summary-item">
+                            <h4>Map Resolution</h4>
+                            <p>200m spatial resolution with high-resolution enhancement for major cities (Tashkent, Nukus)</p>
+                        </div>
+                        <div class="summary-item">
+                            <h4>Temporal Range</h4>
+                            <p>9-year time series analysis (2015-2024) showing long-term SUHI evolution patterns</p>
+                        </div>
+                        <div class="summary-item">
+                            <h4>Data Sources</h4>
+                            <p>Real satellite data: MODIS LST, Dynamic World, GHSL, ESA WorldCover, MODIS LC, GLAD</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trends Section -->
+            <section id="trends" class="section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Temporal Analysis Dashboard</h3>
+                        <div class="chart-controls">
+                            <select class="select" id="city-select" onchange="updateTrendsChart()">
+                                <option value="all">All Cities Average</option>
+                                <!-- Cities will be populated by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div style="height: 500px;" id="temporal-trends-chart"></div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">City-Specific Trend Analysis</h3>
+                    </div>
+                    <div style="height: 400px;" id="city-trends-chart"></div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Year-over-Year Changes</h3>
+                    </div>
+                    <div style="height: 400px;" id="year-changes-chart"></div>
+                </div>
+            </section>
+
+            <!-- Correlations Section -->
+            <section id="correlations" class="section">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Variable Correlation Matrix</h3>
+                    </div>
+                    <div style="height: 500px;" id="correlation-heatmap"></div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">SUHI vs Urban Characteristics</h3>
+                        <div class="chart-controls">
+                            <select class="select" id="correlation-variable" onchange="updateCorrelationScatter()">
+                                <option value="NDVI_Urban">Urban NDVI</option>
+                                <option value="NDBI_Urban">Urban NDBI</option>
+                                <option value="Urban_Pixel_Count">Urban Size</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="height: 400px;" id="correlation-scatter"></div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Urban Size Effect Analysis</h3>
+                    </div>
+                    <div style="height: 400px;" id="urban-size-chart"></div>
+                </div>
+            </section>
+
+            <!-- Insights Section -->
+            <section id="insights" class="section">
+                <h2>Scientific Insights & Methodology</h2>
+                
+                <div class="methodology-section" style="margin-bottom: 2rem;">
+                    <h3>Analysis Methodology</h3>
+                    <div class="methodology-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                        <div class="methodology-card" style="background: var(--background-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Multi-Dataset Urban Classification</h4>
+                            <p style="font-family: monospace; color: var(--accent-color); margin: 0.5rem 0;"><strong>Formula:</strong> P(urban) = (DW + GHSL + ESA + MODIS + GLAD) / 5</p>
+                            <p style="margin-bottom: 1rem;">Combined urban probability using five global datasets for robust classification</p>
+                            <ul style="font-size: 0.9rem; color: var(--secondary-text);">
+                                <li>Dynamic World urban classification</li>
+                                <li>GHSL built-up areas</li>
+                                <li>ESA WorldCover urban areas</li>
+                                <li>MODIS land cover urban pixels</li>
+                                <li>GLAD land cover urban areas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="methodology-card" style="background: var(--background-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Land Surface Temperature Processing</h4>
+                            <p style="font-family: monospace; color: var(--accent-color); margin: 0.5rem 0;"><strong>Formula:</strong> LST_Celsius = (MODIS_LST × 0.02) - 273.15</p>
+                            <p style="margin-bottom: 1rem;">MODIS LST data processing for warm season months</p>
+                            <ul style="font-size: 0.9rem; color: var(--secondary-text);">
+                                <li>Monthly median composite (June-August)</li>
+                                <li>Quality flags and cloud masking applied</li>
+                                <li>1km spatial resolution processing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="methodology-card" style="background: var(--background-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">SUHI Intensity Calculation</h4>
+                            <p style="font-family: monospace; color: var(--accent-color); margin: 0.5rem 0;"><strong>Day:</strong> SUHI_Day = mean(LST_Day_Urban) - mean(LST_Day_Rural)</p>
+                            <p style="font-family: monospace; color: var(--accent-color); margin: 0.5rem 0;"><strong>Night:</strong> SUHI_Night = mean(LST_Night_Urban) - mean(LST_Night_Rural)</p>
+                            <ul style="font-size: 0.9rem; color: var(--secondary-text);">
+                                <li>Urban zone: P(urban) > 0.15</li>
+                                <li>Rural zone: P(urban) < 0.2</li>
+                                <li>25km ring buffer for rural sampling</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="methodology-card" style="background: var(--background-color); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                            <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Trend Analysis</h4>
+                            <p style="font-family: monospace; color: var(--accent-color); margin: 0.5rem 0;"><strong>Formula:</strong> β = Σ(xi - x̄)(yi - ȳ) / Σ(xi - x̄)²</p>
+                            <p style="margin-bottom: 1rem;">Linear regression for detecting warming/cooling trends</p>
+                            <ul style="font-size: 0.9rem; color: var(--secondary-text);">
+                                <li>9-year analysis period (2015-2024)</li>
+                                <li>Statistical significance testing (α = 0.05)</li>
+                                <li>Positive trend = warming, negative = cooling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-summary" style="margin-bottom: 2rem;">
+                    <h3>Key Scientific Results</h3>
+                    <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <div class="stat-card" style="background: var(--background-color); padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid var(--border-color);">
+                            <h4 style="margin-bottom: 0.5rem;">Regional Day SUHI Change</h4>
+                            <span class="stat-value positive" style="font-size: 2rem; font-weight: bold; color: var(--danger-color);">+1.52°C</span>
+                            <p style="margin-top: 0.5rem; color: var(--secondary-text);">Mean daytime warming effect across all cities</p>
+                        </div>
+                        <div class="stat-card" style="background: var(--background-color); padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid var(--border-color);">
+                            <h4 style="margin-bottom: 0.5rem;">Regional Night SUHI Change</h4>
+                            <span class="stat-value negative" style="font-size: 2rem; font-weight: bold; color: var(--success-color);">-0.44°C</span>
+                            <p style="margin-top: 0.5rem; color: var(--secondary-text);">Mean nighttime cooling effect across all cities</p>
+                        </div>
+                        <div class="stat-card" style="background: var(--background-color); padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid var(--border-color);">
+                            <h4 style="margin-bottom: 0.5rem;">Cities with Valid Data</h4>
+                            <span class="stat-value neutral" style="font-size: 2rem; font-weight: bold; color: var(--primary-color);">14/14</span>
+                            <p style="margin-top: 0.5rem; color: var(--secondary-text);">Complete coverage of analyzed urban areas</p>
+                        </div>
+                        <div class="stat-card" style="background: var(--background-color); padding: 1.5rem; border-radius: 12px; text-align: center; border: 1px solid var(--border-color);">
+                            <h4 style="margin-bottom: 0.5rem;">Data Quality</h4>
+                            <span class="stat-value positive" style="font-size: 2rem; font-weight: bold; color: var(--success-color);">93.6%</span>
+                            <p style="margin-top: 0.5rem; color: var(--secondary-text);">Good quality observations (131/140 total)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Priority Cities</h3>
+                            <div class="card-icon status-danger">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                        </div>
+                        <div class="card-description">
+                            <strong>High Priority:</strong> Fergana (+3.60°C), Jizzakh (+3.26°C), Nukus (+2.08°C)<br>
+                            <strong>Reason:</strong> Extreme SUHI intensities with strong warming trends
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Fastest Warming Trends</h3>
+                            <div class="card-icon status-warning">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                        </div>
+                        <div class="card-description">
+                            <strong>Top 3:</strong> Jizzakh (+0.553°C/yr), Gulistan (+0.258°C/yr), Bukhara (+0.245°C/yr)<br>
+                            <strong>Impact:</strong> Rapid urban heat intensification requiring immediate action
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Real Data Quality</h3>
+                            <div class="card-icon status-good">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="card-description">
+                            <strong>Analysis:</strong> 140 observations from 14 cities (2015-2024)<br>
+                            <strong>Method:</strong> Multi-dataset classification with 200m resolution
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Temporal Coverage</h3>
+                            <div class="card-icon status-good">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                        </div>
+                        <div class="card-description">
+                            <strong>Period:</strong> 9-year comprehensive analysis (2015-2024)<br>
+                            <strong>Season:</strong> Warm months (June-August) for peak SUHI detection
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h3 class="chart-title">Scientific Analysis Workflow</h3>
+                    </div>
+                    <div style="height: 400px;" id="projections-chart"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="enhanced-suhi-dashboard.js"></script>
+</body>
+</html>

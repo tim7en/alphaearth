@@ -1,0 +1,29 @@
+{
+  "SUHI_Day_Change_mean": 1.5230228300835507,
+  "SUHI_Day_Change_std": 2.6805754869544423,
+  "SUHI_Day_Change_min": -2.268954021410657,
+  "SUHI_Day_Change_max": 4.979675015063485,
+  "cities_with_valid_data": 5,
+  "SUHI_Night_Change_mean": -0.44362175653933383,
+  "SUHI_Night_Change_std": 0.5188749319626144,
+  "SUHI_Night_Change_min": -0.7553929366688212,
+  "SUHI_Night_Change_max": 0.4805574788528091,
+  "analysis_type": "multi_dataset_suhi",
+  "method": "combined_urban_classification",
+  "warm_months": [
+    6,
+    7,
+    8
+  ],
+  "analysis_scale_m": 200,
+  "urban_threshold": 0.15,
+  "rural_threshold": 0.2,
+  "min_urban_pixels": 10,
+  "min_rural_pixels": 25,
+  "ring_width_km": 25,
+  "cities_analyzed": 14,
+  "cities_with_valid_suhi": 5,
+  "analysis_span_years": 9,
+  "first_period": "2015",
+  "last_period": "2024"
+}

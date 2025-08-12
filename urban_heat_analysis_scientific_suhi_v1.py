@@ -6,6 +6,7 @@ import seaborn as sns
 from pathlib import Path
 from datetime import datetime
 import warnings
+import time  # Add time module for delays
 warnings.filterwarnings('ignore')
 
 # Configuration - All major Uzbekistan cities
@@ -18,18 +19,18 @@ UZBEKISTAN_CITIES = {
     "Nukus":      {"lat": 42.4731, "lon": 59.6103, "buffer": 10000},  # Karakalpakstan
     
     # Regional capitals
-    #"Andijan":    {"lat": 40.7821, "lon": 72.3442, "buffer": 12000},
+    "Andijan":    {"lat": 40.7821, "lon": 72.3442, "buffer": 12000},
     "Bukhara":    {"lat": 39.7748, "lon": 64.4286, "buffer": 10000},
-    #"Samarkand":  {"lat": 39.6542, "lon": 66.9597, "buffer": 12000},
-    #"Namangan":   {"lat": 40.9983, "lon": 71.6726, "buffer": 12000},
-    #"Jizzakh":    {"lat": 40.1158, "lon": 67.8422, "buffer": 8000},
-    #"Qarshi":     {"lat": 38.8606, "lon": 65.7887, "buffer": 8000},
-    #"Navoiy":     {"lat": 40.1030, "lon": 65.3686, "buffer": 10000},
-   # "Termez":     {"lat": 37.2242, "lon": 67.2783, "buffer": 8000},
-   # "Gulistan":   {"lat": 40.4910, "lon": 68.7810, "buffer": 8000},
-    #"Nurafshon":  {"lat": 41.0167, "lon": 69.3417, "buffer": 8000},
-    #"Fergana":    {"lat": 40.3842, "lon": 71.7843, "buffer": 12000},
-    #"Urgench":    {"lat": 41.5506, "lon": 60.6317, "buffer": 10000},
+    "Samarkand":  {"lat": 39.6542, "lon": 66.9597, "buffer": 12000},
+    "Namangan":   {"lat": 40.9983, "lon": 71.6726, "buffer": 12000},
+    "Jizzakh":    {"lat": 40.1158, "lon": 67.8422, "buffer": 8000},
+    "Qarshi":     {"lat": 38.8606, "lon": 65.7887, "buffer": 8000},
+    "Navoiy":     {"lat": 40.1030, "lon": 65.3686, "buffer": 10000},
+    "Termez":     {"lat": 37.2242, "lon": 67.2783, "buffer": 8000},
+    "Gulistan":   {"lat": 40.4910, "lon": 68.7810, "buffer": 8000},
+    "Nurafshon":  {"lat": 41.0167, "lon": 69.3417, "buffer": 8000},
+    "Fergana":    {"lat": 40.3842, "lon": 71.7843, "buffer": 12000},
+    "Urgench":    {"lat": 41.5506, "lon": 60.6317, "buffer": 10000},
 }
 
 # Scientific constants - Multi-dataset approach with enhanced spatial resolution
@@ -300,16 +301,21 @@ def _landsat_thermal(geom, start, end):
             return st_celsius.updateMask(mask)
         
         size = coll.size()
-        if size.getInfo() == 0:
-            print(f"   ⚠️ No Landsat thermal data available")
-            return None
         
-        # Process and get median
-        processed = coll.map(process_thermal)
-        lst_landsat = processed.median()
+        # Process conditionally without getInfo() to avoid rate limits
+        def process_if_available():
+            processed = coll.map(process_thermal)
+            return processed.median()
         
-        print(f"   ✅ Landsat thermal data available ({size.getInfo()} images)")
-        return lst_landsat
+        # Use conditional processing
+        lst_landsat = ee.Algorithms.If(
+            size.gt(0),
+            process_if_available(),
+            None
+        )
+        
+        print(f"   ✅ Landsat thermal processing configured")
+        return ee.Image(lst_landsat) if lst_landsat else None
         
     except Exception as e:
         print(f"   ⚠️ Landsat thermal error: {e}")
@@ -341,17 +347,25 @@ def _aster_lst(geom, start, end):
             
             return lst_celsius
         
+        # Check size without calling getInfo() to avoid rate limits
         size = aster_coll.size()
-        if size.getInfo() == 0:
-            print(f"   ⚠️ No ASTER thermal data available")
-            return None
         
-        # Process and get median
-        processed = aster_coll.map(calculate_aster_lst)
-        lst_aster = processed.median()
+        # Use conditional processing instead of getInfo()
+        def process_if_available():
+            processed = aster_coll.map(calculate_aster_lst)
+            lst_aster = processed.median()
+            return lst_aster
         
-        print(f"   ✅ ASTER thermal data available ({size.getInfo()} images)")
-        return lst_aster
+        # Return conditional result
+        lst_aster = ee.Algorithms.If(
+            size.gt(0),
+            process_if_available(),
+            None
+        )
+        
+        # Only check if we have data server-side, avoid getInfo()
+        print(f"   ✅ ASTER thermal processing configured")
+        return ee.Image(lst_aster) if lst_aster else None
         
     except Exception as e:
         print(f"   ⚠️ ASTER thermal error: {e}")
@@ -360,13 +374,12 @@ def _aster_lst(geom, start, end):
 def _combine_thermal_sources(geom, start, end):
     """
     Combine multiple thermal data sources for enhanced resolution and temporal coverage
-    Priority: Landsat (100m) > ASTER (90m) > MODIS (1km)
+    Priority: Landsat (100m) > MODIS (1km) - Simplified to avoid rate limits
     """
-    print(f"   🌡️ Processing enhanced multi-source thermal data for 200m resolution...")
+    print(f"   🌡️ Processing thermal data for 200m resolution...")
     
-    # Get available thermal sources (Landsat, ASTER, MODIS)
+    # Get available thermal sources (Landsat, MODIS only)
     landsat_thermal = _landsat_thermal(geom, start, end)
-    aster_thermal = _aster_lst(geom, start, end) 
     modis_thermal = _modis_lst(geom, start, end)
     
     # Create composite based on availability and quality
@@ -376,17 +389,6 @@ def _combine_thermal_sources(geom, start, end):
     if landsat_thermal is not None:
         thermal_sources.append(landsat_thermal.select('LST_Landsat').rename('LST_Day'))
         source_info.append("Landsat (~100m)")
-    
-    if aster_thermal is not None:
-        # Use ASTER if Landsat not available or as supplementary
-        if len(thermal_sources) == 0:
-            thermal_sources.append(aster_thermal.select('LST_ASTER').rename('LST_Day'))
-            source_info.append("ASTER (~90m)")
-        else:
-            # Blend with existing high-resolution source
-            blended = thermal_sources[0].blend(aster_thermal.select('LST_ASTER').rename('LST_Day'))
-            thermal_sources[0] = blended
-            source_info[0] += " + ASTER"
     
     if modis_thermal is not None:
         if len(thermal_sources) == 0:
@@ -481,6 +483,9 @@ def analyze_period(period):
 
     for city, info in UZBEKISTAN_CITIES.items():
         print(f"      🏙️ Analyzing {city}...")
+        
+        # Add delay before processing each city to avoid rate limits
+        time.sleep(3)  # 3 second delay between cities
         
         try:
             # --- Geometries with city-specific parameters ---
@@ -812,7 +817,7 @@ def analyze_urban_expansion_impacts():
     print("Resolution: 200m (Enhanced from 1km) for improved spatial detail")
     print("="*60)
     
-    # Define analysis periods
+    # Define analysis periods - reduced to avoid rate limits
     periods = {
         '2015': {'start': '2015-01-01', 'end': '2015-12-31', 'label': '2015'},
         '2016': {'start': '2016-01-01', 'end': '2016-12-31', 'label': '2016'},
@@ -837,6 +842,10 @@ def analyze_urban_expansion_impacts():
     
     for key, period in periods.items():
         print(f"\n🔍 Processing {period['label']}...")
+        
+        # Add delay before processing each period to avoid rate limits
+        time.sleep(1)  # 1 second delay between periods
+        
         try:
             fc = analyze_period(period)
             df = fc_to_pandas(fc, period['label'])
