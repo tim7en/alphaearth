@@ -1,0 +1,64 @@
+
+# Scientific Surface Urban Heat Island (SUHI) Analysis - Uzbekistan Cities
+
+## Executive Summary
+
+This analysis quantifies surface urban heat island intensity (SUHI) for 6 major cities in Uzbekistan using scientifically defensible remote sensing methods. SUHI is calculated as the difference in land surface temperature (LST) between urban cores and nearby rural rings during the warm season (June-August).
+
+## Methodology
+
+### Data Sources and Processing
+- **MODIS LST**: MOD11A2 V6.1 8-day composites, properly scaled (0.02 K) and converted to °C
+- **Landsat 8/9**: Collection-2 Level-2 surface reflectance with QA_PIXEL cloud masking
+- **Dynamic World V1**: 10m land cover probabilities for urban/rural classification
+- **Analysis Scale**: 1000m (MODIS native resolution) with explicit aggregation
+- **Temporal Focus**: Warm season (JJA) median composites to avoid seasonal bias
+
+### SUHI Calculation
+Urban cores defined using multi-dataset approach with rural rings at 25km distance. SUHI calculated separately for day and night as:
+
+**SUHI = LST_urban - LST_rural**
+
+### Quality Assurance
+- Server-side processing via Google Earth Engine reduceRegions
+- Proper Landsat L2 cloud/shadow masking using QA_PIXEL bits
+- MODIS LST scaling and offset correction
+- Scale-consistent analysis at 1km resolution
+- Warm season filtering for temporal consistency
+
+## Results
+
+### Regional SUHI Trends (2018 → 2024)
+
+**Surface Urban Heat Island Changes:**
+- Mean SUHI Day Change: 0.951 ± 1.339°C
+- Mean SUHI Night Change: 0.440 ± 0.529°C
+- Range Day SUHI Change: -0.648 to 2.392°C
+- Range Night SUHI Change: -0.263 to 0.923°C
+
+### City-Level Results
+
+| City | SUHI Day Change (°C) | SUHI Night Change (°C) | Urban Built Change | Rural Built Change |
+|------|---------------------|----------------------|------------------|------------------|
+| Tashkent | 2.392 | 0.760 | N/A | N/A |
+| Nukus | -0.648 | 0.923 | N/A | N/A |
+| Andijan | N/A | N/A | N/A | N/A |
+| Bukhara | 0.426 | -0.263 | N/A | N/A |
+| Samarkand | 1.633 | 0.341 | N/A | N/A |
+| Namangan | N/A | N/A | N/A | N/A |
+
+
+## Technical Implementation
+
+### Server-Side Processing
+This analysis leverages Google Earth Engine's distributed computing infrastructure:
+- Zonal statistics computed server-side using grouped reducers
+- Minimal data transfer (only aggregated results)
+- Scale-aware processing at 1km resolution
+- Proper handling of mixed-resolution datasets
+
+---
+
+**Report Generated**: 2025-08-12 14:14:39
+**Analysis Method**: Scientific SUHI (Urban-Rural LST Difference)
+**Data Processing**: Google Earth Engine Server-Side

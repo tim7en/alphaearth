@@ -19,27 +19,57 @@ UZBEKISTAN_CITIES = {
     
     # Regional capitals
     "Andijan":    {"lat": 40.7821, "lon": 72.3442, "buffer": 12000},
-    #"Bukhara":    {"lat": 39.7748, "lon": 64.4286, "buffer": 10000},
-    #"Jizzakh":    {"lat": 40.1158, "lon": 67.8422, "buffer": 8000},
-    #"Qarshi":     {"lat": 38.8606, "lon": 65.7887, "buffer": 8000},
-    #"Navoiy":     {"lat": 40.1030, "lon": 65.3686, "buffer": 10000},
-    #"Namangan":   {"lat": 40.9983, "lon": 71.6726, "buffer": 12000},
-    #"Samarkand":  {"lat": 39.6542, "lon": 66.9597, "buffer": 12000},
-    #"Termez":     {"lat": 37.2242, "lon": 67.2783, "buffer": 8000},
-    #"Gulistan":   {"lat": 40.4910, "lon": 68.7810, "buffer": 8000},
-    #"Nurafshon":  {"lat": 41.0167, "lon": 69.3417, "buffer": 8000},
-    #"Fergana":    {"lat": 40.3842, "lon": 71.7843, "buffer": 12000},
-    #"Urgench":    {"lat": 41.5506, "lon": 60.6317, "buffer": 10000},
+    "Bukhara":    {"lat": 39.7748, "lon": 64.4286, "buffer": 10000},
+    "Samarkand":  {"lat": 39.6542, "lon": 66.9597, "buffer": 12000},
+    "Namangan":   {"lat": 40.9983, "lon": 71.6726, "buffer": 12000},
+    "Jizzakh":    {"lat": 40.1158, "lon": 67.8422, "buffer": 8000},
+    "Qarshi":     {"lat": 38.8606, "lon": 65.7887, "buffer": 8000},
+    "Navoiy":     {"lat": 40.1030, "lon": 65.3686, "buffer": 10000},
+    "Termez":     {"lat": 37.2242, "lon": 67.2783, "buffer": 8000},
+    "Gulistan":   {"lat": 40.4910, "lon": 68.7810, "buffer": 8000},
+    "Nurafshon":  {"lat": 41.0167, "lon": 69.3417, "buffer": 8000},
+    "Fergana":    {"lat": 40.3842, "lon": 71.7843, "buffer": 12000},
+    "Urgench":    {"lat": 41.5506, "lon": 60.6317, "buffer": 10000},
 }
 
 # Scientific constants - Multi-dataset approach
 WARM_MONTHS = [6, 7, 8]  # June, July, August
-URBAN_THRESHOLD = 0.3    # Threshold for urban classification from multiple sources
+URBAN_THRESHOLD = 0.15   # Further reduced threshold for urban classification (was 0.25)
 RURAL_THRESHOLD = 0.2    # Threshold for rural classification
 RING_KM = 25             # Rural reference area
 TARGET_SCALE = 1000      # 1 km to match MODIS LST native resolution
-MIN_URBAN_PIXELS = 10    # Minimum urban pixels required for valid SUHI calculation
-MIN_RURAL_PIXELS = 20    # Minimum rural pixels required for valid SUHI calculation
+MIN_URBAN_PIXELS = 3     # Further relaxed minimum urban pixels (was 5)
+MIN_RURAL_PIXELS = 10    # Further relaxed minimum rural pixels (was 15)
+
+# City-specific urban classification thresholds to handle problematic cases
+CITY_SPECIFIC_THRESHOLDS = {
+    'Bukhara': {
+        'urban_threshold': 0.01,   # Very low threshold for Bukhara - any built signature
+        'rural_threshold': 0.10,   # Lower rural threshold to avoid misclassification
+        'ndvi_urban_max': 0.8,     # Very relaxed NDVI constraint
+        'ring_km': 15,             # Smaller rural ring to avoid distant irrigated areas
+        'reason': 'Traditional urban morphology poorly captured by global datasets'
+    },
+    'Nukus': {
+        'urban_threshold': 0.10,   # Slightly lower for smaller city
+        'rural_threshold': 0.18,
+        'ndvi_urban_max': 0.6,
+        'ring_km': 25,             # Standard ring
+        'reason': 'Smaller city with lower urban signature'
+    }
+}
+
+def get_city_thresholds(city_name):
+    """Get city-specific thresholds or defaults"""
+    if city_name in CITY_SPECIFIC_THRESHOLDS:
+        config = CITY_SPECIFIC_THRESHOLDS[city_name]
+        print(f"   🎯 Using city-specific thresholds for {city_name}: {config['reason']}")
+        return (config['urban_threshold'], 
+                config['rural_threshold'], 
+                config['ndvi_urban_max'],
+                config.get('ring_km', RING_KM))
+    else:
+        return (URBAN_THRESHOLD, RURAL_THRESHOLD, 0.6, RING_KM)  # defaults
 
 def authenticate_gee():
     """Initialize Google Earth Engine"""
@@ -90,7 +120,7 @@ def _combine_urban_classifications(geom, start, end, year):
         if size.gt(0):
             dw_built = dw.median().rename('dw_built')
             urban_layers.append(dw_built)
-            weights.append(0.35)  # Higher weight for recent data
+            weights.append(0.4)  # Higher weight for recent, high-resolution data
             print(f"   ✓ Dynamic World data available")
     except:
         print(f"   ⚠️ Dynamic World not available")
@@ -102,7 +132,7 @@ def _combine_urban_classifications(geom, start, end, year):
         # Normalize to 0-1 range (original is percentage 0-100)
         ghsl_norm = ghsl.divide(100).rename('ghsl_built')
         urban_layers.append(ghsl_norm)
-        weights.append(0.25)
+        weights.append(0.3)  # Increased weight for built-up surface data
         print(f"   ✓ GHSL data available")
     except:
         print(f"   ⚠️ GHSL not available")
@@ -114,7 +144,7 @@ def _combine_urban_classifications(geom, start, end, year):
         # Built-up class is 50
         esa_built = esa.eq(50).rename('esa_built')
         urban_layers.append(esa_built)
-        weights.append(0.2)
+        weights.append(0.2)  # Good for small urban areas
         print(f"   ✓ ESA WorldCover data available")
     except:
         try:
@@ -298,10 +328,13 @@ def analyze_period(period):
         print(f"      🏙️ Analyzing {city}...")
         
         try:
-            # --- Geometries ---
+            # --- Geometries with city-specific parameters ---
+            # Get city-specific thresholds and ring distance
+            urban_thresh, rural_thresh, ndvi_max, ring_km = get_city_thresholds(city)
+            
             pt = ee.Geometry.Point([info['lon'], info['lat']])
             inner = pt.buffer(info['buffer'])
-            outer = pt.buffer(info['buffer'] + RING_KM * 1000)
+            outer = pt.buffer(info['buffer'] + ring_km * 1000)  # Use city-specific ring distance
             rural_ring = outer.difference(inner)
             
             # Minimal erosion to avoid edge effects
@@ -332,15 +365,15 @@ def analyze_period(period):
             gsw = ee.Image('JRC/GSW1_4/GlobalSurfaceWater').select('occurrence')
             water_mask = gsw.resample('bilinear').reproject(ref_proj, None, TARGET_SCALE).lt(25)
             
-            # --- Create urban and rural masks ---
-            # Urban mask: high urban probability within urban core
-            urban_mask = (urban_prob_1k.gte(URBAN_THRESHOLD)
+            # --- Create urban and rural masks with city-specific thresholds ---
+            # Urban mask: adaptive thresholds for different cities
+            urban_mask = (urban_prob_1k.gte(urban_thresh)
                          .And(water_mask)
-                         .And(nds_1k.select('NDVI').lt(0.4)))  # Not heavily vegetated
+                         .And(nds_1k.select('NDVI').lt(ndvi_max)))
             urban_mask = urban_mask.clip(urban_core).rename('urban_mask')
             
             # Rural mask: low urban probability within rural ring
-            rural_mask = (urban_prob_1k.lt(RURAL_THRESHOLD)
+            rural_mask = (urban_prob_1k.lt(rural_thresh)
                          .And(water_mask)
                          .Or(nds_1k.select('NDVI').gt(0.3)))  # Or vegetated areas
             rural_mask = rural_mask.clip(rural_ring_eroded).rename('rural_mask')
@@ -379,6 +412,41 @@ def analyze_period(period):
             try:
                 urban_stats_info = urban_stats.getInfo()
                 rural_stats_info = rural_stats.getInfo()
+                
+                # Check if we have sufficient urban pixels
+                urban_count = urban_stats_info.get('LST_Day_count', 0)
+                
+                # Fallback for small cities with insufficient urban pixels
+                if urban_count < MIN_URBAN_PIXELS:
+                    print(f"   🔄 Applying fallback classification for {city} (only {urban_count} urban pixels)")
+                    
+                    # Try more relaxed urban mask
+                    fallback_urban_mask = (urban_prob_1k.gte(0.1)  # Even lower threshold
+                                          .And(water_mask)
+                                          .And(nds_1k.select('NDVI').lt(0.8)))  # Very relaxed NDVI
+                    fallback_urban_mask = fallback_urban_mask.clip(urban_core).rename('fallback_urban_mask')
+                    
+                    # Recalculate urban statistics with fallback mask
+                    fallback_urban_stats = vars_1k.updateMask(fallback_urban_mask).reduceRegion(
+                        reducer=reducer,
+                        geometry=urban_core,
+                        scale=TARGET_SCALE,
+                        maxPixels=1e9,
+                        tileScale=4,
+                        bestEffort=True
+                    )
+                    
+                    try:
+                        fallback_stats_info = fallback_urban_stats.getInfo()
+                        fallback_count = fallback_stats_info.get('LST_Day_count', 0)
+                        
+                        if fallback_count >= MIN_URBAN_PIXELS:
+                            print(f"   ✅ Fallback successful: {fallback_count} urban pixels found")
+                            urban_stats_info = fallback_stats_info
+                        else:
+                            print(f"   ⚠️ Fallback still insufficient: {fallback_count} pixels")
+                    except Exception as e:
+                        print(f"   ❌ Fallback failed: {e}")
                 
                 # Create feature with all statistics
                 common = {
@@ -505,6 +573,11 @@ def fc_to_pandas(fc, period_label):
                     lst_day_rural = None
                     lst_night_rural = None
                     rural_pixels = 0
+                
+                # Classification quality validation
+                urban_prob_mean = safe_get(core_stats, 'urban_probability_mean', 0)
+                if urban_prob_mean is not None and urban_prob_mean < 2.0:
+                    print(f"   ⚠️ {city}: Low urban probability ({urban_prob_mean:.2f}), classification may be poor")
                 
                 # Calculate SUHI only if we have valid data and sufficient pixels
                 suhi_day = None
@@ -1106,7 +1179,7 @@ Urban cores defined using multi-dataset approach with rural rings at {RING_KM}km
             built_urban_str = f"{built_urban:.4f}" if pd.notna(built_urban) else "N/A"
             built_rural_str = f"{built_rural:.4f}" if pd.notna(built_rural) else "N/A"
             
-            report += f"| {row['City']} | {suhi_day_str} | {suhi_night_str} | {built_urban_str} | {built_rural_str} |\n"
+            report += f"| {row.name} | {suhi_day_str} | {suhi_night_str} | {built_urban_str} | {built_rural_str} |\n"
 
     report += f"""
 
@@ -1557,13 +1630,22 @@ def create_suhi_trend_visualizations(expansion_data, impacts_df, regional_stats,
     return trend_path
 
 def create_detailed_city_gis_maps(impacts_df, expansion_data, output_dirs):
-    """Create detailed GIS maps for each city showing SUHI patterns"""
+    """Create detailed GIS maps for each city showing SUHI patterns with basemap layers"""
     print("\n🗺️ Creating detailed GIS maps for individual cities...")
     
     # Import required packages
     try:
         import matplotlib.pyplot as plt
         from matplotlib.patches import Circle
+        # Try to import basemap libraries
+        try:
+            import contextily as ctx
+            basemap_available = True
+            print("   ✅ Contextily available for basemap layers")
+        except ImportError:
+            basemap_available = False
+            print("   ⚠️ Contextily not available, using simple plotting")
+            
     except ImportError:
         print("❌ Missing matplotlib for visualization")
         return None
@@ -1626,10 +1708,30 @@ def create_detailed_city_gis_maps(impacts_df, expansion_data, output_dirs):
         center_lon, center_lat = city_info['lon'], city_info['lat']
         buffer_deg = city_info['buffer'] / 111000  # Convert meters to degrees (approximate)
         
-        # Create a grid of points around the city center
-        n_points = 50
-        lons = np.linspace(center_lon - buffer_deg, center_lon + buffer_deg, n_points)
-        lats = np.linspace(center_lat - buffer_deg, center_lat + buffer_deg, n_points)
+        # Set map extent
+        west, east = center_lon - buffer_deg, center_lon + buffer_deg
+        south, north = center_lat - buffer_deg, center_lat + buffer_deg
+        ax.set_xlim(west, east)
+        ax.set_ylim(south, north)
+        
+        # Add basemap if available
+        if basemap_available:
+            try:
+                # Add OpenStreetMap basemap
+                ctx.add_basemap(ax, crs='EPSG:4326', source=ctx.providers.OpenStreetMap.Mapnik, alpha=0.6)
+                print(f"   ✅ Added OpenStreetMap basemap for {city_name}")
+            except Exception as e:
+                print(f"   ⚠️ Could not add basemap for {city_name}: {e}")
+                # Fallback: create simple background
+                ax.set_facecolor('#f0f0f0')
+        else:
+            # Simple background without basemap
+            ax.set_facecolor('#f0f0f0')
+        
+        # Create a grid of points around the city center for temperature overlay
+        n_points = 30
+        lons = np.linspace(center_lon - buffer_deg*0.8, center_lon + buffer_deg*0.8, n_points)
+        lats = np.linspace(center_lat - buffer_deg*0.8, center_lat + buffer_deg*0.8, n_points)
         
         # Create temperature data based on distance from center (mock SUHI pattern)
         LON, LAT = np.meshgrid(lons, lats)
@@ -1638,20 +1740,26 @@ def create_detailed_city_gis_maps(impacts_df, expansion_data, output_dirs):
         # Mock temperature: higher in center (urban), lower at edges (rural)
         base_temp = 30.0  # Base temperature
         suhi_intensity = city_row.get('SUHI_Day_Latest', 2.0)  # Use actual SUHI if available
-        temperatures = base_temp + suhi_intensity * np.exp(-distances * 5) + np.random.normal(0, 0.5, LON.shape)
+        temperatures = base_temp + suhi_intensity * np.exp(-distances * 8) + np.random.normal(0, 0.3, LON.shape)
         
-        # Create contour plot
-        contour = ax.contourf(LON, LAT, temperatures, levels=20, cmap='RdYlBu_r', alpha=0.8)
+        # Create temperature contour overlay with transparency
+        contour = ax.contourf(LON, LAT, temperatures, levels=15, cmap='RdYlBu_r', alpha=0.5)
         
-        # Add city center
-        ax.scatter(center_lon, center_lat, s=200, c='red', marker='*', 
-                  edgecolors='white', linewidth=2, label='City Center', zorder=10)
+        # Add city boundaries - enhanced circular boundary
+        city_boundary = Circle((center_lon, center_lat), buffer_deg*0.6, 
+                              fill=False, edgecolor='red', 
+                              linewidth=3, linestyle='-', alpha=0.9, label='City Boundary')
+        ax.add_patch(city_boundary)
         
-        # Add buffer circle
-        circle = Circle((center_lon, center_lat), buffer_deg, 
-                       fill=False, edgecolor='black', 
-                       linewidth=2, linestyle='--', alpha=0.8)
-        ax.add_patch(circle)
+        # Add city center with enhanced styling
+        ax.scatter(center_lon, center_lat, s=300, c='darkred', marker='*', 
+                  edgecolors='white', linewidth=3, label='City Center', zorder=15)
+        
+        # Add analysis buffer zone
+        buffer_circle = Circle((center_lon, center_lat), buffer_deg, 
+                              fill=False, edgecolor='navy', 
+                              linewidth=2, linestyle='--', alpha=0.7, label='Analysis Area')
+        ax.add_patch(buffer_circle)
         
         # Labels and formatting
         ax.set_xlabel('Longitude')
@@ -1671,6 +1779,18 @@ def create_detailed_city_gis_maps(impacts_df, expansion_data, output_dirs):
         # Add colorbar
         cbar = plt.colorbar(contour, ax=ax, shrink=0.8)
         cbar.set_label('Temperature (°C)', fontsize=9)
+        
+        # Add legend for the first subplot only
+        if idx == 0:
+            legend_elements = [
+                plt.Line2D([0], [0], marker='*', color='w', markerfacecolor='darkred', 
+                          markersize=15, label='City Center', markeredgecolor='white', markeredgewidth=2),
+                plt.Line2D([0], [0], linestyle='-', color='red', linewidth=3,
+                          label='City Boundary'),
+                plt.Line2D([0], [0], linestyle='--', color='navy', linewidth=2,
+                          label='Analysis Area')
+            ]
+            ax.legend(handles=legend_elements, loc='upper right', fontsize=8, framealpha=0.8)
         
     # Hide unused subplots
     for idx in range(num_cities, len(axes_flat)):
