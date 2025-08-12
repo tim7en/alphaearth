@@ -13,6 +13,9 @@ import ee
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import matplotlib.ticker as ticker
+from matplotlib.lines import Line2D
 import seaborn as sns
 from pathlib import Path
 from datetime import datetime
@@ -532,8 +535,8 @@ def create_detailed_city_gis_maps(impacts_df, expansion_data, output_dirs):
         axes_flat = [axes]
     
     # Enhanced color schemes
-    temp_cmap = plt.cm.RdYlBu_r
-    uhi_cmap = plt.cm.Reds
+    temp_cmap = cm.RdYlBu_r
+    uhi_cmap = cm.Reds
     
     for idx, (city_name, city_row) in enumerate(impacts_df.iterrows()):
         if idx >= len(axes_flat):
@@ -755,8 +758,8 @@ Green Loss: {city_row['green_change_10yr']:+.4f}"""
         ax.tick_params(axis='both', which='major', labelsize=10)
         
         # Format coordinate labels to show more precision
-        ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x:.3f}°'))
-        ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, p: f'{y:.3f}°'))
+        ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: f'{x:.3f}°'))
+        ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda y, p: f'{y:.3f}°'))
     
     # Hide unused subplots
     for idx in range(num_cities, len(axes_flat)):
@@ -764,17 +767,17 @@ Green Loss: {city_row['green_change_10yr']:+.4f}"""
     
     # Enhanced overall figure legend
     legend_elements = [
-        plt.Line2D([0], [0], marker='*', color='w', markerfacecolor='red', 
-                   markersize=20, label='City Center', markeredgecolor='white', markeredgewidth=2),
-        plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='blue', 
-                   markersize=15, label='Sample Points (LST)', markeredgecolor='white', markeredgewidth=1),
-        plt.Line2D([0], [0], marker='s', color='w', markerfacecolor='red', 
-                   markersize=12, label='UHI Intensity', markeredgecolor='black', markeredgewidth=1),
-        plt.Line2D([0], [0], marker='^', color='w', markerfacecolor='forestgreen', 
-                   markersize=12, label='High Vegetation', markeredgecolor='darkgreen', markeredgewidth=1),
-        plt.Line2D([0], [0], marker='X', color='w', markerfacecolor='red', 
-                   markersize=15, label='Urban Hotspots', markeredgecolor='darkred', markeredgewidth=1),
-        plt.Line2D([0], [0], linestyle='--', color='navy', linewidth=3,
+        Line2D([0], [0], marker='*', color='w', markerfacecolor='red', 
+               markersize=20, label='City Center', markeredgecolor='white', markeredgewidth=2),
+        Line2D([0], [0], marker='o', color='w', markerfacecolor='blue', 
+               markersize=15, label='Sample Points (LST)', markeredgecolor='white', markeredgewidth=1),
+        Line2D([0], [0], marker='s', color='w', markerfacecolor='red', 
+               markersize=12, label='UHI Intensity', markeredgecolor='black', markeredgewidth=1),
+        Line2D([0], [0], marker='^', color='w', markerfacecolor='forestgreen', 
+               markersize=12, label='High Vegetation', markeredgecolor='darkgreen', markeredgewidth=1),
+        Line2D([0], [0], marker='X', color='w', markerfacecolor='red', 
+               markersize=15, label='Urban Hotspots', markeredgecolor='darkred', markeredgewidth=1),
+        Line2D([0], [0], linestyle='--', color='navy', linewidth=3,
                    label='City Buffer Zone')
     ]
     

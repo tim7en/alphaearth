@@ -31,26 +31,26 @@ Urban cores defined using Dynamic World built-up probabilities (threshold > 0.15
 ### Regional SUHI Trends (2019 → 2025)
 
 **Surface Urban Heat Island Changes:**
-- Mean SUHI Day Change: 0.836 ± 0.398°C
-- Mean SUHI Night Change: 0.541 ± 0.743°C
-- Range Day SUHI Change: 0.408 to 1.194°C
-- Range Night SUHI Change: -0.103 to 1.353°C
+- Mean SUHI Day Change: 0.518 ± nan°C
+- Mean SUHI Night Change: 0.513 ± nan°C
+- Range Day SUHI Change: 0.518 to 0.518°C
+- Range Night SUHI Change: 0.513 to 0.513°C
 
 **Urban Expansion Metrics:**
-- Mean Urban Built-up Change: 0.0035 ± 0.0031
-- Mean Rural Built-up Change: 0.0035 ± 0.0031
+- Mean Urban Built-up Change: 0.0309 ± nan
+- Mean Rural Built-up Change: 0.0048 ± 0.0033
 
 **Vegetation Changes:**
-- Mean Urban NDVI Change: 0.0542 ± 0.0736
-- Mean Rural NDVI Change: 0.0534 ± 0.0727
+- Mean Urban NDVI Change: -0.0493 ± nan
+- Mean Rural NDVI Change: 0.0468 ± 0.0719
 
 ### City-Level Results
 
 | City | SUHI Day Change (°C) | SUHI Night Change (°C) | Urban Built Change | Rural Built Change |
 |------|---------------------|----------------------|------------------|------------------|
-| Tashkent | 1.194 | 1.353 | 0.0070 | 0.0070 |
-| Samarkand | 0.408 | 0.372 | 0.0023 | 0.0023 |
-| Namangan | 0.907 | -0.103 | 0.0012 | 0.0012 |
+| Tashkent | N/A | N/A | N/A | 0.0075 |
+| Samarkand | 0.518 | 0.513 | 0.0309 | 0.0057 |
+| Namangan | N/A | N/A | N/A | 0.0012 |
 
 
 ## Technical Implementation
@@ -96,7 +96,7 @@ This methodology follows established remote sensing literature for satellite SUH
 
 ---
 
-**Report Generated**: 2025-08-12 10:48:12
+**Report Generated**: 2025-08-12 11:22:19
 **Analysis Method**: Scientific SUHI (Urban-Rural LST Difference)
 **Data Processing**: Google Earth Engine Server-Side
 **Quality Assurance**: Comprehensive QA masking and scaling

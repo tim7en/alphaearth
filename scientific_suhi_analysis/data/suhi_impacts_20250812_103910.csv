@@ -1,4 +1,0 @@
-City,Analysis_Period,Years_Span,SUHI_Day_Change,SUHI_Night_Change,LST_Day_Urban_Change,LST_Night_Urban_Change,LST_Day_Rural_Change,LST_Night_Rural_Change,Built_Prob_Urban_Change,Built_Prob_Rural_Change,NDVI_Urban_Change,NDVI_Rural_Change,Green_Prob_Urban_Change,Green_Prob_Rural_Change,Water_Prob_Urban_Change,Water_Prob_Rural_Change,SUHI_Day_Baseline,SUHI_Night_Baseline,SUHI_Day_Latest,SUHI_Night_Latest,Urban_Pixels_Base,Rural_Pixels_Base,Urban_Pixels_Latest,Rural_Pixels_Latest
-Tashkent,2019_to_2025,6,,,,,1.7668879720626762,4.598583060440731,,0.005597370003147695,,0.14626283496523843,,-0.016579641603582773,,0.0005315441765513448,,,,,0,2571,0,1120
-Samarkand,2019_to_2025,6,,,,,,,,,,,,,,,,,,,0,0,86,0
-Namangan,2019_to_2025,6,,,,,0.8193858043335496,3.913943114255323,,9.231269394198438e-05,,0.09200931747139918,,0.04583852459156773,,0.002156837901979236,,,,,0,512,0,514
