@@ -1,0 +1,8 @@
+{
+  "analysis_type": "urban_expansion_impact",
+  "analysis_span_years": 6,
+  "analysis_periods": 7,
+  "cities_analyzed": 2,
+  "first_period": "period_2018",
+  "last_period": "period_2024"
+}
