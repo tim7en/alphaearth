@@ -1,0 +1,21 @@
+{
+  "city": "Tashkent",
+  "analysis_year": 2023,
+  "resolution_m": 120,
+  "temp_range_c": [
+    35.3616016468844,
+    51.48572774799189
+  ],
+  "temp_mean_c": 43.67437565467821,
+  "temp_std_c": 2.0361802544784102,
+  "valid_points": 4925,
+  "total_points": 6400,
+  "data_quality_percent": 76.953125,
+  "features": {
+    "edge_detection": true,
+    "topographic_basemap": true,
+    "white_edge_overlays": true,
+    "enhanced_colormap": true,
+    "vector_features": true
+  }
+}
