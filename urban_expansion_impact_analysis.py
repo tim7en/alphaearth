@@ -21,20 +21,20 @@ warnings.filterwarnings('ignore')
 
 # Enhanced city configuration for expansion analysis - FOCUSED URBAN CORE AREAS
 UZBEKISTAN_CITIES = {
-    "Tashkent": {"lat": 41.2995, "lon": 69.2401, "buffer": 10000, "samples": 50},  # Reduced from 25km to 10km
-    "Samarkand": {"lat": 39.6542, "lon": 66.9597, "buffer": 8000, "samples": 50},   # Reduced from 20km to 8km
-    "Namangan": {"lat": 40.9983, "lon": 71.6726, "buffer": 6000, "samples": 50},    # Reduced from 15km to 6km
-    #"Andijan": {"lat": 40.7821, "lon": 72.3442, "buffer": 6000, "samples": 50},     # Reduced from 15km to 6km
-    #"Nukus": {"lat": 42.4731, "lon": 59.6103, "buffer": 6000, "samples": 50},       # Reduced from 15km to 6km
-    #"Bukhara": {"lat": 39.7748, "lon": 64.4286, "buffer": 6000, "samples": 50},     # Reduced from 15km to 6km
-    #"Qarshi": {"lat": 38.8606, "lon": 65.7887, "buffer": 5000, "samples": 50},      # Reduced from 12km to 5km
-    #"Kokand": {"lat": 40.5219, "lon": 70.9428, "buffer": 5000, "samples": 50},      # Reduced from 12km to 5km
-    #"Margilan": {"lat": 40.4731, "lon": 71.7244, "buffer": 4000, "samples": 50},    # Reduced from 10km to 4km
-    #"Urgench": {"lat": 41.5506, "lon": 60.6317, "buffer": 5000, "samples": 50},     # Reduced from 12km to 5km
-    #"Fergana": {"lat": 40.3842, "lon": 71.7843, "buffer": 6000, "samples": 50},     # Reduced from 15km to 6km
-    #"Jizzakh": {"lat": 40.1158, "lon": 67.8422, "buffer": 4000, "samples": 50},     # Reduced from 10km to 4km
-    #"Sirdaryo": {"lat": 40.8375, "lon": 68.6736, "buffer": 4000, "samples": 50},     # Reduced from 8km to 4km
-    #"Termez": {"lat": 37.2242, "lon": 67.2783, "buffer": 5000, "samples": 50}        # Reduced from 12km to 5km
+    "Tashkent": {"lat": 41.2995, "lon": 69.2401, "buffer": 10000, "samples": 1000},  # Reduced from 25km to 10km
+    "Samarkand": {"lat": 39.6542, "lon": 66.9597, "buffer": 10000, "samples": 1000},   # Reduced from 20km to 8km
+    "Namangan": {"lat": 40.9983, "lon": 71.6726, "buffer": 10000, "samples": 1000},    # Reduced from 15km to 6km
+    "Andijan": {"lat": 40.7821, "lon": 72.3442, "buffer": 10000, "samples": 1000},     # Reduced from 15km to 6km
+    "Nukus": {"lat": 42.4731, "lon": 59.6103, "buffer": 10000, "samples": 1000},       # Reduced from 15km to 6km
+    "Bukhara": {"lat": 39.7748, "lon": 64.4286, "buffer": 10000, "samples": 1000},     # Reduced from 15km to 6km
+    "Qarshi": {"lat": 38.8606, "lon": 65.7887, "buffer": 10000, "samples": 1000},      # Reduced from 12km to 5km
+    "Kokand": {"lat": 40.5219, "lon": 70.9428, "buffer": 10000, "samples": 1000},      # Reduced from 12km to 5km
+    "Margilan": {"lat": 40.4731, "lon": 71.7244, "buffer": 10000, "samples": 1000},    # Reduced from 10km to 4km
+    "Urgench": {"lat": 41.5506, "lon": 60.6317, "buffer": 10000, "samples": 1000},     # Reduced from 12km to 5km
+    "Fergana": {"lat": 40.3842, "lon": 71.7843, "buffer": 10000, "samples": 1000},     # Reduced from 15km to 6km
+    "Jizzakh": {"lat": 40.1158, "lon": 67.8422, "buffer": 10000, "samples": 1000},     # Reduced from 10km to 4km
+    "Sirdaryo": {"lat": 40.8375, "lon": 68.6736, "buffer": 10000, "samples": 1000},     # Reduced from 8km to 4km
+    "Termez": {"lat": 37.2242, "lon": 67.2783, "buffer": 10000, "samples": 1000}        # Reduced from 12km to 5km
 }
 
 def authenticate_gee():
@@ -1415,7 +1415,7 @@ def export_original_data(expansion_data, impacts_df, regional_impacts, output_di
 """
     
     summary_path = f"{output_dir}/UZBEKISTAN_DATA_EXPORT_SUMMARY_{timestamp}.md"
-    with open(summary_path, 'w') as f:
+    with open(summary_path, 'w', encoding='utf-8') as f:
         f.write(summary)
     print(f"      ✅ Export summary: {summary_path}")
     
