@@ -10,3 +10,4 @@ seaborn
 scipy
 jinja2
 reportlab
+psutil

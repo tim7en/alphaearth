@@ -19,6 +19,7 @@ Discover ongoing geospatial research into Uzbekistan's landscapes, ecosystems, a
 | 🌊 **Soil Moisture** | Water stress assessment & vulnerability mapping | ✅ Complete | Regional moisture maps, stress hotspots |
 | 🌳 **Afforestation** | Site suitability modeling & species selection | ✅ Complete | Suitability maps, species recommendations |
 | 🏜️ **Land Degradation** | Hotspot identification & trend analysis | ✅ Complete | Degradation maps, intervention priorities |
+| 🌾 **Drought & Vegetation** | Anomaly analysis & district drought atlas | ✅ Complete | Drought atlas, anomaly maps, trend analysis |
 | 🏞️ **Riverbank Disturbance** | Buffer monitoring & change detection | ✅ Complete | Disturbance flags, buffer integrity |
 | 🏛️ **Protected Areas** | Conservation status & incident detection | ✅ Complete | Conservation maps, incident reports |
 | 🦋 **Biodiversity** | Ecosystem classification & fragmentation | ✅ Complete | Diversity metrics, habitat assessment |
@@ -38,6 +39,7 @@ pip install -r requirements.txt
 # Run individual analyses with real satellite data
 python soil_moisture_standalone.py
 python afforestation_standalone.py
+python drought_vegetation_standalone.py
 python urban_heat_standalone.py
 # ... etc for each domain
 ```
