@@ -11,23 +11,23 @@ This comprehensive analysis examines urban expansion impacts across **all 14 maj
 ### 🔍 **KEY FINDINGS OVERVIEW:**
 
 **Regional Trends:**
-- **Average Day Temperature Change**: +1.70°C ± 1.81°C  
-- **Average Night Temperature Change**: +5.58°C ± 1.56°C
-- **Average UHI Change**: +0.19°C ± 0.24°C
-- **Urban Expansion Rate**: +0.005 ± 0.022 (built-up probability)
-- **Green Space Trend**: -0.005 ± 0.001
-- **Water Body Trend**: +0.002 ± 0.002
+- **Average Day Temperature Change**: +1.88°C ± 1.68°C  
+- **Average Night Temperature Change**: +5.15°C ± 1.15°C
+- **Average UHI Change**: +0.24°C ± 0.18°C
+- **Urban Expansion Rate**: +0.018 ± 0.011 (built-up probability)
+- **Green Space Trend**: -0.007 ± 0.008
+- **Water Body Trend**: +0.001 ± 0.004
 
 **City Impact Distribution:**
-- **🔴 High Concern Cities**: 3 (75.0%)
-- **🟡 Moderate Concern Cities**: 1 (25.0%)
-- **🟢 Low Concern Cities**: 0
+- **🔴 High Concern Cities**: 11 (78.6%)
+- **🟡 Moderate Concern Cities**: 8 (57.1%)
+- **🟢 Low Concern Cities**: -5
 
 **Critical Indicators:**
-- **Cities with Temperature Rise**: 3/4 cities
-- **Cities with Significant Expansion**: 2/4 cities
-- **Cities with Green Space Loss**: 4/4 cities
-- **Cities with Water Body Decline**: 0/4 cities
+- **Cities with Temperature Rise**: 14/14 cities
+- **Cities with Significant Expansion**: 11/14 cities
+- **Cities with Green Space Loss**: 12/14 cities
+- **Cities with Water Body Decline**: 4/14 cities
 
 ---
 
@@ -48,10 +48,10 @@ This comprehensive analysis examines urban expansion impacts across **all 14 maj
 - **Enhanced Variables**: 27 environmental indicators per city
 
 ### **Spatial Coverage & Temporal Analysis**
-- **Cities Analyzed**: 4 major urban centers (focused urban core areas)
+- **Cities Analyzed**: 14 major urban centers (focused urban core areas)
 - **Buffer Zones**: 4-10km radius per city (reduced for urban core focus)
 - **Sample Points**: 50 samples per period × 10 periods = 500 total per city
-- **Total Samples**: 2000 data points across focused urban areas
+- **Total Samples**: 7000 data points across focused urban areas
 - **Temporal Range**: Annual analysis from 2016-2025 (10-year change detection with year-to-year tracking)
 - **Spatial Resolution**: 100m analysis (enhanced from 200m for urban core detail)
 
@@ -59,7 +59,7 @@ This comprehensive analysis examines urban expansion impacts across **all 14 maj
 
 **Report Generated**: August 11, 2025
 **Analysis Coverage**: 2018-2025 (7-year comprehensive assessment)  
-**Cities**: 4 major urban centers analyzed
+**Cities**: 14 major urban centers analyzed
 **Data Confidence**: 95% (satellite-validated, server-side processed)
 **Processing**: Google Earth Engine distributed computing infrastructure
 

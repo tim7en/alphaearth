@@ -1,0 +1,15 @@
+City,Analysis_Period,Years_Span,SUHI_Day_Change,SUHI_Night_Change,LST_Day_Urban_Change,LST_Night_Urban_Change,LST_Day_Rural_Change,LST_Night_Rural_Change,NDVI_Urban_Change,NDVI_Rural_Change,SUHI_Day_Baseline,SUHI_Night_Baseline,SUHI_Day_Latest,SUHI_Night_Latest,Urban_Pixels_Base,Rural_Pixels_Base,Urban_Pixels_Latest,Rural_Pixels_Latest
+Tashkent,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Nukus,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Andijan,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Bukhara,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Jizzakh,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Qarshi,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Navoiy,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Namangan,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Samarkand,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Termez,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Gulistan,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Nurafshon,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Fergana,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
+Urgench,2019_to_2024,5,,,,,,,,,,,,,0.0,0.0,0.0,0.0
