@@ -8,7 +8,7 @@
 
 This study presents the most comprehensive analysis of urban heat island effects across all 14 administrative cities of Uzbekistan, utilizing ultra high-resolution satellite data and advanced machine learning. The analysis reveals critical insights into the relationship between urban expansion, ecological cooling capacity, and thermal comfort.
 
-**Key Finding**: Urban expansion has significantly altered surface temperatures, with a 1.45°C average difference between high-density urban areas and low-density zones.
+**Key Finding**: Urban expansion has significantly altered surface temperatures, with a 0.55°C average difference between high-density urban areas and low-density zones.
 
 ---
 
@@ -17,31 +17,39 @@ This study presents the most comprehensive analysis of urban heat island effects
 **Spatial Coverage**: 14 administrative cities of Uzbekistan
 **Temporal Period**: 2023-2024 (most recent high-quality data)
 **Spatial Resolution**: 250m (ultra high-resolution)
-**Total Samples**: 132 georeferenced observations
+**Total Samples**: 6,311 georeferenced observations
 **Feature Dimensions**: 33 satellite-derived variables
 
 **Temperature Statistics**:
-- Mean Temperature: 23.60°C ± 1.46°C
-- Temperature Range: 20.9°C to 29.1°C
-- Urban Heat Island Range: 8.14°C
+- Mean Temperature: 24.00°C ± 2.18°C
+- Temperature Range: 20.5°C to 34.4°C
+- Urban Heat Island Range: 13.98°C
 
 ---
 
 ## 🏙️ CITY-SPECIFIC FINDINGS
 
 ### Temperature Hierarchy (Hottest to Coolest):
-1. **Bukhara**: 24.18°C (Urban: 24%, Green: 11%)
-2. **Tashkent**: 23.17°C (Urban: 37%, Green: 10%)
+1. **Termez**: 26.94°C (Urban: 15%, Green: 9%)
+2. **Navoi**: 25.88°C (Urban: 20%, Green: 8%)
+3. **Qarshi**: 25.07°C (Urban: 27%, Green: 10%)
+4. **Fergana**: 24.84°C (Urban: 24%, Green: 10%)
+5. **Bukhara**: 24.38°C (Urban: 21%, Green: 11%)
+6. **Jizzakh**: 24.04°C (Urban: 28%, Green: 9%)
+7. **Namangan**: 23.58°C (Urban: 27%, Green: 10%)
+8. **Nukus**: 23.55°C (Urban: 20%, Green: 7%)
+9. **Andijan**: 23.52°C (Urban: 26%, Green: 10%)
+10. **Gulistan**: 23.44°C (Urban: 24%, Green: 12%)
 
 
 ### Urban Expansion Impact Analysis:
-- **High Urban Density Areas** (30 samples): 24.75°C average
-- **Low Urban Density Areas** (72 samples): 23.30°C average
-- **Urban Heat Effect**: +1.45°C in highly urbanized areas
+- **High Urban Density Areas** (970 samples): 24.51°C average
+- **Low Urban Density Areas** (4285 samples): 23.96°C average
+- **Urban Heat Effect**: +0.55°C in highly urbanized areas
 
 ### Ecological Cooling Capacity:
 - **High Green Coverage Areas**: nan°C average temperature
-- **Low Green Coverage Areas**: 23.65°C average temperature  
+- **Low Green Coverage Areas**: 24.02°C average temperature  
 - **Green Cooling Effect**: -nan°C cooling benefit
 
 ---
@@ -49,10 +57,10 @@ This study presents the most comprehensive analysis of urban heat island effects
 ## 🤖 MACHINE LEARNING MODEL PERFORMANCE
 
 **Best Performing Model**: Gradient_Boosting_Ultra
-- **Cross-Validation R²**: 0.7264
-- **Test Set R²**: 0.8452
-- **RMSE**: 0.635°C
-- **Overfitting Score**: 0.1548
+- **Cross-Validation R²**: 0.9874
+- **Test Set R²**: 0.9885
+- **RMSE**: 0.180°C
+- **Overfitting Score**: 0.0115
 
 **Model Robustness Validation**:
 - 5-Fold Cross-Validation (5 repeats)
@@ -86,13 +94,13 @@ This study presents the most comprehensive analysis of urban heat island effects
 
 ### Urban Heat Island Intensity:
 - **Severe UHI** (>35°C): 0 locations (0.0%)
-- **Moderate UHI** (30-35°C): 0 locations (0.0%)
-- **Comfortable** (<30°C): 132 locations (100.0%)
+- **Moderate UHI** (30-35°C): 160 locations (2.5%)
+- **Comfortable** (<30°C): 6151 locations (97.5%)
 
 ### Biodiversity Resilience Assessment:
 - **High Resilience**: Green-dominated areas with nan average index
-- **Low Resilience**: Urban-dominated areas with 0.020 average index
-- **Connectivity Loss**: 0.017 standard deviation indicates fragmentation
+- **Low Resilience**: Urban-dominated areas with 0.016 average index
+- **Connectivity Loss**: 0.018 standard deviation indicates fragmentation
 
 ---
 
@@ -158,9 +166,9 @@ This study presents the most comprehensive analysis of urban heat island effects
 
 ---
 
-**Report Generated**: August 12, 2025 at 21:38:53
+**Report Generated**: August 12, 2025 at 23:31:41
 **Analysis Scale**: Ultra High-Resolution (250m spatial resolution)
-**Confidence Level**: 84.5% prediction accuracy
-**Data Quality**: 132 validated observations across 14 cities
+**Confidence Level**: 98.9% prediction accuracy
+**Data Quality**: 6,311 validated observations across 14 cities
 
 *This represents the most comprehensive satellite-based urban heat analysis for Uzbekistan, providing actionable insights for climate-resilient urban planning and biodiversity conservation.*

@@ -29,7 +29,7 @@ warnings.filterwarnings('ignore')
 
 # Analysis constants
 ANALYSIS_RADIUS = 15000  # 15km around each city center
-SAMPLES_PER_CITY = 50    # Number of samples per city per time period
+SAMPLES_PER_CITY = 500    # Number of samples per city per time period
 
 # Define analysis regions - All 14 Uzbekistan administrative centers
 cities = {
@@ -54,7 +54,7 @@ cities = {
 
 # Analysis constants
 ANALYSIS_RADIUS = 15000  # 15km around each city center
-SAMPLES_PER_CITY = 50    # Number of samples per city per time period
+SAMPLES_PER_CITY = 500    # Number of samples per city per time period
 
 # Temporal configuration
 TEMPORAL_CONFIG = {

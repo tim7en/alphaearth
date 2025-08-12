@@ -40,20 +40,20 @@ warnings.filterwarnings('ignore')
 
 # Enhanced city configuration with optimized sampling density
 UZBEKISTAN_CITIES = {
-    "Tashkent": {"lat": 41.2995, "lon": 69.2401, "buffer": 25000, "samples": 80},  # Reduced from 200
-    #"Samarkand": {"lat": 39.6542, "lon": 66.9597, "buffer": 18000, "samples": 60}, # Reduced from 150
-    "Bukhara": {"lat": 39.7747, "lon": 64.4286, "buffer": 18000, "samples": 60},
-    #"Namangan": {"lat": 40.9983, "lon": 71.6726, "buffer": 15000, "samples": 50},
-    #"Andijan": {"lat": 40.7821, "lon": 72.3442, "buffer": 15000, "samples": 50},
-    #"Nukus": {"lat": 42.4731, "lon": 59.6103, "buffer": 15000, "samples": 50},
-    #"Qarshi": {"lat": 38.8406, "lon": 65.7890, "buffer": 12000, "samples": 40},
-    #"Kokand": {"lat": 40.5194, "lon": 70.9428, "buffer": 12000, "samples": 40},
-    #"Fergana": {"lat": 40.3842, "lon": 71.7843, "buffer": 15000, "samples": 50},
-    #"Urgench": {"lat": 41.5500, "lon": 60.6333, "buffer": 12000, "samples": 40},
-    #"Jizzakh": {"lat": 40.1158, "lon": 67.8420, "buffer": 10000, "samples": 30},
-    #"Termez": {"lat": 37.2242, "lon": 67.2783, "buffer": 12000, "samples": 40},
-    #"Gulistan": {"lat": 40.4834, "lon": 68.7842, "buffer": 8000, "samples": 30},
-    #"Navoi": {"lat": 40.0844, "lon": 65.3792, "buffer": 10000, "samples": 30}
+    "Tashkent": {"lat": 41.2995, "lon": 69.2401, "buffer": 25000, "samples": 500},  # Reduced from 200
+    "Samarkand": {"lat": 39.6542, "lon": 66.9597, "buffer": 18000, "samples": 500}, # Reduced from 150
+    "Bukhara": {"lat": 39.7747, "lon": 64.4286, "buffer": 18000, "samples": 500},
+    "Namangan": {"lat": 40.9983, "lon": 71.6726, "buffer": 15000, "samples": 500},
+    "Andijan": {"lat": 40.7821, "lon": 72.3442, "buffer": 15000, "samples": 500},
+    "Nukus": {"lat": 42.4731, "lon": 59.6103, "buffer": 15000, "samples": 500},
+    "Qarshi": {"lat": 38.8406, "lon": 65.7890, "buffer": 12000, "samples": 500},
+    "Kokand": {"lat": 40.5194, "lon": 70.9428, "buffer": 12000, "samples": 500},
+    "Fergana": {"lat": 40.3842, "lon": 71.7843, "buffer": 15000, "samples": 500},
+    "Urgench": {"lat": 41.5500, "lon": 60.6333, "buffer": 12000, "samples": 500},
+    "Jizzakh": {"lat": 40.1158, "lon": 67.8420, "buffer": 10000, "samples": 500},
+    "Termez": {"lat": 37.2242, "lon": 67.2783, "buffer": 12000, "samples": 500},
+    "Gulistan": {"lat": 40.4834, "lon": 68.7842, "buffer": 8000, "samples": 500},
+    "Navoi": {"lat": 40.0844, "lon": 65.3792, "buffer": 10000, "samples": 500}
 }
 
 def authenticate_gee():
