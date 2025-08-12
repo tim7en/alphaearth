@@ -1,0 +1,5 @@
+irrigation_system,irrigation_efficiency_mean,irrigation_efficiency_std,irrigation_efficiency_count,water_use_efficiency_mean,water_use_efficiency_std,estimated_crop_yield_mean,estimated_crop_yield_std,water_cost_efficiency_mean,water_cost_efficiency_std,comprehensive_water_stress_mean,comprehensive_water_stress_std
+drip,0.682,0.112,87,0.578,0.054,0.879,0.172,0.001,0.0,0.171,0.026
+flood,0.5,0.095,44,0.404,0.021,0.258,0.067,0.0,0.0,0.335,0.053
+furrow,0.568,0.162,125,0.502,0.099,0.609,0.348,0.0,0.0,0.245,0.095
+sprinkler,0.598,0.146,144,0.508,0.097,0.629,0.341,0.0,0.0,0.237,0.089

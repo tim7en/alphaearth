@@ -1,0 +1,8 @@
+,irrigation_efficiency,irrigation_efficiency,irrigation_efficiency,irrigation_efficiency,water_use_efficiency,water_use_efficiency,estimated_crop_yield,estimated_crop_yield
+,mean,std,min,max,mean,std,mean,std
+region,,,,,,,,
+Bukhara,0.477,0.112,0.225,0.707,0.425,0.0,0.928,0.0
+Karakalpakstan,0.432,0.112,0.197,0.648,0.382,0.0,0.638,0.0
+Namangan,0.697,0.106,0.462,0.882,0.595,0.0,11.707,0.0
+Samarkand,0.592,0.08,0.374,0.76,0.51,0.0,2.52,0.0
+Tashkent,0.732,0.109,0.476,0.968,0.638,0.0,22.5,0.0
