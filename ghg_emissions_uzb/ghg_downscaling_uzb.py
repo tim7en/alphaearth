@@ -103,8 +103,8 @@ def check_gee_authentication():
         
         # Try to initialize
         try:
-            ee.Initialize()
-            print("✅ Google Earth Engine authentication successful")
+            ee.Initialize(project='ee-sabitovty')
+            print("✅ Google Earth Engine authentication successful with project ee-sabitovty")
             
             # Test basic functionality
             test_result = ee.Number(2025).getInfo()

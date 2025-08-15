@@ -86,8 +86,8 @@ class GHGEmissionsDownscaler:
             return False
         
         try:
-            ee.Initialize()
-            print("✅ Google Earth Engine initialized successfully")
+            ee.Initialize(project='ee-sabitovty')
+            print("✅ Google Earth Engine initialized successfully with project ee-sabitovty")
             self.gee_initialized = True
             return True
         except Exception as e:

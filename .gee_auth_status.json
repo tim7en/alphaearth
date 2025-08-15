@@ -1,5 +1,6 @@
 {
-  "authenticated": false,
-  "timestamp": "1754896701.4680507",
-  "method": "simulation"
+  "authenticated": true,
+  "project_id": "ee-sabitovty",
+  "timestamp": "1755235250.5157633",
+  "method": "project_auth"
 }

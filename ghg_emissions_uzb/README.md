@@ -1,33 +1,42 @@
-# GHG Emissions Downscaling for Uzbekistan
+# Real Atmospheric Data Analysis for Uzbekistan
 
-A comprehensive, standalone greenhouse gas (GHG) emissions downscaling system for Uzbekistan using machine learning and geospatial data. This project provides high-resolution (200m) emissions mapping by downscaling coarse-resolution (1km) satellite and inventory data.
+A comprehensive atmospheric concentration analysis system using **real satellite data** from Google Earth Engine. This project provides high-resolution atmospheric gas concentration mapping and analysis for Uzbekistan using Sentinel-5P satellite measurements and MODIS auxiliary data.
 
-![GHG Emissions Analysis](https://img.shields.io/badge/Analysis-GHG%20Emissions-green) ![Resolution](https://img.shields.io/badge/Resolution-200m-blue) ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![Atmospheric Analysis](https://img.shields.io/badge/Analysis-Atmospheric%20Data-green) ![Resolution](https://img.shields.io/badge/Resolution-1km-blue) ![Status](https://img.shields.io/badge/Status-Operational-brightgreen) ![Data](https://img.shields.io/badge/Data-Real%20Satellite-orange)
 
 ## 🎯 Objectives
 
-- **Spatial Downscaling**: Transform 1km resolution emissions data to 200m high-resolution maps
-- **Multi-source Integration**: Combine ODIAC, EDGAR, and other emissions datasets
-- **Machine Learning**: Use advanced ML algorithms for spatial prediction
-- **Comprehensive Analysis**: Sector-specific emissions, uncertainty quantification, and validation
-- **Standalone Operation**: Complete separation from AlphaEarth project while leveraging proven patterns
+- **Real Satellite Data**: Use actual Sentinel-5P atmospheric concentration measurements
+- **High-Resolution Analysis**: 1km spatial resolution atmospheric mapping
+- **Multi-Gas Analysis**: CO, NO₂, CH₄, SO₂ concentrations from space
+- **Server-Side Processing**: All computation on Google Earth Engine servers
+- **Spatial Statistics**: Intra-urban variability and uncertainty quantification
+- **No Mock Data**: 100% real measurements, no simulated data
 
 ## 🏗️ Project Structure
 
 ```
 ghg_emissions_uzb/
 ├── src/
-│   ├── utils.py              # Utility functions and data loading
-│   └── ghg_downscaling.py    # Main analysis module
-├── data/                     # Input and processed datasets
-├── outputs/                  # Analysis results and model outputs
-├── figs/                     # Generated maps and visualizations
-├── reports/                  # Technical reports and documentation
-├── gee_auth.py              # Google Earth Engine authentication
-├── ghg_downscaling_uzb.py   # Main executable script
-├── config_ghg.json          # Configuration parameters
-├── requirements.txt         # Python dependencies
-└── README.md               # This file
+│   ├── utils.py                    # Utility functions and data loading
+│   └── ghg_downscaling.py         # Legacy analysis module
+├── data/                          # Input and processed datasets
+├── outputs/                       # Analysis results and atmospheric data
+│   ├── real_atmospheric_data_cities.csv
+│   ├── test_atmospheric_data.csv
+│   ├── high_resolution_atmospheric_data.csv
+│   └── server_side_atmospheric_analysis.json
+├── figs/                          # Generated maps and visualizations
+├── reports/                       # Technical reports and documentation
+├── gee_auth.py                    # Google Earth Engine authentication
+├── project_gee_auth.py            # Project-specific GEE authentication
+├── quick_atmospheric_analysis.py  # Fast city-level analysis
+├── test_server_analysis.py        # Lightweight testing script
+├── high_resolution_analysis.py    # 1km resolution full analysis
+├── server_side_analysis.py        # Complete server-side processing
+├── config_ghg.json               # Configuration parameters
+├── requirements.txt               # Python dependencies
+└── README.md                      # This file
 ```
 
 ## 🚀 Quick Start
@@ -35,87 +44,145 @@ ghg_emissions_uzb/
 ### 1. Setup Environment
 
 ```bash
-# Clone or copy the ghg_emissions_uzb folder
+# Navigate to the atmospheric analysis directory
 cd ghg_emissions_uzb
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. (Optional) Google Earth Engine Authentication
+### 2. Google Earth Engine Authentication
 
-For real satellite data (recommended but not required):
-
-```bash
-python gee_auth.py
-```
-
-If GEE authentication fails, the system will automatically run in simulation mode with realistic synthetic data.
-
-### 3. Run Analysis
+**Required** for real satellite data access:
 
 ```bash
-python ghg_downscaling_uzb.py
+# Project-specific authentication (recommended)
+python project_gee_auth.py
 ```
 
-Follow the interactive menu to select analysis options.
+**Note**: This uses your Google Earth Engine project `ee-sabitovty`. Authentication is required for real data access.
+
+### 3. Run Atmospheric Analysis
+
+**Quick Test (3 cities, fast)**:
+```bash
+python quick_atmospheric_analysis.py
+```
+
+**Lightweight Test (3 cities, 30 days)**:
+```bash
+python test_server_analysis.py
+```
+
+**High-Resolution Analysis (10 cities, 1km resolution)**:
+```bash
+python high_resolution_analysis.py
+```
+
+**Full Server-Side Analysis (comprehensive)**:
+```bash
+python server_side_analysis.py
+```
 
 ## 📊 Features
 
-### Data Sources
+### Real Satellite Data Sources
 
-- **ODIAC**: Fossil fuel CO2 emissions from GEE
-- **EDGAR**: Sectoral emissions inventory (when available)
-- **Auxiliary Data**: Population, land use, infrastructure, climate variables
-- **Simulation Mode**: Realistic synthetic data when satellite data unavailable
+- **Sentinel-5P OFFL**: Carbon Monoxide (CO) column density
+- **Sentinel-5P OFFL**: Tropospheric Nitrogen Dioxide (NO₂) 
+- **Sentinel-5P OFFL**: Methane (CH₄) mixing ratios
+- **Sentinel-5P NRTI**: Sulfur Dioxide (SO₂) column density
+- **MODIS**: Land surface temperature, vegetation indices, land cover
+- **Server-Side Processing**: All computation on Google Earth Engine servers
 
-### Machine Learning Models
+### Analysis Capabilities
 
-- **Random Forest**: Ensemble method for robust predictions
-- **Gradient Boosting**: Advanced boosting for complex patterns
-- **Cross-validation**: 5-fold CV for model validation
-- **Feature Importance**: Analysis of predictor variable contributions
+- **High-Resolution**: 1km spatial resolution atmospheric mapping
+- **Multi-Temporal**: 3-month analysis periods with temporal statistics
+- **Spatial Statistics**: Intra-urban variability analysis (9 points per city)
+- **Quality Control**: Uncertainty quantification and data validation
+- **Regional Analysis**: Administrative region-level aggregation
 
-### Spatial Downscaling
+### Processing Modes
 
-- **Input Resolution**: 1km (ODIAC/EDGAR native resolution)
-- **Output Resolution**: 200m (configurable)
-- **Coverage**: Complete Uzbekistan territory
-- **Grid Points**: ~50,000 high-resolution prediction points
+1. **Quick Analysis**: Fast city-level sampling (5 cities, 2 gases)
+2. **Test Mode**: Lightweight validation (3 cities, 30 days, 2 gases)
+3. **High-Resolution**: Full analysis (10 cities, 3 months, 3 gases, 1km resolution)
+4. **Server-Side**: Complete atmospheric analysis with regional statistics
 
 ### Outputs
 
-1. **High-Resolution Emissions Maps**
-   - CO2, CH4, N2O emissions intensity
-   - Sector-specific breakdowns
-   - Emissions hotspot identification
+1. **High-Resolution Atmospheric Concentration Maps**
+   - CO, NO₂, CH₄, SO₂ concentrations
+   - City-level spatial variability analysis
+   - Temporal statistics and uncertainty bounds
 
 2. **Analysis Results**
-   - Regional emissions summaries
-   - Model performance metrics
-   - Uncertainty quantification
+   - City-level concentration statistics
+   - Regional atmospheric analysis
+   - Spatial variability metrics
+   - Data quality assessments
 
-3. **Technical Reports**
-   - Comprehensive methodology documentation
-   - Model validation results
-   - Key findings and recommendations
+3. **Comprehensive Reports**
+   - Real data processing logs
+   - Statistical analysis summaries
+   - Methodology documentation
+   - Quality control results
+
+## 📈 Latest Results (August 2025)
+
+### High-Resolution Analysis Results
+
+**10 Cities Analyzed at 1km Resolution**:
+- **Tashkent**: NO₂: 1.52e-04 ± 1.43e-05 mol/m² (highest pollution)
+- **Samarkand**: NO₂: 7.45e-05 ± 2.84e-06 mol/m²
+- **Namangan**: NO₂: 6.32e-05 ± 8.25e-06 mol/m²
+- **Andijan**: NO₂: 6.57e-05 ± 5.05e-06 mol/m²
+- **Nukus**: NO₂: 2.81e-05 ± 5.26e-07 mol/m² (lowest pollution)
+
+**Processing Statistics**:
+- **Satellite Images Processed**: 3,852 images (1,284 per gas)
+- **Sampling Points**: 90 total (9 per city for spatial variability)
+- **Processing Time**: 6.7 minutes for full high-resolution analysis
+- **Data Coverage**: July-September 2024 (3-month period)
 
 ## 🎛️ Usage Modes
 
-### 1. Complete Analysis (Recommended)
-Runs end-to-end analysis including data loading, model training, prediction, and visualization.
+### 1. Quick Atmospheric Analysis
+```bash
+python quick_atmospheric_analysis.py
+```
+- **Purpose**: Fast testing and validation
+- **Scope**: 5 major cities, 2 gases (CO, NO₂)
+- **Duration**: ~12 seconds
+- **Resolution**: 5km (for speed)
 
-### 2. Authentication Setup
-Configure Google Earth Engine access for real satellite data.
+### 2. Test Server Analysis
+```bash
+python test_server_analysis.py
+```
+- **Purpose**: Lightweight testing with reduced scope
+- **Scope**: 3 cities, 2 gases, 30-day period
+- **Duration**: ~12 seconds
+- **Resolution**: 10km
 
-### 3. Data Exploration
-Load and examine emissions datasets without model training.
+### 3. High-Resolution Analysis
+```bash
+python high_resolution_analysis.py
+```
+- **Purpose**: Full atmospheric analysis (recommended)
+- **Scope**: 10 cities, 3 gases, 3-month period
+- **Duration**: ~7 minutes
+- **Resolution**: 1km with spatial statistics
 
-### 4. Model Training
-Train machine learning models using loaded data.
-
-### 5. Mapping Only
-Generate visualizations from existing analysis results.
+### 4. Server-Side Analysis
+```bash
+python server_side_analysis.py
+```
+- **Purpose**: Comprehensive regional analysis
+- **Scope**: Entire Uzbekistan, all available gases
+- **Duration**: Variable (depends on region size)
+- **Resolution**: 1km with regional aggregation
 
 ## ⚙️ Configuration
 
@@ -129,22 +196,29 @@ Edit `config_ghg.json` to customize:
 
 ## 📈 Methodology
 
-### 1. Data Integration
-- Load emissions data from multiple sources (ODIAC, EDGAR)
-- Generate auxiliary geospatial predictors (population, land use, infrastructure)
-- Spatial matching between emissions points and predictor variables
+### 1. Satellite Data Collection
+- **Sentinel-5P**: Real-time atmospheric concentration retrieval
+- **MODIS**: Auxiliary environmental variables (LST, NDVI, land cover)
+- **Server-side processing**: Efficient cloud-based computation
+- **Quality filtering**: Cloud masking and data validation
 
-### 2. Model Training
-- Feature engineering and preprocessing
-- Multiple ML algorithm comparison (Random Forest, Gradient Boosting)
-- Cross-validation and hyperparameter optimization
-- Feature importance analysis
+### 2. Spatial Analysis
+- **Grid generation**: 1km resolution sampling points
+- **Urban sampling**: Up to 90 points per city for spatial coverage
+- **Coordinate transformation**: WGS84 to local projections
+- **Spatial statistics**: Mean, standard deviation, coefficient of variation
 
-### 3. Spatial Prediction
-- Create high-resolution prediction grid (200m spacing)
-- Interpolate auxiliary variables to prediction grid
-- Apply trained models for emissions prediction
-- Uncertainty quantification
+### 3. Temporal Integration
+- **Multi-temporal analysis**: 3-month seasonal periods
+- **Data aggregation**: Statistical summaries across time
+- **Trend analysis**: Temporal patterns and anomaly detection
+- **Uncertainty quantification**: Data quality and completeness metrics
+
+### 4. Results Processing
+- **Multi-format output**: CSV tables and JSON metadata
+- **City-level aggregation**: Statistical summaries by urban area
+- **Quality assessment**: Data coverage and reliability metrics
+- **Validation**: Cross-checks between multiple gas species
 
 ### 4. Validation and Analysis
 - Model performance assessment (R², RMSE, MAE)
@@ -168,24 +242,78 @@ Edit `config_ghg.json` to customize:
 
 ## 🔧 Technical Requirements
 
+### Google Earth Engine Setup
+```bash
+# Authenticate with project-specific access
+python project_gee_auth.py
+```
+
+### Python Environment
+```bash
+# Install atmospheric analysis dependencies
+pip install -r requirements.txt
+
+# Required packages:
+# - earthengine-api
+# - pandas
+# - numpy  
+# - matplotlib
+# - seaborn
+# - scikit-learn
+# - geopandas
+```
+
+### Data Sources
+- **Sentinel-5P**: Real atmospheric concentrations (CO, NO₂, CH₄, SO₂)
+- **MODIS**: Land surface temperature, vegetation indices, land cover
+- **Server-side processing**: All computation on Google Earth Engine
+
+### Spatial Coverage
+- **Cities**: 10 major Uzbekistan urban centers
+- **Resolution**: 1km grid for intra-urban analysis
+- **Sampling**: Up to 90 points per city for spatial statistics
+- **Temporal**: 3-month periods for seasonal analysis
+
 ### System Requirements
 - **Python**: 3.8 or higher
 - **Memory**: 4GB+ RAM recommended
 - **Storage**: 1GB+ free space for outputs
-- **Internet**: Required for GEE authentication (optional)
-
-### Dependencies
-- **Core**: numpy, pandas, scikit-learn, matplotlib, seaborn
-- **Geospatial**: geopandas, rasterio, shapely (optional)
-- **Earth Engine**: earthengine-api, geemap (optional)
+- **Internet**: Required for GEE authentication and data access
 
 ## 🚨 Troubleshooting
 
 ### Common Issues
 
-**1. Import Errors**
+**1. Google Earth Engine Authentication**
 ```bash
-pip install -r requirements.txt
+# If authentication fails, run:
+python project_gee_auth.py
+
+# Or check project access:
+earthengine authenticate --project=ee-sabitovty
+```
+
+**2. Data Access Issues**
+```bash
+# Test Sentinel-5P data availability:
+python quick_atmospheric_analysis.py
+
+# Verify server connection:
+python test_server_analysis.py
+```
+
+**3. Memory/Performance Issues**
+```bash
+# Use lightweight test mode:
+python test_server_analysis.py  # 3 cities only
+
+# Or reduce sampling density in config
+```
+
+**4. Output File Issues**
+- Check write permissions in output directory
+- Ensure sufficient disk space (>1GB recommended)
+- Verify JSON/CSV file format compatibility
 ```
 
 **2. GEE Authentication Fails**

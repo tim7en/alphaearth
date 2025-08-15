@@ -1,0 +1,12 @@
+{
+  "test_date": "2025-08-15T10:55:35.125588",
+  "cities_tested": 3,
+  "gases_tested": [
+    "NO2",
+    "CO"
+  ],
+  "time_period": "2024-07-01 to 2024-07-31",
+  "processing_mode": "server_side_test",
+  "spatial_resolution": "10km",
+  "success": true
+}

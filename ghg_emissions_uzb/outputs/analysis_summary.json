@@ -1,0 +1,12 @@
+{
+  "analysis_date": "2025-08-15",
+  "cities_analyzed": 5,
+  "gases_detected": [
+    "CO",
+    "NO2",
+    "CH4"
+  ],
+  "data_source": "Sentinel-5P OFFL",
+  "spatial_resolution": "5km",
+  "temporal_coverage": "2024"
+}

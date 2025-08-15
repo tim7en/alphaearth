@@ -1,0 +1,17 @@
+{
+  "analysis_date": "2025-08-15T11:04:38.271688",
+  "analysis_type": "high_resolution_server_side",
+  "spatial_resolution": "1km",
+  "temporal_coverage": "2024-07-01 to 2024-09-30",
+  "cities_analyzed": 10,
+  "gases_analyzed": [
+    "NO2",
+    "CO",
+    "CH4"
+  ],
+  "sampling_points_per_city": 9,
+  "total_sampling_points": 90,
+  "processing_location": "Google Earth Engine Servers",
+  "regional_analysis": true,
+  "spatial_statistics": true
+}

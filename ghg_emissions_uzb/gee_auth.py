@@ -25,10 +25,10 @@ def authenticate_gee():
         import ee
         print("✅ Earth Engine API imported successfully")
         
-        # Check if already authenticated
+        # Check if already authenticated with project
         try:
-            ee.Initialize()
-            print("✅ Already authenticated and ready!")
+            ee.Initialize(project='ee-sabitovty')
+            print("✅ Already authenticated and ready with project ee-sabitovty!")
             test_connection()
             return True
         except:
@@ -76,12 +76,12 @@ def authenticate_gee():
         
         print(f"\n🔑 Using authorization code: {auth_code[:20]}...")
         
-        # Authenticate using the code
+        # Authenticate using the code and initialize with project
         try:
             print("🔄 Completing authentication...")
             ee.Authenticate(code_verifier=None, authorization_code=auth_code)
-            ee.Initialize()
-            print("✅ Earth Engine initialized successfully!")
+            ee.Initialize(project='ee-sabitovty')
+            print("✅ Earth Engine initialized successfully with project ee-sabitovty!")
             
             # Test with a simple query
             test_connection()
@@ -110,9 +110,9 @@ def try_alternative_auth():
         import ee
         
         # Alternative initialization methods
-        print("1. Trying default initialization...")
+        print("1. Trying default initialization with project...")
         try:
-            ee.Initialize()
+            ee.Initialize(project='ee-sabitovty')
             print("✅ Default initialization successful!")
             return test_connection()
         except:
@@ -121,7 +121,7 @@ def try_alternative_auth():
         print("2. Trying project-based initialization...")
         try:
             ee.Initialize(project='earthengine-legacy')
-            print("✅ Project-based initialization successful!")
+            print("✅ Legacy project initialization successful!")
             return test_connection()
         except:
             pass
