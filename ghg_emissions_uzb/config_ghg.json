@@ -1,0 +1,82 @@
+{
+  "country": "Uzbekistan",
+  "regions": [
+    "Karakalpakstan",
+    "Tashkent", 
+    "Samarkand",
+    "Bukhara",
+    "Namangan",
+    "Andijan",
+    "Fergana", 
+    "Khorezm",
+    "Navoiy",
+    "Jizzakh",
+    "Kashkadarya",
+    "Surkhandarya",
+    "Syrdarya"
+  ],
+  "analysis_period": {
+    "start_year": 2015,
+    "end_year": 2023
+  },
+  "spatial_resolution": 1000,
+  "target_resolution": 200,
+  "crs": "EPSG:4326",
+  "random_seed": 42,
+  "uzbekistan_bounds": {
+    "min_lon": 55.9,
+    "max_lon": 73.2,
+    "min_lat": 37.1,
+    "max_lat": 45.6
+  },
+  "ghg_sources": {
+    "ODIAC": true,
+    "EDGAR": true,
+    "GFEI": false,
+    "FFDAS": false
+  },
+  "emission_sectors": [
+    "power_generation",
+    "industry",
+    "transportation", 
+    "residential",
+    "agriculture",
+    "waste"
+  ],
+  "gases": [
+    "CO2",
+    "CH4",
+    "N2O"
+  ],
+  "paths": {
+    "data": "data",
+    "outputs": "outputs",
+    "figs": "figs", 
+    "reports": "reports"
+  },
+  "model_settings": {
+    "test_split": 0.2,
+    "cv_folds": 5,
+    "random_forest": {
+      "n_estimators": 100,
+      "max_depth": 10,
+      "min_samples_split": 5
+    },
+    "gradient_boosting": {
+      "n_estimators": 100,
+      "max_depth": 6,
+      "learning_rate": 0.1
+    }
+  },
+  "visualization": {
+    "dpi": 300,
+    "figure_format": "png",
+    "colormap_emissions": "YlOrRd",
+    "colormap_hotspots": "Reds"
+  },
+  "quality_control": {
+    "min_emission_threshold": 0.001,
+    "max_spatial_distance": 0.1,
+    "outlier_threshold": 3.0
+  }
+}

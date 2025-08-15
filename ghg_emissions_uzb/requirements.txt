@@ -1,0 +1,21 @@
+# GHG Emissions Downscaling Requirements
+# Core scientific computing
+numpy>=1.21.0
+pandas>=1.3.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+scikit-learn>=1.0.0
+scipy>=1.7.0
+
+# Geospatial libraries (optional but recommended)
+geopandas>=0.10.0
+rasterio>=1.2.0
+shapely>=1.8.0
+pyproj>=3.3.0
+
+# Optional: Google Earth Engine
+earthengine-api>=0.1.300
+geemap>=0.15.0
+
+# Utilities
+tqdm>=4.62.0
