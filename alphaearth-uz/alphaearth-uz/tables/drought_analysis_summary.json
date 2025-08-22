@@ -1,0 +1,28 @@
+{
+  "analysis_period": "2000-2023",
+  "baseline_period": "2001-2020",
+  "total_districts_analyzed": 13,
+  "most_affected_district": "Samarkand",
+  "highest_severity_score": 52.0,
+  "districts_with_decreasing_vegetation_trend": 0,
+  "percent_districts_declining": "0.0%",
+  "districts_worse_drought_2023_vs_2021": 1,
+  "districts_worse_drought_2021_vs_2023": 12,
+  "key_findings": [
+    "Most severely affected district: Samarkand",
+    "0 out of 13 districts show declining vegetation trends",
+    "Drought conditions worsened in 1 districts by 2023 compared to 2021",
+    "2021 had worse conditions in 12 districts compared to 2023"
+  ],
+  "methodology": {
+    "vegetation_indices": [
+      "NDVI",
+      "EVI"
+    ],
+    "precipitation_data": "CHIRPS",
+    "z_score_baseline": "2001-2020",
+    "spi_window": "90 days",
+    "trend_test": "Mann-Kendall",
+    "severity_threshold": -1.5
+  }
+}
